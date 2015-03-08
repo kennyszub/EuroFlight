@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kSourceAirportParamsKey;
+extern NSString * const kDestinationAirportParamsKey;
+
 @interface TripClient : NSObject
 
 + (TripClient *)sharedInstance;

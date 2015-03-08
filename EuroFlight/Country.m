@@ -52,7 +52,7 @@
           @"countryName" : @"France",
           @"cities" :
               @[@{@"city" : @"Paris",
-                  @"airportCodes" : @[@"CDG", @"BVA", @"ORY"]},
+                  @"airportCodes" : @[@"CDG", @"ORY"]},
                 @{@"city" : @"Nice",
                   @"airportCodes" : @[@"NCE"]}]
           }
