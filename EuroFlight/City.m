@@ -29,7 +29,8 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     // TODO finalize params (example)
     Context *context = [Context currentContext];
-    params[@"departure_airport"] = context.originAirport;
+    params[kSourceAirportParamsKey] = context.originAirport;
+    params[kDestinationAirportParamsKey] = airportCode;
 
     [[TripClient sharedInstance] tripsWithParams:params completion:^(NSArray *trips, NSError *error) {
         [self.trips addObjectsFromArray:trips];
