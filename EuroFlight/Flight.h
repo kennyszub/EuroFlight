@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSArray *flightSegments;
 @property (nonatomic, strong) NSDate *departureDate;
 @property (nonatomic, strong) NSDate *arrivalDate;
-@property (nonatomic, assign) NSTimeInterval totalDuration;
+@property (nonatomic, assign) NSInteger totalDuration;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

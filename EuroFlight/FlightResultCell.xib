@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="FlightResultCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LHR -&gt; CDG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld5-6e-2En">
+                        <rect key="frame" x="8" y="8" width="98" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6GV-9e-r80"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CDG -&gt; LHR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-Qg-cbb">
+                        <rect key="frame" x="214" y="8" width="98" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="phM-zX-423"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/6 8:30AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-NZ-Hbw">
+                        <rect key="frame" x="8" y="37" width="89" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="DUv-aT-okX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/8 9:00PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-jn-SvD">
+                        <rect key="frame" x="223" y="37" width="89" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0Z2-gN-7Fs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMM-zH-C8e">
+                        <rect key="frame" x="141" y="70" width="39" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="1Yz-az-nN9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NYK-NZ-Hbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0cL-ex-dRo"/>
+                    <constraint firstItem="ciO-Qg-cbb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ld5-6e-2En" secondAttribute="trailing" constant="8" id="3EK-p3-myl"/>
+                    <constraint firstItem="GSz-jn-SvD" firstAttribute="top" secondItem="ciO-Qg-cbb" secondAttribute="bottom" constant="8" id="5bM-c2-muA"/>
+                    <constraint firstItem="eMM-zH-C8e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="62" id="7Dm-eI-YLc"/>
+                    <constraint firstItem="ciO-Qg-cbb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ECj-eb-eET"/>
+                    <constraint firstAttribute="bottom" secondItem="eMM-zH-C8e" secondAttribute="bottom" constant="8" id="GPW-Zy-cbc"/>
+                    <constraint firstAttribute="trailing" secondItem="ciO-Qg-cbb" secondAttribute="trailing" constant="8" id="Ldb-Xc-OM4"/>
+                    <constraint firstItem="Ld5-6e-2En" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Mhl-U2-crU"/>
+                    <constraint firstItem="Ld5-6e-2En" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Nxt-qX-pJW"/>
+                    <constraint firstItem="NYK-NZ-Hbw" firstAttribute="top" secondItem="Ld5-6e-2En" secondAttribute="bottom" constant="8" id="PFJ-Bx-RdZ"/>
+                    <constraint firstItem="GSz-jn-SvD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NYK-NZ-Hbw" secondAttribute="trailing" constant="8" id="Zje-AL-bnb"/>
+                    <constraint firstAttribute="trailing" secondItem="GSz-jn-SvD" secondAttribute="trailing" constant="8" id="j7t-cT-4JZ"/>
+                    <constraint firstAttribute="centerX" secondItem="eMM-zH-C8e" secondAttribute="centerX" id="kz2-VP-HQh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="outboundFlightLabel" destination="Ld5-6e-2En" id="xNk-qY-OY1"/>
+                <outlet property="outboundFlightTimeLabel" destination="NYK-NZ-Hbw" id="KGp-8T-mW5"/>
+                <outlet property="priceLabel" destination="eMM-zH-C8e" id="5lO-A1-lOD"/>
+                <outlet property="returnFlightLabel" destination="ciO-Qg-cbb" id="GYN-pq-hpO"/>
+                <outlet property="returnFlightTimeLabel" destination="GSz-jn-SvD" id="Bdy-OY-0W2"/>
+            </connections>
+            <point key="canvasLocation" x="375" y="785"/>
+        </tableViewCell>
+    </objects>
+</document>

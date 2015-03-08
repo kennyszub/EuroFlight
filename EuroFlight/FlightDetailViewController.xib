@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightDetailViewController">
+            <connections>
+                <outlet property="outboundFlightDetailView" destination="vbe-cA-eGo" id="xLe-DK-yrt"/>
+                <outlet property="returnFlightDetailView" destination="lqJ-gb-7qp" id="hZT-H2-eAu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-4I-fQc">
+                    <rect key="frame" x="281" y="344" width="31" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="q70-M7-8CU"/>
+                    </constraints>
+                    <state key="normal" title="Buy!">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBuyButton:" destination="-1" eventType="touchUpInside" id="bnR-gK-b7K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ss-QM-Wfl">
+                    <rect key="frame" x="8" y="344" width="70" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="zSJ-xT-tRl"/>
+                    </constraints>
+                    <state key="normal" title="Start Over">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onStartOverButton:" destination="-1" eventType="touchUpInside" id="mZL-vg-bxl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx3-ip-DxI">
+                    <rect key="frame" x="118" y="381" width="84" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="tO7-L6-SjE"/>
+                    </constraints>
+                    <state key="normal" title="Tell A Friend">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTellAFriendButton:" destination="-1" eventType="touchUpInside" id="wrl-Od-DNT"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-cA-eGo" customClass="OneWayFlightDetailView">
+                    <rect key="frame" x="8" y="8" width="304" height="160"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="uh4-l2-YUR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-gb-7qp" customClass="OneWayFlightDetailView">
+                    <rect key="frame" x="8" y="176" width="304" height="160"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="Ewb-7U-24x"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3ss-QM-Wfl" firstAttribute="top" secondItem="lqJ-gb-7qp" secondAttribute="bottom" constant="8" id="1LO-1U-7aa"/>
+                <constraint firstAttribute="trailing" secondItem="9F5-4I-fQc" secondAttribute="trailing" constant="8" id="4Dc-ZI-nWt"/>
+                <constraint firstItem="vbe-cA-eGo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" placeholder="YES" id="5tq-rK-9dw"/>
+                <constraint firstItem="9F5-4I-fQc" firstAttribute="top" secondItem="lqJ-gb-7qp" secondAttribute="bottom" constant="8" id="DtS-4V-1gF"/>
+                <constraint firstItem="3ss-QM-Wfl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="G9I-8E-Pkk"/>
+                <constraint firstItem="lqJ-gb-7qp" firstAttribute="top" secondItem="vbe-cA-eGo" secondAttribute="bottom" constant="8" id="Ig6-Gq-UoG"/>
+                <constraint firstAttribute="trailing" secondItem="vbe-cA-eGo" secondAttribute="trailing" constant="8" id="KUH-nV-PpR"/>
+                <constraint firstItem="lqJ-gb-7qp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LUD-uR-cx2"/>
+                <constraint firstItem="vbe-cA-eGo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PTa-bZ-ARv"/>
+                <constraint firstAttribute="trailing" secondItem="lqJ-gb-7qp" secondAttribute="trailing" constant="8" id="b9l-DT-xvT"/>
+                <constraint firstAttribute="centerX" secondItem="nx3-ip-DxI" secondAttribute="centerX" id="n9g-65-e5v"/>
+                <constraint firstItem="nx3-ip-DxI" firstAttribute="top" secondItem="lqJ-gb-7qp" secondAttribute="bottom" constant="45" id="zGV-mr-IIG"/>
+            </constraints>
+            <point key="canvasLocation" x="375" y="742"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
