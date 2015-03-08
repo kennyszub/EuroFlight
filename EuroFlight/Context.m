@@ -26,7 +26,7 @@ static Context *_currentContext;
                                  initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         _currentContext.departureDate = [gregorian dateFromComponents:comps];
         
-        [comps setDay:30];
+        [comps setDay:29];
         [comps setMonth:3];
         [comps setYear:2015];
         _currentContext.returnDate = [gregorian dateFromComponents:comps];

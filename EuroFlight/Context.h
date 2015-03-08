@@ -17,5 +17,4 @@
 @property (nonatomic, strong) NSDate *returnDate;
 @property (nonatomic, assign) NSInteger numPassengers;
 
-
 @end
