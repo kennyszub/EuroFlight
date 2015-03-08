@@ -16,7 +16,8 @@
 @property (nonatomic, strong) NSDate *arrivalDate;
 @property (nonatomic, strong) NSString *airline;
 @property (nonatomic, strong) NSString *flightNumber;
-@property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, assign) NSInteger duration;
+@property (nonatomic, assign) NSInteger connectionDuration;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

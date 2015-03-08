@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet OneWayFlightDetailView *outboundFlightDetailView;
 @property (weak, nonatomic) IBOutlet OneWayFlightDetailView *returnFlightDetailView;
+@property (weak, nonatomic) IBOutlet UILabel *costLabel;
 
 - (IBAction)onStartOverButton:(id)sender;
 - (IBAction)onBuyButton:(id)sender;
@@ -33,6 +34,7 @@
     
     self.outboundFlightDetailView.flight = self.trip.outboundFlight;
     self.returnFlightDetailView.flight = self.trip.returnFlight;
+    self.costLabel.text = [NSString stringWithFormat:@"%@ %0.2f", self.trip.currencyType, self.trip.flightCost];
 }
 
 - (void)didReceiveMemoryWarning {

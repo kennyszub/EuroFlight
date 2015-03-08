@@ -59,6 +59,24 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nonstop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-uY-Ocd">
+                        <rect key="frame" x="8" y="66" width="66" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="5Om-TO-gFM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 stop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-N2-gC4">
+                        <rect key="frame" x="263" y="66" width="49" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="hMc-fO-toJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="NYK-NZ-Hbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0cL-ex-dRo"/>
@@ -71,16 +89,22 @@
                     <constraint firstItem="Ld5-6e-2En" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Mhl-U2-crU"/>
                     <constraint firstItem="Ld5-6e-2En" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Nxt-qX-pJW"/>
                     <constraint firstItem="NYK-NZ-Hbw" firstAttribute="top" secondItem="Ld5-6e-2En" secondAttribute="bottom" constant="8" id="PFJ-Bx-RdZ"/>
+                    <constraint firstItem="oXl-uY-Ocd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Wyf-7a-QDZ"/>
                     <constraint firstItem="GSz-jn-SvD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NYK-NZ-Hbw" secondAttribute="trailing" constant="8" id="Zje-AL-bnb"/>
+                    <constraint firstItem="oXl-uY-Ocd" firstAttribute="top" secondItem="NYK-NZ-Hbw" secondAttribute="bottom" constant="8" id="ewj-uu-Hei"/>
+                    <constraint firstAttribute="trailing" secondItem="g7c-N2-gC4" secondAttribute="trailing" constant="8" id="hzK-Gb-rQH"/>
                     <constraint firstAttribute="trailing" secondItem="GSz-jn-SvD" secondAttribute="trailing" constant="8" id="j7t-cT-4JZ"/>
                     <constraint firstAttribute="centerX" secondItem="eMM-zH-C8e" secondAttribute="centerX" id="kz2-VP-HQh"/>
+                    <constraint firstItem="g7c-N2-gC4" firstAttribute="top" secondItem="GSz-jn-SvD" secondAttribute="bottom" constant="8" id="vF9-3A-hAU"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="outboundFlightLabel" destination="Ld5-6e-2En" id="xNk-qY-OY1"/>
+                <outlet property="outboundFlightStopsLabel" destination="oXl-uY-Ocd" id="xS2-MU-mKt"/>
                 <outlet property="outboundFlightTimeLabel" destination="NYK-NZ-Hbw" id="KGp-8T-mW5"/>
                 <outlet property="priceLabel" destination="eMM-zH-C8e" id="5lO-A1-lOD"/>
                 <outlet property="returnFlightLabel" destination="ciO-Qg-cbb" id="GYN-pq-hpO"/>
+                <outlet property="returnFlightStopsLabel" destination="g7c-N2-gC4" id="uvh-Ft-FEM"/>
                 <outlet property="returnFlightTimeLabel" destination="GSz-jn-SvD" id="Bdy-OY-0W2"/>
             </connections>
             <point key="canvasLocation" x="375" y="785"/>

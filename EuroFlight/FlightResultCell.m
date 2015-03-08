@@ -12,8 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *outboundFlightLabel;
 @property (weak, nonatomic) IBOutlet UILabel *outboundFlightTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *outboundFlightStopsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *returnFlightLabel;
 @property (weak, nonatomic) IBOutlet UILabel *returnFlightTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *returnFlightStopsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 @end
@@ -45,11 +47,25 @@ static NSDateFormatter *dateTimeFormatter;
     
     self.outboundFlightTimeLabel.text = [dateTimeFormatter stringFromDate:trip.outboundFlight.departureDate];
     self.returnFlightTimeLabel.text = [dateTimeFormatter stringFromDate:trip.returnFlight.departureDate];
+
+    self.outboundFlightStopsLabel.text = [self stopsForFlight:trip.outboundFlight];
+    self.returnFlightStopsLabel.text = [self stopsForFlight:trip.returnFlight];
 }
 
 + (void)initDateTimeFormatter {
     dateTimeFormatter = [[NSDateFormatter alloc] init];
     dateTimeFormatter.dateFormat = @"M/d/yy h:mm a";
+}
+
+- (NSString *)stopsForFlight:(Flight *)flight {
+    NSInteger numSegments = flight.flightSegments.count;
+    if (numSegments <= 1) {
+        return @"Nonstop";
+    } else if (numSegments == 1) {
+        return @"1 stop";
+    } else {
+        return [NSString stringWithFormat:@"%ld stops", numSegments];
+    }
 }
 
 @end

@@ -40,8 +40,13 @@
     return trips;
 }
 
+static NSRegularExpression *currencyRegex;
+
 - (void)parseCurrencyString:(NSString *)currencyString {
-    NSRegularExpression *currencyRegex = [NSRegularExpression regularExpressionWithPattern:@"([A-Za-z]+)([0-9.]+)" options:0 error:nil];
+    if (!currencyRegex) {
+        currencyRegex = [NSRegularExpression regularExpressionWithPattern:@"([A-Za-z]+)([0-9.]+)" options:0 error:nil];
+    }
+
     NSArray *matches = [currencyRegex matchesInString:currencyString options:0 range:NSMakeRange(0, currencyString.length)];
     
     for (NSTextCheckingResult *match in matches) {
