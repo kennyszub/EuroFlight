@@ -2,10 +2,16 @@
 "kind": "qpxExpress#tripsSearch",
 "trips": {
 "kind": "qpxexpress#tripOptions",
-"requestId": "l5Rqk4SPvPveOxqNY0LiH5",
+"requestId": "ctTEQalSOPimvQZop0Lidz",
 "data": {
 "kind": "qpxexpress#data",
 "airport": [
+{
+"kind": "qpxexpress#airportData",
+"code": "AMS",
+"city": "AMS",
+"name": "Amsterdam Schiphol Airport"
+},
 {
 "kind": "qpxexpress#airportData",
 "code": "CDG",
@@ -17,13 +23,29 @@
 "code": "LHR",
 "city": "LON",
 "name": "London Heathrow"
+},
+{
+"kind": "qpxexpress#airportData",
+"code": "LIN",
+"city": "MIL",
+"name": "Milan Linate"
 }
 ],
 "city": [
 {
 "kind": "qpxexpress#cityData",
+"code": "AMS",
+"name": "Amsterdam"
+},
+{
+"kind": "qpxexpress#cityData",
 "code": "LON",
 "name": "London"
+},
+{
+"kind": "qpxexpress#cityData",
+"code": "MIL",
+"name": "Milan"
 },
 {
 "kind": "qpxexpress#cityData",
@@ -34,8 +56,125 @@
 "aircraft": [
 {
 "kind": "qpxexpress#aircraftData",
+"code": "318",
+"name": "Airbus A318"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "319",
+"name": "Airbus A319"
+},
+{
+"kind": "qpxexpress#aircraftData",
 "code": "320",
 "name": "Airbus A320"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "321",
+"name": "Airbus A321"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "32S",
+"name": "Airbus A320"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "73J",
+"name": "Boeing 737"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "73W",
+"name": "Boeing 737"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "E90",
+"name": "Embraer RJ-190"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "F70",
+"name": "Fokker 70"
+}
+],
+"tax": [
+{
+"kind": "qpxexpress#taxData",
+"id": "IT_001",
+"name": "Italian Embarkation Tax"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "FR_007",
+"name": "French Airport Tax"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "EX_001",
+"name": "Italian Security Bag Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "GB_001",
+"name": "United Kingdom Air Passengers Duty"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "VT_001",
+"name": "Italian Security Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "UB",
+"name": "United Kingdom Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "CJ",
+"name": "The Netherlands Security Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "QX",
+"name": "French International Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "VV_001",
+"name": "The Netherlands Noise Isolation Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "RN_001",
+"name": "The Netherlands Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "IZ_001",
+"name": "French Air Passenger Solidarity Tax"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "FR_001",
+"name": "French Aviation Civile Tax"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "MJ_001",
+"name": "Italian Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "HB_001",
+"name": "Italian Council City Tax"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "YR",
+"name": "AF YR surcharge"
 }
 ],
 "carrier": [
@@ -43,14 +182,617 @@
 "kind": "qpxexpress#carrierData",
 "code": "AF",
 "name": "Air France"
+},
+{
+"kind": "qpxexpress#carrierData",
+"code": "AZ",
+"name": "Alitalia-Compagnia Aerea Italiana S.p.A"
+},
+{
+"kind": "qpxexpress#carrierData",
+"code": "BA",
+"name": "British Airways p.l.c."
+},
+{
+"kind": "qpxexpress#carrierData",
+"code": "KL",
+"name": "KLM Royal Dutch Airlines"
 }
 ]
 },
 "tripOption": [
 {
 "kind": "qpxexpress#tripOption",
-"saleTotal": "GBP189.11",
-"id": "YG3ljufg6IUMwl1TxWalc5001",
+"saleTotal": "GBP164.31",
+"id": "EbiluxheyK6Q7M31C2voI000E",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 360,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 115,
+"flight": {
+"carrier": "AZ",
+"number": "229"
+},
+"id": "GTuuwv88y+LmyWYz",
+"cabin": "COACH",
+"bookingCode": "W",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lh2vAoC7nwqXxRGh",
+"aircraft": "32S",
+"arrivalTime": "2015-03-27T10:20+01:00",
+"departureTime": "2015-03-27T07:25+00:00",
+"origin": "LHR",
+"destination": "LIN",
+"originTerminal": "4",
+"duration": 115,
+"mileage": 609
+}
+],
+"connectionDuration": 155
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 90,
+"flight": {
+"carrier": "AZ",
+"number": "312"
+},
+"id": "GURI3bRNf-7xYUFU",
+"cabin": "COACH",
+"bookingCode": "W",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lc690Gk50kVtclbr",
+"aircraft": "32S",
+"arrivalTime": "2015-03-27T14:25+01:00",
+"departureTime": "2015-03-27T12:55+01:00",
+"origin": "LIN",
+"destination": "CDG",
+"destinationTerminal": "2F",
+"duration": 90,
+"mileage": 399
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AZ9tDzvODMVorb1CM1EXnyjun71MWDoqQiaGbiArz52s",
+"carrier": "AZ",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "WSPEU6"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AZ9tDzvODMVorb1CM1EXnyjun71MWDoqQiaGbiArz52s",
+"segmentId": "GTuuwv88y+LmyWYz",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard"
+],
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Ski Equipment"
+],
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTING EQUIPMENT UP TO 23KG",
+"count": 1,
+"subcode": "0F8"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF UP TO 78 IN 200 CM",
+"count": 0,
+"description": [
+"Windsurf Equipment"
+],
+"subcode": "0GI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF FROM 200CM TO 300CM",
+"count": 0,
+"description": [
+"Windsurf Equipment",
+"Over 98 in/250 cm"
+],
+"subcode": "0GJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD  UP TO 75KG",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WEAPONS MUNITION UP TO 20KG",
+"count": 0,
+"description": [
+"Sporting Firearms"
+],
+"subcode": "0ED"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AZ9tDzvODMVorb1CM1EXnyjun71MWDoqQiaGbiArz52s",
+"segmentId": "GURI3bRNf-7xYUFU",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard"
+],
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Ski Equipment"
+],
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTING EQUIPMENT UP TO 23KG",
+"count": 1,
+"subcode": "0F8"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF UP TO 78 IN 200 CM",
+"count": 0,
+"description": [
+"Windsurf Equipment"
+],
+"subcode": "0GI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF FROM 200CM TO 300CM",
+"count": 0,
+"description": [
+"Windsurf Equipment",
+"Over 98 in/250 cm"
+],
+"subcode": "0GJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD  UP TO 75KG",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WEAPONS MUNITION UP TO 20KG",
+"count": 0,
+"description": [
+"Sporting Firearms"
+],
+"subcode": "0ED"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP12.00",
+"saleFareTotal": "GBP12.00",
+"saleTaxTotal": "GBP152.31",
+"saleTotal": "GBP164.31",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IT_001",
+"chargeType": "GOVERNMENT",
+"code": "IT",
+"country": "IT",
+"salePrice": "GBP10.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VT_001",
+"chargeType": "GOVERNMENT",
+"code": "VT",
+"country": "IT",
+"salePrice": "GBP1.90"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "EX_001",
+"chargeType": "GOVERNMENT",
+"code": "EX",
+"country": "IT",
+"salePrice": "GBP0.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "HB_001",
+"chargeType": "GOVERNMENT",
+"code": "HB",
+"country": "IT",
+"salePrice": "GBP4.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "MJ_001",
+"chargeType": "GOVERNMENT",
+"code": "MJ",
+"country": "IT",
+"salePrice": "GBP1.10"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP43.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP24.00"
+}
+],
+"fareCalculation": "LON AZ X/MIL AZ PAR 14.09WSPEU6 AF LON 4.69VSR6GB NUC 18.78 END ROE 0.638555 FARE GBP 12.00 XT 13.00GB 30.11UB 0.70EX 4.70HB 10.20IT 1.10MJ 1.90VT 12.50FR 0.80IZ 9.70QX 67.60YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP174.11",
+"id": "EbiluxheyK6Q7M31C2voI0001",
 "slice": [
 {
 "kind": "qpxexpress#sliceInfo",
@@ -64,6 +806,10 @@
 "number": "1781"
 },
 "id": "GzYgYyKHNvpDB5ZB",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "0",
 "leg": [
 {
 "kind": "qpxexpress#legInfo",
@@ -95,6 +841,10 @@
 "number": "1380"
 },
 "id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
 "leg": [
 {
 "kind": "qpxexpress#legInfo",
@@ -121,11 +871,11 @@
 "fare": [
 {
 "kind": "qpxexpress#fareInfo",
-"id": "A4yM7xvjvQ3RqG2U+gJ9AFw7hA5wsS9r4KydSVW5CTuY",
+"id": "APDbfoJsrSOm3T75qeBmpChsAlaRfdN1RApZI3S/JOxE",
 "carrier": "AF",
 "origin": "LON",
 "destination": "PAR",
-"basisCode": "KSRGB"
+"basisCode": "HWKGB"
 },
 {
 "kind": "qpxexpress#fareInfo",
@@ -139,26 +889,8232 @@
 "segmentPricing": [
 {
 "kind": "qpxexpress#segmentPricing",
-"fareId": "A4yM7xvjvQ3RqG2U+gJ9AFw7hA5wsS9r4KydSVW5CTuY",
-"segmentId": "GzYgYyKHNvpDB5ZB"
+"fareId": "APDbfoJsrSOm3T75qeBmpChsAlaRfdN1RApZI3S/JOxE",
+"segmentId": "GzYgYyKHNvpDB5ZB",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
 },
 {
 "kind": "qpxexpress#segmentPricing",
 "fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
-"segmentId": "GCV6ouHJH177kLX-"
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
 }
 ],
-"baseFareTotal": "GBP68.00",
-"saleFareTotal": "GBP68.00",
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP53.00",
+"saleFareTotal": "GBP53.00",
 "saleTaxTotal": "GBP121.11",
-"saleTotal": "GBP189.11",
+"saleTotal": "GBP174.11",
 "passengers": {
 "kind": "qpxexpress#passengerCounts",
 "adultCount": 1
 },
-"fareCalculation": "LON AF PAR 101.79KSRGB AF LON 4.69VSR6GB NUC 106.48 END ROE 0.638555 FARE GBP 68.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
-"latestTicketingTime": "2015-03-10T23:59-05:00",
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 79.08HWKGB AF LON 4.69VSR6GB NUC 83.77 END ROE 0.638555 FARE GBP 53.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
 "ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP177.11",
+"id": "EbiluxheyK6Q7M31C2voI0003",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "322"
+},
+"id": "Gz+L121dyySGYeIY",
+"cabin": "COACH",
+"bookingCode": "L",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L-IWK9rynINcaPu9",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T19:40+01:00",
+"departureTime": "2015-03-27T17:25+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "5",
+"destinationTerminal": "2A",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "303"
+},
+"id": "GwJfLpgjBewSUeFa",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LNoyOlyiY3z8OYT4",
+"aircraft": "319",
+"arrivalTime": "2015-03-29T07:45+01:00",
+"departureTime": "2015-03-29T07:30+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2A",
+"destinationTerminal": "5",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AxFFKcUpVhoOt5V0L2E4JG2uE3DzcUbGf8xbuULSwCOc",
+"carrier": "BA",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "LM0V2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"carrier": "BA",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "QM0V1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AxFFKcUpVhoOt5V0L2E4JG2uE3DzcUbGf8xbuULSwCOc",
+"segmentId": "Gz+L121dyySGYeIY",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"segmentId": "GwJfLpgjBewSUeFa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP111.00",
+"saleFareTotal": "GBP111.00",
+"saleTaxTotal": "GBP66.11",
+"saleTotal": "GBP177.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+}
+],
+"fareCalculation": "LON BA PAR 129.98LM0V2R BA LON 43.84QM0V1R NUC 173.82 END ROE 0.638555 FARE GBP 111.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX",
+"latestTicketingTime": "2015-03-08T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP177.11",
+"id": "EbiluxheyK6Q7M31C2voI0004",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "316"
+},
+"id": "GFjILXGWVeV48b74",
+"cabin": "COACH",
+"bookingCode": "L",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L57MA5oj736LKo1g",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T17:35+01:00",
+"departureTime": "2015-03-27T15:15+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "5",
+"destinationTerminal": "2A",
+"duration": 80,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "303"
+},
+"id": "GwJfLpgjBewSUeFa",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LNoyOlyiY3z8OYT4",
+"aircraft": "319",
+"arrivalTime": "2015-03-29T07:45+01:00",
+"departureTime": "2015-03-29T07:30+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2A",
+"destinationTerminal": "5",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AxFFKcUpVhoOt5V0L2E4JG2uE3DzcUbGf8xbuULSwCOc",
+"carrier": "BA",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "LM0V2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"carrier": "BA",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "QM0V1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AxFFKcUpVhoOt5V0L2E4JG2uE3DzcUbGf8xbuULSwCOc",
+"segmentId": "GFjILXGWVeV48b74",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"segmentId": "GwJfLpgjBewSUeFa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP111.00",
+"saleFareTotal": "GBP111.00",
+"saleTaxTotal": "GBP66.11",
+"saleTotal": "GBP177.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+}
+],
+"fareCalculation": "LON BA PAR 129.98LM0V2R BA LON 43.84QM0V1R NUC 173.82 END ROE 0.638555 FARE GBP 111.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX",
+"latestTicketingTime": "2015-03-08T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP198.71",
+"id": "EbiluxheyK6Q7M31C2voI000C",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 190,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1018"
+},
+"id": "GFi3SyEwRCKC1DW3",
+"cabin": "COACH",
+"bookingCode": "E",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L8pzGZV8YSg4mj-w",
+"aircraft": "73W",
+"arrivalTime": "2015-03-27T17:05+01:00",
+"departureTime": "2015-03-27T14:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 40
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1245"
+},
+"id": "Gshhw3qCZFqgAcpZ",
+"cabin": "COACH",
+"bookingCode": "E",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LSfVv48ifqpbkMQr",
+"aircraft": "73J",
+"arrivalTime": "2015-03-27T19:00+01:00",
+"departureTime": "2015-03-27T17:45+01:00",
+"origin": "AMS",
+"destination": "CDG",
+"destinationTerminal": "2F",
+"duration": 75,
+"mileage": 247,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AUDl1rJK7xcnrMFJIwtI2oiBCgfSol59outchuO3zj8s",
+"carrier": "KL",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "ESRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AUDl1rJK7xcnrMFJIwtI2oiBCgfSol59outchuO3zj8s",
+"segmentId": "GFi3SyEwRCKC1DW3",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AUDl1rJK7xcnrMFJIwtI2oiBCgfSol59outchuO3zj8s",
+"segmentId": "Gshhw3qCZFqgAcpZ",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP49.00",
+"saleFareTotal": "GBP49.00",
+"saleTaxTotal": "GBP149.71",
+"saleTotal": "GBP198.71",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP4.90"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.50"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP5.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP48.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP24.00"
+}
+],
+"fareCalculation": "LON KL X/AMS KL PAR 72.03ESRGB AF LON 4.69VSR6GB NUC 76.72 END ROE 0.638555 FARE GBP 49.00 XT 13.00GB 30.11UB 5.20CJ 4.90RN 1.50VV 12.50FR 0.80IZ 9.70QX 72.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP200.31",
+"id": "EbiluxheyK6Q7M31C2voI000F",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 245,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 115,
+"flight": {
+"carrier": "AZ",
+"number": "229"
+},
+"id": "GTuuwv88y+LmyWYz",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lh2vAoC7nwqXxRGh",
+"aircraft": "32S",
+"arrivalTime": "2015-03-27T10:20+01:00",
+"departureTime": "2015-03-27T07:25+00:00",
+"origin": "LHR",
+"destination": "LIN",
+"originTerminal": "4",
+"duration": 115,
+"mileage": 609
+}
+],
+"connectionDuration": 40
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 90,
+"flight": {
+"carrier": "AZ",
+"number": "7846"
+},
+"id": "Goq1nEVFBA4P+bSo",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L+HY2xJMTj5uY5JD",
+"aircraft": "318",
+"arrivalTime": "2015-03-27T12:30+01:00",
+"departureTime": "2015-03-27T11:00+01:00",
+"origin": "LIN",
+"destination": "CDG",
+"destinationTerminal": "2F",
+"duration": 90,
+"operatingDisclosure": "OPERATED BY AIR FRANCE",
+"mileage": 399
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "2",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "A5FYi++mhyxxeD0ExQ6w9zp/q11nOfPTM9VRpjxio5DM",
+"carrier": "AZ",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "QSPEU6"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "A5FYi++mhyxxeD0ExQ6w9zp/q11nOfPTM9VRpjxio5DM",
+"segmentId": "Goq1nEVFBA4P+bSo",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard"
+],
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Ski Equipment"
+],
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTING EQUIPMENT UP TO 23KG",
+"count": 1,
+"subcode": "0F8"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF UP TO 78 IN 200 CM",
+"count": 0,
+"description": [
+"Windsurf Equipment"
+],
+"subcode": "0GI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF FROM 200CM TO 300CM",
+"count": 0,
+"description": [
+"Windsurf Equipment",
+"Over 98 in/250 cm"
+],
+"subcode": "0GJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD  UP TO 75KG",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WEAPONS MUNITION UP TO 20KG",
+"count": 0,
+"description": [
+"Sporting Firearms"
+],
+"subcode": "0ED"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "A5FYi++mhyxxeD0ExQ6w9zp/q11nOfPTM9VRpjxio5DM",
+"segmentId": "GTuuwv88y+LmyWYz",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard"
+],
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Ski Equipment"
+],
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTING EQUIPMENT UP TO 23KG",
+"count": 1,
+"subcode": "0F8"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF UP TO 78 IN 200 CM",
+"count": 0,
+"description": [
+"Windsurf Equipment"
+],
+"subcode": "0GI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF FROM 200CM TO 300CM",
+"count": 0,
+"description": [
+"Windsurf Equipment",
+"Over 98 in/250 cm"
+],
+"subcode": "0GJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD  UP TO 75KG",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WEAPONS MUNITION UP TO 20KG",
+"count": 0,
+"description": [
+"Sporting Firearms"
+],
+"subcode": "0ED"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP32.00",
+"saleFareTotal": "GBP32.00",
+"saleTaxTotal": "GBP168.31",
+"saleTotal": "GBP200.31",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IT_001",
+"chargeType": "GOVERNMENT",
+"code": "IT",
+"country": "IT",
+"salePrice": "GBP10.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VT_001",
+"chargeType": "GOVERNMENT",
+"code": "VT",
+"country": "IT",
+"salePrice": "GBP1.90"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "EX_001",
+"chargeType": "GOVERNMENT",
+"code": "EX",
+"country": "IT",
+"salePrice": "GBP0.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "HB_001",
+"chargeType": "GOVERNMENT",
+"code": "HB",
+"country": "IT",
+"salePrice": "GBP4.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "MJ_001",
+"chargeType": "GOVERNMENT",
+"code": "MJ",
+"country": "IT",
+"salePrice": "GBP1.10"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP59.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP24.00"
+}
+],
+"fareCalculation": "LON AZ X/MIL AZ PAR 45.41QSPEU6 AF LON 4.69VSR6GB NUC 50.10 END ROE 0.638555 FARE GBP 32.00 XT 13.00GB 30.11UB 0.70EX 4.70HB 10.20IT 1.10MJ 1.90VT 12.50FR 0.80IZ 9.70QX 83.60YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP216.71",
+"id": "EbiluxheyK6Q7M31C2voI000I",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 255,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1018"
+},
+"id": "GFi3SyEwRCKC1DW3",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L8pzGZV8YSg4mj-w",
+"aircraft": "73W",
+"arrivalTime": "2015-03-27T17:05+01:00",
+"departureTime": "2015-03-27T14:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 105
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "2017"
+},
+"id": "GWxdxAz6NSnlDkLG",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LoxEUGJMUmuUSsdx",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T20:05+01:00",
+"departureTime": "2015-03-27T18:50+01:00",
+"origin": "AMS",
+"destination": "CDG",
+"destinationTerminal": "2F",
+"duration": 75,
+"operatingDisclosure": "OPERATED BY AIR FRANCE",
+"mileage": 247
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AHQjkDuP1xU0yr7Rv2dW0c6MSegwttezV6W8MptI1M+U",
+"carrier": "KL",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "QSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHQjkDuP1xU0yr7Rv2dW0c6MSegwttezV6W8MptI1M+U",
+"segmentId": "GFi3SyEwRCKC1DW3",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHQjkDuP1xU0yr7Rv2dW0c6MSegwttezV6W8MptI1M+U",
+"segmentId": "GWxdxAz6NSnlDkLG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP53.00",
+"saleFareTotal": "GBP53.00",
+"saleTaxTotal": "GBP163.71",
+"saleTotal": "GBP216.71",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP4.90"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.50"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP5.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP62.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP24.00"
+}
+],
+"fareCalculation": "LON KL X/AMS KL PAR 78.30QSRGB AF LON 4.69VSR6GB NUC 82.99 END ROE 0.638555 FARE GBP 53.00 XT 13.00GB 30.11UB 5.20CJ 4.90RN 1.50VV 12.50FR 0.80IZ 9.70QX 86.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP216.71",
+"id": "EbiluxheyK6Q7M31C2voI000G",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 200,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1020"
+},
+"id": "GdRfb3vFuR5Ei8Ny",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LyfjcIcapBMAL733",
+"aircraft": "F70",
+"arrivalTime": "2015-03-27T18:00+01:00",
+"departureTime": "2015-03-27T15:45+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 50
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "2017"
+},
+"id": "GWxdxAz6NSnlDkLG",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LoxEUGJMUmuUSsdx",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T20:05+01:00",
+"departureTime": "2015-03-27T18:50+01:00",
+"origin": "AMS",
+"destination": "CDG",
+"destinationTerminal": "2F",
+"duration": 75,
+"operatingDisclosure": "OPERATED BY AIR FRANCE",
+"mileage": 247
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AHQjkDuP1xU0yr7Rv2dW0c6MSegwttezV6W8MptI1M+U",
+"carrier": "KL",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "QSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHQjkDuP1xU0yr7Rv2dW0c6MSegwttezV6W8MptI1M+U",
+"segmentId": "GWxdxAz6NSnlDkLG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHQjkDuP1xU0yr7Rv2dW0c6MSegwttezV6W8MptI1M+U",
+"segmentId": "GdRfb3vFuR5Ei8Ny",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP53.00",
+"saleFareTotal": "GBP53.00",
+"saleTaxTotal": "GBP163.71",
+"saleTotal": "GBP216.71",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP4.90"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.50"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP5.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP62.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP24.00"
+}
+],
+"fareCalculation": "LON KL X/AMS KL PAR 78.30QSRGB AF LON 4.69VSR6GB NUC 82.99 END ROE 0.638555 FARE GBP 53.00 XT 13.00GB 30.11UB 5.20CJ 4.90RN 1.50VV 12.50FR 0.80IZ 9.70QX 86.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP217.11",
+"id": "EbiluxheyK6Q7M31C2voI0006",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "304"
+},
+"id": "Gupd0z2Sj3f1+nQ2",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L2ApiR+jNwU0ospC",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T09:35+01:00",
+"departureTime": "2015-03-27T07:20+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "5",
+"destinationTerminal": "2A",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "303"
+},
+"id": "GwJfLpgjBewSUeFa",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LNoyOlyiY3z8OYT4",
+"aircraft": "319",
+"arrivalTime": "2015-03-29T07:45+01:00",
+"departureTime": "2015-03-29T07:30+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2A",
+"destinationTerminal": "5",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AHDPIxLdmYXDbn2/0L82YbtOG9LVcj7v2WfRd6mU",
+"carrier": "BA",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"carrier": "BA",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "QM0V1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHDPIxLdmYXDbn2/0L82YbtOG9LVcj7v2WfRd6mU",
+"segmentId": "Gupd0z2Sj3f1+nQ2",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"segmentId": "GwJfLpgjBewSUeFa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP151.00",
+"saleFareTotal": "GBP151.00",
+"saleTaxTotal": "GBP66.11",
+"saleTotal": "GBP217.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+}
+],
+"fareCalculation": "LON BA PAR 192.62MV2R BA LON 43.84QM0V1R NUC 236.46 END ROE 0.638555 FARE GBP 151.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX",
+"latestTicketingTime": "2015-03-08T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP217.11",
+"id": "EbiluxheyK6Q7M31C2voI0007",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "306"
+},
+"id": "GaNpJcQ5o9NZFbLr",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L3BVxT2MrZnDEz-Y",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T11:10+01:00",
+"departureTime": "2015-03-27T08:55+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "5",
+"destinationTerminal": "2A",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "303"
+},
+"id": "GwJfLpgjBewSUeFa",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LNoyOlyiY3z8OYT4",
+"aircraft": "319",
+"arrivalTime": "2015-03-29T07:45+01:00",
+"departureTime": "2015-03-29T07:30+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2A",
+"destinationTerminal": "5",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AHDPIxLdmYXDbn2/0L82YbtOG9LVcj7v2WfRd6mU",
+"carrier": "BA",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"carrier": "BA",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "QM0V1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHDPIxLdmYXDbn2/0L82YbtOG9LVcj7v2WfRd6mU",
+"segmentId": "GaNpJcQ5o9NZFbLr",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"segmentId": "GwJfLpgjBewSUeFa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP151.00",
+"saleFareTotal": "GBP151.00",
+"saleTaxTotal": "GBP66.11",
+"saleTotal": "GBP217.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+}
+],
+"fareCalculation": "LON BA PAR 192.62MV2R BA LON 43.84QM0V1R NUC 236.46 END ROE 0.638555 FARE GBP 151.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX",
+"latestTicketingTime": "2015-03-08T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP217.11",
+"id": "EbiluxheyK6Q7M31C2voI0005",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "314"
+},
+"id": "G66Sg4X4hSz-F+6X",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LRlv3W4NJ44X4Fk2",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T15:15+01:00",
+"departureTime": "2015-03-27T13:00+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "5",
+"destinationTerminal": "2A",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "303"
+},
+"id": "GwJfLpgjBewSUeFa",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LNoyOlyiY3z8OYT4",
+"aircraft": "319",
+"arrivalTime": "2015-03-29T07:45+01:00",
+"departureTime": "2015-03-29T07:30+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2A",
+"destinationTerminal": "5",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AHDPIxLdmYXDbn2/0L82YbtOG9LVcj7v2WfRd6mU",
+"carrier": "BA",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"carrier": "BA",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "QM0V1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHDPIxLdmYXDbn2/0L82YbtOG9LVcj7v2WfRd6mU",
+"segmentId": "G66Sg4X4hSz-F+6X",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"segmentId": "GwJfLpgjBewSUeFa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP151.00",
+"saleFareTotal": "GBP151.00",
+"saleTaxTotal": "GBP66.11",
+"saleTotal": "GBP217.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+}
+],
+"fareCalculation": "LON BA PAR 192.62MV2R BA LON 43.84QM0V1R NUC 236.46 END ROE 0.638555 FARE GBP 151.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX",
+"latestTicketingTime": "2015-03-08T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP238.71",
+"id": "EbiluxheyK6Q7M31C2voI000J",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 235,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "KL",
+"number": "1012"
+},
+"id": "Gz+JGJbW1K3m51IN",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LKFwOJQlqwK41Ikj",
+"aircraft": "E90",
+"arrivalTime": "2015-03-27T16:25+01:00",
+"departureTime": "2015-03-27T14:05+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 80,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 80
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1245"
+},
+"id": "Gshhw3qCZFqgAcpZ",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 7,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LSfVv48ifqpbkMQr",
+"aircraft": "73J",
+"arrivalTime": "2015-03-27T19:00+01:00",
+"departureTime": "2015-03-27T17:45+01:00",
+"origin": "AMS",
+"destination": "CDG",
+"destinationTerminal": "2F",
+"duration": 75,
+"mileage": 247,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AV6UQCu2K7hEBW4I6zLPzH/L1j6YBnh7h2ok6uizVKvc",
+"carrier": "KL",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "HSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AV6UQCu2K7hEBW4I6zLPzH/L1j6YBnh7h2ok6uizVKvc",
+"segmentId": "Gshhw3qCZFqgAcpZ",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AV6UQCu2K7hEBW4I6zLPzH/L1j6YBnh7h2ok6uizVKvc",
+"segmentId": "Gz+JGJbW1K3m51IN",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP75.00",
+"saleFareTotal": "GBP75.00",
+"saleTaxTotal": "GBP163.71",
+"saleTotal": "GBP238.71",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP4.90"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.50"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP5.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP62.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP24.00"
+}
+],
+"fareCalculation": "LON KL X/AMS KL PAR 113.53HSRGB AF LON 4.69VSR6GB NUC 118.22 END ROE 0.638555 FARE GBP 75.00 XT 13.00GB 30.11UB 5.20CJ 4.90RN 1.50VV 12.50FR 0.80IZ 9.70QX 86.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP244.11",
+"id": "EbiluxheyK6Q7M31C2voI0009",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "AF",
+"number": "1381"
+},
+"id": "GY8fLb4R5eSEU1HS",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LejwiqlLp3UPlqln",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T09:00+01:00",
+"departureTime": "2015-03-27T06:40+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 80,
+"mileage": 216,
+"meal": "Breakfast"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"segmentId": "GY8fLb4R5eSEU1HS",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP123.00",
+"saleFareTotal": "GBP123.00",
+"saleTaxTotal": "GBP121.11",
+"saleTotal": "GBP244.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 188.70MWKGB AF LON 4.69VSR6GB NUC 193.39 END ROE 0.638555 FARE GBP 123.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP244.11",
+"id": "EbiluxheyK6Q7M31C2voI0008",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1481"
+},
+"id": "GejXthVfeU0wt48u",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LXFrA5jJISh7aDOZ",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T10:35+01:00",
+"departureTime": "2015-03-27T08:20+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 75,
+"mileage": 216,
+"meal": "Breakfast"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"segmentId": "GejXthVfeU0wt48u",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP123.00",
+"saleFareTotal": "GBP123.00",
+"saleTaxTotal": "GBP121.11",
+"saleTotal": "GBP244.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 188.70MWKGB AF LON 4.69VSR6GB NUC 193.39 END ROE 0.638555 FARE GBP 123.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP244.11",
+"id": "EbiluxheyK6Q7M31C2voI0002",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1081"
+},
+"id": "GMPV1vwmFU3ocqNN",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 8,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LQ1H8ql6dxW9zcY3",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T09:25+01:00",
+"departureTime": "2015-03-27T07:10+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 75,
+"mileage": 216,
+"meal": "Breakfast"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"segmentId": "GMPV1vwmFU3ocqNN",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP123.00",
+"saleFareTotal": "GBP123.00",
+"saleTaxTotal": "GBP121.11",
+"saleTotal": "GBP244.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 188.70MWKGB AF LON 4.69VSR6GB NUC 193.39 END ROE 0.638555 FARE GBP 123.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP244.11",
+"id": "EbiluxheyK6Q7M31C2voI000A",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "AF",
+"number": "1981"
+},
+"id": "GaEx6AwkmCB07Eav",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 8,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LaVNAFMrKQK8PSWP",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T14:35+01:00",
+"departureTime": "2015-03-27T12:15+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 80,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "MWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AkKCQuI0HEGCSz/NJvjygTyu3VrpT1Hozqg7cOk5DTEw",
+"segmentId": "GaEx6AwkmCB07Eav",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP123.00",
+"saleFareTotal": "GBP123.00",
+"saleTaxTotal": "GBP121.11",
+"saleTotal": "GBP244.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 188.70MWKGB AF LON 4.69VSR6GB NUC 193.39 END ROE 0.638555 FARE GBP 123.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP250.11",
+"id": "EbiluxheyK6Q7M31C2voI000B",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 70,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 70,
+"flight": {
+"carrier": "BA",
+"number": "326"
+},
+"id": "Gl+XTWvN5OSXxU2W",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LnMm6rzz5NvoxcAc",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T21:45+01:00",
+"departureTime": "2015-03-27T19:35+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "5",
+"destinationTerminal": "2A",
+"duration": 70,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "303"
+},
+"id": "GwJfLpgjBewSUeFa",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LNoyOlyiY3z8OYT4",
+"aircraft": "319",
+"arrivalTime": "2015-03-29T07:45+01:00",
+"departureTime": "2015-03-29T07:30+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2A",
+"destinationTerminal": "5",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AN3NJotwAVpmc3xoi5IVx6J9FxeSXLRXit17QkGk",
+"carrier": "BA",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"carrier": "BA",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "QM0V1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AN3NJotwAVpmc3xoi5IVx6J9FxeSXLRXit17QkGk",
+"segmentId": "Gl+XTWvN5OSXxU2W",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Aciqnc/CP+Uq/QkgSpafBVFo2hnv9OJcDWZ2udoc8oyU",
+"segmentId": "GwJfLpgjBewSUeFa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP184.00",
+"saleFareTotal": "GBP184.00",
+"saleTaxTotal": "GBP66.11",
+"saleTotal": "GBP250.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+}
+],
+"fareCalculation": "LON BA PAR 245.08KV2R BA LON 43.84QM0V1R NUC 288.92 END ROE 0.638555 FARE GBP 184.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX",
+"latestTicketingTime": "2015-03-08T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP289.11",
+"id": "EbiluxheyK6Q7M31C2voI000D",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1681"
+},
+"id": "GYigM9m+9mMeBGWr",
+"cabin": "COACH",
+"bookingCode": "B",
+"bookingCodeCount": 8,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LH82aVf027PI+p3a",
+"aircraft": "321",
+"arrivalTime": "2015-03-27T11:55+01:00",
+"departureTime": "2015-03-27T09:40+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 75,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AvGVDQyz1qsAPd03PtmmLWbGnlLV136gFhkctlXrpNH2",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "BWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AvGVDQyz1qsAPd03PtmmLWbGnlLV136gFhkctlXrpNH2",
+"segmentId": "GYigM9m+9mMeBGWr",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP168.00",
+"saleFareTotal": "GBP168.00",
+"saleTaxTotal": "GBP121.11",
+"saleTotal": "GBP289.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 259.17BWKGB AF LON 4.69VSR6GB NUC 263.86 END ROE 0.638555 FARE GBP 168.00 XT 13.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP306.11",
+"id": "EbiluxheyK6Q7M31C2voI000H",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 70,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 70,
+"flight": {
+"carrier": "AF",
+"number": "1181"
+},
+"id": "GTrj5zUbZq2ORTHn",
+"cabin": "COACH",
+"bookingCode": "A",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LVnHkbua96vBqFtv",
+"aircraft": "321",
+"arrivalTime": "2015-03-27T22:20+01:00",
+"departureTime": "2015-03-27T20:10+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 70,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AfPC/FxgOf9NOB1mvDw/zq3GDymZE+/ccx3aldTuhi+2",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "AFFGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AfPC/FxgOf9NOB1mvDw/zq3GDymZE+/ccx3aldTuhi+2",
+"segmentId": "GTrj5zUbZq2ORTHn",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP172.00",
+"saleFareTotal": "GBP172.00",
+"saleTaxTotal": "GBP134.11",
+"saleTotal": "GBP306.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP26.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 265.44AFFGB AF LON 4.69VSR6GB NUC 270.13 END ROE 0.638555 FARE GBP 172.00 XT 26.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT",
+"refundable": true
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP341.11",
+"id": "EbiluxheyK6Q7M31C2voI000K",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 70,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 70,
+"flight": {
+"carrier": "AF",
+"number": "1281"
+},
+"id": "GJ+iv5zVkQtiKdoP",
+"cabin": "BUSINESS",
+"bookingCode": "D",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LabRSUBBqb9qWOIL",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T20:00+01:00",
+"departureTime": "2015-03-27T17:50+00:00",
+"origin": "LHR",
+"destination": "CDG",
+"originTerminal": "4",
+"destinationTerminal": "2E",
+"duration": 70,
+"mileage": 216,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "AF",
+"number": "1380"
+},
+"id": "GCV6ouHJH177kLX-",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Le2pEwWNMX6YGdAE",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T20:30+01:00",
+"departureTime": "2015-03-29T20:15+02:00",
+"origin": "CDG",
+"destination": "LHR",
+"originTerminal": "2E",
+"destinationTerminal": "4",
+"duration": 75,
+"mileage": 216,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "Ajip+FxiLRIR1JEJB6evKrppTyoDML5cCJc4CNiOMbQc",
+"carrier": "AF",
+"origin": "LON",
+"destination": "PAR",
+"basisCode": "DFFGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"carrier": "AF",
+"origin": "PAR",
+"destination": "LON",
+"basisCode": "VSR6GB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "Ajip+FxiLRIR1JEJB6evKrppTyoDML5cCJc4CNiOMbQc",
+"segmentId": "GJ+iv5zVkQtiKdoP",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 2,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 2
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AOPGovcSRMbYTL+0qOinh4yV3dbaz8dLmRiwiNmCvEws",
+"segmentId": "GCV6ouHJH177kLX-",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT",
+"count": 0,
+"description": [
+"Scuba Equipment"
+],
+"subcode": "0EE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP207.00",
+"saleFareTotal": "GBP207.00",
+"saleTaxTotal": "GBP134.11",
+"saleTotal": "GBP341.11",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP55.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP26.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_001",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP3.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "QX",
+"chargeType": "GOVERNMENT",
+"code": "QX",
+"country": "FR",
+"salePrice": "GBP9.70"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "FR_007",
+"chargeType": "GOVERNMENT",
+"code": "FR",
+"country": "FR",
+"salePrice": "GBP9.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "IZ_001",
+"chargeType": "GOVERNMENT",
+"code": "IZ",
+"country": "FR",
+"salePrice": "GBP0.80"
+}
+],
+"fareCalculation": "LON AF PAR 319.47DFFGB AF LON 4.69VSR6GB NUC 324.16 END ROE 0.638555 FARE GBP 207.00 XT 26.00GB 30.11UB 12.50FR 0.80IZ 9.70QX 55.00YR",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT",
+"refundable": true
 }
 ]
 }
