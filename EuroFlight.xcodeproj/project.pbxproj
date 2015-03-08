@@ -10,25 +10,25 @@
 		B84314A94BA67928B7206B9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F116A637F1BF91C4CE37A3 /* libPods.a */; };
 		C4FA0D771AAB9B830023FDC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D761AAB9B830023FDC3 /* main.m */; };
 		C4FA0D7A1AAB9B830023FDC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D791AAB9B830023FDC3 /* AppDelegate.m */; };
-		C4FA0D821AAB9B830023FDC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D811AAB9B830023FDC3 /* Images.xcassets */; };
 		C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D831AAB9B830023FDC3 /* LaunchScreen.xib */; };
 		C4FA0D911AAB9B830023FDC3 /* EuroFlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D901AAB9B830023FDC3 /* EuroFlightTests.m */; };
-		C4FA0DA21AABA5520023FDC3 /* FlightSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA11AABA5520023FDC3 /* FlightSegment.m */; };
 		C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA41AABA5B50023FDC3 /* Flight.m */; };
-		C4FA0DA81AABA6930023FDC3 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA71AABA6930023FDC3 /* Trip.m */; };
 		C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DAA1AABA72F0023FDC3 /* City.m */; };
-		C4FA0DAE1AABA8040023FDC3 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DAD1AABA8040023FDC3 /* Country.m */; };
 		C4FA0DB11AABA86A0023FDC3 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DB01AABA86A0023FDC3 /* Event.m */; };
 		C4FA0DB51AABBA770023FDC3 /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DB41AABBA770023FDC3 /* Context.m */; };
-		C4FA0DBB1AABC1C80023FDC3 /* TripClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DBA1AABC1C80023FDC3 /* TripClient.m */; };
 		C4FA0DBF1AABD6670023FDC3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DBD1AABD6670023FDC3 /* HomeViewController.m */; };
-		C4FA0DC01AABD6670023FDC3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DBE1AABD6670023FDC3 /* HomeViewController.xib */; };
 		C4FA0DC41AABDEF20023FDC3 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DC21AABDEF20023FDC3 /* ResultsViewController.m */; };
 		C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DC31AABDEF20023FDC3 /* ResultsViewController.xib */; };
 		C4FA0DC91AABDFC60023FDC3 /* CountryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */; };
 		C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */; };
 		C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DCC1AABDFDA0023FDC3 /* CityTableViewCell.m */; };
 		C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */; };
+		C4FA0DD01AABEE0F0023FDC3 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA71AABA6930023FDC3 /* Trip.m */; };
+		C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA11AABA5520023FDC3 /* FlightSegment.m */; };
+		C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DBA1AABC1C80023FDC3 /* TripClient.m */; };
+		C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DAD1AABA8040023FDC3 /* Country.m */; };
+		C4FA0DD41AABEE0F0023FDC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D811AAB9B830023FDC3 /* Images.xcassets */; };
+		C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DBE1AABD6670023FDC3 /* HomeViewController.xib */; };
 		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
 		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
 		EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210E1AABE2CE0081E88A /* MAD.txt */; };
@@ -345,18 +345,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */,
-				C4FA0D821AAB9B830023FDC3 /* Images.xcassets in Resources */,
-				C4FA0DC01AABD6670023FDC3 /* HomeViewController.xib in Resources */,
+				C4FA0DD41AABEE0F0023FDC3 /* Images.xcassets in Resources */,
+				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
 				C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */,
 				C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */,
 				EBA5210C1AABE1950081E88A /* BCN.txt in Resources */,
-				C4FA0D821AAB9B830023FDC3 /* Images.xcassets in Resources */,
 				EBA521131AABE3330081E88A /* NCE.txt in Resources */,
 				EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */,
 				EBA521111AABE2FE0081E88A /* ORY.txt in Resources */,
 				EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */,
-				C4FA0DC01AABD6670023FDC3 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,16 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */,
-				C4FA0DAE1AABA8040023FDC3 /* Country.m in Sources */,
-				C4FA0DA81AABA6930023FDC3 /* Trip.m in Sources */,
-				C4FA0DA21AABA5520023FDC3 /* FlightSegment.m in Sources */,
+				C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */,
+				C4FA0DD01AABEE0F0023FDC3 /* Trip.m in Sources */,
+				C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */,
 				C4FA0DC41AABDEF20023FDC3 /* ResultsViewController.m in Sources */,
-				C4FA0DBB1AABC1C80023FDC3 /* TripClient.m in Sources */,
+				C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */,
 				C4FA0DC91AABDFC60023FDC3 /* CountryTableViewCell.m in Sources */,
-				C4FA0DAE1AABA8040023FDC3 /* Country.m in Sources */,
-				C4FA0DA81AABA6930023FDC3 /* Trip.m in Sources */,
-				C4FA0DA21AABA5520023FDC3 /* FlightSegment.m in Sources */,
-				C4FA0DBB1AABC1C80023FDC3 /* TripClient.m in Sources */,
 				C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */,
 				C4FA0DB11AABA86A0023FDC3 /* Event.m in Sources */,
 				C4FA0DBF1AABD6670023FDC3 /* HomeViewController.m in Sources */,
