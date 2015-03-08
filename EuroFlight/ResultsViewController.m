@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *countries;
 @property (nonatomic, assign) NSInteger currentExpandedIndex;
+@property (nonatomic, strong) NSMutableSet *expandedSections;
 
 @end
 
@@ -43,101 +44,81 @@
     if (self) {
         self.countries = [Country initCountries];
         self.currentExpandedIndex = -1;
+        self.expandedSections = [[NSMutableSet alloc] init];
     }
     return self;
 }
 
-#pragma mark Table view methods
+
+#pragma mark new Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BOOL isChild = self.currentExpandedIndex > -1
-        && indexPath.row > self.currentExpandedIndex
-        && indexPath.row <= self.currentExpandedIndex + ((Country *) self.countries[self.currentExpandedIndex]).cities.count;
-    UITableViewCell *cell;
-    if (isChild) {
+    BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
+    NSLog(@"%ld %ld", indexPath.row, indexPath.section);
+    if (sectionExpanded && indexPath.row > 0) { // cell is child
         CityTableViewCell *cityCell = [self.tableView dequeueReusableCellWithIdentifier:@"CityTableViewCell"];
-        cityCell.city = ((Country *) self.countries[self.currentExpandedIndex]).cities[indexPath.row - self.currentExpandedIndex - 1];
-        cell = cityCell;
-
+        cityCell.city = ((Country *) self.countries[indexPath.section]).cities[indexPath.row - 1];
+        return cityCell;
     } else {
         CountryTableViewCell *countryCell =  [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell"];
-        NSInteger topIndex;
-        if (self.currentExpandedIndex > -1 && indexPath.row > self.currentExpandedIndex) {
-            topIndex = indexPath.row - ((Country *) self.countries[self.currentExpandedIndex]).cities.count;
-        } else {
-            topIndex = indexPath.row;
-        }
-        countryCell.country = (Country *) self.countries[topIndex];
-        cell = countryCell;
+        countryCell.country = (Country *) self.countries[indexPath.section];
+        return countryCell;
     }
     
-    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.currentExpandedIndex > -1) {
-        return ((Country *) self.countries[self.currentExpandedIndex]).cities.count + self.countries.count;
+    BOOL sectionExpanded = [self.expandedSections containsObject:@(section)];
+    if (sectionExpanded) {
+        return ((Country *) self.countries[section]).cities.count + 1;
     } else {
-        return self.countries.count;
+        return 1;
     }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.countries.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    BOOL isChild = self.currentExpandedIndex > -1
-    && indexPath.row > self.currentExpandedIndex
-    && indexPath.row <= self.currentExpandedIndex + ((Country *) self.countries[self.currentExpandedIndex]).cities.count;
-    if (isChild) {
+    BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
+    if (sectionExpanded && indexPath.row > 0) { // cell is child
         return;
     }
     
     [self.tableView beginUpdates];
-
-    if (self.currentExpandedIndex == indexPath.row) {
-        [self collapseSubItemsAtIndex:self.currentExpandedIndex];
-        self.currentExpandedIndex = -1;
-    }  else {
-        BOOL shouldCollapse = self.currentExpandedIndex > -1;
-        if (shouldCollapse) {
-            [self collapseSubItemsAtIndex:self.currentExpandedIndex];
-        }
-        if (shouldCollapse && indexPath.row > self.currentExpandedIndex) {
-            self.currentExpandedIndex = indexPath.row - ((Country *) self.countries[self.currentExpandedIndex]).cities.count;
-        } else {
-            self.currentExpandedIndex = indexPath.row;
-        }
-        [self expandItemAtIndex:self.currentExpandedIndex];
+    if (sectionExpanded) {
+        [self.expandedSections removeObject:@(indexPath.section)];
+        [self collapseSubItemsInSection:indexPath.section];
+    } else {
+        [self.expandedSections addObject:@(indexPath.section)];
+        [self expandSubItemsInSection:indexPath.section];
     }
-    
     [self.tableView endUpdates];
-    
 }
-
-- (void)collapseSubItemsAtIndex:(NSInteger)index {
-    NSMutableArray *indexPaths = [NSMutableArray new];
-    for (NSInteger i = index + 1; i <= index + ((Country *) self.countries[index]).cities.count; i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
-    }
-    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-}
-
-- (void)expandItemAtIndex:(NSInteger)index {
-    NSMutableArray *indexPaths = [NSMutableArray new];
-    NSArray *currentSubItems = ((Country *) self.countries[index]).cities;
-    NSInteger insertPos = index + 1;
-    for (int i = 0; i < currentSubItems.count; i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:insertPos++ inSection:0]];
-    }
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-//    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
 }
+
+- (void)collapseSubItemsInSection:(NSInteger)section {
+    NSMutableArray *indexPaths = [NSMutableArray new];
+    for (NSInteger i = 1; i <= ((Country *) self.countries[section]).cities.count; i++) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
+    }
+    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void)expandSubItemsInSection:(NSInteger)section {
+    NSMutableArray *indexPaths = [NSMutableArray new];
+    NSArray *currentSubItems = ((Country *) self.countries[section]).cities;
+    NSInteger insertPos = 1;
+    for (int i = 0; i < currentSubItems.count; i++) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:insertPos++ inSection:section]];
+    }
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+}
+
+
 
 @end
