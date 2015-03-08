@@ -23,7 +23,9 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+
+    self.title = self.city.name;
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -43,9 +45,9 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FlightResultCell *cell = [tableView dequeueReusableCellWithIdentifier:kFlightResultCellIdentifier forIndexPath:indexPath];
-    
+
     cell.trip = self.city.trips[indexPath.row];
-    
+
     return cell;
 }
 
@@ -53,10 +55,10 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
     FlightDetailViewController *fdvc = [[FlightDetailViewController alloc] init];
     fdvc.trip = self.city.trips[indexPath.row];
-    
+
     [self.navigationController pushViewController:fdvc animated:YES];
 }
 

@@ -30,19 +30,26 @@
     // Configure the view for the selected state
 }
 
+static NSDateFormatter *dateTimeFormatter;
+
 - (void)setTrip:(Trip *)trip {
     _trip = trip;
+    
+    if (!dateTimeFormatter) {
+        [FlightResultCell initDateTimeFormatter];
+    }
     
     self.outboundFlightLabel.text = [NSString stringWithFormat:@"%@ -> %@", trip.sourceAirportCode, trip.destinationAirportCode];
     self.returnFlightLabel.text = [NSString stringWithFormat:@"%@ -> %@", trip.destinationAirportCode, trip.sourceAirportCode];
     self.priceLabel.text = [NSString stringWithFormat:@"%@ %0.2f", trip.currencyType, trip.flightCost];
     
-    // TODO cache the formatter so we don't keep initializing them
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"M/d/yy, h:mm a";
-    
-    self.outboundFlightTimeLabel.text = [formatter stringFromDate:trip.outboundFlight.departureDate];
-    self.returnFlightTimeLabel.text = [formatter stringFromDate:trip.returnFlight.departureDate];
+    self.outboundFlightTimeLabel.text = [dateTimeFormatter stringFromDate:trip.outboundFlight.departureDate];
+    self.returnFlightTimeLabel.text = [dateTimeFormatter stringFromDate:trip.returnFlight.departureDate];
+}
+
++ (void)initDateTimeFormatter {
+    dateTimeFormatter = [[NSDateFormatter alloc] init];
+    dateTimeFormatter.dateFormat = @"M/d/yy h:mm a";
 }
 
 @end

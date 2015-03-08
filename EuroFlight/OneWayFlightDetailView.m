@@ -42,15 +42,19 @@
     return self;
 }
 
+static NSDateFormatter *dateFormatter;
+static NSDateFormatter *timeFormatter;
+
 - (void)setFlight:(Flight *)flight {
     _flight = flight;
     
-    // TODO cache date formatter
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"EEEE M/d/yy";
-    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
-    timeFormatter.dateFormat = @"h:mm a";
-    
+    if (!dateFormatter) {
+        [OneWayFlightDetailView initDateFormatter];
+    }
+    if (!timeFormatter) {
+        [OneWayFlightDetailView initTimeFormatter];
+    }
+
     self.airportsLabel.text = [NSString stringWithFormat:@"%@ -> %@", flight.sourceAirportCode, flight.destinationAirportCode];
     self.dateLabel.text = [dateFormatter stringFromDate:flight.departureDate];
     self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@", [timeFormatter stringFromDate:flight.departureDate], [timeFormatter stringFromDate:flight.arrivalDate]];
@@ -66,6 +70,15 @@
     return [NSString stringWithFormat:@"%ld hr %ld min", numHours, numMinutes];
 }
 
++ (void)initDateFormatter {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"EEEE M/d/yy";
+}
+
++ (void)initTimeFormatter {
+    timeFormatter = [[NSDateFormatter alloc] init];
+    timeFormatter.dateFormat = @"h:mm a";
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
