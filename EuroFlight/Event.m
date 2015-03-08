@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Event.m
 //  EuroFlight
 //
 //  Created by Ken Szubzda on 3/7/15.
 //  Copyright (c) 2015 OkStupid. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Event.h"
 
-@interface ViewController : UIViewController
-
+@implementation Event
 
 @end
-
