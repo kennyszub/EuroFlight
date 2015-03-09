@@ -10,7 +10,9 @@
 #import "AFNetworking.h"
 
 @interface PlacesClient : AFHTTPRequestOperationManager
-@property (nonatomic, strong) NSDictionary *placeSummaries;
+@property (nonatomic, strong) NSMutableDictionary *placeSummaries;
+@property (nonatomic, strong) NSMutableDictionary *cityImages;
+
 + (PlacesClient *)sharedInstance;
 
 - (AFHTTPRequestOperation *)searchWithCity:(NSString *)city success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *summary;
 @property (nonatomic, strong) NSArray *places;
+@property (nonatomic, strong) NSString *imageURL;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

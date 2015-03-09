@@ -49,6 +49,7 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
         }
         
         self.summary = [PlacesClient sharedInstance].placeSummaries[self.name];
+        self.imageURL = [PlacesClient sharedInstance].cityImages[self.name];
         
     }
     return self;
@@ -67,7 +68,7 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
 
     [[TripClient sharedInstance] tripsWithParams:params completion:^(NSArray *trips, NSError *error) {
         [self.trips addObjectsFromArray:trips];
-    }];
+    }];    
 }
 
 // dynamically compute the lowest cost across all trips available

@@ -16,7 +16,9 @@ NSString * const kApiKey = @"AIzaSyD8qHwJn4c7FFdSNDEtu19Cot2UlP3WHnc";
 -(id)init {
     self = [super init];
     if (self) {
-        self.placeSummaries = [self getSummaries];
+        self.placeSummaries = [[NSMutableDictionary alloc] init];
+        self.cityImages = [[NSMutableDictionary alloc] init];
+        [self getSummaries];
     }
     return self;
 }
@@ -49,16 +51,15 @@ NSString * const kApiKey = @"AIzaSyD8qHwJn4c7FFdSNDEtu19Cot2UlP3WHnc";
     return [self GET:@"https://www.kimonolabs.com/api/coyvgcjc" parameters:params success:success failure:failure];
 }
 
-- (NSDictionary *)getSummaries {
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+- (void)getSummaries {
     [self fetchSummariesWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
         for (NSDictionary *item in response[@"results"][@"descriptions"]) {
-            [dictionary setObject:item[@"description"] forKey:item[@"name"][@"text"]];
+            [self.placeSummaries setObject:item[@"description"] forKey:item[@"name"][@"text"]];
+            [self.cityImages setObject:item[@"image"] forKey:item[@"name"][@"text"]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed getting summaries %@", error.description);
     }];
-    return dictionary;
 }
 
 @end

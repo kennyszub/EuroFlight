@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -14,29 +14,39 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95b-r3-L6U">
-                        <rect key="frame" x="17" y="35" width="48" height="26"/>
+                        <rect key="frame" x="96" y="20" width="48" height="26"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from $300" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-O9-vrS">
-                        <rect key="frame" x="17" y="63" width="60" height="18"/>
+                        <rect key="frame" x="96" y="54" width="60" height="18"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
                         <color key="textColor" red="0.1803921568627451" green="0.25098039215686274" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hpg-Gt-RD0">
+                        <rect key="frame" x="8" y="16" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="XlU-kg-THn"/>
+                            <constraint firstAttribute="height" constant="75" id="fnb-rf-gOr"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="95b-r3-L6U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="MLW-w3-65H"/>
-                    <constraint firstItem="JX2-O9-vrS" firstAttribute="top" secondItem="95b-r3-L6U" secondAttribute="bottom" constant="2" id="Tbm-Bg-U6a"/>
-                    <constraint firstItem="JX2-O9-vrS" firstAttribute="top" secondItem="95b-r3-L6U" secondAttribute="bottom" constant="2" id="bGa-Jj-T1o"/>
-                    <constraint firstItem="JX2-O9-vrS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="s6l-p0-L8t"/>
-                    <constraint firstItem="95b-r3-L6U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="wJk-vV-EEg"/>
-                    <constraint firstAttribute="bottom" secondItem="JX2-O9-vrS" secondAttribute="bottom" constant="25.5" id="y9I-mo-9Ov"/>
+                    <constraint firstItem="95b-r3-L6U" firstAttribute="leading" secondItem="Hpg-Gt-RD0" secondAttribute="trailing" constant="13" id="5n4-SA-kj5"/>
+                    <constraint firstItem="95b-r3-L6U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="UQv-sD-ISv"/>
+                    <constraint firstItem="JX2-O9-vrS" firstAttribute="top" secondItem="95b-r3-L6U" secondAttribute="bottom" constant="8" id="e2T-ek-eHa"/>
+                    <constraint firstAttribute="bottom" secondItem="Hpg-Gt-RD0" secondAttribute="bottom" constant="16" id="iOn-Fr-Wbo"/>
+                    <constraint firstItem="Hpg-Gt-RD0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="iWh-FW-Bkf"/>
+                    <constraint firstItem="Hpg-Gt-RD0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pOs-5A-Nga"/>
+                    <constraint firstItem="JX2-O9-vrS" firstAttribute="leading" secondItem="Hpg-Gt-RD0" secondAttribute="trailing" constant="13" id="vOG-UC-9gN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="countryImage" destination="Hpg-Gt-RD0" id="Alq-yh-UqZ"/>
                 <outlet property="countryName" destination="95b-r3-L6U" id="Go1-Od-JTL"/>
+                <outlet property="lowestPriceLabel" destination="JX2-O9-vrS" id="jM9-C7-iua"/>
             </connections>
             <point key="canvasLocation" x="352" y="716.5"/>
         </tableViewCell>

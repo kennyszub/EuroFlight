@@ -83,6 +83,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
     if (sectionExpanded && indexPath.row > 0) { // cell is child
         CityDetailsViewController *vc = [[CityDetailsViewController alloc] init];

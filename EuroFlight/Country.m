@@ -29,7 +29,7 @@
 
 // dynamically compute the lowest cost across all cities available
 - (float)lowestCost {
-    float min = [[self.cities valueForKeyPath:@"@min.flightCost"] floatValue];
+    float min = [[self.cities valueForKeyPath:@"@min.lowestCost"] floatValue];
     return min;
 }
 
@@ -65,6 +65,14 @@
       ];
     
     return destinations;
+}
+
+- (NSString *)countryPhotoURL {
+    if (self.cities.count > 0) {
+        return ((City *) self.cities[0]).imageURL;
+    } else {
+        return nil;
+    }
 }
         
 
