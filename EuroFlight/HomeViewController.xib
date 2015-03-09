@@ -17,35 +17,41 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mar 20, 2015" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOr-0u-aGW">
-                    <rect key="frame" x="112" y="269" width="107" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mar 20, 2015" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOr-0u-aGW">
+                    <rect key="frame" x="108" y="269" width="105" height="30"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mar 23, 2015" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHl-wa-ydB">
-                    <rect key="frame" x="112" y="315" width="107" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mar 23, 2015" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHl-wa-ydB">
+                    <rect key="frame" x="108" y="315" width="105" height="30"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make sure your departure date is before your return date." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4M-TG-Lry">
-                    <rect key="frame" x="13" y="358" width="295" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure your departure date is before your return date." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4M-TG-Lry">
+                    <rect key="frame" x="17" y="359" width="286" height="16"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="11"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Depart:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aat-Vz-sKc">
-                    <rect key="frame" x="33" y="272" width="48" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depart:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aat-Vz-sKc">
+                    <rect key="frame" x="46" y="274" width="48" height="20"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                     <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Return:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-d2-bvm">
-                    <rect key="frame" x="33" y="320" width="46" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-d2-bvm">
+                    <rect key="frame" x="46" y="320" width="46" height="20"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                     <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-HI-W1v">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helping travelers find the cheapest European flights since 2015" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-yC-6Bc">
+                    <rect key="frame" x="20" y="99" width="280" height="47"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                    <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-HI-W1v">
                     <rect key="frame" x="136" y="451" width="48" height="30"/>
                     <state key="normal" title="Search">
                         <color key="titleColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,6 +63,27 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SHl-wa-ydB" firstAttribute="top" secondItem="fOr-0u-aGW" secondAttribute="bottom" constant="16" id="5ld-DN-aTo"/>
+                <constraint firstItem="OLq-yC-6Bc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="99" id="6bc-El-lbH"/>
+                <constraint firstAttribute="centerX" secondItem="SHl-wa-ydB" secondAttribute="centerX" id="AY2-Yb-mPb"/>
+                <constraint firstItem="fOr-0u-aGW" firstAttribute="leading" secondItem="Aat-Vz-sKc" secondAttribute="trailing" constant="14" id="BqA-Rd-mkP"/>
+                <constraint firstItem="Aat-Vz-sKc" firstAttribute="centerY" secondItem="fOr-0u-aGW" secondAttribute="centerY" id="ChG-PL-usx"/>
+                <constraint firstAttribute="trailing" secondItem="OLq-yC-6Bc" secondAttribute="trailing" constant="20" id="ENh-tp-sgY"/>
+                <constraint firstAttribute="centerX" secondItem="OLq-yC-6Bc" secondAttribute="centerX" id="IZY-2g-X7s"/>
+                <constraint firstAttribute="trailing" secondItem="m4M-TG-Lry" secondAttribute="trailing" constant="17" id="QkR-0R-wxH"/>
+                <constraint firstItem="OLq-yC-6Bc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Ult-pS-B18"/>
+                <constraint firstItem="I9A-HI-W1v" firstAttribute="top" secondItem="m4M-TG-Lry" secondAttribute="bottom" constant="77" id="cAp-2K-ceZ"/>
+                <constraint firstAttribute="centerX" secondItem="m4M-TG-Lry" secondAttribute="centerX" id="dbP-FT-dQQ"/>
+                <constraint firstAttribute="centerX" secondItem="fOr-0u-aGW" secondAttribute="centerX" id="eth-cI-2Gy"/>
+                <constraint firstItem="m4M-TG-Lry" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="fDm-Yf-N9m"/>
+                <constraint firstItem="I9A-HI-W1v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="136" id="qVP-KV-jk3"/>
+                <constraint firstItem="m4M-TG-Lry" firstAttribute="top" secondItem="SHl-wa-ydB" secondAttribute="bottom" constant="14" id="sJz-9Q-AMo"/>
+                <constraint firstAttribute="bottom" secondItem="I9A-HI-W1v" secondAttribute="bottom" constant="87" id="uwj-iv-kiQ"/>
+                <constraint firstAttribute="trailing" secondItem="I9A-HI-W1v" secondAttribute="trailing" constant="136" id="wJ8-C3-fyR"/>
+                <constraint firstItem="Uh6-d2-bvm" firstAttribute="centerY" secondItem="SHl-wa-ydB" secondAttribute="centerY" id="zRX-be-Ema"/>
+                <constraint firstItem="SHl-wa-ydB" firstAttribute="leading" secondItem="Uh6-d2-bvm" secondAttribute="trailing" constant="16" id="zwc-JD-z0H"/>
+            </constraints>
             <point key="canvasLocation" x="444" y="427"/>
         </view>
     </objects>

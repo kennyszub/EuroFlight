@@ -33,6 +33,7 @@
     self.countryName.text = country.name;
     self.lowestPriceLabel.text = [NSString stringWithFormat:@"from: %0.2f", self.country.lowestCost];
     [self.countryImage setImageWithURL:[NSURL URLWithString:self.country.countryPhotoURL]];
+    self.countryImage.layer.cornerRadius = 3;
 }
 
 @end

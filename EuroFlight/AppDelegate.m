@@ -70,7 +70,9 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+      [UIColor whiteColor], NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir" size:20.0f], NSFontAttributeName,
+      nil]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 

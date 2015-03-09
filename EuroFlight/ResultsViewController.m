@@ -56,7 +56,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
-    NSLog(@"%ld %ld", indexPath.row, indexPath.section);
     if (sectionExpanded && indexPath.row > 0) { // cell is child
         CityTableViewCell *cityCell = [self.tableView dequeueReusableCellWithIdentifier:@"CityTableViewCell"];
         cityCell.city = ((Country *) self.countries[indexPath.section]).cities[indexPath.row - 1];
