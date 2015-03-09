@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSArray *events;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *summary;
-@property (nonatomic, strong) NSArray *photoURLs;
+@property (nonatomic, strong) NSArray *places;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -9,8 +9,15 @@
 #import "City.h"
 #import "Context.h"
 #import "TripClient.h"
+#import "PlacesClient.h"
+#import "Place.h"
 
+@interface City ()
+@property (nonatomic, strong) NSDictionary *summaries;
+@end
 @implementation City
+
+NSString * const kPlaceDataPrefix = @"PlaceData";
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
@@ -21,8 +28,34 @@
         for (NSString *airportCode in airportCodes) {
             [self makeFlightRequestWithAirportCode:airportCode];
         }
+        
+        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:[self userDefaultsKeyWithCity:self.name]];
+        if (data != nil) {
+            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+            NSLog(@"Saved data %@", dictionary);
+            self.places = [Place placesWithArray:dictionary[@"results"]];
+        } else {
+            [[PlacesClient sharedInstance] searchWithCity:self.name success:^(AFHTTPRequestOperation *operation, id response) {
+                NSLog(@"Status %@", response[@"status"]);
+                if ([response[@"status"] isEqualToString:@"OK"]) {
+                    self.places = [Place placesWithArray:response[@"results"]];
+                    NSData *data = [NSJSONSerialization dataWithJSONObject:response options:0 error:NULL];
+                    [[NSUserDefaults standardUserDefaults] setObject:data forKey:[self userDefaultsKeyWithCity:self.name]];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+                }
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                NSLog(@"Failed for %@", self.name);
+            }];
+        }
+        
+        self.summary = [PlacesClient sharedInstance].placeSummaries[self.name];
+        
     }
     return self;
+}
+
+- (NSString *)userDefaultsKeyWithCity:(NSString *)cityName {
+    return [NSString stringWithFormat:@"%@%@", kPlaceDataPrefix, cityName];
 }
 
 - (void)makeFlightRequestWithAirportCode:(NSString *)airportCode {

@@ -11,6 +11,7 @@
 #import "CountryTableViewCell.h"
 #import "CityTableViewCell.h"
 #import "City.h"
+#import "CityDetailsViewController.h"
 
 @interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -83,6 +84,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
     if (sectionExpanded && indexPath.row > 0) { // cell is child
+        CityDetailsViewController *vc = [[CityDetailsViewController alloc] init];
+        vc.city = ((Country *)self.countries[indexPath.section]).cities[indexPath.row - 1];
+        [self.navigationController pushViewController:vc animated:YES];
         return;
     }
     

@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "ResultsViewController.h"
 #import "THDatePickerViewController.h"
+#import "Country.h"
+#import "PlacesClient.h"
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
