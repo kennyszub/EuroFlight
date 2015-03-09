@@ -9,12 +9,14 @@
 #import "FlightResultsViewController.h"
 #import "FlightResultCell.h"
 #import "FlightDetailViewController.h"
+#import "Trip.h"
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 
 @interface FlightResultsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *tripsSorted;
 
 @end
 
@@ -25,6 +27,8 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
     // Do any additional setup after loading the view from its nib.
 
     self.title = self.city.name;
+
+    self.tripsSorted = [self sortTrips];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -40,13 +44,13 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 #pragma mark - UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.city.trips.count;
+    return self.tripsSorted.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FlightResultCell *cell = [tableView dequeueReusableCellWithIdentifier:kFlightResultCellIdentifier forIndexPath:indexPath];
 
-    cell.trip = self.city.trips[indexPath.row];
+    cell.trip = self.tripsSorted[indexPath.row];
 
     return cell;
 }
@@ -57,13 +61,24 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     FlightDetailViewController *fdvc = [[FlightDetailViewController alloc] init];
-    fdvc.trip = self.city.trips[indexPath.row];
+    fdvc.trip = self.tripsSorted[indexPath.row];
 
     [self.navigationController pushViewController:fdvc animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
+}
+
+#pragma mark - Private methods
+
+- (NSArray *)sortTrips {
+    return [self.city.trips sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Trip *trip1 = (Trip *)obj1;
+        Trip *trip2 = (Trip *)obj2;
+
+        return [@(trip1.flightCost) compare:@(trip2.flightCost)];
+    }];
 }
 
 @end
