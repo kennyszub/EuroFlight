@@ -61,10 +61,10 @@ static NSDateFormatter *dateTimeFormatter;
     NSInteger numSegments = flight.flightSegments.count;
     if (numSegments <= 1) {
         return @"Nonstop";
-    } else if (numSegments == 1) {
+    } else if (numSegments == 2) {
         return @"1 stop";
     } else {
-        return [NSString stringWithFormat:@"%ld stops", numSegments];
+        return [NSString stringWithFormat:@"%ld stops", numSegments - 1];
     }
 }
 

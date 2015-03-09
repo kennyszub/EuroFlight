@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-4I-fQc">
-                    <rect key="frame" x="281" y="372" width="31" height="30"/>
+                    <rect key="frame" x="281" y="413" width="31" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="q70-M7-8CU"/>
                     </constraints>
@@ -30,7 +30,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ss-QM-Wfl">
-                    <rect key="frame" x="8" y="373" width="70" height="30"/>
+                    <rect key="frame" x="8" y="413" width="70" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="zSJ-xT-tRl"/>
                     </constraints>
@@ -42,7 +42,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx3-ip-DxI">
-                    <rect key="frame" x="118" y="404" width="84" height="30"/>
+                    <rect key="frame" x="118" y="445" width="84" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="tO7-L6-SjE"/>
                     </constraints>
@@ -54,25 +54,25 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-cA-eGo" customClass="OneWayFlightDetailView">
-                    <rect key="frame" x="8" y="8" width="304" height="160"/>
+                    <rect key="frame" x="8" y="8" width="304" height="180"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="160" id="uh4-l2-YUR"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-gb-7qp" customClass="OneWayFlightDetailView">
-                    <rect key="frame" x="8" y="176" width="304" height="160"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="160" id="Ewb-7U-24x"/>
+                        <constraint firstAttribute="height" constant="180" id="uh4-l2-YUR"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5z-nY-xlK">
-                    <rect key="frame" x="8" y="344" width="304" height="21"/>
+                    <rect key="frame" x="8" y="384" width="304" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-gb-7qp" customClass="OneWayFlightDetailView">
+                    <rect key="frame" x="8" y="196" width="304" height="180"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="Ewb-7U-24x"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

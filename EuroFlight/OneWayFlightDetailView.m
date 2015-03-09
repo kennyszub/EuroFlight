@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *flightNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stopsLabel;
 
 @end
 
@@ -61,6 +62,7 @@ static NSDateFormatter *timeFormatter;
     FlightSegment *segment = flight.flightSegments[0];
     self.flightNumberLabel.text = [NSString stringWithFormat:@"%@ %@", segment.airline, segment.flightNumber];
     self.durationLabel.text = [self durationAsString:flight.totalDuration];
+    self.stopsLabel.text = [self formatStopsLabelText];
 }
 
 - (NSString *)durationAsString:(NSTimeInterval)duration {
@@ -68,6 +70,23 @@ static NSDateFormatter *timeFormatter;
     NSInteger numMinutes = duration - (kMinutesInHour * numHours);
     
     return [NSString stringWithFormat:@"%ld hr %ld min", numHours, numMinutes];
+}
+
+- (NSString *)formatStopsLabelText {
+    NSInteger numSegments = self.flight.flightSegments.count;
+    if (numSegments <= 1) {
+        return @"Nonstop";
+    } else if (numSegments == 2) {
+        FlightSegment *segment = self.flight.flightSegments[0];
+        return [NSString stringWithFormat:@"1 stop (%@ in %@)", [self durationAsString:segment.connectionDuration], segment.destinationAirportCode];
+    } else {
+        NSArray *layoverSegments = [self.flight.flightSegments subarrayWithRange:NSMakeRange(0, self.flight.flightSegments.count - 1)];
+        NSMutableArray *allStops = [NSMutableArray array];
+        [layoverSegments enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [allStops addObject:((FlightSegment *)obj).destinationAirportCode];
+        }];
+        return [NSString stringWithFormat:@"%ld stops (%@)", numSegments - 1, [allStops componentsJoinedByString:@", "]];
+    }
 }
 
 + (void)initDateFormatter {
