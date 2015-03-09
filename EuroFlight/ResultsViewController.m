@@ -33,6 +33,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"CityTableViewCell" bundle:nil] forCellReuseIdentifier:@"CityTableViewCell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
+    self.title = @"Flight Results";
 }
 
 - (void)didReceiveMemoryWarning {

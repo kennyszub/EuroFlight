@@ -14,10 +14,13 @@
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
-@property (nonatomic, strong) THDatePickerViewController *datePicker;
+@property (weak, nonatomic) IBOutlet UITextField *returnDateField;
+@property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
+@property (nonatomic, strong) THDatePickerViewController *returnDatePicker;
 @property (nonatomic, strong) NSDate *outboundDate;
 @property (nonatomic, strong) NSDate *returnDate;
 @property (nonatomic, retain) NSDateFormatter *formatter;
+@property (weak, nonatomic) IBOutlet UILabel *dateErrorLabel;
 
 enum Weeks {
     SUNDAY = 1,
@@ -36,17 +39,20 @@ enum Weeks {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     //this is kind of a hack, but whatever (placeSummaries needs to be initialized before Cities are created)
     [PlacesClient sharedInstance];
     
+    self.dateErrorLabel.hidden = YES;
     self.outboundDateField.delegate = self;
     self.outboundDate = [self getNextWeekdayDate:FRIDAY];
+    self.returnDateField.delegate = self;
     self.returnDate = [self getNextWeekdayDate:SUNDAY];
     
     self.formatter = [[NSDateFormatter alloc] init];
     [self.formatter setDateFormat:@"MMM d, y"];
-    [self refreshOutboundDate];
+    [self refreshDates];
+    
+    self.title = @"EuroFlight";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,15 +61,21 @@ enum Weeks {
 }
 
 - (IBAction)onSearchButton:(id)sender {
-    ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
-    [self.navigationController pushViewController:rvc animated:YES];
+    if ([self.outboundDate compare:self.returnDate] == NSOrderedDescending) {
+        self.dateErrorLabel.hidden = NO;
+    } else {
+        self.dateErrorLabel.hidden = YES;
+        ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
+        [self.navigationController pushViewController:rvc animated:YES];
+    }
 }
 
 
 
 #pragma mark Date picker methods
-- (void)refreshOutboundDate {
+- (void)refreshDates {
     self.outboundDateField.text = [self.formatter stringFromDate:self.outboundDate];
+    self.returnDateField.text = [self.formatter stringFromDate:self.returnDate];
 }
 
 - (void)datePickerCancelPressed:(THDatePickerViewController *)datePicker {
@@ -71,41 +83,67 @@ enum Weeks {
 }
 
 - (void)datePickerDonePressed:(THDatePickerViewController *)datePicker {
-    self.outboundDate = datePicker.date;
-    [self refreshOutboundDate];
+    if (datePicker == self.outboundDatePicker) {
+        self.outboundDate = datePicker.date;
+    } else if (datePicker == self.returnDatePicker) {
+        self.returnDate = datePicker.date;
+    }
+    [self refreshDates];
     [self dismissSemiModalView];
 }
 
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    if (!self.datePicker) {
-        self.datePicker = [THDatePickerViewController datePicker];
+    self.dateErrorLabel.hidden = YES;
+    if ([textField isEqual:self.outboundDateField]) {
+        if (!self.outboundDatePicker) {
+            self.outboundDatePicker = [THDatePickerViewController datePicker];
+        }
+        [self configureDatePicker:self.outboundDatePicker];
+        [self presentSemiViewController:self.outboundDatePicker withOptions:@{
+                                                                      KNSemiModalOptionKeys.pushParentBack    : @(NO),
+                                                                      KNSemiModalOptionKeys.animationDuration : @(0.4),
+                                                                      KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
+                                                                      }];
+    } else if ([textField isEqual:self.returnDateField]) {
+        if (!self.returnDatePicker) {
+            self.returnDatePicker = [THDatePickerViewController datePicker];
+        }
+        [self configureDatePicker:self.returnDatePicker];
+        [self presentSemiViewController:self.returnDatePicker withOptions:@{
+                                                                              KNSemiModalOptionKeys.pushParentBack    : @(NO),
+                                                                              KNSemiModalOptionKeys.animationDuration : @(0.4),
+                                                                              KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
+                                                                              }];
     }
-    self.datePicker.date = [NSDate date];
-    self.datePicker.delegate = self;
-    [self.datePicker setAllowClearDate:NO];
-    [self.datePicker setClearAsToday:YES];
-    [self.datePicker setAutoCloseOnSelectDate:YES];
-    [self.datePicker setAllowSelectionOfSelectedDate:YES];
-    [self.datePicker setDisableHistorySelection:YES];
-    [self.datePicker setDisableFutureSelection:NO];
-    [self.datePicker setSelectedBackgroundColor:[UIColor colorWithRed:125/255.0 green:208/255.0 blue:0/255.0 alpha:1.0]];
-    [self.datePicker setCurrentDateColor:[UIColor colorWithRed:242/255.0 green:121/255.0 blue:53/255.0 alpha:1.0]];
-    [self.datePicker setCurrentDateColorSelected:[UIColor yellowColor]];
-//    __weak typeof(self) weakSelf = self;
     
-    [self.datePicker setDateHasItemsCallback:^BOOL(NSDate *date) {
+    return NO;
+}
+
+- (void)configureDatePicker:(THDatePickerViewController *)datePicker {
+    if (datePicker == self.outboundDatePicker) {
+        datePicker.date = self.outboundDate;
+    } else if (datePicker == self.returnDatePicker) {
+        datePicker.date = self.returnDate;
+    }
+    datePicker.delegate = self;
+    [datePicker setAllowClearDate:NO];
+    [datePicker setClearAsToday:YES];
+    [datePicker setAutoCloseOnSelectDate:YES];
+    [datePicker setAllowSelectionOfSelectedDate:YES];
+    [datePicker setDisableHistorySelection:YES];
+    [datePicker setDisableFutureSelection:NO];
+    [datePicker setSelectedBackgroundColor:[UIColor colorWithRed:125/255.0 green:208/255.0 blue:0/255.0 alpha:1.0]];
+    [datePicker setCurrentDateColor:[UIColor colorWithRed:242/255.0 green:121/255.0 blue:53/255.0 alpha:1.0]];
+    [datePicker setCurrentDateColorSelected:[UIColor yellowColor]];
+    //    __weak typeof(self) weakSelf = self;
+    
+    [datePicker setDateHasItemsCallback:^BOOL(NSDate *date) {
         // FIXME uncheck to make markers appear on dates, but these aren't called each time calendar displayed
-//        return [weakSelf isSameDayWithDate1:weakSelf.outboundDate date2:date]
-//        || [weakSelf isSameDayWithDate1:weakSelf.returnDate date2:date];
+        //        return [weakSelf isSameDayWithDate1:weakSelf.outboundDate date2:date]
+        //        || [weakSelf isSameDayWithDate1:weakSelf.returnDate date2:date];
         return NO;
     }];
-    [self presentSemiViewController:self.datePicker withOptions:@{
-                                                                  KNSemiModalOptionKeys.pushParentBack    : @(NO),
-                                                                  KNSemiModalOptionKeys.animationDuration : @(0.4),
-                                                                  KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
-                                                                  }];
-    return NO;
 }
 
 - (NSDate *)getNextWeekdayDate:(enum Weeks)weekday {

@@ -35,6 +35,7 @@
     self.window.rootViewController = nvc;
     
     [self.window makeKeyAndVisible];
+    [self configureNavBar];
     
     return YES;
 }
@@ -59,6 +60,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)configureNavBar {
+    // set navigation bar colors
+    [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:46/255.0 green:64/255.0 blue:87/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 @end
