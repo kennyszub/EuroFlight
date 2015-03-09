@@ -10,6 +10,7 @@
 
 @interface CityTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 @end
 
@@ -28,6 +29,7 @@
 - (void)setCity:(City *)city {
     _city = city;
     self.cityNameLabel.text = city.name;
+    self.priceLabel.text = [NSString stringWithFormat:@"from: %0.2f", city.lowestCost];
 }
 
 @end

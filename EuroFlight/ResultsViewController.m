@@ -45,14 +45,29 @@
     self = [super init];
     if (self) {
         self.countries = [Country initCountries];
+        self.countries = [self.countries sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            float price1 = ((Country *) obj1).lowestCost;
+            float price2 = ((Country *) obj2).lowestCost;
+            return [ResultsViewController compareFloats:price1 secondFloat:price2];
+        }];
         self.currentExpandedIndex = -1;
         self.expandedSections = [[NSMutableSet alloc] init];
     }
     return self;
 }
 
+#pragma mark helper methods
++ (NSComparisonResult) compareFloats:(float)first secondFloat:(float)second {
+    if (first == second) {
+        return NSOrderedSame;
+    } else if (first > second) {
+        return NSOrderedDescending;
+    } else {
+        return NSOrderedAscending;
+    }
+}
 
-#pragma mark new Table view methods
+#pragma mark Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];

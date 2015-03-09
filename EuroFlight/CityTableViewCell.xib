@@ -19,15 +19,24 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from: $123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFP-WT-eES">
+                        <rect key="frame" x="238" y="11" width="74" height="21"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                        <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="nrX-au-9c5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="BPi-au-hVp"/>
                     <constraint firstItem="nrX-au-9c5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="SZ4-5j-cEr"/>
+                    <constraint firstAttribute="trailing" secondItem="jFP-WT-eES" secondAttribute="trailing" constant="8" id="ume-y6-9l1"/>
                     <constraint firstAttribute="bottom" secondItem="nrX-au-9c5" secondAttribute="bottom" constant="12" id="vUC-Zo-OCR"/>
+                    <constraint firstAttribute="centerY" secondItem="jFP-WT-eES" secondAttribute="centerY" id="xD2-Zz-l4W"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityNameLabel" destination="nrX-au-9c5" id="552-08-nyp"/>
+                <outlet property="priceLabel" destination="jFP-WT-eES" id="xGA-wa-s15"/>
             </connections>
         </tableViewCell>
     </objects>

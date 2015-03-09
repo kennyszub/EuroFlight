@@ -8,6 +8,7 @@
 
 #import "Country.h"
 #import "City.h"
+#import "ResultsViewController.h"
 
 @implementation Country
 
@@ -23,6 +24,12 @@
             [cities addObject:city];
         }
         self.cities = cities;
+        // sort cities
+        self.cities = [self.cities sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            float price1 = ((City *) obj1).lowestCost;
+            float price2 = ((City *) obj2).lowestCost;
+            return [ResultsViewController compareFloats:price1 secondFloat:price2];
+        }];
     }
     return self;
 }
