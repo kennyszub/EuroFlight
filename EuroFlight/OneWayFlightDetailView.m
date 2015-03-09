@@ -8,6 +8,7 @@
 
 #import "OneWayFlightDetailView.h"
 #import "FlightSegment.h"
+#import "NameMappingHelper.h"
 
 #define kMinutesInHour 60
 
@@ -56,7 +57,7 @@ static NSDateFormatter *timeFormatter;
         [OneWayFlightDetailView initTimeFormatter];
     }
 
-    self.airportsLabel.text = [NSString stringWithFormat:@"%@ -> %@", flight.sourceAirportCode, flight.destinationAirportCode];
+    self.airportsLabel.text = [NSString stringWithFormat:@"%@ -> %@", [self formatAirportStringForCode:flight.sourceAirportCode], [self formatAirportStringForCode:flight.destinationAirportCode]];
     self.dateLabel.text = [dateFormatter stringFromDate:flight.departureDate];
     self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@", [timeFormatter stringFromDate:flight.departureDate], [timeFormatter stringFromDate:flight.arrivalDate]];
     FlightSegment *segment = flight.flightSegments[0];
@@ -72,6 +73,11 @@ static NSDateFormatter *timeFormatter;
     return [NSString stringWithFormat:@"%ld hr %ld min", numHours, numMinutes];
 }
 
+- (NSString *)formatAirportStringForCode:(NSString *)code {
+    NameMappingHelper *mappingHelper = [NameMappingHelper sharedInstance];
+    return [NSString stringWithFormat:@"%@ (%@)", [mappingHelper cityNameForAirportCode:code], code];
+}
+
 - (NSString *)formatStopsLabelText {
     NSInteger numSegments = self.flight.flightSegments.count;
     if (numSegments <= 1) {
@@ -81,10 +87,8 @@ static NSDateFormatter *timeFormatter;
         return [NSString stringWithFormat:@"1 stop (%@ in %@)", [self durationAsString:segment.connectionDuration], segment.destinationAirportCode];
     } else {
         NSArray *layoverSegments = [self.flight.flightSegments subarrayWithRange:NSMakeRange(0, self.flight.flightSegments.count - 1)];
-        NSMutableArray *allStops = [NSMutableArray array];
-        [layoverSegments enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            [allStops addObject:((FlightSegment *)obj).destinationAirportCode];
-        }];
+        NSArray *allStops = [layoverSegments valueForKeyPath:@"@unionOfObjects.destinationAirportCode"];
+
         return [NSString stringWithFormat:@"%ld stops (%@)", numSegments - 1, [allStops componentsJoinedByString:@", "]];
     }
 }

@@ -37,4 +37,10 @@
     }];
 }
 
+// dynamically compute the lowest cost across all trips available
+- (float)lowestCost {
+    float min = [[self.trips valueForKeyPath:@"@min.flightCost"] floatValue];
+    return min;
+}
+
 @end

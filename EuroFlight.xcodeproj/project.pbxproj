@@ -30,6 +30,7 @@
 		C4FA0DD41AABEE0F0023FDC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D811AAB9B830023FDC3 /* Images.xcassets */; };
 		C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DBE1AABD6670023FDC3 /* HomeViewController.xib */; };
 		EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */; };
+		EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */; };
 		EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */; };
 		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
 		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
@@ -98,6 +99,8 @@
 		C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		EB08A4041AAC3948001C2AA3 /* OneWayFlightDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneWayFlightDetailView.h; sourceTree = "<group>"; };
 		EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneWayFlightDetailView.m; sourceTree = "<group>"; };
+		EB08A40B1AAD349C001C2AA3 /* NameMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameMappingHelper.h; sourceTree = "<group>"; };
+		EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameMappingHelper.m; sourceTree = "<group>"; };
 		EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayFlightDetailView.xib; sourceTree = "<group>"; };
 		EBA521091AABDDC20081E88A /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
 		EBA5210B1AABE1950081E88A /* BCN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCN.txt; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 		C4FA0D731AAB9B830023FDC3 /* EuroFlight */ = {
 			isa = PBXGroup;
 			children = (
+				EB08A4071AAD335A001C2AA3 /* Helpers */,
 				C4FA0DB21AABAAFE0023FDC3 /* API */,
 				C4FA0D9C1AAB9BA50023FDC3 /* View Controllers */,
 				C4FA0D9B1AAB9B9E0023FDC3 /* Views */,
@@ -280,6 +284,15 @@
 				C4FA0DBA1AABC1C80023FDC3 /* TripClient.m */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		EB08A4071AAD335A001C2AA3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EB08A40B1AAD349C001C2AA3 /* NameMappingHelper.h */,
+				EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		EBA5210D1AABE2800081E88A /* Sample Flight Data */ = {
@@ -457,6 +470,7 @@
 				C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */,
 				C4FA0D7A1AAB9B830023FDC3 /* AppDelegate.m in Sources */,
 				C4FA0DB51AABBA770023FDC3 /* Context.m in Sources */,
+				EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */,
 				EBA521171AABF3290081E88A /* FlightResultsViewController.m in Sources */,
 				C4FA0D771AAB9B830023FDC3 /* main.m in Sources */,
 			);

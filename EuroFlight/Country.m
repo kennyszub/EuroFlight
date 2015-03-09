@@ -27,6 +27,12 @@
     return self;
 }
 
+// dynamically compute the lowest cost across all cities available
+- (float)lowestCost {
+    float min = [[self.cities valueForKeyPath:@"@min.flightCost"] floatValue];
+    return min;
+}
+
 + (NSArray *)initCountries {
     NSArray *destinations = [self getDestinations];
     NSMutableArray *countries = [[NSMutableArray alloc] init];

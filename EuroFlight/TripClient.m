@@ -8,6 +8,7 @@
 
 #import "TripClient.h"
 #import "Trip.h"
+#import "NameMappingHelper.h"
 
 NSString * const kSourceAirportParamsKey = @"sourceAirport";
 NSString * const kDestinationAirportParamsKey = @"destinationAirport";
@@ -26,8 +27,13 @@ NSString * const kDestinationAirportParamsKey = @"destinationAirport";
 
 - (void)tripsWithParams:(NSDictionary *)params completion:(void (^)(NSArray *trips, NSError *error))completion {
     NSString *destinationAirport = params[kDestinationAirportParamsKey];
-    
-    NSArray *trips = [Trip tripsWithArray:[TripClient getSampleResponseForAirport:destinationAirport][@"trips"][@"tripOption"]];
+
+    NSDictionary *tripsResponse = [TripClient getSampleResponseForAirport:destinationAirport];
+    NSArray *trips = [Trip tripsWithArray:tripsResponse[@"trips"][@"tripOption"]];
+
+    // TODO make sure this is thread-safe (when this actually becomes part of a network call)
+    [[NameMappingHelper sharedInstance] parseTripData:[tripsResponse valueForKeyPath:@"trips.data"]];
+
     completion(trips, nil);
 }
 
