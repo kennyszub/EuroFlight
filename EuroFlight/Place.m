@@ -17,7 +17,7 @@
         NSString *photoReference = dictionary[@"photos"][0][@"photo_reference"];
         self.photoURL = [PlacesClient photoURLWithPhotoReference:photoReference maxWidth:400];
         self.name = dictionary[@"name"];
-        NSLog(@"name: %@, photo reference: %@", self.name, self.photoURL);
+        NSLog(@"name: %@", self.name);
     }
     return self;
 }

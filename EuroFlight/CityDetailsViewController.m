@@ -8,6 +8,7 @@
 
 #import "CityDetailsViewController.h"
 #import "PlaceCell.h"
+#import "FlightResultsViewController.h"
 
 @interface CityDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -28,8 +29,12 @@
     self.nameLabel.text = self.city.name;
     self.descriptionLabel.text = self.city.summary;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 150;
 }
 - (IBAction)onTickets:(id)sender {
+    FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
+    vc.city = self.city;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

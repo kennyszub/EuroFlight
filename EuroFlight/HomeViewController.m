@@ -36,6 +36,10 @@ enum Weeks {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //this is kind of a hack, but whatever (placeSummaries needs to be initialized before Cities are created)
+    [PlacesClient sharedInstance];
+    
     self.outboundDateField.delegate = self;
     self.outboundDate = [self getNextWeekdayDate:FRIDAY];
     self.returnDate = [self getNextWeekdayDate:SUNDAY];
