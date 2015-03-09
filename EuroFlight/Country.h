@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSArray *events;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *countryPhotoURL;
+@property (nonatomic, strong) NSString *currencyType;
 
 + (NSArray *)initCountries;
 

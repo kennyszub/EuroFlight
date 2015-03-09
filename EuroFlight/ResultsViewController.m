@@ -57,7 +57,7 @@
 }
 
 #pragma mark helper methods
-+ (NSComparisonResult) compareFloats:(float)first secondFloat:(float)second {
++ (NSComparisonResult)compareFloats:(float)first secondFloat:(float)second {
     if (first == second) {
         return NSOrderedSame;
     } else if (first > second) {
@@ -65,6 +65,19 @@
     } else {
         return NSOrderedAscending;
     }
+}
+
++ (NSNumberFormatter *)currencyFormatterWithCurrencyCode:(NSString *)code {
+    static NSNumberFormatter *sharedFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (sharedFormatter == nil) {
+            sharedFormatter = [[NSNumberFormatter alloc] init];
+            [sharedFormatter setCurrencyCode:code];
+            [sharedFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        }
+    });
+    return sharedFormatter;
 }
 
 #pragma mark Table view methods

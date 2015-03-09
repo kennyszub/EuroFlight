@@ -11,6 +11,7 @@
 #import "TripClient.h"
 #import "PlacesClient.h"
 #import "Place.h"
+#import "Trip.h"
 
 @interface City ()
 @property (nonatomic, strong) NSDictionary *summaries;
@@ -75,6 +76,14 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
 - (float)lowestCost {
     float min = [[self.trips valueForKeyPath:@"@min.flightCost"] floatValue];
     return min;
+}
+
+- (NSString *)currencyType {
+    if (self.trips.count > 0) {
+        return ((Trip *) self.trips[0]).currencyType;
+    } else {
+        return nil;
+    }
 }
 
 @end

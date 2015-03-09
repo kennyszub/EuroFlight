@@ -8,6 +8,7 @@
 
 #import "CountryTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "ResultsViewController.h"
 
 @interface CountryTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *countryName;
@@ -31,7 +32,9 @@
 - (void)setCountry:(Country *)country {
     _country = country;
     self.countryName.text = country.name;
-    self.lowestPriceLabel.text = [NSString stringWithFormat:@"from: %0.2f", self.country.lowestCost];
+    NSNumberFormatter *formatter = [ResultsViewController currencyFormatterWithCurrencyCode:country.currencyType];
+    NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.country.lowestCost]];
+    self.lowestPriceLabel.text = [NSString stringWithFormat:@"from: %@", price];
     [self.countryImage setImageWithURL:[NSURL URLWithString:self.country.countryPhotoURL]];
     self.countryImage.layer.cornerRadius = 3;
 }

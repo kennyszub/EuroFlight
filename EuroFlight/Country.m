@@ -81,6 +81,14 @@
         return nil;
     }
 }
+
+- (NSString *)currencyType {
+    if (self.cities.count > 0) {
+        return ((City *) self.cities[0]).currencyType;
+    } else {
+        return nil;
+    }
+}
         
 
 @end

@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *summary;
 @property (nonatomic, strong) NSArray *places;
 @property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSString *currencyType;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -19,6 +19,12 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from $300" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-O9-vrS">
+                        <rect key="frame" x="233" y="21" width="79" height="24"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.1803921568627451" green="0.25098039215686274" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hpg-Gt-RD0">
                         <rect key="frame" x="8" y="16" width="75" height="75"/>
                         <constraints>
@@ -26,12 +32,6 @@
                             <constraint firstAttribute="height" constant="75" id="fnb-rf-gOr"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from $300" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-O9-vrS">
-                        <rect key="frame" x="233" y="21" width="79" height="24"/>
-                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                        <color key="textColor" red="0.1803921568627451" green="0.25098039215686274" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="95b-r3-L6U" firstAttribute="leading" secondItem="Hpg-Gt-RD0" secondAttribute="trailing" constant="13" id="5n4-SA-kj5"/>
