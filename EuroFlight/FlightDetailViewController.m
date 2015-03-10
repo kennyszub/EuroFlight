@@ -8,6 +8,7 @@
 
 #import "FlightDetailViewController.h"
 #import "OneWayFlightDetailView.h"
+#import "HomeViewController.h"
 
 @interface FlightDetailViewController ()
 
@@ -43,7 +44,10 @@
 }
 
 - (IBAction)onStartOverButton:(id)sender {
-    // TODO
+    HomeViewController *hvc = [[HomeViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:hvc];
+
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (IBAction)onBuyButton:(id)sender {

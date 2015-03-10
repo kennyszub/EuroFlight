@@ -26,12 +26,6 @@
     HomeViewController *hvc = [[HomeViewController alloc] init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:hvc];
 
-    // comment this in for testing flight result list
-//    NSArray *countries = [Country initCountries];
-//    FlightResultsViewController *frvc = [[FlightResultsViewController alloc] init];
-//    frvc.city = ((Country *)countries[1]).cities[0];
-//    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:frvc];
-
     self.window.rootViewController = nvc;
     
     [self.window makeKeyAndVisible];
