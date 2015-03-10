@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *airportCodeToCityCode;
 @property (nonatomic, strong) NSMutableDictionary *cityCodeToCityName;
+@property (nonatomic, strong) NSMutableDictionary *carrierCodeToCarrierName;
 
 @end
 
@@ -23,6 +24,7 @@
     if (self) {
         self.airportCodeToCityCode = [NSMutableDictionary dictionary];
         self.cityCodeToCityName = [NSMutableDictionary dictionary];
+        self.carrierCodeToCarrierName = [NSMutableDictionary dictionary];
     }
 
     return self;
@@ -49,6 +51,10 @@
     return self.cityCodeToCityName[cityCode];
 }
 
+- (NSString *)carrierNameForCode:(NSString *)code {
+    return self.carrierCodeToCarrierName[code];
+}
+
 - (void)parseTripData:(NSDictionary *)data {
     NSArray *airportData = data[@"airport"];
     for (NSDictionary *airport in airportData) {
@@ -59,6 +65,11 @@
     for (NSDictionary *city in cityData) {
         [self setCityName:city[@"name"] forCityCode:city[@"code"]];
     }
+
+    NSArray *carrierData = data[@"carrier"];
+    for (NSDictionary *carrier in carrierData) {
+        [self setCarrierName:carrier[@"name"] forCarrierCode:carrier[@"code"]];
+    }
 }
 
 - (void)setCityCode:(NSString *)cityCode forAirportCode:(NSString *)airportCode {
@@ -67,6 +78,10 @@
 
 - (void)setCityName:(NSString *)name forCityCode:(NSString *)code {
     [self.cityCodeToCityName setValue:name forKey:code];
+}
+
+- (void)setCarrierName:(NSString *)name forCarrierCode:(NSString *)code {
+    [self.carrierCodeToCarrierName setValue:name forKey:code];
 }
 
 @end

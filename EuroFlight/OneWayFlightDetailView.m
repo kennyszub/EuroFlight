@@ -61,9 +61,14 @@ static NSDateFormatter *timeFormatter;
     self.dateLabel.text = [dateFormatter stringFromDate:flight.departureDate];
     self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@", [timeFormatter stringFromDate:flight.departureDate], [timeFormatter stringFromDate:flight.arrivalDate]];
     FlightSegment *segment = flight.flightSegments[0];
-    self.flightNumberLabel.text = [NSString stringWithFormat:@"%@ %@", segment.airline, segment.flightNumber];
+    self.flightNumberLabel.text = [self formatFlightNumberLabelForSegment:segment];
     self.durationLabel.text = [self durationAsString:flight.totalDuration];
     self.stopsLabel.text = [self formatStopsLabelText];
+}
+
+- (NSString *)formatFlightNumberLabelForSegment:(FlightSegment *)segment {
+    NameMappingHelper *mappingHelper = [NameMappingHelper sharedInstance];
+    return [NSString stringWithFormat:@"%@ %@", [mappingHelper carrierNameForCode:segment.airline], segment.flightNumber];
 }
 
 - (NSString *)durationAsString:(NSTimeInterval)duration {

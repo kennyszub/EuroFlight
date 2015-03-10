@@ -13,6 +13,7 @@
 + (NameMappingHelper *)sharedInstance;
 
 - (NSString *)cityNameForAirportCode:(NSString *)code;
+- (NSString *)carrierNameForCode:(NSString *)code;
 
 - (void)parseTripData:(NSDictionary *)data;
 
