@@ -17,10 +17,11 @@ NSString * const kDestinationAirportParamsKey = @"destinationAirport";
 
 + (TripClient *)sharedInstance {
     static TripClient *instance = nil;
+    static dispatch_once_t token = 0;
     
-    if (instance == nil) {
+    dispatch_once(&token, ^ {
         instance = [[TripClient alloc] init];
-    }
+    });
     
     return instance;
 }

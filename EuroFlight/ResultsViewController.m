@@ -12,6 +12,8 @@
 #import "CityTableViewCell.h"
 #import "City.h"
 #import "CityDetailsViewController.h"
+#import "Event.h"
+#import "EventDetailViewController.h"
 
 @interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

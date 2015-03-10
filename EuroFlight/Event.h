@@ -12,8 +12,13 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *summary;
-@property (nonatomic, strong) NSArray *photoURLs;
+@property (nonatomic, strong) NSString *photoURL;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
+@property (nonatomic, strong) NSString *dateString;
+@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) NSString *country;
+
++ (NSArray *)allEvents;
 
 @end

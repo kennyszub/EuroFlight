@@ -11,6 +11,8 @@
 #import "THDatePickerViewController.h"
 #import "Country.h"
 #import "PlacesClient.h"
+#import "KimonoClient.h"
+#import "Event.h"
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
@@ -39,8 +41,9 @@ enum Weeks {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    //this is kind of a hack, but whatever (placeSummaries needs to be initialized before Cities are created)
-    [PlacesClient sharedInstance];
+    
+    //this is kind of a hack, but whatever (kimono stuff needs to be initialized before Cities are created)
+    [KimonoClient sharedInstance];
     
     self.dateErrorLabel.hidden = YES;
     self.outboundDateField.delegate = self;

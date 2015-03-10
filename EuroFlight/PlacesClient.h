@@ -10,8 +10,6 @@
 #import "AFNetworking.h"
 
 @interface PlacesClient : AFHTTPRequestOperationManager
-@property (nonatomic, strong) NSMutableDictionary *placeSummaries;
-@property (nonatomic, strong) NSMutableDictionary *cityImages;
 
 + (PlacesClient *)sharedInstance;
 

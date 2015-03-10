@@ -12,6 +12,7 @@
 #import "PlacesClient.h"
 #import "Place.h"
 #import "Trip.h"
+#import "KimonoClient.h"
 
 @interface City ()
 @property (nonatomic, strong) NSDictionary *summaries;
@@ -49,8 +50,8 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
             }];
         }
         
-        self.summary = [PlacesClient sharedInstance].placeSummaries[self.name];
-        self.imageURL = [PlacesClient sharedInstance].cityImages[self.name];
+        self.summary = [KimonoClient sharedInstance].placeSummaries[self.name];
+        self.imageURL = [KimonoClient sharedInstance].cityImages[self.name];
         
     }
     return self;

@@ -13,22 +13,13 @@
 //NSString * const kApiKey = @"AIzaSyC2InBTC3Q8lelPtJHNCCtbFgvbw1n0O44";
 NSString * const kApiKey = @"AIzaSyD8qHwJn4c7FFdSNDEtu19Cot2UlP3WHnc";
 
--(id)init {
-    self = [super init];
-    if (self) {
-        self.placeSummaries = [[NSMutableDictionary alloc] init];
-        self.cityImages = [[NSMutableDictionary alloc] init];
-        [self getSummaries];
-    }
-    return self;
-}
-
 + (PlacesClient *)sharedInstance {
     static PlacesClient *instance = nil;
+    static dispatch_once_t token = 0;
     
-    if (instance == nil) {
+    dispatch_once(&token, ^ {
         instance = [[PlacesClient alloc] init];
-    }
+    });
     
     return instance;
 }
@@ -42,24 +33,6 @@ NSString * const kApiKey = @"AIzaSyD8qHwJn4c7FFdSNDEtu19Cot2UlP3WHnc";
 
 + (NSString *)photoURLWithPhotoReference:(NSString *)reference maxWidth:(NSInteger)width {
     return [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?key=%@&photoreference=%@&maxwidth=%ld", kApiKey, reference, width];
-}
-
-- (AFHTTPRequestOperation *)fetchSummariesWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    
-    NSDictionary *params = @{@"apikey" : @"UTXwecz7u66PZKgeLKG3KcFLTQJ2LtjU"};
-    
-    return [self GET:@"https://www.kimonolabs.com/api/coyvgcjc" parameters:params success:success failure:failure];
-}
-
-- (void)getSummaries {
-    [self fetchSummariesWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
-        for (NSDictionary *item in response[@"results"][@"descriptions"]) {
-            [self.placeSummaries setObject:item[@"description"] forKey:item[@"name"][@"text"]];
-            [self.cityImages setObject:item[@"image"] forKey:item[@"name"][@"text"]];
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Failed getting summaries %@", error.description);
-    }];
 }
 
 @end
