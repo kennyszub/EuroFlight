@@ -18,7 +18,9 @@
 @property (nonatomic, strong) NSArray *places;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, strong) NSString *currencyType;
+@property (nonatomic, assign, readonly) BOOL isFavorited;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+- (void)setFavoritedState:(BOOL)state;
 
 @end

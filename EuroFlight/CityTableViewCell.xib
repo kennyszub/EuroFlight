@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcelona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrX-au-9c5">
-                        <rect key="frame" x="22" y="11" width="76" height="21"/>
+                        <rect key="frame" x="32" y="11" width="76" height="21"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -25,10 +25,25 @@
                         <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAl-DE-m8Z">
+                        <rect key="frame" x="8" y="14" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="pRy-uc-qxb"/>
+                            <constraint firstAttribute="width" constant="16" id="yjB-aN-qv9"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="favorite-off">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onFavoriteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1z4-Tx-jvT"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="xAl-DE-m8Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4LH-ji-Nbp"/>
                     <constraint firstItem="nrX-au-9c5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="BPi-au-hVp"/>
-                    <constraint firstItem="nrX-au-9c5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="SZ4-5j-cEr"/>
+                    <constraint firstItem="nrX-au-9c5" firstAttribute="leading" secondItem="xAl-DE-m8Z" secondAttribute="trailing" constant="8" id="cfN-h6-J0G"/>
+                    <constraint firstItem="nrX-au-9c5" firstAttribute="centerY" secondItem="xAl-DE-m8Z" secondAttribute="centerY" id="sJF-T4-SZG"/>
                     <constraint firstAttribute="trailing" secondItem="jFP-WT-eES" secondAttribute="trailing" constant="8" id="ume-y6-9l1"/>
                     <constraint firstAttribute="bottom" secondItem="nrX-au-9c5" secondAttribute="bottom" constant="12" id="vUC-Zo-OCR"/>
                     <constraint firstAttribute="centerY" secondItem="jFP-WT-eES" secondAttribute="centerY" id="xD2-Zz-l4W"/>
@@ -36,8 +51,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityNameLabel" destination="nrX-au-9c5" id="552-08-nyp"/>
+                <outlet property="favoriteButton" destination="xAl-DE-m8Z" id="7np-xm-Ne8"/>
                 <outlet property="priceLabel" destination="jFP-WT-eES" id="xGA-wa-s15"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="favorite-off" width="16" height="16"/>
+    </resources>
 </document>

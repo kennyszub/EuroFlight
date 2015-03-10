@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityDetailsViewController">
             <connections>
                 <outlet property="descriptionLabel" destination="oQP-XV-Rch" id="Xwx-Am-Gld"/>
+                <outlet property="favoriteButton" destination="FEP-6s-6o6" id="7RZ-rw-sfP"/>
                 <outlet property="nameLabel" destination="p1f-if-vdS" id="8Vm-Ov-qgy"/>
                 <outlet property="tableView" destination="hjC-7a-Oyv" id="io4-fB-pKg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -42,11 +43,26 @@
                         <action selector="onTickets:" destination="-1" eventType="touchUpInside" id="NkK-l2-y5z"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEP-6s-6o6">
+                    <rect key="frame" x="296" y="71" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="1bp-g2-uF8"/>
+                        <constraint firstAttribute="width" constant="16" id="aPq-Xf-Tqt"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="favorite-off">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="S7A-hL-B1f"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="FEP-6s-6o6" secondAttribute="trailing" constant="8" id="EBF-M7-Lhy"/>
                 <constraint firstAttribute="trailing" secondItem="oQP-XV-Rch" secondAttribute="trailing" constant="15" id="Eia-fS-cBu"/>
                 <constraint firstItem="yMN-0I-fsd" firstAttribute="top" secondItem="hjC-7a-Oyv" secondAttribute="bottom" constant="45" id="RMb-d9-4aC"/>
+                <constraint firstItem="p1f-if-vdS" firstAttribute="centerY" secondItem="FEP-6s-6o6" secondAttribute="centerY" id="W7h-Ut-I1n"/>
                 <constraint firstAttribute="bottom" secondItem="yMN-0I-fsd" secondAttribute="bottom" constant="65" id="WON-v1-Kf7"/>
                 <constraint firstAttribute="trailing" secondItem="hjC-7a-Oyv" secondAttribute="trailing" id="Yer-hX-Hpa"/>
                 <constraint firstAttribute="bottom" secondItem="hjC-7a-Oyv" secondAttribute="bottom" constant="140" id="Zs6-te-Qdm"/>
@@ -61,6 +77,9 @@
             <point key="canvasLocation" x="201" y="439"/>
         </view>
     </objects>
+    <resources>
+        <image name="favorite-off" width="16" height="16"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

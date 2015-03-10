@@ -40,14 +40,21 @@
     return min;
 }
 
+// TODO for now, keep a static reference to the list of all countries once initialized
+// this way we can grab the countries from multiple places
+static NSArray *_allCountries;
+
 + (NSArray *)initCountries {
-    NSArray *destinations = [self getDestinations];
-    NSMutableArray *countries = [[NSMutableArray alloc] init];
-    for (NSDictionary *countryDictionary in destinations) {
-        Country *country = [[Country alloc] initWithDictionary:countryDictionary];
-        [countries addObject:country];
+    if (!_allCountries) {
+        NSArray *destinations = [self getDestinations];
+        NSMutableArray *countries = [[NSMutableArray alloc] init];
+        for (NSDictionary *countryDictionary in destinations) {
+            Country *country = [[Country alloc] initWithDictionary:countryDictionary];
+            [countries addObject:country];
+        }
+        _allCountries = countries;
     }
-    return countries;
+    return _allCountries;
 }
 
 + (NSArray *)getDestinations {

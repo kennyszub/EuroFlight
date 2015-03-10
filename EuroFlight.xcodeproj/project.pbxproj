@@ -42,6 +42,8 @@
 		EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */; };
 		EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */; };
 		EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */; };
+		EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */; };
+		EB72B22B1AAEDE47004503D1 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */; };
 		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
 		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
 		EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210E1AABE2CE0081E88A /* MAD.txt */; };
@@ -53,6 +55,7 @@
 		EBA5211D1AABF4B80081E88A /* FlightResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA5211B1AABF4B80081E88A /* FlightResultCell.xib */; };
 		EBA521211AABFFE60081E88A /* FlightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA5211F1AABFFE60081E88A /* FlightDetailViewController.m */; };
 		EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA521201AABFFE60081E88A /* FlightDetailViewController.xib */; };
+		EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,9 @@
 		EB08A40B1AAD349C001C2AA3 /* NameMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameMappingHelper.h; sourceTree = "<group>"; };
 		EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameMappingHelper.m; sourceTree = "<group>"; };
 		EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayFlightDetailView.xib; sourceTree = "<group>"; };
+		EB72B2271AAEDE47004503D1 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		EBA521091AABDDC20081E88A /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
 		EBA5210B1AABE1950081E88A /* BCN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCN.txt; sourceTree = "<group>"; };
 		EBA5210E1AABE2CE0081E88A /* MAD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MAD.txt; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		EBA5211E1AABFFE60081E88A /* FlightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailViewController.h; sourceTree = "<group>"; };
 		EBA5211F1AABFFE60081E88A /* FlightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailViewController.m; sourceTree = "<group>"; };
 		EBA521201AABFFE60081E88A /* FlightDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightDetailViewController.xib; sourceTree = "<group>"; };
+		EBDB6BE81AAEBA8200F24818 /* FavoritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesManager.h; sourceTree = "<group>"; };
+		EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +317,9 @@
 				11873B191AAD7D990050D5DA /* EventDetailViewController.h */,
 				11873B1A1AAD7D990050D5DA /* EventDetailViewController.m */,
 				11873B1B1AAD7D990050D5DA /* EventDetailViewController.xib */,
+				EB72B2271AAEDE47004503D1 /* FavoritesViewController.h */,
+				EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */,
+				EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -331,6 +342,8 @@
 			children = (
 				EB08A40B1AAD349C001C2AA3 /* NameMappingHelper.h */,
 				EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */,
+				EBDB6BE81AAEBA8200F24818 /* FavoritesManager.h */,
+				EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -441,6 +454,7 @@
 				EBA5210C1AABE1950081E88A /* BCN.txt in Resources */,
 				EBA5211D1AABF4B80081E88A /* FlightResultCell.xib in Resources */,
 				EBA521131AABE3330081E88A /* NCE.txt in Resources */,
+				EB72B22B1AAEDE47004503D1 /* FavoritesViewController.xib in Resources */,
 				EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */,
 				EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */,
 				11873B1D1AAD7D990050D5DA /* EventDetailViewController.xib in Resources */,
@@ -499,11 +513,13 @@
 			files = (
 				C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */,
 				C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */,
+				EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */,
 				C4FA0DD01AABEE0F0023FDC3 /* Trip.m in Sources */,
 				C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */,
 				C4FA0DC41AABDEF20023FDC3 /* ResultsViewController.m in Sources */,
 				C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */,
 				EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */,
+				EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */,
 				C4FA0DC91AABDFC60023FDC3 /* CountryTableViewCell.m in Sources */,
 				11873B141AABFD900050D5DA /* PlaceCell.m in Sources */,
 				11873B021AABF6220050D5DA /* PlacesClient.m in Sources */,

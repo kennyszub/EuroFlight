@@ -13,6 +13,7 @@
 #import "PlacesClient.h"
 #import "KimonoClient.h"
 #import "Event.h"
+#import "FavoritesViewController.h"
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
@@ -56,6 +57,10 @@ enum Weeks {
     [self refreshDates];
     
     self.title = @"EuroFlight";
+
+    // set up favorites button
+    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(onFavoritesButton)];
+    self.navigationItem.rightBarButtonItem = favoritesButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,6 +78,10 @@ enum Weeks {
     }
 }
 
+- (void)onFavoritesButton {
+    FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
+    [self.navigationController pushViewController:fvc animated:YES];
+}
 
 
 #pragma mark Date picker methods

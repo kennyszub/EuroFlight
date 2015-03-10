@@ -13,10 +13,14 @@
 #import "Place.h"
 #import "Trip.h"
 #import "KimonoClient.h"
+#import "FavoritesManager.h"
 
 @interface City ()
+
 @property (nonatomic, strong) NSDictionary *summaries;
+
 @end
+
 @implementation City
 
 NSString * const kPlaceDataPrefix = @"PlaceData";
@@ -52,7 +56,6 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
         
         self.summary = [KimonoClient sharedInstance].placeSummaries[self.name];
         self.imageURL = [KimonoClient sharedInstance].cityImages[self.name];
-        
     }
     return self;
 }
@@ -85,6 +88,15 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
     } else {
         return nil;
     }
+}
+
+- (BOOL)isFavorited {
+    return [[FavoritesManager sharedInstance] isCityNameFavorited:self.name];
+}
+
+// TODO any way to make this a custom setter instead of an exposed method?
+- (void)setFavoritedState:(BOOL)state {
+    [[FavoritesManager sharedInstance] setCity:self favorited:state];
 }
 
 @end

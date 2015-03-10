@@ -9,11 +9,14 @@
 #import "CityDetailsViewController.h"
 #import "PlaceCell.h"
 #import "FlightResultsViewController.h"
+#import "FavoritesManager.h"
 
 @interface CityDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -30,11 +33,27 @@
     self.descriptionLabel.text = self.city.summary;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 150;
+
+    [self setFavoriteButtonImage];
 }
+
 - (IBAction)onTickets:(id)sender {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = self.city;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)onFavoriteButton:(id)sender {
+    [self.city setFavoritedState:!self.city.isFavorited];
+    [self setFavoriteButtonImage];
+}
+
+- (void)setFavoriteButtonImage {
+    if (self.city.isFavorited) {
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-on"] forState:UIControlStateNormal];
+    } else {
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-off"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
