@@ -7,6 +7,7 @@
 //
 
 #import "KimonoClient.h"
+#import "Event.h"
 
 @implementation KimonoClient
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117F87C31AAFF40900C1E24C /* PlaceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 117F87C11AAFF40900C1E24C /* PlaceCollectionViewCell.m */; };
+		117F87C41AAFF40900C1E24C /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117F87C21AAFF40900C1E24C /* PlaceCollectionViewCell.xib */; };
 		11873B021AABF6220050D5DA /* PlacesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11873B011AABF6220050D5DA /* PlacesClient.m */; };
 		11873B051AABF6340050D5DA /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 11873B041AABF6340050D5DA /* Place.m */; };
 		11873B061AABF9BF0050D5DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D761AAB9B830023FDC3 /* main.m */; };
@@ -14,8 +16,6 @@
 		11873B081AABF9BF0050D5DA /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DB41AABBA770023FDC3 /* Context.m */; };
 		11873B0C1AABF9FD0050D5DA /* CityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11873B0A1AABF9FD0050D5DA /* CityDetailsViewController.m */; };
 		11873B0D1AABF9FD0050D5DA /* CityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11873B0B1AABF9FD0050D5DA /* CityDetailsViewController.xib */; };
-		11873B141AABFD900050D5DA /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11873B121AABFD900050D5DA /* PlaceCell.m */; };
-		11873B151AABFD900050D5DA /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11873B131AABFD900050D5DA /* PlaceCell.xib */; };
 		11873B181AAD49A70050D5DA /* KimonoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11873B171AAD49A70050D5DA /* KimonoClient.m */; };
 		11873B1C1AAD7D990050D5DA /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11873B1A1AAD7D990050D5DA /* EventDetailViewController.m */; };
 		11873B1D1AAD7D990050D5DA /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11873B1B1AAD7D990050D5DA /* EventDetailViewController.xib */; };
@@ -70,15 +70,15 @@
 
 /* Begin PBXFileReference section */
 		10F116A637F1BF91C4CE37A3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		117F87C01AAFF40900C1E24C /* PlaceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCollectionViewCell.h; sourceTree = "<group>"; };
+		117F87C11AAFF40900C1E24C /* PlaceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCollectionViewCell.m; sourceTree = "<group>"; };
+		117F87C21AAFF40900C1E24C /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
 		11873B011AABF6220050D5DA /* PlacesClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesClient.m; sourceTree = "<group>"; };
 		11873B031AABF6340050D5DA /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		11873B041AABF6340050D5DA /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		11873B091AABF9FD0050D5DA /* CityDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetailsViewController.h; sourceTree = "<group>"; };
 		11873B0A1AABF9FD0050D5DA /* CityDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetailsViewController.m; sourceTree = "<group>"; };
 		11873B0B1AABF9FD0050D5DA /* CityDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityDetailsViewController.xib; sourceTree = "<group>"; };
-		11873B111AABFD900050D5DA /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCell.h; sourceTree = "<group>"; };
-		11873B121AABFD900050D5DA /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCell.m; sourceTree = "<group>"; };
-		11873B131AABFD900050D5DA /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
 		11873B161AAD49A70050D5DA /* KimonoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KimonoClient.h; sourceTree = "<group>"; };
 		11873B171AAD49A70050D5DA /* KimonoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KimonoClient.m; sourceTree = "<group>"; };
 		11873B191AAD7D990050D5DA /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
@@ -289,9 +289,9 @@
 				EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */,
 				EB08A4041AAC3948001C2AA3 /* OneWayFlightDetailView.h */,
 				EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */,
-				11873B111AABFD900050D5DA /* PlaceCell.h */,
-				11873B121AABFD900050D5DA /* PlaceCell.m */,
-				11873B131AABFD900050D5DA /* PlaceCell.xib */,
+				117F87C01AAFF40900C1E24C /* PlaceCollectionViewCell.h */,
+				117F87C11AAFF40900C1E24C /* PlaceCollectionViewCell.m */,
+				117F87C21AAFF40900C1E24C /* PlaceCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -447,7 +447,6 @@
 				EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */,
 				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
-				11873B151AABFD900050D5DA /* PlaceCell.xib in Resources */,
 				11873B0D1AABF9FD0050D5DA /* CityDetailsViewController.xib in Resources */,
 				C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */,
 				C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */,
@@ -458,6 +457,7 @@
 				EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */,
 				EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */,
 				11873B1D1AAD7D990050D5DA /* EventDetailViewController.xib in Resources */,
+				117F87C41AAFF40900C1E24C /* PlaceCollectionViewCell.xib in Resources */,
 				EBA521111AABE2FE0081E88A /* ORY.txt in Resources */,
 				EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */,
 				EBA521181AABF3290081E88A /* FlightResultsViewController.xib in Resources */,
@@ -518,10 +518,10 @@
 				C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */,
 				C4FA0DC41AABDEF20023FDC3 /* ResultsViewController.m in Sources */,
 				C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */,
+				117F87C31AAFF40900C1E24C /* PlaceCollectionViewCell.m in Sources */,
 				EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */,
 				EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */,
 				C4FA0DC91AABDFC60023FDC3 /* CountryTableViewCell.m in Sources */,
-				11873B141AABFD900050D5DA /* PlaceCell.m in Sources */,
 				11873B021AABF6220050D5DA /* PlacesClient.m in Sources */,
 				11873B051AABF6340050D5DA /* Place.m in Sources */,
 				C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */,

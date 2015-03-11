@@ -1,30 +1,25 @@
 //
-//  PlaceCell.m
+//  PlaceCollectionViewCell.m
 //  EuroFlight
 //
-//  Created by Helen Kuo on 3/7/15.
+//  Created by Helen Kuo on 3/10/15.
 //  Copyright (c) 2015 OkStupid. All rights reserved.
 //
 
-#import "PlaceCell.h"
+#import "PlaceCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
-@interface PlaceCell ()
+
+@interface PlaceCollectionViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *placeView;
-    
+
 
 @end
 
-@implementation PlaceCell
+@implementation PlaceCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (void)setPlace:(Place *)place {

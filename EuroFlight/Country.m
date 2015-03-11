@@ -9,6 +9,7 @@
 #import "Country.h"
 #import "City.h"
 #import "ResultsViewController.h"
+#import "Event.h"
 
 @implementation Country
 
@@ -30,6 +31,12 @@
             float price2 = ((City *) obj2).lowestCost;
             return [ResultsViewController compareFloats:price1 secondFloat:price2];
         }];
+        
+        NSMutableArray *array = [[Event allEvents] mutableCopy];
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"country like %@", self.name];
+        NSArray *matchingEvents = [array filteredArrayUsingPredicate:predicate];
+        self.events = matchingEvents;
     }
     return self;
 }

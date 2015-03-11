@@ -24,7 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.event = [Event allEvents][self.index];
+    if (self.index < self.events.count) {
+    self.event = self.events[self.index];
     // Do any additional setup after loading the view from its nib.
     self.nameLabel.text = self.event.name;
     self.dateLabel.text = self.event.dateString;
@@ -32,6 +33,7 @@
     self.countryLabel.text = self.event.country;
     self.descriptionLabel.text = self.event.summary;
     [self.eventView setImageWithURL:[NSURL URLWithString:self.event.photoURL]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

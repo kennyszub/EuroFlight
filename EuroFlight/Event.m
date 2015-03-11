@@ -11,6 +11,7 @@
 
 @implementation Event
 static NSArray *_events = nil;
+static NSDateFormatter *dateTimeParser;
 
 + (NSArray *)allEvents {
     if (_events == nil) {
@@ -24,15 +25,20 @@ static NSArray *_events = nil;
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
+        if (!dateTimeParser) {
+            [Event initDateTimeParser];
+        }
         self.name = dictionary[@"name"];
         self.summary = dictionary[@"description"];
         self.photoURL = dictionary[@"photoURL"];
         self.dateString = dictionary[@"date"];
+        
         NSArray *components = [dictionary[@"city"] componentsSeparatedByString:@", "];
         self.city = components[0];
         if (components.count > 1) {
             self.country = components[1];
         }
+        [self parseDateString:self.dateString];
     }
     return self;
 }
@@ -56,6 +62,52 @@ static NSArray *_events = nil;
     }
 
     return array;
+}
+
++ (void)initDateTimeParser {
+    dateTimeParser = [[NSDateFormatter alloc] init];
+    dateTimeParser.dateFormat = @"MMM' 'd', 'y";
+}
+
+static NSRegularExpression *dateRegex;
+
+- (void)parseDateString:(NSString *)dateString {
+    NSDate *startDate = [dateTimeParser dateFromString:dateString];
+    NSDate *endDate = nil;
+    
+    if (!startDate) {
+        if (!dateRegex) {
+            dateRegex = [NSRegularExpression regularExpressionWithPattern:@"([A-Za-z]+ [0-9]+) - ([A-Za-z]* ?[0-9]+), ([0-9]+)" options:0 error:nil];
+        }
+        NSArray *matches = [dateRegex matchesInString:dateString options:0 range:NSMakeRange(0, dateString.length)];
+        
+        for (NSTextCheckingResult *match in matches) {
+            NSRange startRange = [match rangeAtIndex:1];
+            NSRange endRange = [match rangeAtIndex:2];
+            NSRange yearRange = [match rangeAtIndex:3];
+            NSString *startString = [dateString substringWithRange:startRange];
+            NSString *endString = [dateString substringWithRange:endRange];
+            NSString *year = [dateString substringWithRange:yearRange];
+            NSString *startMonth = [startString componentsSeparatedByString:@" "][0];
+            startString = [NSString stringWithFormat:@"%@, %@", startString, year];
+            if ([endString componentsSeparatedByString:@" "].count == 1) {
+                endString = [NSString stringWithFormat:@"%@ %@, %@", startMonth, endString, year];
+            } else {
+                endString = [NSString stringWithFormat:@"%@, %@", endString, year];
+            }
+            startDate = [dateTimeParser dateFromString:startString];
+            endDate = [dateTimeParser dateFromString:endString];
+            
+        }
+    } else {
+        endDate = startDate;
+    }
+    
+    self.startDate = startDate;
+    self.endDate = endDate;
+    
+    NSLog(@"3 %@ %@ %@", dateString, startDate, endDate);
+
 }
 
 @end
