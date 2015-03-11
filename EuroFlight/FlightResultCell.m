@@ -7,6 +7,7 @@
 //
 
 #import "FlightResultCell.h"
+#import "CurrencyFormatter.h"
 
 @interface FlightResultCell ()
 
@@ -43,7 +44,9 @@ static NSDateFormatter *dateTimeFormatter;
     
     self.outboundFlightLabel.text = [NSString stringWithFormat:@"%@ -> %@", trip.sourceAirportCode, trip.destinationAirportCode];
     self.returnFlightLabel.text = [NSString stringWithFormat:@"%@ -> %@", trip.destinationAirportCode, trip.sourceAirportCode];
-    self.priceLabel.text = [NSString stringWithFormat:@"%@ %0.2f", trip.currencyType, trip.flightCost];
+
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:trip.currencyType];
+    self.priceLabel.text = [formatter stringFromNumber:@(trip.flightCost)];
     
     self.outboundFlightTimeLabel.text = [dateTimeFormatter stringFromDate:trip.outboundFlight.departureDate];
     self.returnFlightTimeLabel.text = [dateTimeFormatter stringFromDate:trip.returnFlight.departureDate];

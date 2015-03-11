@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultsViewController : UIViewController
+
 - (id)initWithResults;
 + (NSComparisonResult) compareFloats:(float)first secondFloat:(float)second;
-+ (NSNumberFormatter *)currencyFormatterWithCurrencyCode:(NSString *)code;
 
 @end

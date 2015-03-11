@@ -79,19 +79,6 @@
     }
 }
 
-+ (NSNumberFormatter *)currencyFormatterWithCurrencyCode:(NSString *)code {
-    static NSNumberFormatter *sharedFormatter = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (sharedFormatter == nil) {
-            sharedFormatter = [[NSNumberFormatter alloc] init];
-            [sharedFormatter setCurrencyCode:code];
-            [sharedFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-        }
-    });
-    return sharedFormatter;
-}
-
 #pragma mark Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

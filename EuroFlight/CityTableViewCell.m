@@ -8,6 +8,7 @@
 
 #import "CityTableViewCell.h"
 #import "ResultsViewController.h"
+#import "CurrencyFormatter.h"
 
 @interface CityTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
@@ -31,7 +32,7 @@
 - (void)setCity:(City *)city {
     _city = city;
     self.cityNameLabel.text = city.name;
-    NSNumberFormatter *formatter = [ResultsViewController currencyFormatterWithCurrencyCode:city.currencyType];
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:city.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
     self.priceLabel.text = [NSString stringWithFormat:@"from: %@", price];
     [self setFavoriteButtonImageForCity:city];

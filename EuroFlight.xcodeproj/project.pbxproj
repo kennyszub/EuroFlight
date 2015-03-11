@@ -70,6 +70,7 @@
 		EB72B24F1AB017A3004503D1 /* BRU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B24E1AB017A3004503D1 /* BRU.txt */; };
 		EB72B2511AB0187B004503D1 /* IST.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2501AB0187B004503D1 /* IST.txt */; };
 		EB72B2531AB018CB004503D1 /* ARN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2521AB018CB004503D1 /* ARN.txt */; };
+		EB72B2561AB032D7004503D1 /* CurrencyFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */; };
 		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
 		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
 		EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210E1AABE2CE0081E88A /* MAD.txt */; };
@@ -189,6 +190,8 @@
 		EB72B24E1AB017A3004503D1 /* BRU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BRU.txt; sourceTree = "<group>"; };
 		EB72B2501AB0187B004503D1 /* IST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IST.txt; sourceTree = "<group>"; };
 		EB72B2521AB018CB004503D1 /* ARN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARN.txt; sourceTree = "<group>"; };
+		EB72B2541AB032D7004503D1 /* CurrencyFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyFormatter.h; sourceTree = "<group>"; };
+		EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyFormatter.m; sourceTree = "<group>"; };
 		EBA521091AABDDC20081E88A /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
 		EBA5210B1AABE1950081E88A /* BCN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCN.txt; sourceTree = "<group>"; };
 		EBA5210E1AABE2CE0081E88A /* MAD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MAD.txt; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 				EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */,
 				EBDB6BE81AAEBA8200F24818 /* FavoritesManager.h */,
 				EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */,
+				EB72B2541AB032D7004503D1 /* CurrencyFormatter.h */,
+				EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -644,6 +649,7 @@
 				C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */,
 				EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */,
 				EBA521171AABF3290081E88A /* FlightResultsViewController.m in Sources */,
+				EB72B2561AB032D7004503D1 /* CurrencyFormatter.m in Sources */,
 				11873B071AABF9BF0050D5DA /* AppDelegate.m in Sources */,
 				11873B081AABF9BF0050D5DA /* Context.m in Sources */,
 				C4FA0DDC1AAEB96B0023FDC3 /* AirportClient.m in Sources */,

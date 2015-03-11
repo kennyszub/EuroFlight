@@ -9,6 +9,7 @@
 #import "FlightDetailViewController.h"
 #import "OneWayFlightDetailView.h"
 #import "HomeViewController.h"
+#import "CurrencyFormatter.h"
 
 @interface FlightDetailViewController ()
 
@@ -35,7 +36,8 @@
     
     self.outboundFlightDetailView.flight = self.trip.outboundFlight;
     self.returnFlightDetailView.flight = self.trip.returnFlight;
-    self.costLabel.text = [NSString stringWithFormat:@"%@ %0.2f", self.trip.currencyType, self.trip.flightCost];
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.trip.currencyType];
+    self.costLabel.text = [formatter stringFromNumber:@(self.trip.flightCost)];
 }
 
 - (void)didReceiveMemoryWarning {

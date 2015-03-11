@@ -11,6 +11,7 @@
 #import "ResultsViewController.h"
 #import "Event.h"
 #import "Context.h"
+#import "CurrencyFormatter.h"
 
 @interface CountryTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *countryName;
@@ -35,7 +36,7 @@
 - (void)setCountry:(Country *)country {
     _country = country;
     self.countryName.text = country.name;
-    NSNumberFormatter *formatter = [ResultsViewController currencyFormatterWithCurrencyCode:country.currencyType];
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:country.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.country.lowestCost]];
     self.lowestPriceLabel.text = [NSString stringWithFormat:@"from: %@", price];
     self.countryImage.image = nil;
