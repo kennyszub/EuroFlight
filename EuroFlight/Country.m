@@ -73,7 +73,9 @@ static NSArray *_allCountries;
               @[@{@"city" : @"Barcelona",
                   @"airportCodes" : @[@"BCN"]},
                 @{@"city" : @"Madrid",
-                  @"airportCodes" : @[@"MAD"]}]
+                  @"airportCodes" : @[@"MAD"]},
+                @{@"city" : @"Ibiza",
+                  @"airportCodes" : @[@"IBZ"]}]
           },
       @{
           @"countryName" : @"France",
@@ -82,7 +84,96 @@ static NSArray *_allCountries;
                   @"airportCodes" : @[@"CDG", @"ORY"]},
                 @{@"city" : @"Nice",
                   @"airportCodes" : @[@"NCE"]}]
-          }
+          },
+      @{
+          @"countryName" : @"Netherlands",
+          @"cities" :
+              @[@{@"city" : @"Amsterdam",
+                  @"airportCodes" : @[@"AMS"]}]
+          },
+      @{
+          @"countryName" : @"Hungary",
+          @"cities" :
+              @[@{@"city" : @"Budapest",
+                  @"airportCodes" : @[@"BUD"]}]
+          },
+      @{
+          @"countryName" : @"Ireland",
+          @"cities" :
+              @[@{@"city" : @"Dublin",
+                  @"airportCodes" : @[@"DUB"]}]
+          },
+      @{
+          @"countryName" : @"Scotland",
+          @"cities" :
+              @[@{@"city" : @"Edinburgh",
+                  @"airportCodes" : @[@"EDI"]}]
+          },
+      @{
+          @"countryName" : @"Italy",
+          @"cities" :
+              @[@{@"city" : @"Florence",
+                  @"airportCodes" : @[@"FLR"]},
+                @{@"city" : @"Venice",
+                  @"airportCodes" : @[@"VCE"]},
+                @{@"city" : @"Rome",
+                  @"airportCodes" : @[@"FCO"]}]
+          },
+      @{
+          @"countryName" : @"Sweden",
+          @"cities" :
+              @[@{@"city" : @"Stockholm",
+                  @"airportCodes" : @[@"ARN"]},
+                @{@"city" : @"Gothenburg",
+                  @"airportCodes" : @[@"GOT"]}]
+          },
+      @{
+          @"countryName" : @"Germany",
+          @"cities" :
+              @[@{@"city" : @"Munich",
+                  @"airportCodes" : @[@"MUC"]},
+                @{@"city" : @"Berlin",
+                  @"airportCodes" : @[@"TXL", @"SXF"]},
+                @{@"city" : @"Frankfurt",
+                  @"airportCodes" : @[@"FRA"]}]
+          },
+      @{
+          @"countryName" : @"Norway",
+          @"cities" :
+              @[@{@"city" : @"Oslo",
+                  @"airportCodes" : @[@"OSL"]}]
+          },
+      @{
+          @"countryName" : @"Switzerland",
+          @"cities" :
+              @[@{@"city" : @"Zurich",
+                  @"airportCodes" : @[@"ZRH"]}]
+          },
+      @{
+          @"countryName" : @"Austria",
+          @"cities" :
+              @[@{@"city" : @"Vienna",
+                  @"airportCodes" : @[@"VIE"]}]
+          },
+      @{
+          @"countryName" : @"Iceland",
+          @"cities" :
+              @[@{@"city" : @"Reykjavik",
+                  @"airportCodes" : @[@"KEF"]}]
+          },
+      @{
+          @"countryName" : @"Belgium",
+          @"cities" :
+              @[@{@"city" : @"Brussels",
+                  @"airportCodes" : @[@"BRU"]}]
+          },
+      @{
+          @"countryName" : @"Turkey",
+          @"cities" :
+              @[@{@"city" : @"Istanbul",
+                  @"airportCodes" : @[@"IST"]}]
+          },
+
       ];
     
     return destinations;

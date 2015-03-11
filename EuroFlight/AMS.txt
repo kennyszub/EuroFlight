@@ -1,0 +1,5071 @@
+{
+"kind": "qpxExpress#tripsSearch",
+"trips": {
+"kind": "qpxexpress#tripOptions",
+"requestId": "JbwwTOWWGVp2lgcCu0LjUv",
+"data": {
+"kind": "qpxexpress#data",
+"airport": [
+{
+"kind": "qpxexpress#airportData",
+"code": "AMS",
+"city": "AMS",
+"name": "Amsterdam Schiphol Airport"
+},
+{
+"kind": "qpxexpress#airportData",
+"code": "LHR",
+"city": "LON",
+"name": "London Heathrow"
+}
+],
+"city": [
+{
+"kind": "qpxexpress#cityData",
+"code": "AMS",
+"name": "Amsterdam"
+},
+{
+"kind": "qpxexpress#cityData",
+"code": "LON",
+"name": "London"
+}
+],
+"aircraft": [
+{
+"kind": "qpxexpress#aircraftData",
+"code": "319",
+"name": "Airbus A319"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "320",
+"name": "Airbus A320"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "321",
+"name": "Airbus A321"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "73H",
+"name": "Boeing 737"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "73J",
+"name": "Boeing 737"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "73W",
+"name": "Boeing 737"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "767",
+"name": "Boeing 767"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "E90",
+"name": "Embraer RJ-190"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "F70",
+"name": "Fokker 70"
+}
+],
+"tax": [
+{
+"kind": "qpxexpress#taxData",
+"id": "UB",
+"name": "United Kingdom Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "CJ",
+"name": "The Netherlands Security Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "VV_001",
+"name": "The Netherlands Noise Isolation Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "RN_001",
+"name": "The Netherlands Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "GB_001",
+"name": "United Kingdom Air Passengers Duty"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "YR",
+"name": "KL YR surcharge"
+}
+],
+"carrier": [
+{
+"kind": "qpxexpress#carrierData",
+"code": "BA",
+"name": "British Airways p.l.c."
+},
+{
+"kind": "qpxexpress#carrierData",
+"code": "KL",
+"name": "KLM Royal Dutch Airlines"
+}
+]
+},
+"tripOption": [
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP178.91",
+"id": "NbV4rQUnf8ATfbCPk96l87002",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1020"
+},
+"id": "GdRfb3vFuR5Ei8Ny",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 5,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LyfjcIcapBMAL733",
+"aircraft": "F70",
+"arrivalTime": "2015-03-27T18:00+01:00",
+"departureTime": "2015-03-27T15:45+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1001"
+},
+"id": "G9SHw7ukcKxdVmju",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPJkmCIawhVO-BMW",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T07:40+01:00",
+"departureTime": "2015-03-29T07:15+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ADlIzLMJC1M2eRnunngNhyp5jSZ9uS2OPgdcasrq4dC2",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "QSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "G9SHw7ukcKxdVmju",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ADlIzLMJC1M2eRnunngNhyp5jSZ9uS2OPgdcasrq4dC2",
+"segmentId": "GdRfb3vFuR5Ei8Ny",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP70.00",
+"saleFareTotal": "GBP70.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP178.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 81.43QSRGB KL LHR 28.18RSRGB NUC 109.61 END ROE 0.638555 FARE GBP 70.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP178.91",
+"id": "NbV4rQUnf8ATfbCPk96l87001",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 70,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 70,
+"flight": {
+"carrier": "KL",
+"number": "1028"
+},
+"id": "GhkrxI+dYOFgg7o8",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LuJoTLcbbykZ7Ldv",
+"aircraft": "F70",
+"arrivalTime": "2015-03-27T22:25+01:00",
+"departureTime": "2015-03-27T20:15+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 70,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1001"
+},
+"id": "G9SHw7ukcKxdVmju",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPJkmCIawhVO-BMW",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T07:40+01:00",
+"departureTime": "2015-03-29T07:15+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ADlIzLMJC1M2eRnunngNhyp5jSZ9uS2OPgdcasrq4dC2",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "QSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "G9SHw7ukcKxdVmju",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ADlIzLMJC1M2eRnunngNhyp5jSZ9uS2OPgdcasrq4dC2",
+"segmentId": "GhkrxI+dYOFgg7o8",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP70.00",
+"saleFareTotal": "GBP70.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP178.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 81.43QSRGB KL LHR 28.18RSRGB NUC 109.61 END ROE 0.638555 FARE GBP 70.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP179.91",
+"id": "NbV4rQUnf8ATfbCPk96l87003",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1018"
+},
+"id": "GFi3SyEwRCKC1DW3",
+"cabin": "COACH",
+"bookingCode": "U",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L8pzGZV8YSg4mj-w",
+"aircraft": "73W",
+"arrivalTime": "2015-03-27T17:05+01:00",
+"departureTime": "2015-03-27T14:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1001"
+},
+"id": "G9SHw7ukcKxdVmju",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPJkmCIawhVO-BMW",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T07:40+01:00",
+"departureTime": "2015-03-29T07:15+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AHCgkjHIjH4SNgi3RN/79gF2Ar+K2wPgQQWsCvgj5s8g",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "UWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "G9SHw7ukcKxdVmju",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AHCgkjHIjH4SNgi3RN/79gF2Ar+K2wPgQQWsCvgj5s8g",
+"segmentId": "GFi3SyEwRCKC1DW3",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP71.00",
+"saleFareTotal": "GBP71.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP179.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 83.78UWKGB KL LHR 28.18RSRGB NUC 111.96 END ROE 0.638555 FARE GBP 71.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP201.91",
+"id": "NbV4rQUnf8ATfbCPk96l87004",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1032"
+},
+"id": "GNfSNT3ytdZqRBDg",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 6,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L8HiG9aBcdxWKeLF",
+"aircraft": "E90",
+"arrivalTime": "2015-03-27T22:40+01:00",
+"departureTime": "2015-03-27T20:25+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1001"
+},
+"id": "G9SHw7ukcKxdVmju",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPJkmCIawhVO-BMW",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T07:40+01:00",
+"departureTime": "2015-03-29T07:15+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "HSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "G9SHw7ukcKxdVmju",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"segmentId": "GNfSNT3ytdZqRBDg",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP93.00",
+"saleFareTotal": "GBP93.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP201.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 117.45HSRGB KL LHR 28.18RSRGB NUC 145.63 END ROE 0.638555 FARE GBP 93.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP201.91",
+"id": "NbV4rQUnf8ATfbCPk96l87006",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "KL",
+"number": "1010"
+},
+"id": "GN8biEcjUc04qGnG",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 8,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L-9n2N-aslEN9qLX",
+"aircraft": "73J",
+"arrivalTime": "2015-03-27T14:05+01:00",
+"departureTime": "2015-03-27T11:45+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1033"
+},
+"id": "GsVDiXKCW-cG-e-O",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LfWhuu2dsb7wzhpC",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T20:55+01:00",
+"departureTime": "2015-03-29T20:30+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "HSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"segmentId": "GN8biEcjUc04qGnG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "GsVDiXKCW-cG-e-O",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP93.00",
+"saleFareTotal": "GBP93.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP201.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 117.45HSRGB KL LHR 28.18RSRGB NUC 145.63 END ROE 0.638555 FARE GBP 93.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP201.91",
+"id": "NbV4rQUnf8ATfbCPk96l87005",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "KL",
+"number": "1024"
+},
+"id": "GtOTRjz+9Vc5uCEk",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lrd1s3qcp0UAFbWW",
+"aircraft": "F70",
+"arrivalTime": "2015-03-27T21:10+01:00",
+"departureTime": "2015-03-27T18:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 80,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1001"
+},
+"id": "G9SHw7ukcKxdVmju",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPJkmCIawhVO-BMW",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T07:40+01:00",
+"departureTime": "2015-03-29T07:15+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "HSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "G9SHw7ukcKxdVmju",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"segmentId": "GtOTRjz+9Vc5uCEk",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP93.00",
+"saleFareTotal": "GBP93.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP201.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 117.45HSRGB KL LHR 28.18RSRGB NUC 145.63 END ROE 0.638555 FARE GBP 93.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP201.91",
+"id": "NbV4rQUnf8ATfbCPk96l87007",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "KL",
+"number": "1012"
+},
+"id": "Gz+JGJbW1K3m51IN",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 5,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LKFwOJQlqwK41Ikj",
+"aircraft": "E90",
+"arrivalTime": "2015-03-27T16:25+01:00",
+"departureTime": "2015-03-27T14:05+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 80,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1033"
+},
+"id": "GsVDiXKCW-cG-e-O",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LfWhuu2dsb7wzhpC",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T20:55+01:00",
+"departureTime": "2015-03-29T20:30+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "HSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AX6gVYkBjnv/7Ns94wROd/wGyYAVGuRCTH9unhrbDEiY",
+"segmentId": "Gz+JGJbW1K3m51IN",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "GsVDiXKCW-cG-e-O",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP93.00",
+"saleFareTotal": "GBP93.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP201.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 117.45HSRGB KL LHR 28.18RSRGB NUC 145.63 END ROE 0.638555 FARE GBP 93.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP208.91",
+"id": "NbV4rQUnf8ATfbCPk96l87008",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "KL",
+"number": "1030"
+},
+"id": "G-7uykOvBMQDkRvf",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LAaaZ+j+AIVNci5j",
+"aircraft": "F70",
+"arrivalTime": "2015-03-27T20:05+01:00",
+"departureTime": "2015-03-27T17:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 75,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1001"
+},
+"id": "G9SHw7ukcKxdVmju",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPJkmCIawhVO-BMW",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T07:40+01:00",
+"departureTime": "2015-03-29T07:15+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ADH+83TfOO6PvMsWUdZqVMGJ931lZiJ2tV8mwKE4zJAE",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "MWKGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "G9SHw7ukcKxdVmju",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ADH+83TfOO6PvMsWUdZqVMGJ931lZiJ2tV8mwKE4zJAE",
+"segmentId": "G-7uykOvBMQDkRvf",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP100.00",
+"saleFareTotal": "GBP100.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP208.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 128.41MWKGB KL LHR 28.18RSRGB NUC 156.59 END ROE 0.638555 FARE GBP 100.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP226.91",
+"id": "NbV4rQUnf8ATfbCPk96l87009",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "KL",
+"number": "1022"
+},
+"id": "GHsdEqbM+9l5NMwo",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lfy5V2l-PBA1+YL8",
+"aircraft": "E90",
+"arrivalTime": "2015-03-27T19:25+01:00",
+"departureTime": "2015-03-27T17:05+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 80,
+"operatingDisclosure": "OPERATED BY KLM CITYHOPPER",
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1033"
+},
+"id": "GsVDiXKCW-cG-e-O",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LfWhuu2dsb7wzhpC",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T20:55+01:00",
+"departureTime": "2015-03-29T20:30+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AYbfpSi9j99sEdm+OKd3Tt0yKzIx7xBgJnUrmhBpDhXs",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "KSRGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "GsVDiXKCW-cG-e-O",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AYbfpSi9j99sEdm+OKd3Tt0yKzIx7xBgJnUrmhBpDhXs",
+"segmentId": "GHsdEqbM+9l5NMwo",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP118.00",
+"saleFareTotal": "GBP118.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP226.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 156.60KSRGB KL LHR 28.18RSRGB NUC 184.78 END ROE 0.638555 FARE GBP 118.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP249.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700B",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 90,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 90,
+"flight": {
+"carrier": "KL",
+"number": "1002"
+},
+"id": "GYODgL8upX5PmTr3",
+"cabin": "BUSINESS",
+"bookingCode": "Z",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LTXdU-KlUasmQZU6",
+"aircraft": "73H",
+"arrivalTime": "2015-03-27T11:10+01:00",
+"departureTime": "2015-03-27T08:40+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 90,
+"mileage": 229,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1033"
+},
+"id": "GsVDiXKCW-cG-e-O",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LfWhuu2dsb7wzhpC",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T20:55+01:00",
+"departureTime": "2015-03-29T20:30+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AFT1ixLcsq/bRoldlE+ulSNVOrmQqR1T6UdeOrtQiRlA",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "ZSFGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "GsVDiXKCW-cG-e-O",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AFT1ixLcsq/bRoldlE+ulSNVOrmQqR1T6UdeOrtQiRlA",
+"segmentId": "GYODgL8upX5PmTr3",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 2,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0H1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 2
+}
+]
+}
+],
+"baseFareTotal": "GBP128.00",
+"saleFareTotal": "GBP128.00",
+"saleTaxTotal": "GBP121.91",
+"saleTotal": "GBP249.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP26.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 172.26ZSFGB KL LHR 28.18RSRGB NUC 200.44 END ROE 0.638555 FARE GBP 128.00 XT 26.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP249.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700A",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 90,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 90,
+"flight": {
+"carrier": "KL",
+"number": "1008"
+},
+"id": "GszwA8CT55UVpq3D",
+"cabin": "BUSINESS",
+"bookingCode": "Z",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LbSH87nOIcdo9EAJ",
+"aircraft": "73J",
+"arrivalTime": "2015-03-27T12:30+01:00",
+"departureTime": "2015-03-27T10:00+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 90,
+"mileage": 229,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1033"
+},
+"id": "GsVDiXKCW-cG-e-O",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LfWhuu2dsb7wzhpC",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T20:55+01:00",
+"departureTime": "2015-03-29T20:30+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AFT1ixLcsq/bRoldlE+ulSNVOrmQqR1T6UdeOrtQiRlA",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "ZSFGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "GsVDiXKCW-cG-e-O",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AFT1ixLcsq/bRoldlE+ulSNVOrmQqR1T6UdeOrtQiRlA",
+"segmentId": "GszwA8CT55UVpq3D",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 2,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0H1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 2
+}
+]
+}
+],
+"baseFareTotal": "GBP128.00",
+"saleFareTotal": "GBP128.00",
+"saleTaxTotal": "GBP121.91",
+"saleTotal": "GBP249.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP26.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 172.26ZSFGB KL LHR 28.18RSRGB NUC 200.44 END ROE 0.638555 FARE GBP 128.00 XT 26.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP268.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700C",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "446"
+},
+"id": "GsGPCF+Em3RG+glY",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LjFw8Xxz6Ax3gXBQ",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T16:40+01:00",
+"departureTime": "2015-03-27T14:25+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"segmentId": "GsGPCF+Em3RG+glY",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP204.00",
+"saleFareTotal": "GBP204.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP268.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 237.25MV2R BA LON 82.21QV1R NUC 319.46 END ROE 0.638555 FARE GBP 204.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP268.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700F",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "442"
+},
+"id": "GlT4ktgPaNJHT-dN",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LrdDTqqP1-JDZtaA",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T20:05+01:00",
+"departureTime": "2015-03-27T17:45+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"segmentId": "GlT4ktgPaNJHT-dN",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP204.00",
+"saleFareTotal": "GBP204.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP268.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 237.25MV2R BA LON 82.21QV1R NUC 319.46 END ROE 0.638555 FARE GBP 204.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP268.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700D",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "438"
+},
+"id": "GywPGGPqIpr6dFkJ",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LPdRFsTMeMmXL-v5",
+"aircraft": "321",
+"arrivalTime": "2015-03-27T15:05+01:00",
+"departureTime": "2015-03-27T12:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"segmentId": "GywPGGPqIpr6dFkJ",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP204.00",
+"saleFareTotal": "GBP204.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP268.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 237.25MV2R BA LON 82.21QV1R NUC 319.46 END ROE 0.638555 FARE GBP 204.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP268.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700E",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "444"
+},
+"id": "GT-4c46ljJ6CFksa",
+"cabin": "COACH",
+"bookingCode": "M",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LFlzZooxh8-TLVrZ",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T21:55+01:00",
+"departureTime": "2015-03-27T19:40+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "MV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhS4YQOslhK36zYKHpqqC174BKRKzwfoux+L/3pI",
+"segmentId": "GT-4c46ljJ6CFksa",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP204.00",
+"saleFareTotal": "GBP204.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP268.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 237.25MV2R BA LON 82.21QV1R NUC 319.46 END ROE 0.638555 FARE GBP 204.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP286.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700G",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 90,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 90,
+"flight": {
+"carrier": "KL",
+"number": "1000"
+},
+"id": "G+Cs1epdseSr9J8W",
+"cabin": "COACH",
+"bookingCode": "Y",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LLz70A2pTxGuhrCf",
+"aircraft": "73J",
+"arrivalTime": "2015-03-27T09:00+01:00",
+"departureTime": "2015-03-27T06:30+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "4",
+"duration": 90,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "KL",
+"number": "1033"
+},
+"id": "GsVDiXKCW-cG-e-O",
+"cabin": "COACH",
+"bookingCode": "R",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LfWhuu2dsb7wzhpC",
+"aircraft": "73J",
+"arrivalTime": "2015-03-29T20:55+01:00",
+"departureTime": "2015-03-29T20:30+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "4",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AT6hHx1bpD82TDLUcC/t40YDGr6tNsK3DP1fLFaQTC0I",
+"carrier": "KL",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "YFFGB"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"carrier": "KL",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "RSRGB"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AT6hHx1bpD82TDLUcC/t40YDGr6tNsK3DP1fLFaQTC0I",
+"segmentId": "G+Cs1epdseSr9J8W",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT EQUIP SMALL DIMENSIONS",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 80 li/203 lcm"
+],
+"subcode": "0GC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0GE"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0D6"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0ED"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0DD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0G2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0F2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0FT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0EA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT UPTO50 LB 23KG",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 1,
+"subcode": "0IN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 0,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ANTLERS UP TO 120 INCHES",
+"count": 0,
+"description": [
+"Antlers",
+"Up to 120 inches"
+],
+"subcode": "0EM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO70LB 32KG AND62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 70 lb/32 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0FM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0GP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO100LB 45KG AND 62LI 158LCM",
+"count": 0,
+"description": [
+"Up to 100 lb/45 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0EW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN HOLD",
+"count": 0,
+"subcode": "0BS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PET IN CABIN",
+"count": 0,
+"subcode": "0BT"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0EI"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0H1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0F4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"count": 0,
+"subcode": "0G5"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEdMz5nQKowM7oVQgTLqnQbCBJ+67vCC1X76ZjHxBy5M",
+"segmentId": "GsVDiXKCW-cG-e-O",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"pieces": 0
+}
+]
+}
+],
+"baseFareTotal": "GBP178.00",
+"saleFareTotal": "GBP178.00",
+"saleTaxTotal": "GBP108.91",
+"saleTotal": "GBP286.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP44.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+}
+],
+"fareCalculation": "LHR KL AMS 250.56YFFGB KL LHR 28.18RSRGB NUC 278.74 END ROE 0.638555 FARE GBP 178.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV 44.00YR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT",
+"refundable": true
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP301.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700K",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 85,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 85,
+"flight": {
+"carrier": "BA",
+"number": "428"
+},
+"id": "Gteb1fcVzyk0PGpY",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LX7mnh3r4vLVS0H7",
+"aircraft": "767",
+"arrivalTime": "2015-03-27T09:15+01:00",
+"departureTime": "2015-03-27T06:50+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 85,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"segmentId": "Gteb1fcVzyk0PGpY",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP237.00",
+"saleFareTotal": "GBP237.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP301.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 289.71KV2R BA LON 82.21QV1R NUC 371.92 END ROE 0.638555 FARE GBP 237.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP301.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700I",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "440"
+},
+"id": "GrmusJLekJvk8YiC",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LsqkXKfK5YKI1qa+",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T18:45+01:00",
+"departureTime": "2015-03-27T16:30+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"segmentId": "GrmusJLekJvk8YiC",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP237.00",
+"saleFareTotal": "GBP237.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP301.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 289.71KV2R BA LON 82.21QV1R NUC 371.92 END ROE 0.638555 FARE GBP 237.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP301.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700H",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 75,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 75,
+"flight": {
+"carrier": "BA",
+"number": "430"
+},
+"id": "G16Yxtn3jtdhTEdp",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 2,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LCHJteN4apCIkuJX",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T10:40+01:00",
+"departureTime": "2015-03-27T08:25+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 75,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"segmentId": "G16Yxtn3jtdhTEdp",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP237.00",
+"saleFareTotal": "GBP237.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP301.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 289.71KV2R BA LON 82.21QV1R NUC 371.92 END ROE 0.638555 FARE GBP 237.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP301.91",
+"id": "NbV4rQUnf8ATfbCPk96l8700J",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "434"
+},
+"id": "Gn4SBDwlZ69NkQQw",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LEd3t7i+Lg3Jp24i",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T13:15+01:00",
+"departureTime": "2015-03-27T10:55+00:00",
+"origin": "LHR",
+"destination": "AMS",
+"originTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 80,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 80,
+"flight": {
+"carrier": "BA",
+"number": "423"
+},
+"id": "GvSxW5ZcBcGvwmTF",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LmCID50-Nl2g0nsL",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:40+01:00",
+"departureTime": "2015-03-29T08:20+02:00",
+"origin": "AMS",
+"destination": "LHR",
+"destinationTerminal": "5",
+"duration": 80,
+"mileage": 229,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"carrier": "BA",
+"origin": "LON",
+"destination": "AMS",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"carrier": "BA",
+"origin": "AMS",
+"destination": "LON",
+"basisCode": "QV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ACthPVBjOYwK1Cs6G6WcFL+n/qpjSDo9G9a3dynA",
+"segmentId": "Gn4SBDwlZ69NkQQw",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AdmvfQ4rytzBuf+ywkriUFlQDeaKBMQeITDCBnn6",
+"segmentId": "GvSxW5ZcBcGvwmTF",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP237.00",
+"saleFareTotal": "GBP237.00",
+"saleTaxTotal": "GBP64.91",
+"saleTotal": "GBP301.91",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP30.11"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "CJ",
+"chargeType": "GOVERNMENT",
+"code": "CJ",
+"country": "NL",
+"salePrice": "GBP9.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "VV_001",
+"chargeType": "GOVERNMENT",
+"code": "VV",
+"country": "NL",
+"salePrice": "GBP1.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RN_001",
+"chargeType": "GOVERNMENT",
+"code": "RN",
+"country": "NL",
+"salePrice": "GBP11.20"
+}
+],
+"fareCalculation": "LON BA AMS 289.71KV2R BA LON 82.21QV1R NUC 371.92 END ROE 0.638555 FARE GBP 237.00 XT 13.00GB 30.11UB 9.20CJ 11.20RN 1.40VV",
+"latestTicketingTime": "2015-03-11T23:59-04:00",
+"ptc": "ADT"
+}
+]
+}
+]
+}
+}

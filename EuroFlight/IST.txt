@@ -1,0 +1,6336 @@
+{
+"kind": "qpxExpress#tripsSearch",
+"trips": {
+"kind": "qpxexpress#tripOptions",
+"requestId": "ulUDsufPMkXfNrw4W0LjVd",
+"data": {
+"kind": "qpxexpress#data",
+"airport": [
+{
+"kind": "qpxexpress#airportData",
+"code": "FRA",
+"city": "FRA",
+"name": "Frankfurt International"
+},
+{
+"kind": "qpxexpress#airportData",
+"code": "IST",
+"city": "IST",
+"name": "Istanbul Ataturk"
+},
+{
+"kind": "qpxexpress#airportData",
+"code": "LHR",
+"city": "LON",
+"name": "London Heathrow"
+},
+{
+"kind": "qpxexpress#airportData",
+"code": "MUC",
+"city": "MUC",
+"name": "Munich Franz Joseph Strauss Int'l"
+}
+],
+"city": [
+{
+"kind": "qpxexpress#cityData",
+"code": "FRA",
+"name": "Frankfurt"
+},
+{
+"kind": "qpxexpress#cityData",
+"code": "IST",
+"name": "Istanbul"
+},
+{
+"kind": "qpxexpress#cityData",
+"code": "LON",
+"name": "London"
+},
+{
+"kind": "qpxexpress#cityData",
+"code": "MUC",
+"name": "Munich"
+}
+],
+"aircraft": [
+{
+"kind": "qpxexpress#aircraftData",
+"code": "319",
+"name": "Airbus A319"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "320",
+"name": "Airbus A320"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "321",
+"name": "Airbus A321"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "32A",
+"name": "Airbus A320"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "330",
+"name": "Airbus A330"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "767",
+"name": "Boeing 767"
+},
+{
+"kind": "qpxexpress#aircraftData",
+"code": "77W",
+"name": "Boeing 777"
+}
+],
+"tax": [
+{
+"kind": "qpxexpress#taxData",
+"id": "RA_002",
+"name": "German Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "UB",
+"name": "United Kingdom Passenger Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "DE_001",
+"name": "German Airport Security Tax"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "GB_001",
+"name": "United Kingdom Air Passengers Duty"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "TR_001",
+"name": "Turkish Int'l Airport Service Charge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "YR",
+"name": "TK YR surcharge"
+},
+{
+"kind": "qpxexpress#taxData",
+"id": "YQ",
+"name": "LH YQ surcharge"
+}
+],
+"carrier": [
+{
+"kind": "qpxexpress#carrierData",
+"code": "BA",
+"name": "British Airways p.l.c."
+},
+{
+"kind": "qpxexpress#carrierData",
+"code": "LH",
+"name": "Deutsche Lufthansa AG"
+},
+{
+"kind": "qpxexpress#carrierData",
+"code": "TK",
+"name": "Turkish Airlines Inc."
+}
+]
+},
+"tripOption": [
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP220.66",
+"id": "PWTR6NNcpdCRffEztUnpt7001",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 230,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 230,
+"flight": {
+"carrier": "TK",
+"number": "1980"
+},
+"id": "GrlBQIcLsZP7-4vf",
+"cabin": "COACH",
+"bookingCode": "L",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LeJq1DabFGAvhZoc",
+"aircraft": "77W",
+"arrivalTime": "2015-03-27T17:30+02:00",
+"departureTime": "2015-03-27T11:40+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "2",
+"destinationTerminal": "I",
+"duration": 230,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 245,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 245,
+"flight": {
+"carrier": "TK",
+"number": "1987"
+},
+"id": "GqqiGus8tROpHsgw",
+"cabin": "COACH",
+"bookingCode": "W",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L+PPvmbbiTVrGwgd",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T22:30+01:00",
+"departureTime": "2015-03-29T20:25+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 245,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "A6CDllW/kkhnfiVGai47EYsmXoU02VH4MJlb37nYVk8g",
+"carrier": "TK",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "LY2XP"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"carrier": "TK",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "WY2PR1"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "A6CDllW/kkhnfiVGai47EYsmXoU02VH4MJlb37nYVk8g",
+"segmentId": "GrlBQIcLsZP7-4vf",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"segmentId": "GqqiGus8tROpHsgw",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+}
+],
+"baseFareTotal": "GBP108.00",
+"saleFareTotal": "GBP108.00",
+"saleTaxTotal": "GBP112.66",
+"saleTotal": "GBP220.66",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP47.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON TK IST 141.72LY2XP TK LON 27.40WY2PR1 NUC 169.12 END ROE 0.638555 FARE GBP 108.00 XT 13.00GB 42.06UB 10.00TR 47.60YR",
+"latestTicketingTime": "2015-03-12T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP243.68",
+"id": "PWTR6NNcpdCRffEztUnpt7005",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 420,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 95,
+"flight": {
+"carrier": "LH",
+"number": "923"
+},
+"id": "GCpqbbDzaFJaIAD+",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LlQKKxYaqsM7flYy",
+"aircraft": "321",
+"arrivalTime": "2015-03-27T10:05+01:00",
+"departureTime": "2015-03-27T07:30+00:00",
+"origin": "LHR",
+"destination": "FRA",
+"originTerminal": "2",
+"destinationTerminal": "1",
+"duration": 95,
+"mileage": 406,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 150
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 175,
+"flight": {
+"carrier": "LH",
+"number": "1300"
+},
+"id": "G4WmCUR9CHjq2piG",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lc5h6XZwjDVbzcdQ",
+"aircraft": "321",
+"arrivalTime": "2015-03-27T16:30+02:00",
+"departureTime": "2015-03-27T12:35+01:00",
+"origin": "FRA",
+"destination": "IST",
+"originTerminal": "1",
+"destinationTerminal": "I",
+"duration": 175,
+"mileage": 1156,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 345,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 165,
+"flight": {
+"carrier": "LH",
+"number": "1775"
+},
+"id": "GshhtNEV6cwA5vOG",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lz3z9LW0zpS5EaYl",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:05+02:00",
+"departureTime": "2015-03-29T06:20+03:00",
+"origin": "IST",
+"destination": "MUC",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 165,
+"mileage": 976,
+"meal": "Meal"
+}
+],
+"connectionDuration": 60
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 120,
+"flight": {
+"carrier": "LH",
+"number": "2472"
+},
+"id": "GFqgdEjzF0w+5Sc5",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LLoKUE3at5-Hk7Nw",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T10:05+01:00",
+"departureTime": "2015-03-29T09:05+02:00",
+"origin": "MUC",
+"destination": "LHR",
+"originTerminal": "2",
+"destinationTerminal": "2",
+"duration": 120,
+"mileage": 584,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AaFKdZAglHwxNC1uh3UQT1coyxJdzKLHXOMt9Q9pYPPE",
+"carrier": "LH",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "VNC22C0D"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"carrier": "LH",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "KNC22C3S"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"segmentId": "GFqgdEjzF0w+5Sc5",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"segmentId": "GshhtNEV6cwA5vOG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AaFKdZAglHwxNC1uh3UQT1coyxJdzKLHXOMt9Q9pYPPE",
+"segmentId": "GCpqbbDzaFJaIAD+",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AaFKdZAglHwxNC1uh3UQT1coyxJdzKLHXOMt9Q9pYPPE",
+"segmentId": "G4WmCUR9CHjq2piG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP85.00",
+"saleFareTotal": "GBP85.00",
+"saleTaxTotal": "GBP158.68",
+"saleTotal": "GBP243.68",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RA_002",
+"chargeType": "GOVERNMENT",
+"code": "RA",
+"country": "DE",
+"salePrice": "GBP27.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YQ",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YQ",
+"salePrice": "GBP72.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP32.18"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "DE_001",
+"chargeType": "GOVERNMENT",
+"code": "DE",
+"country": "DE",
+"salePrice": "GBP4.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON LH X/FRA LH IST 88.48VNC22C0D LH X/MUC LH LON 44.63KNC22C3S NUC 133.11 END ROE 0.638555 FARE GBP 85.00 XT 13.00GB 32.18UB 4.20DE 27.30RA 10.00TR 72.00YQ",
+"latestTicketingTime": "2015-03-12T06:29-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP262.28",
+"id": "PWTR6NNcpdCRffEztUnpt7006",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 380,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 95,
+"flight": {
+"carrier": "LH",
+"number": "909"
+},
+"id": "GoFzTarLXzsgZ4vB",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LjD-xTxVu5f11wgh",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T17:55+01:00",
+"departureTime": "2015-03-27T15:20+00:00",
+"origin": "LHR",
+"destination": "FRA",
+"originTerminal": "2",
+"destinationTerminal": "1",
+"duration": 95,
+"mileage": 406,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 110
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 175,
+"flight": {
+"carrier": "LH",
+"number": "1304"
+},
+"id": "GoiNcyNsuV7i8Few",
+"cabin": "COACH",
+"bookingCode": "Q",
+"bookingCodeCount": 3,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L8YA3Ev5I-k-Kwaw",
+"aircraft": "32A",
+"arrivalTime": "2015-03-27T23:40+02:00",
+"departureTime": "2015-03-27T19:45+01:00",
+"origin": "FRA",
+"destination": "IST",
+"originTerminal": "1",
+"destinationTerminal": "I",
+"duration": 175,
+"mileage": 1156,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 345,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 165,
+"flight": {
+"carrier": "LH",
+"number": "1775"
+},
+"id": "GshhtNEV6cwA5vOG",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lz3z9LW0zpS5EaYl",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:05+02:00",
+"departureTime": "2015-03-29T06:20+03:00",
+"origin": "IST",
+"destination": "MUC",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 165,
+"mileage": 976,
+"meal": "Meal"
+}
+],
+"connectionDuration": 60
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 120,
+"flight": {
+"carrier": "LH",
+"number": "2472"
+},
+"id": "GFqgdEjzF0w+5Sc5",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LLoKUE3at5-Hk7Nw",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T10:05+01:00",
+"departureTime": "2015-03-29T09:05+02:00",
+"origin": "MUC",
+"destination": "LHR",
+"originTerminal": "2",
+"destinationTerminal": "2",
+"duration": 120,
+"mileage": 584,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEN0waF13VqGU3dWaGWiR4+wnZ1TB1QnXgopdWza+9e6",
+"carrier": "LH",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "QNC42C0D"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"carrier": "LH",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "KNC22C3S"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEN0waF13VqGU3dWaGWiR4+wnZ1TB1QnXgopdWza+9e6",
+"segmentId": "GoFzTarLXzsgZ4vB",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"segmentId": "GFqgdEjzF0w+5Sc5",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"segmentId": "GshhtNEV6cwA5vOG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEN0waF13VqGU3dWaGWiR4+wnZ1TB1QnXgopdWza+9e6",
+"segmentId": "GoiNcyNsuV7i8Few",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP92.00",
+"saleFareTotal": "GBP92.00",
+"saleTaxTotal": "GBP170.28",
+"saleTotal": "GBP262.28",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RA_002",
+"chargeType": "GOVERNMENT",
+"code": "RA",
+"country": "DE",
+"salePrice": "GBP27.30"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YQ",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YQ",
+"salePrice": "GBP83.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP32.18"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "DE_001",
+"chargeType": "GOVERNMENT",
+"code": "DE",
+"country": "DE",
+"salePrice": "GBP4.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON LH X/FRA LH IST 100.22QNC42C0D LH X/MUC LH LON 44.63KNC22C3S NUC 144.85 END ROE 0.638555 FARE GBP 92.00 XT 13.00GB 32.18UB 4.20DE 27.30RA 10.00TR 83.60YQ",
+"latestTicketingTime": "2015-03-12T06:29-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP303.38",
+"id": "PWTR6NNcpdCRffEztUnpt700A",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 320,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 110,
+"flight": {
+"carrier": "LH",
+"number": "2479"
+},
+"id": "G9eg-71btjmdK2Px",
+"cabin": "COACH",
+"bookingCode": "U",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LThfYxpl4vsUPlSN",
+"aircraft": "319",
+"arrivalTime": "2015-03-27T20:40+01:00",
+"departureTime": "2015-03-27T17:50+00:00",
+"origin": "LHR",
+"destination": "MUC",
+"originTerminal": "2",
+"destinationTerminal": "2",
+"duration": 110,
+"mileage": 584,
+"meal": "Snack or Brunch"
+}
+],
+"connectionDuration": 55
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 155,
+"flight": {
+"carrier": "LH",
+"number": "1774"
+},
+"id": "GdWCQwhrQ2OCNQ7V",
+"cabin": "COACH",
+"bookingCode": "U",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LK5xLc6dkgLFUWDm",
+"aircraft": "321",
+"arrivalTime": "2015-03-28T01:10+02:00",
+"departureTime": "2015-03-27T21:35+01:00",
+"origin": "MUC",
+"destination": "IST",
+"originTerminal": "2",
+"destinationTerminal": "I",
+"duration": 155,
+"mileage": 976,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 345,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 165,
+"flight": {
+"carrier": "LH",
+"number": "1775"
+},
+"id": "GshhtNEV6cwA5vOG",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lz3z9LW0zpS5EaYl",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T08:05+02:00",
+"departureTime": "2015-03-29T06:20+03:00",
+"origin": "IST",
+"destination": "MUC",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 165,
+"mileage": 976,
+"meal": "Meal"
+}
+],
+"connectionDuration": 60
+},
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 120,
+"flight": {
+"carrier": "LH",
+"number": "2472"
+},
+"id": "GFqgdEjzF0w+5Sc5",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 4,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LLoKUE3at5-Hk7Nw",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T10:05+01:00",
+"departureTime": "2015-03-29T09:05+02:00",
+"origin": "MUC",
+"destination": "LHR",
+"originTerminal": "2",
+"destinationTerminal": "2",
+"duration": 120,
+"mileage": 584,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AXsqxCe6V60OzhifMW+UJlkHAJWkyh5YcNiNW9rM8DxQ",
+"carrier": "LH",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "URC42C0D"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"carrier": "LH",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "KNC22C3S"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AXsqxCe6V60OzhifMW+UJlkHAJWkyh5YcNiNW9rM8DxQ",
+"segmentId": "G9eg-71btjmdK2Px",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"segmentId": "GFqgdEjzF0w+5Sc5",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "ARsNX4TZ6KDRjdVHeZqmhbo9gM5ErjYKm5LF6t4/ZZQ/",
+"segmentId": "GshhtNEV6cwA5vOG",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AXsqxCe6V60OzhifMW+UJlkHAJWkyh5YcNiNW9rM8DxQ",
+"segmentId": "GdWCQwhrQ2OCNQ7V",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "UPTO50LB 23KG AND62LI 158LCM",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0GO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ALPINIST EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Alpinist Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O0"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "ARCHERY EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Archery Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OF"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOOGIE BOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Boogie Board",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N3"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BOWLING EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Bowling Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "CANOE KAYAK W OARS UP TO 23KG",
+"count": 1,
+"description": [
+"Canoe/Kayak",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "FISHING EQUIPMENTUPTO50LB 23KG",
+"count": 1,
+"description": [
+"Fishing Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "GOLF EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Golf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HQ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HANG GLIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Hang Gliding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OO"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HOCKEY EQUIP UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Hockey Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KN"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "HORSE RIDING EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Horse Riding Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "INLINE SKATES EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Inline Skates Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0O4"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "JAVELIN UP TO 23KG",
+"count": 1,
+"description": [
+"Javelin",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PG"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "KITE SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Kite Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0KS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "LONGBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Longboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "PARACHUTE EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Parachute Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OL"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "POLE VAULT EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Pole Vault Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PJ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "RUBBER DINGHY BOAT UP TO 23KG",
+"count": 1,
+"description": [
+"Rubber Dinghy or Boat",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0PD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SCUBA EQUIPMENT UP TO50LB 23KG",
+"count": 1,
+"description": [
+"Scuba Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKATEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Skateboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SKI EQUIPMENT UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0HS"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SNOWBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Snowboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NR"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORT FIREARMS UP TO 50LB 23KG",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 62 li/158 lcm"
+],
+"subcode": "0HW"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SURFBOARD UPTO50LB 23KG",
+"count": 1,
+"description": [
+"Surfboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0GH"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TANDEM BICYCLE UP TO 23KG",
+"count": 1,
+"description": [
+"Tandem Bicycle",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NY"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "TENNIS SQUASH BADMINTON EQPMT",
+"count": 1,
+"description": [
+"Tennis Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OX"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAKEBOARD UP TO 23KG",
+"count": 1,
+"description": [
+"Wakeboard",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0N7"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WATER SKI EQUIPMENT UP TO 23KG",
+"count": 1,
+"description": [
+"Water Ski Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0NU"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WAVEBOARD EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Waveboard Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OA"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WINDSURF EQPMT UP TO 23KG",
+"count": 1,
+"description": [
+"Windsurf Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0OD"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "WHEELCHAIR  ASSISTIVE DEVICES",
+"count": 0,
+"subcode": "0GM"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "COLLAPSIBLE BUGGY",
+"count": 0,
+"description": [
+"Stroller/Pushchair"
+],
+"subcode": "0F4"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP136.00",
+"saleFareTotal": "GBP136.00",
+"saleTaxTotal": "GBP167.38",
+"saleTotal": "GBP303.38",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "RA_002",
+"chargeType": "GOVERNMENT",
+"code": "RA",
+"country": "DE",
+"salePrice": "GBP24.40"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YQ",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YQ",
+"salePrice": "GBP83.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP32.18"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "DE_001",
+"chargeType": "GOVERNMENT",
+"code": "DE",
+"country": "DE",
+"salePrice": "GBP4.20"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON LH X/MUC LH IST 169.13URC42C0D LH X/MUC LH LON 44.63KNC22C3S NUC 213.76 END ROE 0.638555 FARE GBP 136.00 XT 13.00GB 32.18UB 4.20DE 24.40RA 10.00TR 83.60YQ",
+"latestTicketingTime": "2015-03-12T06:29-04:00",
+"ptc": "ADT",
+"refundable": true
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP360.66",
+"id": "PWTR6NNcpdCRffEztUnpt7002",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 230,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 230,
+"flight": {
+"carrier": "TK",
+"number": "1988"
+},
+"id": "GsEG0kBy6S6vmyfX",
+"cabin": "BUSINESS",
+"bookingCode": "K",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LGQsZd6N0qRQ3D6K",
+"aircraft": "321",
+"arrivalTime": "2015-03-27T13:45+02:00",
+"departureTime": "2015-03-27T07:55+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "2",
+"destinationTerminal": "I",
+"duration": 230,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 245,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 245,
+"flight": {
+"carrier": "TK",
+"number": "1987"
+},
+"id": "GqqiGus8tROpHsgw",
+"cabin": "COACH",
+"bookingCode": "W",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L+PPvmbbiTVrGwgd",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T22:30+01:00",
+"departureTime": "2015-03-29T20:25+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 245,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AEGwpKMZh7vGeeHWtHhiCKVoJAttx0sYrnGbWKC+fvz/",
+"carrier": "TK",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "KY1BX"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"carrier": "TK",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "WY2PR1"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"segmentId": "GqqiGus8tROpHsgw",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AEGwpKMZh7vGeeHWtHhiCKVoJAttx0sYrnGbWKC+fvz/",
+"segmentId": "GsEG0kBy6S6vmyfX",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 30
+}
+]
+}
+],
+"baseFareTotal": "GBP235.00",
+"saleFareTotal": "GBP235.00",
+"saleTaxTotal": "GBP125.66",
+"saleTotal": "GBP360.66",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP47.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP26.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON TK IST 341.39KY1BX TK LON 27.40WY2PR1 NUC 368.79 END ROE 0.638555 FARE GBP 235.00 XT 26.00GB 42.06UB 10.00TR 47.60YR",
+"latestTicketingTime": "2015-03-12T23:59-04:00",
+"ptc": "ADT",
+"refundable": true
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP377.66",
+"id": "PWTR6NNcpdCRffEztUnpt7003",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 230,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 230,
+"flight": {
+"carrier": "TK",
+"number": "1986"
+},
+"id": "G8996U092QLPqMdV",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L1NKjG-gbXYfyjg+",
+"aircraft": "330",
+"arrivalTime": "2015-03-27T22:00+02:00",
+"departureTime": "2015-03-27T16:10+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "2",
+"destinationTerminal": "I",
+"duration": 230,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 245,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 245,
+"flight": {
+"carrier": "TK",
+"number": "1987"
+},
+"id": "GqqiGus8tROpHsgw",
+"cabin": "COACH",
+"bookingCode": "W",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L+PPvmbbiTVrGwgd",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T22:30+01:00",
+"departureTime": "2015-03-29T20:25+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 245,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AyvOg1APZxSPQs1EZcem2n1e+pwDSABwscz4XaIVrJnU",
+"carrier": "TK",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "HY2XP"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"carrier": "TK",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "WY2PR1"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AyvOg1APZxSPQs1EZcem2n1e+pwDSABwscz4XaIVrJnU",
+"segmentId": "G8996U092QLPqMdV",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"segmentId": "GqqiGus8tROpHsgw",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+}
+],
+"baseFareTotal": "GBP265.00",
+"saleFareTotal": "GBP265.00",
+"saleTaxTotal": "GBP112.66",
+"saleTotal": "GBP377.66",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP47.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON TK IST 387.59HY2XP TK LON 27.40WY2PR1 NUC 414.99 END ROE 0.638555 FARE GBP 265.00 XT 13.00GB 42.06UB 10.00TR 47.60YR",
+"latestTicketingTime": "2015-03-12T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP377.66",
+"id": "PWTR6NNcpdCRffEztUnpt7004",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 230,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 230,
+"flight": {
+"carrier": "TK",
+"number": "1984"
+},
+"id": "Ggkr+j1-FjDkHPcK",
+"cabin": "COACH",
+"bookingCode": "H",
+"bookingCodeCount": 1,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LxHh54WFrm4adIB9",
+"aircraft": "321",
+"arrivalTime": "2015-03-28T04:20+02:00",
+"departureTime": "2015-03-27T22:30+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "2",
+"destinationTerminal": "I",
+"duration": 230,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 245,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 245,
+"flight": {
+"carrier": "TK",
+"number": "1987"
+},
+"id": "GqqiGus8tROpHsgw",
+"cabin": "COACH",
+"bookingCode": "W",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "L+PPvmbbiTVrGwgd",
+"aircraft": "321",
+"arrivalTime": "2015-03-29T22:30+01:00",
+"departureTime": "2015-03-29T20:25+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "2",
+"duration": 245,
+"mileage": 1561,
+"meal": "Meal"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AyvOg1APZxSPQs1EZcem2n1e+pwDSABwscz4XaIVrJnU",
+"carrier": "TK",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "HY2XP"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"carrier": "TK",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "WY2PR1"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AhC0mtIfk7x83OeVFS4t+RYXDJzgDbynM1tl4H7d9RKA",
+"segmentId": "GqqiGus8tROpHsgw",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AyvOg1APZxSPQs1EZcem2n1e+pwDSABwscz4XaIVrJnU",
+"segmentId": "Ggkr+j1-FjDkHPcK",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"kilos": 23
+}
+]
+}
+],
+"baseFareTotal": "GBP265.00",
+"saleFareTotal": "GBP265.00",
+"saleTaxTotal": "GBP112.66",
+"saleTotal": "GBP377.66",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "YR",
+"chargeType": "CARRIER_SURCHARGE",
+"code": "YR",
+"salePrice": "GBP47.60"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON TK IST 387.59HY2XP TK LON 27.40WY2PR1 NUC 414.99 END ROE 0.638555 FARE GBP 265.00 XT 13.00GB 42.06UB 10.00TR 47.60YR",
+"latestTicketingTime": "2015-03-12T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP429.06",
+"id": "PWTR6NNcpdCRffEztUnpt7009",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 235,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 235,
+"flight": {
+"carrier": "BA",
+"number": "680"
+},
+"id": "G1MVZBdLW2D0SjOS",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 5,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LwL200qDHzKLwcYd",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T22:15+02:00",
+"departureTime": "2015-03-27T16:20+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "5",
+"destinationTerminal": "I",
+"duration": 235,
+"mileage": 1561,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 250,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 250,
+"flight": {
+"carrier": "BA",
+"number": "675"
+},
+"id": "Geh-7xYkprwQcOXY",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 5,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LQmhtOZ6PtdqXGkk",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T11:00+01:00",
+"departureTime": "2015-03-29T08:50+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "5",
+"duration": 250,
+"mileage": 1561,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AWJW588UFIU9cHT6tyLyssILuVB6/+2nkie4Q2vw",
+"carrier": "BA",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AblA3gXr7V1Ya4FMu51RbK+rCn2ZFGM4DqoOTY0S5+xw",
+"carrier": "BA",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "VLV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AblA3gXr7V1Ya4FMu51RbK+rCn2ZFGM4DqoOTY0S5+xw",
+"segmentId": "Geh-7xYkprwQcOXY",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AWJW588UFIU9cHT6tyLyssILuVB6/+2nkie4Q2vw",
+"segmentId": "G1MVZBdLW2D0SjOS",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP364.00",
+"saleFareTotal": "GBP364.00",
+"saleTaxTotal": "GBP65.06",
+"saleTotal": "GBP429.06",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON BA IST 374.28KV2R BA LON 195.75VLV1R NUC 570.03 END ROE 0.638555 FARE GBP 364.00 XT 13.00GB 42.06UB 10.00TR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP429.06",
+"id": "PWTR6NNcpdCRffEztUnpt7007",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 230,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 230,
+"flight": {
+"carrier": "BA",
+"number": "678"
+},
+"id": "G-gz7tJvIevYivGD",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LUeLifMqPMUliWWZ",
+"aircraft": "320",
+"arrivalTime": "2015-03-27T12:10+02:00",
+"departureTime": "2015-03-27T06:20+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "5",
+"destinationTerminal": "I",
+"duration": 230,
+"mileage": 1561,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 250,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 250,
+"flight": {
+"carrier": "BA",
+"number": "675"
+},
+"id": "Geh-7xYkprwQcOXY",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 5,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LQmhtOZ6PtdqXGkk",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T11:00+01:00",
+"departureTime": "2015-03-29T08:50+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "5",
+"duration": 250,
+"mileage": 1561,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AWJW588UFIU9cHT6tyLyssILuVB6/+2nkie4Q2vw",
+"carrier": "BA",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AblA3gXr7V1Ya4FMu51RbK+rCn2ZFGM4DqoOTY0S5+xw",
+"carrier": "BA",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "VLV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AblA3gXr7V1Ya4FMu51RbK+rCn2ZFGM4DqoOTY0S5+xw",
+"segmentId": "Geh-7xYkprwQcOXY",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AWJW588UFIU9cHT6tyLyssILuVB6/+2nkie4Q2vw",
+"segmentId": "G-gz7tJvIevYivGD",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP364.00",
+"saleFareTotal": "GBP364.00",
+"saleTaxTotal": "GBP65.06",
+"saleTotal": "GBP429.06",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON BA IST 374.28KV2R BA LON 195.75VLV1R NUC 570.03 END ROE 0.638555 FARE GBP 364.00 XT 13.00GB 42.06UB 10.00TR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+},
+{
+"kind": "qpxexpress#tripOption",
+"saleTotal": "GBP429.06",
+"id": "PWTR6NNcpdCRffEztUnpt7008",
+"slice": [
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 230,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 230,
+"flight": {
+"carrier": "BA",
+"number": "676"
+},
+"id": "GF-Mf-4PR0NnNrPS",
+"cabin": "COACH",
+"bookingCode": "K",
+"bookingCodeCount": 9,
+"marriedSegmentGroup": "0",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "Lco0yAfJQKJP2WSc",
+"aircraft": "767",
+"arrivalTime": "2015-03-27T15:30+02:00",
+"departureTime": "2015-03-27T09:40+00:00",
+"origin": "LHR",
+"destination": "IST",
+"originTerminal": "5",
+"destinationTerminal": "I",
+"duration": 230,
+"mileage": 1561,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+},
+{
+"kind": "qpxexpress#sliceInfo",
+"duration": 250,
+"segment": [
+{
+"kind": "qpxexpress#segmentInfo",
+"duration": 250,
+"flight": {
+"carrier": "BA",
+"number": "675"
+},
+"id": "Geh-7xYkprwQcOXY",
+"cabin": "COACH",
+"bookingCode": "V",
+"bookingCodeCount": 5,
+"marriedSegmentGroup": "1",
+"leg": [
+{
+"kind": "qpxexpress#legInfo",
+"id": "LQmhtOZ6PtdqXGkk",
+"aircraft": "320",
+"arrivalTime": "2015-03-29T11:00+01:00",
+"departureTime": "2015-03-29T08:50+03:00",
+"origin": "IST",
+"destination": "LHR",
+"originTerminal": "I",
+"destinationTerminal": "5",
+"duration": 250,
+"mileage": 1561,
+"meal": "Snack or Brunch"
+}
+]
+}
+]
+}
+],
+"pricing": [
+{
+"kind": "qpxexpress#pricingInfo",
+"fare": [
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AWJW588UFIU9cHT6tyLyssILuVB6/+2nkie4Q2vw",
+"carrier": "BA",
+"origin": "LON",
+"destination": "IST",
+"basisCode": "KV2R"
+},
+{
+"kind": "qpxexpress#fareInfo",
+"id": "AblA3gXr7V1Ya4FMu51RbK+rCn2ZFGM4DqoOTY0S5+xw",
+"carrier": "BA",
+"origin": "IST",
+"destination": "LON",
+"basisCode": "VLV1R"
+}
+],
+"segmentPricing": [
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AblA3gXr7V1Ya4FMu51RbK+rCn2ZFGM4DqoOTY0S5+xw",
+"segmentId": "Geh-7xYkprwQcOXY",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+},
+{
+"kind": "qpxexpress#segmentPricing",
+"fareId": "AWJW588UFIU9cHT6tyLyssILuVB6/+2nkie4Q2vw",
+"segmentId": "GF-Mf-4PR0NnNrPS",
+"freeBaggageOption": [
+{
+"kind": "qpxexpress#freeBaggageAllowance",
+"bagDescriptor": [
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BAG MAX 23KG 51LB  208LCM 81LI",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0IZ"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "SPORTS EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I1"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MUSICAL INSTRUMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Up to 50 lb/23 kg",
+"Up to 81 li/208 lcm"
+],
+"subcode": "0I2"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "MEDIA EQUIPMENT 23KG 51LB",
+"count": 1,
+"description": [
+"Media Equipment",
+"Up to 50 lb/23 kg"
+],
+"subcode": "0IP"
+},
+{
+"kind": "qpxexpress#bagDescriptor",
+"commercialName": "BICYCLE",
+"count": 1,
+"description": [
+"Bicycle"
+],
+"subcode": "0EC"
+}
+],
+"pieces": 1
+}
+]
+}
+],
+"baseFareTotal": "GBP364.00",
+"saleFareTotal": "GBP364.00",
+"saleTaxTotal": "GBP65.06",
+"saleTotal": "GBP429.06",
+"passengers": {
+"kind": "qpxexpress#passengerCounts",
+"adultCount": 1
+},
+"tax": [
+{
+"kind": "qpxexpress#taxInfo",
+"id": "GB_001",
+"chargeType": "GOVERNMENT",
+"code": "GB",
+"country": "GB",
+"salePrice": "GBP13.00"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "UB",
+"chargeType": "GOVERNMENT",
+"code": "UB",
+"country": "GB",
+"salePrice": "GBP42.06"
+},
+{
+"kind": "qpxexpress#taxInfo",
+"id": "TR_001",
+"chargeType": "GOVERNMENT",
+"code": "TR",
+"country": "TR",
+"salePrice": "GBP10.00"
+}
+],
+"fareCalculation": "LON BA IST 374.28KV2R BA LON 195.75VLV1R NUC 570.03 END ROE 0.638555 FARE GBP 364.00 XT 13.00GB 42.06UB 10.00TR",
+"latestTicketingTime": "2015-03-14T23:59-04:00",
+"ptc": "ADT"
+}
+]
+}
+]
+}
+}
