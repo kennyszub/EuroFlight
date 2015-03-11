@@ -17,9 +17,13 @@
 
 @interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate, CountryTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+// keeps track of all countries
+@property (strong, nonatomic) NSArray *allCountries;
+// keeps track of the countries we're currently displaying (i.e. all or favorites-only)
 @property (strong, nonatomic) NSArray *countries;
 @property (nonatomic, assign) NSInteger currentExpandedIndex;
 @property (nonatomic, strong) NSMutableSet *expandedSections;
+@property (nonatomic, assign) BOOL isFavoritesOnly;
 
 @end
 
@@ -35,6 +39,16 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
     self.title = @"Flight Results";
+
+    // set up favorites button
+    UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
+    favoritesImageView.frame = CGRectMake(0, 0, 20, 20);
+    favoritesImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onFavoritesButton)];
+    [favoritesImageView addGestureRecognizer:tapGesture];
+    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
+    self.navigationItem.rightBarButtonItem = favoritesButton;
+    self.isFavoritesOnly = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,11 +60,8 @@
     self = [super init];
     if (self) {
         self.countries = [Country initCountries];
-        self.countries = [self.countries sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            float price1 = ((Country *) obj1).lowestCost;
-            float price2 = ((Country *) obj2).lowestCost;
-            return [ResultsViewController compareFloats:price1 secondFloat:price2];
-        }];
+        self.allCountries = self.countries;
+        [self sortCountriesList];
         self.currentExpandedIndex = -1;
         self.expandedSections = [[NSMutableSet alloc] init];
     }
@@ -87,7 +98,7 @@
     BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
     if (sectionExpanded && indexPath.row > 0) { // cell is child
         CityTableViewCell *cityCell = [self.tableView dequeueReusableCellWithIdentifier:@"CityTableViewCell"];
-        cityCell.city = ((Country *) self.countries[indexPath.section]).cities[indexPath.row - 1];
+        cityCell.city = [((Country *) self.countries[indexPath.section]) citiesWithFavorite:self.isFavoritesOnly][indexPath.row - 1];
         return cityCell;
     } else {
         CountryTableViewCell *countryCell =  [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell"];
@@ -101,7 +112,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     BOOL sectionExpanded = [self.expandedSections containsObject:@(section)];
     if (sectionExpanded) {
-        return ((Country *) self.countries[section]).cities.count + 1;
+        return [((Country *) self.countries[section]) citiesWithFavorite:self.isFavoritesOnly].count + 1;
     } else {
         return 1;
     }
@@ -116,7 +127,7 @@
     BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
     if (sectionExpanded && indexPath.row > 0) { // cell is child
         CityDetailsViewController *vc = [[CityDetailsViewController alloc] init];
-        vc.city = ((Country *)self.countries[indexPath.section]).cities[indexPath.row - 1];
+        vc.city = [((Country *)self.countries[indexPath.section]) citiesWithFavorite:self.isFavoritesOnly][indexPath.row - 1];
         [self.navigationController pushViewController:vc animated:YES];
         return;
     }
@@ -138,7 +149,7 @@
 
 - (void)collapseSubItemsInSection:(NSInteger)section {
     NSMutableArray *indexPaths = [NSMutableArray new];
-    for (NSInteger i = 1; i <= ((Country *) self.countries[section]).cities.count; i++) {
+    for (NSInteger i = 1; i <= [((Country *) self.countries[section]) citiesWithFavorite:self.isFavoritesOnly].count; i++) {
         [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
     }
     [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
@@ -146,7 +157,7 @@
 
 - (void)expandSubItemsInSection:(NSInteger)section {
     NSMutableArray *indexPaths = [NSMutableArray new];
-    NSArray *currentSubItems = ((Country *) self.countries[section]).cities;
+    NSArray *currentSubItems = [((Country *) self.countries[section]) citiesWithFavorite:self.isFavoritesOnly];
     NSInteger insertPos = 1;
     for (int i = 0; i < currentSubItems.count; i++) {
         [indexPaths addObject:[NSIndexPath indexPathForRow:insertPos++ inSection:section]];
@@ -160,5 +171,26 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)onFavoritesButton {
+    if (!self.isFavoritesOnly) {
+        NSPredicate *favoritedPredicate = [NSPredicate predicateWithFormat:@"favoritedCities[SIZE] > 0"];
+        self.countries = [self.allCountries filteredArrayUsingPredicate:favoritedPredicate];
+    } else {
+        self.countries = self.allCountries;
+    }
+
+    [self sortCountriesList];
+    [self.expandedSections removeAllObjects];
+    self.isFavoritesOnly = !self.isFavoritesOnly;
+    [self.tableView reloadData];
+}
+
+- (void)sortCountriesList {
+    self.countries = [self.countries sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        float price1 = ((Country *) obj1).lowestCost;
+        float price2 = ((Country *) obj2).lowestCost;
+        return [ResultsViewController compareFloats:price1 secondFloat:price2];
+    }];
+}
 
 @end

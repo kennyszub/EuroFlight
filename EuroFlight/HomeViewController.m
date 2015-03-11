@@ -67,7 +67,12 @@ enum Weeks {
     self.title = @"EuroFlight";
 
     // set up favorites button
-    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(onFavoritesButton)];
+    UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
+    favoritesImageView.frame = CGRectMake(0, 0, 20, 20);
+    favoritesImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onFavoritesButton)];
+    [favoritesImageView addGestureRecognizer:tapGesture];
+    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
     self.navigationItem.rightBarButtonItem = favoritesButton;
 }
 

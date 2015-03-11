@@ -202,6 +202,18 @@ static NSArray *_allCountries;
         return nil;
     }
 }
-        
+
+- (NSArray *)favoritedCities {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isFavorited = YES"];
+    NSArray *favoritedCities = [self.cities filteredArrayUsingPredicate:predicate];
+    return favoritedCities;
+}
+
+- (NSArray *)citiesWithFavorite:(BOOL)on {
+    if (on) {
+        return [self favoritedCities];
+    }
+    return self.cities;
+}
 
 @end

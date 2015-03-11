@@ -19,4 +19,8 @@
 
 + (NSArray *)initCountries;
 
+- (NSArray *)favoritedCities;
+// returns either all cities or only favorited cities
+- (NSArray *)citiesWithFavorite:(BOOL)on;
+
 @end
