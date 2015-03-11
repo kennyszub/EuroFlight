@@ -15,19 +15,29 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xti-5k-qkN">
                         <rect key="frame" x="26" y="11" width="34" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="- San Francisco Intl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-7Y-c59">
+                        <rect key="frame" x="63" y="10" width="250" height="24"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="GaX-7Y-c59" secondAttribute="trailing" constant="8" id="8y1-VA-LE9"/>
                     <constraint firstAttribute="bottom" secondItem="xti-5k-qkN" secondAttribute="bottom" constant="11.5" id="EOT-8n-9lo"/>
                     <constraint firstItem="xti-5k-qkN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="PcQ-wr-Slk"/>
+                    <constraint firstItem="xti-5k-qkN" firstAttribute="centerY" secondItem="GaX-7Y-c59" secondAttribute="centerY" id="VEZ-0I-p4F"/>
+                    <constraint firstItem="GaX-7Y-c59" firstAttribute="leading" secondItem="xti-5k-qkN" secondAttribute="trailing" constant="3" id="bhd-yr-aIo"/>
                     <constraint firstItem="xti-5k-qkN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="mVm-NU-7cu"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="airportNameLabel" destination="xti-5k-qkN" id="wth-XB-P6l"/>
+                <outlet property="airportCodeLabel" destination="xti-5k-qkN" id="hKD-OZ-4Tw"/>
+                <outlet property="airportNameLabel" destination="GaX-7Y-c59" id="HB9-jY-cN8"/>
             </connections>
         </tableViewCell>
     </objects>

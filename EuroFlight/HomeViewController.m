@@ -17,9 +17,10 @@
 #import "AirportSearchResultsControllerViewController.h"
 #import "Context.h"
 
-@interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate>
+@interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
 @property (weak, nonatomic) IBOutlet UITextField *returnDateField;
+@property (weak, nonatomic) IBOutlet UITextField *airportTextField;
 @property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
 @property (nonatomic, strong) THDatePickerViewController *returnDatePicker;
 @property (nonatomic, strong) NSDate *outboundDate;
@@ -47,6 +48,8 @@ enum Weeks {
     
     //this is kind of a hack, but whatever (kimono stuff needs to be initialized before Cities are created)
     [KimonoClient sharedInstance];
+    
+    self.airportTextField.delegate = self;
     
     self.dateErrorLabel.hidden = YES;
     self.outboundDateField.delegate = self;
@@ -88,9 +91,8 @@ enum Weeks {
     [self.navigationController pushViewController:fvc animated:YES];
 }
 
-- (IBAction)onAirportSearch:(id)sender {
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[[AirportSearchResultsControllerViewController alloc] init]];
-    [self.navigationController presentViewController:nvc animated:YES completion:nil];
+- (void)airportSearchResultsControllerViewController:(AirportSearchResultsControllerViewController *)airportsController didSelectAirport:(Airport *)airport {
+    self.airportTextField.text = airport.code;
 }
 
 #pragma mark Date picker methods
@@ -138,6 +140,11 @@ enum Weeks {
                                                                               KNSemiModalOptionKeys.animationDuration : @(0.4),
                                                                               KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
                                                                               }];
+    } else if ([textField isEqual:self.airportTextField]) {
+        AirportSearchResultsControllerViewController *avc = [[AirportSearchResultsControllerViewController alloc] init];
+        avc.delegate = self;
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:avc];
+        [self.navigationController presentViewController:nvc animated:YES completion:nil];
     }
     
     return NO;

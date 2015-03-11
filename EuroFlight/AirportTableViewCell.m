@@ -10,6 +10,7 @@
 
 @interface AirportTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *airportNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *airportCodeLabel;
 
 @end
 
@@ -27,7 +28,8 @@
 
 - (void)setAirport:(Airport *)airport {
     _airport = airport;
-    self.airportNameLabel.text = airport.name;
+    self.airportNameLabel.text = [NSString stringWithFormat:@" - %@", airport.name];
+    self.airportCodeLabel.text = airport.code;
 }
 
 @end

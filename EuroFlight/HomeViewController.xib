@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="airportTextField" destination="w8O-Fs-bRd" id="fCB-w9-2Ad"/>
                 <outlet property="dateErrorLabel" destination="m4M-TG-Lry" id="t4i-jy-WUy"/>
                 <outlet property="outboundDateField" destination="fOr-0u-aGW" id="5ad-iH-XgV"/>
                 <outlet property="returnDateField" destination="SHl-wa-ydB" id="rkQ-lJ-uAQ"/>
@@ -61,21 +62,28 @@
                         <action selector="onSearchButton:" destination="-1" eventType="touchUpInside" id="GMt-3o-3U0"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOy-Vm-E5i">
-                    <rect key="frame" x="121" y="209" width="46" height="30"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onAirportSearch:" destination="-1" eventType="touchUpInside" id="N3p-od-daS"/>
-                    </connections>
-                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BCN" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-Fs-bRd">
+                    <rect key="frame" x="108" y="198" width="105" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="5yv-RE-GVh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvS-Er-Msp">
+                    <rect key="frame" x="46" y="203" width="37" height="20"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                    <color key="textColor" red="0.18039215689999999" green="0.25098039220000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="SHl-wa-ydB" firstAttribute="top" secondItem="fOr-0u-aGW" secondAttribute="bottom" constant="16" id="5ld-DN-aTo"/>
                 <constraint firstItem="OLq-yC-6Bc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="99" id="6bc-El-lbH"/>
+                <constraint firstItem="fOr-0u-aGW" firstAttribute="top" secondItem="w8O-Fs-bRd" secondAttribute="bottom" constant="41" id="AEF-Lk-myR"/>
                 <constraint firstAttribute="centerX" secondItem="SHl-wa-ydB" secondAttribute="centerX" id="AY2-Yb-mPb"/>
+                <constraint firstAttribute="centerX" secondItem="w8O-Fs-bRd" secondAttribute="centerX" id="Azx-Zr-FFj"/>
                 <constraint firstItem="fOr-0u-aGW" firstAttribute="leading" secondItem="Aat-Vz-sKc" secondAttribute="trailing" constant="14" id="BqA-Rd-mkP"/>
                 <constraint firstItem="Aat-Vz-sKc" firstAttribute="centerY" secondItem="fOr-0u-aGW" secondAttribute="centerY" id="ChG-PL-usx"/>
                 <constraint firstAttribute="trailing" secondItem="OLq-yC-6Bc" secondAttribute="trailing" constant="20" id="ENh-tp-sgY"/>
@@ -84,10 +92,12 @@
                 <constraint firstItem="OLq-yC-6Bc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Ult-pS-B18"/>
                 <constraint firstItem="I9A-HI-W1v" firstAttribute="top" secondItem="m4M-TG-Lry" secondAttribute="bottom" constant="77" id="cAp-2K-ceZ"/>
                 <constraint firstAttribute="centerX" secondItem="m4M-TG-Lry" secondAttribute="centerX" id="dbP-FT-dQQ"/>
+                <constraint firstItem="NvS-Er-Msp" firstAttribute="centerY" secondItem="w8O-Fs-bRd" secondAttribute="centerY" id="emr-af-BbE"/>
                 <constraint firstAttribute="centerX" secondItem="fOr-0u-aGW" secondAttribute="centerX" id="eth-cI-2Gy"/>
                 <constraint firstItem="m4M-TG-Lry" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="fDm-Yf-N9m"/>
                 <constraint firstItem="I9A-HI-W1v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="136" id="qVP-KV-jk3"/>
                 <constraint firstItem="m4M-TG-Lry" firstAttribute="top" secondItem="SHl-wa-ydB" secondAttribute="bottom" constant="14" id="sJz-9Q-AMo"/>
+                <constraint firstItem="w8O-Fs-bRd" firstAttribute="leading" secondItem="NvS-Er-Msp" secondAttribute="trailing" constant="25" id="tZO-we-uD7"/>
                 <constraint firstAttribute="bottom" secondItem="I9A-HI-W1v" secondAttribute="bottom" constant="87" id="uwj-iv-kiQ"/>
                 <constraint firstAttribute="trailing" secondItem="I9A-HI-W1v" secondAttribute="trailing" constant="136" id="wJ8-C3-fyR"/>
                 <constraint firstItem="Uh6-d2-bvm" firstAttribute="centerY" secondItem="SHl-wa-ydB" secondAttribute="centerY" id="zRX-be-Ema"/>

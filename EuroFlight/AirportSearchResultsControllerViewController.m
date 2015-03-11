@@ -81,6 +81,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    AirportTableViewCell *cell = (AirportTableViewCell *) [self.tableView cellForRowAtIndexPath:indexPath];
+    [self.delegate airportSearchResultsControllerViewController:self didSelectAirport:cell.airport];
+    [self.searchController setActive:NO];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
