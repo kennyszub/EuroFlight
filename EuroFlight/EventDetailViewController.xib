@@ -11,7 +11,6 @@
                 <outlet property="dateLabel" destination="ZyS-io-Rvc" id="qui-Du-j0Q"/>
                 <outlet property="descriptionLabel" destination="3pM-v3-ray" id="pL3-3s-bAA"/>
                 <outlet property="eventView" destination="hS2-sU-o3r" id="uUS-MU-nxK"/>
-                <outlet property="nameLabel" destination="ks5-K9-vPN" id="TOf-9N-IoT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,20 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks5-K9-vPN">
-                    <rect key="frame" x="15" y="70" width="46" height="24"/>
-                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyS-io-Rvc">
-                    <rect key="frame" x="15" y="107" width="37" height="24"/>
+                    <rect key="frame" x="15" y="70" width="37" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-v3-ray">
-                    <rect key="frame" x="15" y="188" width="290" height="24"/>
+                    <rect key="frame" x="15" y="152" width="290" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="ebs-9u-1uF"/>
                     </constraints>
@@ -42,19 +35,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-SD-Y8D">
-                    <rect key="frame" x="15" y="130" width="31" height="24"/>
+                    <rect key="frame" x="15" y="94" width="31" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-kD-g1c">
-                    <rect key="frame" x="15" y="157" width="62" height="24"/>
+                    <rect key="frame" x="15" y="120" width="62" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-sU-o3r">
-                    <rect key="frame" x="15" y="262" width="290" height="150"/>
+                    <rect key="frame" x="15" y="225" width="290" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="xvY-uX-oDT"/>
                     </constraints>
@@ -80,13 +73,11 @@
                 <constraint firstAttribute="centerX" secondItem="zpF-jx-f5V" secondAttribute="centerX" id="T8W-7X-AOH"/>
                 <constraint firstItem="6I3-SD-Y8D" firstAttribute="top" secondItem="ZyS-io-Rvc" secondAttribute="bottom" id="fvj-e0-J6l"/>
                 <constraint firstItem="3pM-v3-ray" firstAttribute="top" secondItem="u8x-kD-g1c" secondAttribute="bottom" constant="8" id="g34-a6-fYU"/>
+                <constraint firstItem="ZyS-io-Rvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="lBm-9k-9pR"/>
                 <constraint firstItem="ZyS-io-Rvc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="lwa-O1-LTG"/>
                 <constraint firstAttribute="trailing" secondItem="hS2-sU-o3r" secondAttribute="trailing" constant="15" id="op3-4x-D3s"/>
-                <constraint firstItem="ks5-K9-vPN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="qSt-iB-kTm"/>
-                <constraint firstItem="ZyS-io-Rvc" firstAttribute="top" secondItem="ks5-K9-vPN" secondAttribute="bottom" constant="13" id="qk1-qf-b8M"/>
                 <constraint firstItem="3pM-v3-ray" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="qkw-Xn-MVb"/>
                 <constraint firstAttribute="bottom" secondItem="zpF-jx-f5V" secondAttribute="bottom" constant="50" id="wy9-GL-j2s"/>
-                <constraint firstItem="ks5-K9-vPN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="yig-OY-gnG"/>
             </constraints>
             <point key="canvasLocation" x="317" y="293"/>
         </view>

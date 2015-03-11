@@ -11,7 +11,6 @@
 #import "FlightResultsViewController.h"
 
 @interface EventDetailViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countryLabel;
@@ -25,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.nameLabel.text = self.event.name;
+    self.title = self.event.name;
     self.dateLabel.text = self.event.dateString;
     self.cityLabel.text = self.event.cityString;
     self.countryLabel.text = self.event.countryString;

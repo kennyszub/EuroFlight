@@ -9,7 +9,6 @@
                 <outlet property="collectionView" destination="IOd-eM-y08" id="M5v-GW-1AL"/>
                 <outlet property="descriptionLabel" destination="oQP-XV-Rch" id="Xwx-Am-Gld"/>
                 <outlet property="favoriteButton" destination="FEP-6s-6o6" id="7RZ-rw-sfP"/>
-                <outlet property="nameLabel" destination="p1f-if-vdS" id="8Vm-Ov-qgy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,19 +26,6 @@
                         <action selector="onTickets:" destination="-1" eventType="touchUpInside" id="NkK-l2-y5z"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEP-6s-6o6">
-                    <rect key="frame" x="296" y="83" width="16" height="16"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="16" id="1bp-g2-uF8"/>
-                        <constraint firstAttribute="width" constant="16" id="aPq-Xf-Tqt"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="favorite-off">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="S7A-hL-B1f"/>
-                    </connections>
-                </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IOd-eM-y08">
                     <rect key="frame" x="0.0" y="169" width="320" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -54,31 +40,36 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-XV-Rch">
-                    <rect key="frame" x="8" y="131" width="297" height="18"/>
+                    <rect key="frame" x="8" y="100" width="297" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-if-vdS">
-                    <rect key="frame" x="139" y="80" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEP-6s-6o6">
+                    <rect key="frame" x="261" y="480" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="1bp-g2-uF8"/>
+                        <constraint firstAttribute="width" constant="16" id="aPq-Xf-Tqt"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="favorite-off">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="S7A-hL-B1f"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="oQP-XV-Rch" secondAttribute="trailing" constant="15" id="Eia-fS-cBu"/>
                 <constraint firstItem="IOd-eM-y08" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LP7-zL-zQ6"/>
+                <constraint firstItem="FEP-6s-6o6" firstAttribute="centerY" secondItem="yMN-0I-fsd" secondAttribute="centerY" id="PfX-xp-V2r"/>
                 <constraint firstAttribute="trailing" secondItem="IOd-eM-y08" secondAttribute="trailing" id="Pum-N7-9dF"/>
-                <constraint firstItem="p1f-if-vdS" firstAttribute="centerY" secondItem="FEP-6s-6o6" secondAttribute="centerY" id="W7h-Ut-I1n"/>
                 <constraint firstAttribute="bottom" secondItem="yMN-0I-fsd" secondAttribute="bottom" constant="65" id="WON-v1-Kf7"/>
-                <constraint firstAttribute="trailing" secondItem="FEP-6s-6o6" secondAttribute="trailing" constant="8" id="Xfg-Oi-epH"/>
-                <constraint firstItem="IOd-eM-y08" firstAttribute="top" secondItem="oQP-XV-Rch" secondAttribute="bottom" constant="20" id="gx0-Na-cgc"/>
-                <constraint firstAttribute="centerX" secondItem="p1f-if-vdS" secondAttribute="centerX" id="l2n-mQ-IlH"/>
-                <constraint firstItem="oQP-XV-Rch" firstAttribute="top" secondItem="p1f-if-vdS" secondAttribute="bottom" constant="30" id="oQG-yz-S3T"/>
+                <constraint firstAttribute="trailing" secondItem="FEP-6s-6o6" secondAttribute="trailing" constant="43" id="WOl-te-BDT"/>
+                <constraint firstItem="IOd-eM-y08" firstAttribute="top" secondItem="oQP-XV-Rch" secondAttribute="bottom" constant="51" id="gx0-Na-cgc"/>
+                <constraint firstItem="oQP-XV-Rch" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="hla-ah-ncB"/>
                 <constraint firstAttribute="centerX" secondItem="yMN-0I-fsd" secondAttribute="centerX" id="p58-ee-n74"/>
-                <constraint firstItem="p1f-if-vdS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="tEn-S8-6p8"/>
                 <constraint firstItem="oQP-XV-Rch" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="x3J-pG-Wap"/>
             </constraints>
             <point key="canvasLocation" x="201" y="439"/>

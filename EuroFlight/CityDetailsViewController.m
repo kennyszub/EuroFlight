@@ -12,7 +12,6 @@
 #import "FavoritesManager.h"
 
 @interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
@@ -28,7 +27,7 @@
     self.collectionView.dataSource = self;
     [self.collectionView registerNib:[UINib nibWithNibName:@"PlaceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PlaceCollectionViewCell"];
     
-    self.nameLabel.text = self.city.name;
+    self.title = self.city.name;
     self.descriptionLabel.text = self.city.summary;
     
     [self setFavoriteButtonImage];
