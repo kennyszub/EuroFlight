@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightDetailViewController">
             <connections>
+                <outlet property="containerView" destination="i5M-Pr-FkT" id="mIo-RH-fAC"/>
                 <outlet property="costLabel" destination="v5z-nY-xlK" id="LhJ-EV-QMh"/>
                 <outlet property="outboundFlightDetailView" destination="vbe-cA-eGo" id="xLe-DK-yrt"/>
                 <outlet property="returnFlightDetailView" destination="lqJ-gb-7qp" id="hZT-H2-eAu"/>
@@ -43,7 +44,7 @@
                         <action selector="onStartOverButton:" destination="-1" eventType="touchUpInside" id="mZL-vg-bxl"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx3-ip-DxI">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx3-ip-DxI">
                     <rect key="frame" x="117" y="447" width="85" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="tO7-L6-SjE"/>

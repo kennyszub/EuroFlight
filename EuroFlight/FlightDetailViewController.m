@@ -10,18 +10,24 @@
 #import "OneWayFlightDetailView.h"
 #import "HomeViewController.h"
 #import "CurrencyFormatter.h"
+#import "FlightSegment.h"
+#import "BuyFlightViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface FlightDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet OneWayFlightDetailView *outboundFlightDetailView;
 @property (weak, nonatomic) IBOutlet OneWayFlightDetailView *returnFlightDetailView;
 @property (weak, nonatomic) IBOutlet UILabel *costLabel;
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 
 - (IBAction)onStartOverButton:(id)sender;
 - (IBAction)onBuyButton:(id)sender;
 - (IBAction)onTellAFriendButton:(id)sender;
 
 @end
+
+NSString * const kKayakBaseURL = @"http://www.kayak.com/flights";
 
 @implementation FlightDetailViewController
 
@@ -53,7 +59,19 @@
 }
 
 - (IBAction)onBuyButton:(id)sender {
-    // TODO
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"y-MM-dd";
+
+    NSString *sourceAirport = self.trip.sourceAirportCode;
+    NSString *destinationAirport = self.trip.destinationAirportCode;
+    NSString *departureDate = [formatter stringFromDate:((FlightSegment *)self.trip.outboundFlight.flightSegments[0]).departureDate ];
+    NSString *returnDate = [formatter stringFromDate:((FlightSegment *)self.trip.returnFlight.flightSegments[0]).departureDate];
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@-%@/%@/%@", kKayakBaseURL, sourceAirport, destinationAirport, departureDate, returnDate];
+
+    BuyFlightViewController *bfvc = [[BuyFlightViewController alloc] init];
+    bfvc.url = urlString;
+
+    [self.navigationController pushViewController:bfvc animated:YES];
 }
 
 - (IBAction)onTellAFriendButton:(id)sender {
