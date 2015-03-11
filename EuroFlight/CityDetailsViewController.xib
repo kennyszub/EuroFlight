@@ -18,12 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-if-vdS">
-                    <rect key="frame" x="139" y="20" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-0I-fsd">
                     <rect key="frame" x="120" y="473" width="80" height="30"/>
                     <state key="normal" title="Find tickets">
@@ -34,7 +28,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEP-6s-6o6">
-                    <rect key="frame" x="296" y="23" width="16" height="16"/>
+                    <rect key="frame" x="296" y="83" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="1bp-g2-uF8"/>
                         <constraint firstAttribute="width" constant="16" id="aPq-Xf-Tqt"/>
@@ -47,7 +41,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IOd-eM-y08">
-                    <rect key="frame" x="0.0" y="108" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="169" width="320" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="3c4-Jz-LsL"/>
@@ -60,8 +54,14 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-XV-Rch">
-                    <rect key="frame" x="8" y="70" width="297" height="18"/>
+                    <rect key="frame" x="8" y="131" width="297" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-if-vdS">
+                    <rect key="frame" x="139" y="80" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -78,7 +78,7 @@
                 <constraint firstAttribute="centerX" secondItem="p1f-if-vdS" secondAttribute="centerX" id="l2n-mQ-IlH"/>
                 <constraint firstItem="oQP-XV-Rch" firstAttribute="top" secondItem="p1f-if-vdS" secondAttribute="bottom" constant="30" id="oQG-yz-S3T"/>
                 <constraint firstAttribute="centerX" secondItem="yMN-0I-fsd" secondAttribute="centerX" id="p58-ee-n74"/>
-                <constraint firstItem="p1f-if-vdS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="tEn-S8-6p8"/>
+                <constraint firstItem="p1f-if-vdS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="tEn-S8-6p8"/>
                 <constraint firstItem="oQP-XV-Rch" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="x3J-pG-Wap"/>
             </constraints>
             <point key="canvasLocation" x="201" y="439"/>

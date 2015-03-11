@@ -12,6 +12,5 @@
 @interface EventDetailViewController : UIViewController
 
 @property (nonatomic, strong) Event *event;
-@property (nonatomic, strong) NSArray *events;
 
 @end

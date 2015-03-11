@@ -34,9 +34,9 @@ static NSDateFormatter *dateTimeParser;
         self.dateString = dictionary[@"date"];
         
         NSArray *components = [dictionary[@"city"] componentsSeparatedByString:@", "];
-        self.city = components[0];
+        self.cityString = components[0];
         if (components.count > 1) {
-            self.country = components[1];
+            self.countryString = components[1];
         }
         [self parseDateString:self.dateString];
     }
@@ -57,7 +57,9 @@ static NSDateFormatter *dateTimeParser;
             [dictionary setObject:details[key][@"date"] forKey:@"date"];
             [dictionary setObject:([details[key][@"description"] isKindOfClass:[NSDictionary class]] ? details[key][@"description"][@"text"] : details[key][@"description"]) forKey:@"description"];
             Event *event = [[Event alloc] initWithDictionary:dictionary];
-            [array addObject:event];
+            if (event.startDate != nil && event.endDate != nil) {
+                [array addObject:event];
+            }
         }
     }
 
@@ -106,7 +108,7 @@ static NSRegularExpression *dateRegex;
     self.startDate = startDate;
     self.endDate = endDate;
     
-    NSLog(@"3 %@ %@ %@", dateString, startDate, endDate);
+//    NSLog(@"3 %@ %@ %@", dateString, startDate, endDate);
 
 }
 

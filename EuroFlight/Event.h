@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "City.h"
+#import "Country.h"
 
 @interface Event : NSObject
 
@@ -16,8 +18,10 @@
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
 @property (nonatomic, strong) NSString *dateString;
-@property (nonatomic, strong) NSString *city;
-@property (nonatomic, strong) NSString *country;
+@property (nonatomic, strong) NSString *cityString;
+@property (nonatomic, strong) NSString *countryString;
+@property (nonatomic, strong) City *city;
+@property (nonatomic, strong) Country *country;
 
 + (NSArray *)allEvents;
 

@@ -34,8 +34,16 @@
         
         NSMutableArray *array = [[Event allEvents] mutableCopy];
         
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"country like %@", self.name];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"countryString like %@", self.name];
         NSArray *matchingEvents = [array filteredArrayUsingPredicate:predicate];
+        for (Event *event in matchingEvents) {
+            event.country = self;
+            NSPredicate *cityPredicate = [NSPredicate predicateWithFormat:@"name like %@", event.cityString];
+            NSArray *matchingCities = [self.cities filteredArrayUsingPredicate:cityPredicate];
+            if (matchingCities.count > 0) {
+                event.city = [matchingCities objectAtIndex:0];
+            }
+        }
         self.events = matchingEvents;
     }
     return self;

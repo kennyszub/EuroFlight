@@ -15,7 +15,7 @@
 #import "Event.h"
 #import "EventDetailViewController.h"
 
-@interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate, CountryTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *countries;
 @property (nonatomic, assign) NSInteger currentExpandedIndex;
@@ -92,6 +92,7 @@
     } else {
         CountryTableViewCell *countryCell =  [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell"];
         countryCell.country = (Country *) self.countries[indexPath.section];
+        countryCell.delegate = self;
         return countryCell;
     }
     
@@ -153,6 +154,11 @@
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
 }
 
+- (void)didTapEvent:(CountryTableViewCell *)cell {
+    EventDetailViewController *vc = [[EventDetailViewController alloc] init];
+    vc.event = [cell.country.events objectAtIndex:cell.eventIndex];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "EventDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "FlightResultsViewController.h"
 
 @interface EventDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -16,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *countryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *eventView;
-@property (nonatomic, assign) NSInteger index;
 
 @end
 
@@ -24,16 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (self.index < self.events.count) {
-    self.event = self.events[self.index];
     // Do any additional setup after loading the view from its nib.
     self.nameLabel.text = self.event.name;
     self.dateLabel.text = self.event.dateString;
-    self.cityLabel.text = self.event.city;
-    self.countryLabel.text = self.event.country;
+    self.cityLabel.text = self.event.cityString;
+    self.countryLabel.text = self.event.countryString;
     self.descriptionLabel.text = self.event.summary;
     [self.eventView setImageWithURL:[NSURL URLWithString:self.event.photoURL]];
-    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,8 +49,9 @@
 }
 */
 - (IBAction)onNext:(id)sender {
-    self.index += 1;
-    [self viewDidLoad];
+    FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
+    vc.city = self.event.city;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

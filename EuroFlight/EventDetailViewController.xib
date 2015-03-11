@@ -21,19 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks5-K9-vPN">
-                    <rect key="frame" x="15" y="27" width="46" height="24"/>
+                    <rect key="frame" x="15" y="70" width="46" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyS-io-Rvc">
-                    <rect key="frame" x="15" y="64" width="37" height="24"/>
+                    <rect key="frame" x="15" y="107" width="37" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-v3-ray">
-                    <rect key="frame" x="15" y="145" width="290" height="24"/>
+                    <rect key="frame" x="15" y="188" width="290" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="ebs-9u-1uF"/>
                     </constraints>
@@ -42,26 +42,26 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-SD-Y8D">
-                    <rect key="frame" x="15" y="87" width="31" height="24"/>
+                    <rect key="frame" x="15" y="130" width="31" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-kD-g1c">
-                    <rect key="frame" x="15" y="114" width="62" height="24"/>
+                    <rect key="frame" x="15" y="157" width="62" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-sU-o3r">
-                    <rect key="frame" x="15" y="219" width="290" height="150"/>
+                    <rect key="frame" x="15" y="262" width="290" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="xvY-uX-oDT"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-jx-f5V">
-                    <rect key="frame" x="144" y="488" width="32" height="30"/>
-                    <state key="normal" title="Next">
+                    <rect key="frame" x="118" y="488" width="84" height="30"/>
+                    <state key="normal" title="Find Tickets">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -86,7 +86,7 @@
                 <constraint firstItem="ZyS-io-Rvc" firstAttribute="top" secondItem="ks5-K9-vPN" secondAttribute="bottom" constant="13" id="qk1-qf-b8M"/>
                 <constraint firstItem="3pM-v3-ray" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="qkw-Xn-MVb"/>
                 <constraint firstAttribute="bottom" secondItem="zpF-jx-f5V" secondAttribute="bottom" constant="50" id="wy9-GL-j2s"/>
-                <constraint firstItem="ks5-K9-vPN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="yig-OY-gnG"/>
+                <constraint firstItem="ks5-K9-vPN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="yig-OY-gnG"/>
             </constraints>
             <point key="canvasLocation" x="317" y="293"/>
         </view>
