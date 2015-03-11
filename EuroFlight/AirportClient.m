@@ -9,7 +9,7 @@
 #import "AirportClient.h"
 #import "Airport.h"
 
-NSString * const kAirportAeroBaseUrl = @"https://airport.api.aero/";
+NSString * const kAirportAeroBaseUrl = @"https://airport.api.aero";
 NSString * const kAirportAeroKey = @"49cfc5c6fa0f1e4a9bef3ce3e71d7a5a";
 
 @implementation AirportClient
@@ -22,15 +22,17 @@ NSString * const kAirportAeroKey = @"49cfc5c6fa0f1e4a9bef3ce3e71d7a5a";
     
     dispatch_once(&token, ^ {
         instance = [[AirportClient alloc] initWithBaseURL:[NSURL URLWithString:kAirportAeroBaseUrl]];
+        [instance.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     });
     
     return instance;
 }
 
 - (void)searchAirportByName:(NSString *)name completion:(void (^)(NSMutableArray *, NSError *))completion {
-    NSString *url = [NSString stringWithFormat:@"/airport/match/%@", name];
+    name = [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *url = [NSString stringWithFormat:@"airport/match/%@?user_key=%@", name, kAirportAeroKey];
     [self GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSMutableArray *airports = [Airport airportsWithArray:responseObject];
+        NSMutableArray *airports = [Airport airportsWithArray:responseObject[@"airports"]];
         completion(airports, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed retrieving airports: %@", error);

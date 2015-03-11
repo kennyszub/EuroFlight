@@ -13,7 +13,11 @@
 #import "PlacesClient.h"
 #import "KimonoClient.h"
 #import "Event.h"
+<<<<<<< HEAD
 #import "FavoritesViewController.h"
+=======
+#import "AirportSearchResultsControllerViewController.h"
+>>>>>>> can search for airports
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
@@ -78,10 +82,18 @@ enum Weeks {
     }
 }
 
+<<<<<<< HEAD
 - (void)onFavoritesButton {
     FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
     [self.navigationController pushViewController:fvc animated:YES];
 }
+=======
+- (IBAction)onAirportSearch:(id)sender {
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[[AirportSearchResultsControllerViewController alloc] init]];
+    [self.navigationController presentViewController:nvc animated:YES completion:nil];
+}
+
+>>>>>>> can search for airports
 
 
 #pragma mark Date picker methods

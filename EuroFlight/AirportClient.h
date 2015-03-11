@@ -9,5 +9,6 @@
 #import "AFHTTPRequestOperationManager.h"
 
 @interface AirportClient : AFHTTPRequestOperationManager
-
++ (AirportClient *)sharedInstance;
+- (void)searchAirportByName:(NSString *)name completion:(void (^)(NSMutableArray *, NSError *))completion;
 @end
