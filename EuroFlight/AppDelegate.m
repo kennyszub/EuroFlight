@@ -60,8 +60,7 @@
     // set navigation bar colors
     [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:46/255.0 green:64/255.0 blue:87/255.0 alpha:1.0]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTranslucent:NO];
-    
+
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIColor whiteColor], NSForegroundColorAttributeName,
