@@ -20,40 +20,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyS-io-Rvc">
-                    <rect key="frame" x="15" y="70" width="37" height="24"/>
+                    <rect key="frame" x="8" y="196" width="37" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-v3-ray">
-                    <rect key="frame" x="15" y="152" width="290" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="ebs-9u-1uF"/>
-                    </constraints>
+                    <rect key="frame" x="8" y="277" width="290" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-SD-Y8D">
-                    <rect key="frame" x="15" y="94" width="31" height="24"/>
+                    <rect key="frame" x="8" y="220" width="31" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-kD-g1c">
-                    <rect key="frame" x="15" y="120" width="62" height="24"/>
+                    <rect key="frame" x="8" y="245" width="62" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-sU-o3r">
-                    <rect key="frame" x="15" y="225" width="290" height="150"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-sU-o3r">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="xvY-uX-oDT"/>
+                        <constraint firstAttribute="height" constant="186" id="xvY-uX-oDT"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-jx-f5V">
-                    <rect key="frame" x="118" y="488" width="84" height="30"/>
+                    <rect key="frame" x="228" y="194" width="84" height="30"/>
                     <state key="normal" title="Find Tickets">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -64,20 +61,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="u8x-kD-g1c" firstAttribute="top" secondItem="6I3-SD-Y8D" secondAttribute="bottom" constant="3" id="6DG-3U-YSg"/>
-                <constraint firstItem="6I3-SD-Y8D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="7gp-gL-4An"/>
-                <constraint firstItem="hS2-sU-o3r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="EEh-a5-kmC"/>
-                <constraint firstAttribute="trailing" secondItem="3pM-v3-ray" secondAttribute="trailing" constant="15" id="KFC-hn-dd9"/>
-                <constraint firstItem="u8x-kD-g1c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="MYb-Hx-RMv"/>
-                <constraint firstItem="hS2-sU-o3r" firstAttribute="top" secondItem="3pM-v3-ray" secondAttribute="bottom" constant="50" id="Qun-se-Hmw"/>
-                <constraint firstAttribute="centerX" secondItem="zpF-jx-f5V" secondAttribute="centerX" id="T8W-7X-AOH"/>
+                <constraint firstItem="u8x-kD-g1c" firstAttribute="top" secondItem="6I3-SD-Y8D" secondAttribute="bottom" constant="2" id="6DG-3U-YSg"/>
+                <constraint firstItem="6I3-SD-Y8D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7gp-gL-4An"/>
+                <constraint firstItem="hS2-sU-o3r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EEh-a5-kmC"/>
+                <constraint firstItem="hS2-sU-o3r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FIR-db-fKH"/>
+                <constraint firstAttribute="trailing" secondItem="zpF-jx-f5V" secondAttribute="trailing" constant="8" id="Ivn-Gl-maI"/>
+                <constraint firstAttribute="trailing" secondItem="3pM-v3-ray" secondAttribute="trailing" constant="22" id="KFC-hn-dd9"/>
+                <constraint firstItem="u8x-kD-g1c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="MYb-Hx-RMv"/>
+                <constraint firstItem="ZyS-io-Rvc" firstAttribute="top" secondItem="hS2-sU-o3r" secondAttribute="bottom" constant="10" id="X5v-Ji-Dy6"/>
+                <constraint firstItem="zpF-jx-f5V" firstAttribute="top" secondItem="hS2-sU-o3r" secondAttribute="bottom" constant="8" id="eIr-VY-RQv"/>
                 <constraint firstItem="6I3-SD-Y8D" firstAttribute="top" secondItem="ZyS-io-Rvc" secondAttribute="bottom" id="fvj-e0-J6l"/>
                 <constraint firstItem="3pM-v3-ray" firstAttribute="top" secondItem="u8x-kD-g1c" secondAttribute="bottom" constant="8" id="g34-a6-fYU"/>
-                <constraint firstItem="ZyS-io-Rvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="lBm-9k-9pR"/>
-                <constraint firstItem="ZyS-io-Rvc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="lwa-O1-LTG"/>
-                <constraint firstAttribute="trailing" secondItem="hS2-sU-o3r" secondAttribute="trailing" constant="15" id="op3-4x-D3s"/>
-                <constraint firstItem="3pM-v3-ray" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="qkw-Xn-MVb"/>
-                <constraint firstAttribute="bottom" secondItem="zpF-jx-f5V" secondAttribute="bottom" constant="50" id="wy9-GL-j2s"/>
+                <constraint firstItem="ZyS-io-Rvc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="lwa-O1-LTG"/>
+                <constraint firstAttribute="trailing" secondItem="hS2-sU-o3r" secondAttribute="trailing" id="op3-4x-D3s"/>
+                <constraint firstItem="3pM-v3-ray" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qkw-Xn-MVb"/>
             </constraints>
             <point key="canvasLocation" x="317" y="293"/>
         </view>

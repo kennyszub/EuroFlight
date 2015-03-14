@@ -29,7 +29,9 @@ static NSDateFormatter *dateTimeParser;
             [Event initDateTimeParser];
         }
         self.name = dictionary[@"name"];
-        self.summary = dictionary[@"description"];
+        if ([dictionary[@"description"] isKindOfClass:[NSString class]]) {
+            self.summary = [dictionary[@"description"] stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+        }
         self.photoURL = dictionary[@"photoURL"];
         self.dateString = dictionary[@"date"];
         

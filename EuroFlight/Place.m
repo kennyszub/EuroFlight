@@ -15,7 +15,9 @@
     self = [super init];
     if (self) {
         NSString *photoReference = dictionary[@"photos"][0][@"photo_reference"];
-        self.photoURL = [PlacesClient photoURLWithPhotoReference:photoReference maxWidth:400];
+        if (photoReference != nil) {
+            self.photoURL = [PlacesClient photoURLWithPhotoReference:photoReference maxWidth:400];
+        }
         self.name = dictionary[@"name"];
     }
     return self;
@@ -24,7 +26,10 @@
 + (NSArray *)placesWithArray:(NSArray *)array {
     NSMutableArray *places = [[NSMutableArray alloc] init];
     for (NSDictionary *dictionary in array) {
-        [places addObject:[[Place alloc] initWithDictionary:dictionary]];
+        Place *place = [[Place alloc] initWithDictionary:dictionary];
+        if (place.photoURL != nil) {
+            [places addObject:place];
+        }
     }
     
     return places;

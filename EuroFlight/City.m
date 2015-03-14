@@ -54,7 +54,10 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
             }];
         }
         
-        self.summary = [KimonoClient sharedInstance].placeSummaries[self.name];
+        NSString *summary = [KimonoClient sharedInstance].placeSummaries[self.name];
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\s+[^\\.]+\\.{3}$" options:0 error:nil];
+        NSString *truncatedSummary = [regex stringByReplacingMatchesInString:summary options:0 range:NSMakeRange(0, [summary length]) withTemplate:@""];
+        self.summary = truncatedSummary;
         self.imageURL = [KimonoClient sharedInstance].cityImages[self.name];
     }
     return self;
