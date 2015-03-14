@@ -16,6 +16,8 @@
 #import "FavoritesViewController.h"
 #import "AirportSearchResultsControllerViewController.h"
 #import "Context.h"
+#import "LocationManager.h"
+#import "AirportClient.h"
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
@@ -57,12 +59,14 @@ enum Weeks {
     [Context currentContext].departureDate = self.outboundDate;
     
     self.returnDateField.delegate = self;
-    self.returnDate = [self getNextWeekdayDate:SUNDAY];
+    self.returnDate = [self dateByAddingDaystoDate:self.outboundDate days:2];
     [Context currentContext].returnDate = self.returnDate;
     
     self.formatter = [[NSDateFormatter alloc] init];
     [self.formatter setDateFormat:@"MMM d, y"];
     [self refreshDates];
+    
+    [self setUpAirportTextField];
     
     self.title = @"EuroFlight";
 
@@ -98,6 +102,23 @@ enum Weeks {
 
 - (void)airportSearchResultsControllerViewController:(AirportSearchResultsControllerViewController *)airportsController didSelectAirport:(Airport *)airport {
     self.airportTextField.text = airport.code;
+}
+
+- (void)setUpAirportTextField {
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [[LocationManager sharedInstance] getCurrentLocationWithCompletion:^(CLLocation *location) {
+            [[AirportClient sharedInstance] searchAirportByLatitude:location.coordinate.latitude longitude:location.coordinate.longitude completion:^(NSMutableArray *airports, NSError *error) {
+                if (airports.count > 0) {
+                    Airport *airport = airports[0];
+                    self.airportTextField.text = airport.code;
+                } else {
+                    self.airportTextField.text = @"LHR";
+                }
+            }];
+        }];
+    } else {
+        self.airportTextField.text = @"LHR";
+    }
 }
 
 #pragma mark Date picker methods
@@ -198,6 +219,15 @@ enum Weeks {
     NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
     NSDate* newDate = [calendar dateByAddingComponents:components toDate:date options:0];
     return newDate;
+}
+
+- (NSDate *)dateByAddingDaystoDate:(NSDate *)date days:(NSInteger)days {
+    NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+    dayComponent.day = days;
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDate *nextDate = [cal dateByAddingComponents:dayComponent toDate:date options:0];
+    
+    return nextDate;
 }
 
 - (BOOL)isSameDayWithDate1:(NSDate*)date1 date2:(NSDate*)date2 {

@@ -9,6 +9,7 @@
 #import "AirportSearchResultsControllerViewController.h"
 #import "AirportTableViewCell.h"
 #import "AirportClient.h"
+#import "LocationManager.h"
 
 @interface AirportSearchResultsControllerViewController () <UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UIBarPositioningDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -41,6 +42,17 @@
     self.searchController.hidesNavigationBarDuringPresentation = YES;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     self.definesPresentationContext = YES;
+    
+    
+    // auto populate with closest airports
+    [[LocationManager sharedInstance] getCurrentLocationWithCompletion:^(CLLocation *location) {
+        [[AirportClient sharedInstance] searchAirportByLatitude:location.coordinate.latitude longitude:location.coordinate.longitude completion:^(NSMutableArray *airports, NSError *error) {
+            if (airports.count > 0) {
+                self.filteredAirports = airports;
+                [self.tableView reloadData];
+            }
+        }];
+    }];
 }
 
 

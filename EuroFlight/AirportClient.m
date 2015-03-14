@@ -40,4 +40,15 @@ NSString * const kAirportAeroKey = @"49cfc5c6fa0f1e4a9bef3ce3e71d7a5a";
     }];
 }
 
+- (void)searchAirportByLatitude:(double)lat longitude:(double)lng completion:(void (^)(NSMutableArray *, NSError *))completion {
+    NSString *url = [NSString stringWithFormat:@"airport/nearest/%f/%f?user_key=%@&maxAirports=%d", lat, lng, kAirportAeroKey, 5];
+    [self GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *airports = [Airport airportsWithArray:responseObject[@"airports"]];
+        completion(airports, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failed retrieving airports: %@", error);
+        completion(nil, error);
+    }];
+}
+
 @end

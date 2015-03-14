@@ -11,4 +11,5 @@
 @interface AirportClient : AFHTTPRequestOperationManager
 + (AirportClient *)sharedInstance;
 - (void)searchAirportByName:(NSString *)name completion:(void (^)(NSMutableArray *, NSError *))completion;
+- (void)searchAirportByLatitude:(double)lat longitude:(double)lng completion:(void (^)(NSMutableArray *, NSError *))completion;
 @end

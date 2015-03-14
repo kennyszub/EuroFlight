@@ -27,7 +27,9 @@
 + (NSMutableArray *)airportsWithArray:(NSArray *)array {
     NSMutableArray *airports = [NSMutableArray array];
     for (NSDictionary *dictionary in array) {
-        [airports addObject:[[Airport alloc] initWithDictionary:dictionary]];
+        if (dictionary != (id) [NSNull null]) {
+            [airports addObject:[[Airport alloc] initWithDictionary:dictionary]];
+        }
     }
     return airports;
 }

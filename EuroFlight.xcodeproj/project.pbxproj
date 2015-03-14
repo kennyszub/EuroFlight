@@ -21,6 +21,8 @@
 		11873B1D1AAD7D990050D5DA /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11873B1B1AAD7D990050D5DA /* EventDetailViewController.xib */; };
 		11A389931AABE017006BA0F1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		B84314A94BA67928B7206B9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F116A637F1BF91C4CE37A3 /* libPods.a */; };
+		C43028071AB4DD7700DA2B18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43028061AB4DD7600DA2B18 /* CoreLocation.framework */; };
+		C430280A1AB4DED200DA2B18 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028091AB4DED200DA2B18 /* LocationManager.m */; };
 		C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D831AAB9B830023FDC3 /* LaunchScreen.xib */; };
 		C4FA0D911AAB9B830023FDC3 /* EuroFlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D901AAB9B830023FDC3 /* EuroFlightTests.m */; };
 		C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA41AABA5B50023FDC3 /* Flight.m */; };
@@ -117,6 +119,9 @@
 		11A389911AABE017006BA0F1 /* PlacesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesClient.h; sourceTree = "<group>"; };
 		22C6EE4FA5C1D6C4ABDB0D26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3AB1657D6FAF216320BCD98D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C43028061AB4DD7600DA2B18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C43028081AB4DED200DA2B18 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		C43028091AB4DED200DA2B18 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		C4FA0D711AAB9B830023FDC3 /* EuroFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuroFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FA0D751AAB9B830023FDC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FA0D761AAB9B830023FDC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -222,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43028071AB4DD7700DA2B18 /* CoreLocation.framework in Frameworks */,
 				EB72B2581AB03CCA004503D1 /* WebKit.framework in Frameworks */,
 				B84314A94BA67928B7206B9D /* libPods.a in Frameworks */,
 			);
@@ -240,6 +246,7 @@
 		AA784F5A2B8CBA29111699DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C43028061AB4DD7600DA2B18 /* CoreLocation.framework */,
 				EB72B2571AB03CCA004503D1 /* WebKit.framework */,
 				10F116A637F1BF91C4CE37A3 /* libPods.a */,
 			);
@@ -427,6 +434,8 @@
 				EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */,
 				EB72B2541AB032D7004503D1 /* CurrencyFormatter.h */,
 				EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */,
+				C43028081AB4DED200DA2B18 /* LocationManager.h */,
+				C43028091AB4DED200DA2B18 /* LocationManager.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -638,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */,
+				C430280A1AB4DED200DA2B18 /* LocationManager.m in Sources */,
 				C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */,
 				EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */,
 				C4FA0DD01AABEE0F0023FDC3 /* Trip.m in Sources */,
