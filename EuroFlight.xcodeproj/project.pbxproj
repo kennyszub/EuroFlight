@@ -23,6 +23,13 @@
 		B84314A94BA67928B7206B9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F116A637F1BF91C4CE37A3 /* libPods.a */; };
 		C43028071AB4DD7700DA2B18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43028061AB4DD7600DA2B18 /* CoreLocation.framework */; };
 		C430280A1AB4DED200DA2B18 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028091AB4DED200DA2B18 /* LocationManager.m */; };
+		C430280F1AB507FA00DA2B18 /* DepartureCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C430280D1AB507FA00DA2B18 /* DepartureCityCell.m */; };
+		C43028101AB507FA00DA2B18 /* DepartureCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C430280E1AB507FA00DA2B18 /* DepartureCityCell.xib */; };
+		C43028141AB50B9F00DA2B18 /* DateSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028121AB50B9F00DA2B18 /* DateSelectionCell.m */; };
+		C43028151AB50B9F00DA2B18 /* DateSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43028131AB50B9F00DA2B18 /* DateSelectionCell.xib */; };
+		C43028231AB51F0400DA2B18 /* OneWayRoundTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028211AB51F0400DA2B18 /* OneWayRoundTripCell.m */; };
+		C43028241AB51F0400DA2B18 /* OneWayRoundTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43028221AB51F0400DA2B18 /* OneWayRoundTripCell.xib */; };
+		C43028281AB53FBC00DA2B18 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028271AB53FBC00DA2B18 /* UIImage+Util.m */; };
 		C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D831AAB9B830023FDC3 /* LaunchScreen.xib */; };
 		C4FA0D911AAB9B830023FDC3 /* EuroFlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D901AAB9B830023FDC3 /* EuroFlightTests.m */; };
 		C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA41AABA5B50023FDC3 /* Flight.m */; };
@@ -122,6 +129,17 @@
 		C43028061AB4DD7600DA2B18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C43028081AB4DED200DA2B18 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		C43028091AB4DED200DA2B18 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		C430280C1AB507FA00DA2B18 /* DepartureCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepartureCityCell.h; sourceTree = "<group>"; };
+		C430280D1AB507FA00DA2B18 /* DepartureCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepartureCityCell.m; sourceTree = "<group>"; };
+		C430280E1AB507FA00DA2B18 /* DepartureCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DepartureCityCell.xib; sourceTree = "<group>"; };
+		C43028111AB50B9F00DA2B18 /* DateSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectionCell.h; sourceTree = "<group>"; };
+		C43028121AB50B9F00DA2B18 /* DateSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectionCell.m; sourceTree = "<group>"; };
+		C43028131AB50B9F00DA2B18 /* DateSelectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectionCell.xib; sourceTree = "<group>"; };
+		C43028201AB51F0400DA2B18 /* OneWayRoundTripCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneWayRoundTripCell.h; sourceTree = "<group>"; };
+		C43028211AB51F0400DA2B18 /* OneWayRoundTripCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneWayRoundTripCell.m; sourceTree = "<group>"; };
+		C43028221AB51F0400DA2B18 /* OneWayRoundTripCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayRoundTripCell.xib; sourceTree = "<group>"; };
+		C43028261AB53FBC00DA2B18 /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		C43028271AB53FBC00DA2B18 /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		C4FA0D711AAB9B830023FDC3 /* EuroFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuroFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FA0D751AAB9B830023FDC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FA0D761AAB9B830023FDC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -262,6 +280,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C430280B1AB507CE00DA2B18 /* HomeViewController Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C430280C1AB507FA00DA2B18 /* DepartureCityCell.h */,
+				C430280D1AB507FA00DA2B18 /* DepartureCityCell.m */,
+				C430280E1AB507FA00DA2B18 /* DepartureCityCell.xib */,
+				C43028111AB50B9F00DA2B18 /* DateSelectionCell.h */,
+				C43028121AB50B9F00DA2B18 /* DateSelectionCell.m */,
+				C43028131AB50B9F00DA2B18 /* DateSelectionCell.xib */,
+				C43028201AB51F0400DA2B18 /* OneWayRoundTripCell.h */,
+				C43028211AB51F0400DA2B18 /* OneWayRoundTripCell.m */,
+				C43028221AB51F0400DA2B18 /* OneWayRoundTripCell.xib */,
+			);
+			name = "HomeViewController Cells";
+			sourceTree = "<group>";
+		};
+		C43028251AB53FAE00DA2B18 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C43028261AB53FBC00DA2B18 /* UIImage+Util.h */,
+				C43028271AB53FBC00DA2B18 /* UIImage+Util.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		C4FA0D681AAB9B820023FDC3 = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +328,7 @@
 		C4FA0D731AAB9B830023FDC3 /* EuroFlight */ = {
 			isa = PBXGroup;
 			children = (
+				C43028251AB53FAE00DA2B18 /* Categories */,
 				EB08A4071AAD335A001C2AA3 /* Helpers */,
 				C4FA0DB21AABAAFE0023FDC3 /* API */,
 				C4FA0D9C1AAB9BA50023FDC3 /* View Controllers */,
@@ -354,6 +398,7 @@
 		C4FA0D9B1AAB9B9E0023FDC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C430280B1AB507CE00DA2B18 /* HomeViewController Cells */,
 				C4FA0DC61AABDFC60023FDC3 /* CountryTableViewCell.h */,
 				C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */,
 				C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */,
@@ -564,10 +609,12 @@
 				EB72B2311AB01009004503D1 /* DUB.txt in Resources */,
 				EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */,
 				EB72B24F1AB017A3004503D1 /* BRU.txt in Resources */,
+				C43028151AB50B9F00DA2B18 /* DateSelectionCell.xib in Resources */,
 				EB72B2431AB01537004503D1 /* ZRH.txt in Resources */,
 				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
 				EB72B23B1AB01414004503D1 /* MUC.txt in Resources */,
+				C43028241AB51F0400DA2B18 /* OneWayRoundTripCell.xib in Resources */,
 				EB72B2371AB01325004503D1 /* GOT.txt in Resources */,
 				EB72B2411AB0150B004503D1 /* OSL.txt in Resources */,
 				EB72B2331AB01031004503D1 /* EDI.txt in Resources */,
@@ -578,6 +625,7 @@
 				C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */,
 				C4FA0DE41AAEC2CD0023FDC3 /* AirportSearchResultsControllerViewController.xib in Resources */,
 				C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */,
+				C43028101AB507FA00DA2B18 /* DepartureCityCell.xib in Resources */,
 				EB72B2471AB015C2004503D1 /* FRA.txt in Resources */,
 				EBA5210C1AABE1950081E88A /* BCN.txt in Resources */,
 				EB72B2391AB01380004503D1 /* IBZ.txt in Resources */,
@@ -646,6 +694,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43028141AB50B9F00DA2B18 /* DateSelectionCell.m in Sources */,
 				C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */,
 				C430280A1AB4DED200DA2B18 /* LocationManager.m in Sources */,
 				C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */,
@@ -664,6 +713,7 @@
 				11873B021AABF6220050D5DA /* PlacesClient.m in Sources */,
 				11873B051AABF6340050D5DA /* Place.m in Sources */,
 				C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */,
+				C43028231AB51F0400DA2B18 /* OneWayRoundTripCell.m in Sources */,
 				C4FA0DB11AABA86A0023FDC3 /* Event.m in Sources */,
 				C4FA0DE31AAEC2CD0023FDC3 /* AirportSearchResultsControllerViewController.m in Sources */,
 				EBA521211AABFFE60081E88A /* FlightDetailViewController.m in Sources */,
@@ -671,8 +721,10 @@
 				EBA5211C1AABF4B80081E88A /* FlightResultCell.m in Sources */,
 				11873B1C1AAD7D990050D5DA /* EventDetailViewController.m in Sources */,
 				C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */,
+				C43028281AB53FBC00DA2B18 /* UIImage+Util.m in Sources */,
 				EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */,
 				EBA521171AABF3290081E88A /* FlightResultsViewController.m in Sources */,
+				C430280F1AB507FA00DA2B18 /* DepartureCityCell.m in Sources */,
 				EB72B2561AB032D7004503D1 /* CurrencyFormatter.m in Sources */,
 				11873B071AABF9BF0050D5DA /* AppDelegate.m in Sources */,
 				11873B081AABF9BF0050D5DA /* Context.m in Sources */,

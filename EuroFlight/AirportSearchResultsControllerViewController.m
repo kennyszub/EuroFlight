@@ -28,7 +28,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"AirportTableViewCell" bundle:nil] forCellReuseIdentifier:@"AirportTableViewCell"];
     
     self.filteredAirports = @[];
-    self.title = @"Search for ";
+    self.title = @"Search Airports";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(cancelTapped)];
 }
 

@@ -18,17 +18,20 @@
 #import "Context.h"
 #import "LocationManager.h"
 #import "AirportClient.h"
+#import "DepartureCityCell.h"
+#import "DateSelectionCell.h"
+#import "OneWayRoundTripCell.h"
+#import "UIImage+Util.h"
 
-@interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *outboundDateField;
-@property (weak, nonatomic) IBOutlet UITextField *returnDateField;
-@property (weak, nonatomic) IBOutlet UITextField *airportTextField;
+@interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
 @property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
 @property (nonatomic, strong) THDatePickerViewController *returnDatePicker;
 @property (nonatomic, strong) NSDate *outboundDate;
 @property (nonatomic, strong) NSDate *returnDate;
 @property (nonatomic, retain) NSDateFormatter *formatter;
-@property (weak, nonatomic) IBOutlet UILabel *dateErrorLabel;
+@property (strong, nonatomic)  UILabel *dateErrorLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, assign) BOOL isRoundTrip;
 
 enum Weeks {
     SUNDAY = 1,
@@ -51,26 +54,27 @@ enum Weeks {
     //this is kind of a hack, but whatever (kimono stuff needs to be initialized before Cities are created)
     [KimonoClient sharedInstance];
     
-    self.airportTextField.delegate = self;
-    
-    self.dateErrorLabel.hidden = YES;
-    self.outboundDateField.delegate = self;
     self.outboundDate = [self getNextWeekdayDate:FRIDAY];
     [Context currentContext].departureDate = self.outboundDate;
     
-    self.returnDateField.delegate = self;
     self.returnDate = [self dateByAddingDaystoDate:self.outboundDate days:2];
     [Context currentContext].returnDate = self.returnDate;
+    [Context currentContext].isRoundTrip = YES;
     
     self.formatter = [[NSDateFormatter alloc] init];
-    [self.formatter setDateFormat:@"MMM d, y"];
-    [self refreshDates];
-    
-    [self setUpAirportTextField];
+    [self.formatter setDateFormat:@"EEE MMM d, y"];
     
     self.title = @"EuroFlight";
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    // set up table view
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView registerNib:[UINib nibWithNibName:@"DepartureCityCell" bundle:nil] forCellReuseIdentifier:@"DepartureCityCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DateSelectionCell" bundle:nil] forCellReuseIdentifier:@"DateSelectionCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"OneWayRoundTripCell" bundle:nil] forCellReuseIdentifier:@"OneWayRoundTripCell"];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.isRoundTrip = YES;
 
     // set up favorites button
     UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
@@ -82,13 +86,59 @@ enum Weeks {
     self.navigationItem.rightBarButtonItem = favoritesButton;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self addSearchButton];
+    [self addErrorLabel];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onSearchButton:(id)sender {
+
+
+- (void)onFavoritesButton {
+    FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
+    [self.navigationController pushViewController:fvc animated:YES];
+}
+
+- (void)airportSearchResultsControllerViewController:(AirportSearchResultsControllerViewController *)airportsController didSelectAirport:(Airport *)airport {
+    DepartureCityCell *cell = (DepartureCityCell *) [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    cell.airport = airport;
+}
+
+- (void)addSearchButton {
+    CGFloat frameWidth = self.view.frame.size.width;
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((frameWidth - (frameWidth - 20)) / 2.0, self.view.frame.size.height - 60, frameWidth - 20, 50)];
+    button.layer.cornerRadius = 3;
+    button.clipsToBounds = YES;
+    [button setTitle: @"Search Flights" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor whiteColor];
+    button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:0.5]] forState:UIControlStateHighlighted];
+    [self.view addSubview:button];
+    
+    [button addTarget:self action:@selector(onSearchButton) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)addErrorLabel {
+    CGFloat frameWidth = self.view.frame.size.width;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, frameWidth, 20)];
+    label.text = @"Select a departure date prior to the return date";
+    label.font = [UIFont fontWithName:@"Verdana" size:13];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor redColor];
+    self.dateErrorLabel = label;
+}
+
+- (void)onSearchButton {
     if ([self.outboundDate compare:self.returnDate] == NSOrderedDescending) {
+        [self.view addSubview:self.dateErrorLabel];
         self.dateErrorLabel.hidden = NO;
     } else {
         self.dateErrorLabel.hidden = YES;
@@ -97,36 +147,106 @@ enum Weeks {
     }
 }
 
-- (void)onFavoritesButton {
-    FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
-    [self.navigationController pushViewController:fvc animated:YES];
-}
-
-- (void)airportSearchResultsControllerViewController:(AirportSearchResultsControllerViewController *)airportsController didSelectAirport:(Airport *)airport {
-    self.airportTextField.text = airport.code;
-}
-
-- (void)setUpAirportTextField {
-    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [[LocationManager sharedInstance] getCurrentLocationWithCompletion:^(CLLocation *location) {
-            [[AirportClient sharedInstance] searchAirportByLatitude:location.coordinate.latitude longitude:location.coordinate.longitude completion:^(NSMutableArray *airports, NSError *error) {
-                if (airports.count > 0) {
-                    Airport *airport = airports[0];
-                    self.airportTextField.text = airport.code;
-                } else {
-                    self.airportTextField.text = @"LHR";
-                }
-            }];
-        }];
+- (void)oneWayRoundTripCellDelegate:(OneWayRoundTripCell *)cell didSelectRoundTrip:(BOOL)isRoundTrip {
+    self.isRoundTrip = isRoundTrip;
+    [Context currentContext].isRoundTrip = isRoundTrip;
+    if (isRoundTrip) {
+        [self.tableView beginUpdates];
+        NSArray *indexPaths = @[[NSIndexPath indexPathForRow:3 inSection:0]];
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView endUpdates];
     } else {
-        self.airportTextField.text = @"LHR";
+        [self.tableView beginUpdates];
+        NSArray *indexPaths = @[[NSIndexPath indexPathForRow:3 inSection:0]];
+        [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView endUpdates];
     }
 }
 
+#pragma mark Table view methods
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        DepartureCityCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DepartureCityCell"];
+        return cell;
+
+    } else if (indexPath.row == 1) {
+        OneWayRoundTripCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"OneWayRoundTripCell"];
+        cell.delegate = self;
+        return cell;
+    } else if (indexPath.row == 2) {
+        DateSelectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DateSelectionCell"];
+        cell.isDeparting = YES;
+        cell.dateString = [self.formatter stringFromDate:self.outboundDate];
+        return cell;
+    } else {
+        DateSelectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DateSelectionCell"];
+        cell.isDeparting = NO;
+        cell.dateString = [self.formatter stringFromDate:self.returnDate];
+
+        return cell;
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.isRoundTrip) {
+        return 4;
+    } else {
+        return 3;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+        AirportSearchResultsControllerViewController *avc = [[AirportSearchResultsControllerViewController alloc] init];
+        avc.delegate = self;
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:avc];
+        [self.navigationController presentViewController:nvc animated:YES completion:nil];
+    } else if (indexPath.row == 2) {
+        self.dateErrorLabel.hidden = YES;
+        if (!self.outboundDatePicker) {
+            self.outboundDatePicker = [THDatePickerViewController datePicker];
+        }
+        [self configureDatePicker:self.outboundDatePicker];
+        [self presentSemiViewController:self.outboundDatePicker withOptions:@{
+                                                                              KNSemiModalOptionKeys.pushParentBack    : @(NO),
+                                                                              KNSemiModalOptionKeys.animationDuration : @(0.4),
+                                                                              KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
+                                                                              }];
+    } else if (indexPath.row == 3) {
+        self.dateErrorLabel.hidden = YES;
+        if (!self.returnDatePicker) {
+            self.returnDatePicker = [THDatePickerViewController datePicker];
+        }
+        [self configureDatePicker:self.returnDatePicker];
+        [self presentSemiViewController:self.returnDatePicker withOptions:@{
+                                                                            KNSemiModalOptionKeys.pushParentBack    : @(NO),
+                                                                            KNSemiModalOptionKeys.animationDuration : @(0.4),
+                                                                            KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
+                                                                            }];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 3) {
+        return 70;
+    }
+    return UITableViewAutomaticDimension;
+}
+
+
 #pragma mark Date picker methods
 - (void)refreshDates {
-    self.outboundDateField.text = [self.formatter stringFromDate:self.outboundDate];
-    self.returnDateField.text = [self.formatter stringFromDate:self.returnDate];
+    DateSelectionCell *departCell = (DateSelectionCell *) [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+    DateSelectionCell *returnCell = (DateSelectionCell *) [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+
+    departCell.dateString = [self.formatter stringFromDate:self.outboundDate];
+    returnCell.dateString = [self.formatter stringFromDate:self.returnDate];
 }
 
 - (void)datePickerCancelPressed:(THDatePickerViewController *)datePicker {
@@ -143,39 +263,6 @@ enum Weeks {
     }
     [self refreshDates];
     [self dismissSemiModalView];
-}
-
-
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    self.dateErrorLabel.hidden = YES;
-    if ([textField isEqual:self.outboundDateField]) {
-        if (!self.outboundDatePicker) {
-            self.outboundDatePicker = [THDatePickerViewController datePicker];
-        }
-        [self configureDatePicker:self.outboundDatePicker];
-        [self presentSemiViewController:self.outboundDatePicker withOptions:@{
-                                                                      KNSemiModalOptionKeys.pushParentBack    : @(NO),
-                                                                      KNSemiModalOptionKeys.animationDuration : @(0.4),
-                                                                      KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
-                                                                      }];
-    } else if ([textField isEqual:self.returnDateField]) {
-        if (!self.returnDatePicker) {
-            self.returnDatePicker = [THDatePickerViewController datePicker];
-        }
-        [self configureDatePicker:self.returnDatePicker];
-        [self presentSemiViewController:self.returnDatePicker withOptions:@{
-                                                                              KNSemiModalOptionKeys.pushParentBack    : @(NO),
-                                                                              KNSemiModalOptionKeys.animationDuration : @(0.4),
-                                                                              KNSemiModalOptionKeys.shadowOpacity     : @(0.3),
-                                                                              }];
-    } else if ([textField isEqual:self.airportTextField]) {
-        AirportSearchResultsControllerViewController *avc = [[AirportSearchResultsControllerViewController alloc] init];
-        avc.delegate = self;
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:avc];
-        [self.navigationController presentViewController:nvc animated:YES completion:nil];
-    }
-    
-    return NO;
 }
 
 - (void)configureDatePicker:(THDatePickerViewController *)datePicker {

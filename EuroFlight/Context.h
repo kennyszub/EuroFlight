@@ -16,5 +16,6 @@
 @property (nonatomic, strong) NSDate *departureDate;
 @property (nonatomic, strong) NSDate *returnDate;
 @property (nonatomic, assign) NSInteger numPassengers;
+@property (nonatomic, assign) BOOL isRoundTrip;
 
 @end
