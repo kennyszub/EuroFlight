@@ -10,11 +10,15 @@
 #import "PlaceCollectionViewCell.h"
 #import "FlightResultsViewController.h"
 #import "FavoritesManager.h"
+#import "UIImageView+AFNetworking.h"
+#import "CurrencyFormatter.h"
 
 @interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet UIImageView *cityView;
+@property (weak, nonatomic) IBOutlet UIButton *ticketButton;
 
 @end
 
@@ -29,8 +33,14 @@
     
     self.title = self.city.name;
     self.descriptionLabel.text = self.city.summary;
-    
+    [self.cityView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
+
     [self setFavoriteButtonImage];
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.city.currencyType];
+    NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
+    [self.ticketButton setTitle:[NSString stringWithFormat:@"Find tickets from %@", price] forState:UIControlStateNormal];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (IBAction)onTickets:(id)sender {

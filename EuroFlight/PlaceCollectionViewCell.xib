@@ -13,25 +13,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-tA-M0K">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
                     </imageView>
+                    <view opaque="NO" clipsSubviews="YES" alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6v-b0-EeW">
+                        <rect key="frame" x="0.0" y="100" width="150" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Sut-GA-6p3"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-W0-OMJ">
-                        <rect key="frame" x="61" y="100" width="30" height="20"/>
-                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                        <rect key="frame" x="59" y="103" width="32" height="15"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="4KD-W0-OMJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="4d4-zz-foc"/>
-                <constraint firstAttribute="centerX" secondItem="4KD-W0-OMJ" secondAttribute="centerX" id="50O-D1-mq8"/>
-                <constraint firstAttribute="bottom" secondItem="9Jb-tA-M0K" secondAttribute="bottom" constant="20" id="FLr-Ug-e19"/>
+                <constraint firstAttribute="trailing" secondItem="A6v-b0-EeW" secondAttribute="trailing" id="Cg3-QH-5KM"/>
+                <constraint firstAttribute="bottom" secondItem="9Jb-tA-M0K" secondAttribute="bottom" id="FLr-Ug-e19"/>
                 <constraint firstAttribute="trailing" secondItem="9Jb-tA-M0K" secondAttribute="trailing" id="Kwa-io-LFw"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4KD-W0-OMJ" secondAttribute="trailing" constant="8" id="fD3-HV-HCy"/>
-                <constraint firstAttribute="bottom" secondItem="4KD-W0-OMJ" secondAttribute="bottom" id="hic-uT-IOa"/>
+                <constraint firstAttribute="bottom" secondItem="A6v-b0-EeW" secondAttribute="bottom" id="Pge-60-rah"/>
+                <constraint firstItem="4KD-W0-OMJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="WJz-WA-Fdy"/>
+                <constraint firstItem="A6v-b0-EeW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZJN-zD-nyN"/>
+                <constraint firstItem="A6v-b0-EeW" firstAttribute="centerY" secondItem="4KD-W0-OMJ" secondAttribute="centerY" id="cBR-qK-Fhs"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4KD-W0-OMJ" secondAttribute="trailing" constant="8" id="mKp-Xe-STn"/>
                 <constraint firstItem="9Jb-tA-M0K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="snm-Do-tOe"/>
-                <constraint firstItem="4KD-W0-OMJ" firstAttribute="top" secondItem="9Jb-tA-M0K" secondAttribute="bottom" id="szF-Pb-rzi"/>
+                <constraint firstAttribute="centerX" secondItem="4KD-W0-OMJ" secondAttribute="centerX" id="xdk-f2-Xwm"/>
                 <constraint firstItem="9Jb-tA-M0K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zhz-ta-AYs"/>
             </constraints>
             <size key="customSize" width="246" height="252"/>

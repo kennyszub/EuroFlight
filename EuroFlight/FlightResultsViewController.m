@@ -34,6 +34,8 @@ NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
     self.tableView.dataSource = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"FlightResultCell" bundle:nil] forCellReuseIdentifier:kFlightResultCellIdentifier];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (void)didReceiveMemoryWarning {

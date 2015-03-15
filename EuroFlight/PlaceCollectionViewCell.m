@@ -19,6 +19,7 @@
 @implementation PlaceCollectionViewCell
 
 - (void)awakeFromNib {
+    self.placeView.layer.cornerRadius = 3;
     // Initialization code
 }
 

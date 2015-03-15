@@ -59,6 +59,14 @@
 - (void)configureNavBar {
     // set navigation bar colors
     [[UINavigationBar appearance] setBarTintColor:[[UIColor alloc] initWithRed:46/255.0 green:64/255.0 blue:87/255.0 alpha:1.0]];
+    
+    //to set navigation bar to transparent
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]];
+//    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+//    [[UINavigationBar appearance] setTranslucent:YES];
+//    [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 
     [[UINavigationBar appearance] setTitleTextAttributes:

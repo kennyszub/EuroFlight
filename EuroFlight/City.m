@@ -38,7 +38,7 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:[self userDefaultsKeyWithCity:self.name]];
         if (data != nil) {
             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-            NSLog(@"Using saved data");
+            //NSLog(@"Using saved data");
             self.places = [Place placesWithArray:dictionary[@"results"]];
         } else {
             [[PlacesClient sharedInstance] searchWithCity:self.name success:^(AFHTTPRequestOperation *operation, id response) {
