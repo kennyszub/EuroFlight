@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FlightResultGroupCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United Airlines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tat-rq-des">
+                        <rect key="frame" x="93.5" y="12.5" width="93" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-wP-hZ1">
+                        <rect key="frame" x="280" y="12.5" width="31.5" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Flights" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5a-2D-xgd">
+                        <rect key="frame" x="32" y="12.5" width="53.5" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="Bd2-qQ-eol">
+                        <rect key="frame" x="8" y="14" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Up1-EN-lH9"/>
+                            <constraint firstAttribute="width" constant="16" id="cH6-Z5-N1A"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Bd2-qQ-eol" firstAttribute="centerY" secondItem="t5a-2D-xgd" secondAttribute="centerY" id="AUm-EH-QaJ"/>
+                    <constraint firstItem="tat-rq-des" firstAttribute="leading" secondItem="t5a-2D-xgd" secondAttribute="trailing" constant="8" id="DCX-Qw-eR0"/>
+                    <constraint firstItem="tat-rq-des" firstAttribute="centerY" secondItem="Bd2-qQ-eol" secondAttribute="centerY" id="H4s-Hq-1ba"/>
+                    <constraint firstAttribute="centerY" secondItem="Bd2-qQ-eol" secondAttribute="centerY" id="Llb-L7-4sf"/>
+                    <constraint firstItem="Bd2-qQ-eol" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="QW4-De-6Ec"/>
+                    <constraint firstItem="t5a-2D-xgd" firstAttribute="leading" secondItem="Bd2-qQ-eol" secondAttribute="trailing" constant="8" id="Yy7-oT-qdf"/>
+                    <constraint firstAttribute="trailing" secondItem="4c7-wP-hZ1" secondAttribute="trailing" constant="8" id="dcO-DP-CTq"/>
+                    <constraint firstItem="4c7-wP-hZ1" firstAttribute="centerY" secondItem="tat-rq-des" secondAttribute="centerY" id="gdC-8n-Zix"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="airlineLabel" destination="tat-rq-des" id="I0a-qG-S2T"/>
+                <outlet property="costLabel" destination="4c7-wP-hZ1" id="QfE-Ni-uQZ"/>
+                <outlet property="dropdownImageView" destination="Bd2-qQ-eol" id="4Ig-9s-bEL"/>
+                <outlet property="numFlightsLabel" destination="t5a-2D-xgd" id="eo5-K0-44x"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="right-dropdown" width="512" height="512"/>
+    </resources>
+</document>

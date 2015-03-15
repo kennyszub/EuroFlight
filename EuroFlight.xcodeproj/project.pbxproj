@@ -83,6 +83,8 @@
 		EB72B2581AB03CCA004503D1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB72B2571AB03CCA004503D1 /* WebKit.framework */; };
 		EB72B25C1AB04468004503D1 /* BuyFlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B25A1AB04468004503D1 /* BuyFlightViewController.m */; };
 		EB72B25D1AB04468004503D1 /* BuyFlightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72B25B1AB04468004503D1 /* BuyFlightViewController.xib */; };
+		EB72B2661AB3F327004503D1 /* OneWayFlightResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2651AB3F327004503D1 /* OneWayFlightResultView.xib */; };
+		EB72B2691AB3F655004503D1 /* OneWayFlightResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */; };
 		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
 		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
 		EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210E1AABE2CE0081E88A /* MAD.txt */; };
@@ -94,6 +96,8 @@
 		EBA5211D1AABF4B80081E88A /* FlightResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA5211B1AABF4B80081E88A /* FlightResultCell.xib */; };
 		EBA521211AABFFE60081E88A /* FlightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA5211F1AABFFE60081E88A /* FlightDetailViewController.m */; };
 		EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA521201AABFFE60081E88A /* FlightDetailViewController.xib */; };
+		EBA7FA8B1AB56CA100760622 /* FlightResultGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */; };
+		EBA7FA8C1AB56CA100760622 /* FlightResultGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */; };
 		EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +226,9 @@
 		EB72B2591AB04468004503D1 /* BuyFlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyFlightViewController.h; sourceTree = "<group>"; };
 		EB72B25A1AB04468004503D1 /* BuyFlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyFlightViewController.m; sourceTree = "<group>"; };
 		EB72B25B1AB04468004503D1 /* BuyFlightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyFlightViewController.xib; sourceTree = "<group>"; };
+		EB72B2651AB3F327004503D1 /* OneWayFlightResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayFlightResultView.xib; sourceTree = "<group>"; };
+		EB72B2671AB3F655004503D1 /* OneWayFlightResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneWayFlightResultView.h; sourceTree = "<group>"; };
+		EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneWayFlightResultView.m; sourceTree = "<group>"; };
 		EBA521091AABDDC20081E88A /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
 		EBA5210B1AABE1950081E88A /* BCN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCN.txt; sourceTree = "<group>"; };
 		EBA5210E1AABE2CE0081E88A /* MAD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MAD.txt; sourceTree = "<group>"; };
@@ -236,6 +243,9 @@
 		EBA5211E1AABFFE60081E88A /* FlightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailViewController.h; sourceTree = "<group>"; };
 		EBA5211F1AABFFE60081E88A /* FlightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailViewController.m; sourceTree = "<group>"; };
 		EBA521201AABFFE60081E88A /* FlightDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightDetailViewController.xib; sourceTree = "<group>"; };
+		EBA7FA881AB56CA100760622 /* FlightResultGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightResultGroupCell.h; sourceTree = "<group>"; };
+		EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightResultGroupCell.m; sourceTree = "<group>"; };
+		EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightResultGroupCell.xib; sourceTree = "<group>"; };
 		EBDB6BE81AAEBA8200F24818 /* FavoritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesManager.h; sourceTree = "<group>"; };
 		EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -416,6 +426,12 @@
 				C4FA0DE51AAEC5B20023FDC3 /* AirportTableViewCell.h */,
 				C4FA0DE61AAEC5B20023FDC3 /* AirportTableViewCell.m */,
 				C4FA0DE71AAEC5B20023FDC3 /* AirportTableViewCell.xib */,
+				EB72B2651AB3F327004503D1 /* OneWayFlightResultView.xib */,
+				EB72B2671AB3F655004503D1 /* OneWayFlightResultView.h */,
+				EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */,
+				EBA7FA881AB56CA100760622 /* FlightResultGroupCell.h */,
+				EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */,
+				EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -603,6 +619,7 @@
 				EB72B2511AB0187B004503D1 /* IST.txt in Resources */,
 				C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */,
 				C4FA0DE91AAEC5B20023FDC3 /* AirportTableViewCell.xib in Resources */,
+				EBA7FA8C1AB56CA100760622 /* FlightResultGroupCell.xib in Resources */,
 				C4FA0DD41AABEE0F0023FDC3 /* Images.xcassets in Resources */,
 				EB72B24D1AB01758004503D1 /* KEF.txt in Resources */,
 				EB72B2491AB0161A004503D1 /* VCE.txt in Resources */,
@@ -644,6 +661,7 @@
 				EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */,
 				EBA521181AABF3290081E88A /* FlightResultsViewController.xib in Resources */,
 				EB72B24B1AB01671004503D1 /* FCO.txt in Resources */,
+				EB72B2661AB3F327004503D1 /* OneWayFlightResultView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +722,7 @@
 				C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */,
 				C4FA0DC41AABDEF20023FDC3 /* ResultsViewController.m in Sources */,
 				C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */,
+				EBA7FA8B1AB56CA100760622 /* FlightResultGroupCell.m in Sources */,
 				117F87C31AAFF40900C1E24C /* PlaceCollectionViewCell.m in Sources */,
 				EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */,
 				EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */,
@@ -729,6 +748,7 @@
 				11873B071AABF9BF0050D5DA /* AppDelegate.m in Sources */,
 				11873B081AABF9BF0050D5DA /* Context.m in Sources */,
 				C4FA0DDC1AAEB96B0023FDC3 /* AirportClient.m in Sources */,
+				EB72B2691AB3F655004503D1 /* OneWayFlightResultView.m in Sources */,
 				11873B061AABF9BF0050D5DA /* main.m in Sources */,
 				11873B0C1AABF9FD0050D5DA /* CityDetailsViewController.m in Sources */,
 				11A389931AABE017006BA0F1 /* (null) in Sources */,
