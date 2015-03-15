@@ -8,7 +8,9 @@
 
 #import "FlightResultGroupCell.h"
 #import "Trip.h"
+#import "FlightSegment.h"
 #import "CurrencyFormatter.h"
+#import "NameMappingHelper.h"
 
 @interface FlightResultGroupCell ()
 
@@ -36,10 +38,57 @@
     Trip *firstTrip = (Trip *)trips[0];
 
     self.dropdownImageView.image = [UIImage imageNamed:@"right-dropdown"];
-    self.numFlightsLabel.text = [NSString stringWithFormat:@"%ld Flights", trips.count];
-    self.airlineLabel.text = @"Multiple Airlines";
+    self.numFlightsLabel.text = [self numFlightsText:trips.count];
+    self.airlineLabel.text = [self airlinesText:trips];
     NSNumberFormatter *currencyFormatter = [CurrencyFormatter formatterWithCurrencyCode:firstTrip.currencyType];
     self.costLabel.text = [currencyFormatter stringFromNumber:@(firstTrip.flightCost)];
+}
+
+- (NSString *)numFlightsText:(NSInteger)count {
+    if (count <= 1) {
+        return @"1 Flight";
+    } else {
+        return [NSString stringWithFormat:@"%ld Flights", count];
+    }
+}
+
+- (NSString *)airlinesText:(NSArray *)trips {
+    NSString *airline = nil;
+    for (Trip *trip in trips) {
+        NSString *outboundAirline = [self singleAirlineForFlight:trip.outboundFlight];
+        NSString *returnAirline = [self singleAirlineForFlight:trip.returnFlight];
+
+        if (!outboundAirline || !returnAirline || ![outboundAirline isEqualToString:returnAirline]) {
+            // outbound and return airlines are different
+            return @"Multiple Airlines";
+        }
+
+        if (!airline) {
+            airline = outboundAirline;
+        } else if (![airline isEqualToString:outboundAirline]) {
+            return @"Multiple Airlines";
+        }
+    }
+
+    NameMappingHelper *helper = [NameMappingHelper sharedInstance];
+    return [helper carrierNameForCode:airline];
+}
+
+// if a flight uses a single airline, return the airline
+// otherwise return nil
+- (NSString *)singleAirlineForFlight:(Flight *)flight {
+    NSString *airline = nil;
+    for (FlightSegment *segment in flight.flightSegments) {
+        if (!airline) {
+            airline = segment.airline;
+        } else {
+            if (![airline isEqualToString:segment.airline]) {
+                return nil;
+            }
+        }
+    }
+
+    return airline;
 }
 
 - (void)setCollapsed:(BOOL)collapsed {
