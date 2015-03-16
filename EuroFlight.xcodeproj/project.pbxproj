@@ -98,6 +98,12 @@
 		EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA521201AABFFE60081E88A /* FlightDetailViewController.xib */; };
 		EBA7FA8B1AB56CA100760622 /* FlightResultGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */; };
 		EBA7FA8C1AB56CA100760622 /* FlightResultGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */; };
+		EBA7FA991AB6538000760622 /* SegmentDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FA971AB6538000760622 /* SegmentDetailCell.m */; };
+		EBA7FA9A1AB6538000760622 /* SegmentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FA981AB6538000760622 /* SegmentDetailCell.xib */; };
+		EBA7FA9E1AB6539600760622 /* LayoverDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FA9C1AB6539600760622 /* LayoverDetailCell.m */; };
+		EBA7FA9F1AB6539600760622 /* LayoverDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FA9D1AB6539600760622 /* LayoverDetailCell.xib */; };
+		EBA7FAA11AB6639900760622 /* FlightDetailSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FAA01AB6639900760622 /* FlightDetailSectionHeaderView.xib */; };
+		EBA7FAA41AB6656100760622 /* FlightDetailSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FAA31AB6656100760622 /* FlightDetailSectionHeaderView.m */; };
 		EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */; };
 /* End PBXBuildFile section */
 
@@ -246,6 +252,15 @@
 		EBA7FA881AB56CA100760622 /* FlightResultGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightResultGroupCell.h; sourceTree = "<group>"; };
 		EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightResultGroupCell.m; sourceTree = "<group>"; };
 		EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightResultGroupCell.xib; sourceTree = "<group>"; };
+		EBA7FA961AB6538000760622 /* SegmentDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentDetailCell.h; sourceTree = "<group>"; };
+		EBA7FA971AB6538000760622 /* SegmentDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentDetailCell.m; sourceTree = "<group>"; };
+		EBA7FA981AB6538000760622 /* SegmentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentDetailCell.xib; sourceTree = "<group>"; };
+		EBA7FA9B1AB6539600760622 /* LayoverDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoverDetailCell.h; sourceTree = "<group>"; };
+		EBA7FA9C1AB6539600760622 /* LayoverDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoverDetailCell.m; sourceTree = "<group>"; };
+		EBA7FA9D1AB6539600760622 /* LayoverDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LayoverDetailCell.xib; sourceTree = "<group>"; };
+		EBA7FAA01AB6639900760622 /* FlightDetailSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightDetailSectionHeaderView.xib; sourceTree = "<group>"; };
+		EBA7FAA21AB6656100760622 /* FlightDetailSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailSectionHeaderView.h; sourceTree = "<group>"; };
+		EBA7FAA31AB6656100760622 /* FlightDetailSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailSectionHeaderView.m; sourceTree = "<group>"; };
 		EBDB6BE81AAEBA8200F24818 /* FavoritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesManager.h; sourceTree = "<group>"; };
 		EBDB6BE91AAEBA8200F24818 /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -432,6 +447,15 @@
 				EBA7FA881AB56CA100760622 /* FlightResultGroupCell.h */,
 				EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */,
 				EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */,
+				EBA7FA961AB6538000760622 /* SegmentDetailCell.h */,
+				EBA7FA971AB6538000760622 /* SegmentDetailCell.m */,
+				EBA7FA981AB6538000760622 /* SegmentDetailCell.xib */,
+				EBA7FA9B1AB6539600760622 /* LayoverDetailCell.h */,
+				EBA7FA9C1AB6539600760622 /* LayoverDetailCell.m */,
+				EBA7FA9D1AB6539600760622 /* LayoverDetailCell.xib */,
+				EBA7FAA01AB6639900760622 /* FlightDetailSectionHeaderView.xib */,
+				EBA7FAA21AB6656100760622 /* FlightDetailSectionHeaderView.h */,
+				EBA7FAA31AB6656100760622 /* FlightDetailSectionHeaderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -630,6 +654,7 @@
 				EB72B2431AB01537004503D1 /* ZRH.txt in Resources */,
 				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
+				EBA7FA9F1AB6539600760622 /* LayoverDetailCell.xib in Resources */,
 				EB72B23B1AB01414004503D1 /* MUC.txt in Resources */,
 				C43028241AB51F0400DA2B18 /* OneWayRoundTripCell.xib in Resources */,
 				EB72B2371AB01325004503D1 /* GOT.txt in Resources */,
@@ -644,6 +669,7 @@
 				C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */,
 				C43028101AB507FA00DA2B18 /* DepartureCityCell.xib in Resources */,
 				EB72B2471AB015C2004503D1 /* FRA.txt in Resources */,
+				EBA7FAA11AB6639900760622 /* FlightDetailSectionHeaderView.xib in Resources */,
 				EBA5210C1AABE1950081E88A /* BCN.txt in Resources */,
 				EB72B2391AB01380004503D1 /* IBZ.txt in Resources */,
 				EBA5211D1AABF4B80081E88A /* FlightResultCell.xib in Resources */,
@@ -659,6 +685,7 @@
 				EB72B25D1AB04468004503D1 /* BuyFlightViewController.xib in Resources */,
 				EBA521111AABE2FE0081E88A /* ORY.txt in Resources */,
 				EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */,
+				EBA7FA9A1AB6538000760622 /* SegmentDetailCell.xib in Resources */,
 				EBA521181AABF3290081E88A /* FlightResultsViewController.xib in Resources */,
 				EB72B24B1AB01671004503D1 /* FCO.txt in Resources */,
 				EB72B2661AB3F327004503D1 /* OneWayFlightResultView.xib in Resources */,
@@ -722,6 +749,7 @@
 				C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */,
 				C4FA0DC41AABDEF20023FDC3 /* ResultsViewController.m in Sources */,
 				C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */,
+				EBA7FA991AB6538000760622 /* SegmentDetailCell.m in Sources */,
 				EBA7FA8B1AB56CA100760622 /* FlightResultGroupCell.m in Sources */,
 				117F87C31AAFF40900C1E24C /* PlaceCollectionViewCell.m in Sources */,
 				EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */,
@@ -731,6 +759,7 @@
 				EB72B25C1AB04468004503D1 /* BuyFlightViewController.m in Sources */,
 				11873B021AABF6220050D5DA /* PlacesClient.m in Sources */,
 				11873B051AABF6340050D5DA /* Place.m in Sources */,
+				EBA7FAA41AB6656100760622 /* FlightDetailSectionHeaderView.m in Sources */,
 				C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */,
 				C43028231AB51F0400DA2B18 /* OneWayRoundTripCell.m in Sources */,
 				C4FA0DB11AABA86A0023FDC3 /* Event.m in Sources */,
@@ -752,6 +781,7 @@
 				11873B061AABF9BF0050D5DA /* main.m in Sources */,
 				11873B0C1AABF9FD0050D5DA /* CityDetailsViewController.m in Sources */,
 				11A389931AABE017006BA0F1 /* (null) in Sources */,
+				EBA7FA9E1AB6539600760622 /* LayoverDetailCell.m in Sources */,
 				11873B181AAD49A70050D5DA /* KimonoClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

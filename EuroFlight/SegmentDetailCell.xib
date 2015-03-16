@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="SegmentDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-takeoff" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-cG-kWi">
+                        <rect key="frame" x="8" y="8" width="40" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="ElR-Jr-9su"/>
+                            <constraint firstAttribute="width" constant="40" id="GU6-Mm-cht"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="British Airways" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JU-th-plH">
+                        <rect key="frame" x="56" y="8" width="105" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVc-tw-WyJ">
+                        <rect key="frame" x="165" y="8" width="27" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:30am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wc-uJ-4xS">
+                        <rect key="frame" x="8" y="34" width="55.5" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPv-WQ-T5z">
+                        <rect key="frame" x="228" y="34" width="64" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-takeoff" translatesAutoresizingMaskIntoConstraints="NO" id="Ft4-fh-Uas">
+                        <rect key="frame" x="67" y="35" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="Dol-FA-iqO"/>
+                            <constraint firstAttribute="height" constant="16" id="fGV-mF-i5e"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-landing" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-IW-KUM">
+                        <rect key="frame" x="296" y="35" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="6xN-87-CqO"/>
+                            <constraint firstAttribute="height" constant="16" id="QDq-9F-6Oh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jy7-Sj-vww">
+                        <rect key="frame" x="8" y="59" width="51.5" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-JQ-rsk">
+                        <rect key="frame" x="278" y="60" width="34" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2h 10m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-m9-d6I">
+                        <rect key="frame" x="8" y="84" width="39" height="12.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Iaa-IW-KUM" secondAttribute="trailing" constant="8" id="1hz-F0-CqC"/>
+                    <constraint firstAttribute="trailing" secondItem="cY4-JQ-rsk" secondAttribute="trailing" constant="8" id="23k-jD-aDQ"/>
+                    <constraint firstItem="vVG-m9-d6I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3Mf-F3-fww"/>
+                    <constraint firstItem="Jy7-Sj-vww" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4yR-0q-kht"/>
+                    <constraint firstItem="Ft4-fh-Uas" firstAttribute="leading" secondItem="3wc-uJ-4xS" secondAttribute="trailing" constant="4" id="9EQ-aw-Evv"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mVc-tw-WyJ" secondAttribute="trailing" constant="8" id="Cxq-Cl-MSt"/>
+                    <constraint firstItem="3JU-th-plH" firstAttribute="leading" secondItem="QZD-cG-kWi" secondAttribute="trailing" constant="8" id="EMg-eR-LRi"/>
+                    <constraint firstItem="mVc-tw-WyJ" firstAttribute="leading" secondItem="3JU-th-plH" secondAttribute="trailing" constant="4" id="ESs-Us-faY"/>
+                    <constraint firstItem="3wc-uJ-4xS" firstAttribute="top" secondItem="3JU-th-plH" secondAttribute="bottom" constant="8" id="LVF-eI-W7v"/>
+                    <constraint firstItem="QZD-cG-kWi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="M4k-he-zJu"/>
+                    <constraint firstItem="QZD-cG-kWi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="OY4-1K-nHz"/>
+                    <constraint firstItem="3JU-th-plH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SNO-Iy-BFq"/>
+                    <constraint firstItem="Jy7-Sj-vww" firstAttribute="top" secondItem="3wc-uJ-4xS" secondAttribute="bottom" constant="8" id="VV6-Wc-rJf"/>
+                    <constraint firstItem="mVc-tw-WyJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Wy8-B3-kR7"/>
+                    <constraint firstItem="vVG-m9-d6I" firstAttribute="top" secondItem="Jy7-Sj-vww" secondAttribute="bottom" constant="8" id="axL-7p-V5R"/>
+                    <constraint firstItem="Iaa-IW-KUM" firstAttribute="leading" secondItem="gPv-WQ-T5z" secondAttribute="trailing" constant="4" id="faD-Kg-g9o"/>
+                    <constraint firstItem="3wc-uJ-4xS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hLg-PC-Use"/>
+                    <constraint firstItem="3wc-uJ-4xS" firstAttribute="centerY" secondItem="gPv-WQ-T5z" secondAttribute="centerY" id="j2v-2M-E45"/>
+                    <constraint firstItem="3wc-uJ-4xS" firstAttribute="centerY" secondItem="Ft4-fh-Uas" secondAttribute="centerY" id="jA7-YQ-GqE"/>
+                    <constraint firstItem="Ft4-fh-Uas" firstAttribute="centerY" secondItem="Iaa-IW-KUM" secondAttribute="centerY" id="la5-uz-jKl"/>
+                    <constraint firstItem="cY4-JQ-rsk" firstAttribute="top" secondItem="gPv-WQ-T5z" secondAttribute="bottom" constant="8" id="ztT-23-qU5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="airlineLabel" destination="3JU-th-plH" id="mvh-RL-teF"/>
+                <outlet property="airlineLogoImageView" destination="QZD-cG-kWi" id="X8u-9C-tFJ"/>
+                <outlet property="arrivalCityLabel" destination="cY4-JQ-rsk" id="8Wp-Ua-72N"/>
+                <outlet property="arrivalTimeLabel" destination="gPv-WQ-T5z" id="Ta4-oo-VOi"/>
+                <outlet property="departureCityLabel" destination="Jy7-Sj-vww" id="G1O-pt-75s"/>
+                <outlet property="departureTimeLabel" destination="3wc-uJ-4xS" id="IkK-oe-fdf"/>
+                <outlet property="flightNumberLabel" destination="mVc-tw-WyJ" id="7ct-Mf-qoY"/>
+                <outlet property="totalFlightDurationLabel" destination="vVG-m9-d6I" id="TXF-ND-cWr"/>
+            </connections>
+            <point key="canvasLocation" x="455" y="276"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="plane-landing" width="256" height="256"/>
+        <image name="plane-takeoff" width="256" height="256"/>
+    </resources>
+</document>

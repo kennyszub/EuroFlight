@@ -12,14 +12,14 @@
 #import "CurrencyFormatter.h"
 #import "FlightSegment.h"
 #import "BuyFlightViewController.h"
+#import "LayoverDetailCell.h"
+#import "SegmentDetailCell.h"
+#import "FlightDetailSectionHeaderView.h"
 #import <WebKit/WebKit.h>
 
-@interface FlightDetailViewController ()
+@interface FlightDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet OneWayFlightDetailView *outboundFlightDetailView;
-@property (weak, nonatomic) IBOutlet OneWayFlightDetailView *returnFlightDetailView;
-@property (weak, nonatomic) IBOutlet UILabel *costLabel;
-@property (strong, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)onStartOverButton:(id)sender;
 - (IBAction)onBuyButton:(id)sender;
@@ -28,27 +28,102 @@
 @end
 
 NSString * const kKayakBaseURL = @"http://www.kayak.com/flights";
+NSString * const kSegmentDetailCellIdentifier = @"SegmentDetailCell";
+NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
 
 @implementation FlightDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    id topGuide = self.topLayoutGuide;
-    UIView *outboundFlightDetailView = self.outboundFlightDetailView;
-    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(outboundFlightDetailView, topGuide);
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide]-8-[outboundFlightDetailView]" options:0 metrics:nil views:viewsDictionary]];
-    
-    self.outboundFlightDetailView.flight = self.trip.outboundFlight;
-    self.returnFlightDetailView.flight = self.trip.returnFlight;
-    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.trip.currencyType];
-    self.costLabel.text = [formatter stringFromNumber:@(self.trip.flightCost)];
+
+    self.title = @"Flight Details";
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    [self.tableView registerNib:[UINib nibWithNibName:@"SegmentDetailCell" bundle:nil] forCellReuseIdentifier:kSegmentDetailCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LayoverDetailCell" bundle:nil] forCellReuseIdentifier:kLayoverDetailCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewDataSource methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return [self numCellsForFlight:self.trip.outboundFlight];
+        case 1:
+            return [self numCellsForFlight:self.trip.returnFlight];
+        default:
+            return 0;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row % 2 == 0) {
+        // segment cell
+        SegmentDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kSegmentDetailCellIdentifier forIndexPath:indexPath];
+        cell.segment = [self segmentForIndexPath:indexPath];
+
+        return cell;
+    } else {
+        // layover cell
+        LayoverDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kLayoverDetailCellIdentifier forIndexPath:indexPath];
+        cell.segment = [self segmentForIndexPath:indexPath];
+
+        return cell;
+    }
+}
+
+#pragma mark - UITableViewDelegate methods
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row % 2 == 0) {
+        return 100;
+    } else {
+        return 44;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 106;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    FlightDetailSectionHeaderView *view = [[FlightDetailSectionHeaderView alloc] init];
+    if (section == 0) {
+        view.flight = self.trip.outboundFlight;
+    } else {
+        view.flight = self.trip.returnFlight;
+    }
+
+    return view;
+}
+
+#pragma mark - Private methods
+
+- (NSInteger)numCellsForFlight:(Flight *)flight {
+    return 1 + 2 * (flight.flightSegments.count - 1);
+}
+
+- (FlightSegment *)segmentForIndexPath:(NSIndexPath *)indexPath {
+    Flight *flight;
+    if (indexPath.section == 0) {
+        flight = self.trip.outboundFlight;
+    } else {
+        flight = self.trip.returnFlight;
+    }
+
+    return flight.flightSegments[indexPath.row / 2];
 }
 
 - (IBAction)onStartOverButton:(id)sender {

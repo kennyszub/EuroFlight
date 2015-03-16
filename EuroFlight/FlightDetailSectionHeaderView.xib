@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightDetailSectionHeaderView">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="xSn-8e-y7F"/>
+                <outlet property="dateLabel" destination="ucn-cc-vfx" id="UC5-zZ-XZH"/>
+                <outlet property="destinationAirportLabel" destination="64g-RR-1tX" id="JUu-C6-Oms"/>
+                <outlet property="sourceAirportLabel" destination="4Jz-02-emQ" id="w2e-m6-Wo2"/>
+                <outlet property="stopsAndDurationLabel" destination="eIt-qI-zlw" id="DKY-zd-cNP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-default" translatesAutoresizingMaskIntoConstraints="NO" id="vcH-7z-Af4">
+                    <rect key="frame" x="144" y="8" width="32" height="32"/>
+                    <color key="tintColor" red="0.15294117647058825" green="0.62352941176470589" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Llg-gx-6Bb"/>
+                        <constraint firstAttribute="width" constant="32" id="Yog-HD-FVI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CDG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64g-RR-1tX">
+                    <rect key="frame" x="184" y="13" width="38.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                    <color key="textColor" red="0.1529411765" green="0.62352941179999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday, 3/27" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucn-cc-vfx">
+                    <rect key="frame" x="107" y="48" width="105" height="21"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                    <color key="textColor" red="0.1529411765" green="0.62352941179999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 stop, 6h 15m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIt-qI-zlw">
+                    <rect key="frame" x="94.5" y="77" width="131.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                    <color key="textColor" red="0.1529411765" green="0.62352941179999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LHR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jz-02-emQ">
+                    <rect key="frame" x="101" y="13" width="34.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                    <color key="textColor" red="0.1529411765" green="0.62352941179999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="vcH-7z-Af4" secondAttribute="centerX" id="0jo-hV-zbR"/>
+                <constraint firstItem="eIt-qI-zlw" firstAttribute="top" secondItem="ucn-cc-vfx" secondAttribute="bottom" constant="8" id="2op-8S-IjX"/>
+                <constraint firstItem="ucn-cc-vfx" firstAttribute="top" secondItem="vcH-7z-Af4" secondAttribute="bottom" constant="8" id="6KS-8U-Dpx"/>
+                <constraint firstItem="vcH-7z-Af4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="C34-Gs-Iyu"/>
+                <constraint firstItem="vcH-7z-Af4" firstAttribute="leading" secondItem="4Jz-02-emQ" secondAttribute="trailing" constant="8" id="FrR-6s-EZA"/>
+                <constraint firstItem="vcH-7z-Af4" firstAttribute="centerY" secondItem="64g-RR-1tX" secondAttribute="centerY" id="G5J-Vd-9Ei"/>
+                <constraint firstItem="vcH-7z-Af4" firstAttribute="centerY" secondItem="4Jz-02-emQ" secondAttribute="centerY" id="Occ-IG-2CM"/>
+                <constraint firstItem="64g-RR-1tX" firstAttribute="leading" secondItem="vcH-7z-Af4" secondAttribute="trailing" constant="8" id="fT0-jb-E85"/>
+                <constraint firstAttribute="centerX" secondItem="ucn-cc-vfx" secondAttribute="centerX" id="mvL-cY-v8Z"/>
+                <constraint firstAttribute="centerX" secondItem="eIt-qI-zlw" secondAttribute="centerX" id="wJc-eI-PfT"/>
+            </constraints>
+            <point key="canvasLocation" x="325" y="248"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plane-default" width="512" height="512"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

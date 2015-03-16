@@ -11,11 +11,13 @@
 #import "FlightSegment.h"
 #import "CurrencyFormatter.h"
 #import "NameMappingHelper.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface FlightResultGroupCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *dropdownImageView;
 @property (weak, nonatomic) IBOutlet UILabel *numFlightsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *airlineLogoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *airlineLabel;
 @property (weak, nonatomic) IBOutlet UILabel *costLabel;
 
@@ -39,7 +41,7 @@
 
     self.dropdownImageView.image = [UIImage imageNamed:@"right-dropdown"];
     self.numFlightsLabel.text = [self numFlightsText:trips.count];
-    self.airlineLabel.text = [self airlinesText:trips];
+    [self setupAirlinesForTrips:trips];
     NSNumberFormatter *currencyFormatter = [CurrencyFormatter formatterWithCurrencyCode:firstTrip.currencyType];
     self.costLabel.text = [currencyFormatter stringFromNumber:@(firstTrip.flightCost)];
 }
@@ -52,7 +54,7 @@
     }
 }
 
-- (NSString *)airlinesText:(NSArray *)trips {
+- (void)setupAirlinesForTrips:(NSArray *)trips {
     NSString *airline = nil;
     for (Trip *trip in trips) {
         NSString *outboundAirline = [self singleAirlineForFlight:trip.outboundFlight];
@@ -60,18 +62,19 @@
 
         if (!outboundAirline || !returnAirline || ![outboundAirline isEqualToString:returnAirline]) {
             // outbound and return airlines are different
-            return @"Multiple Airlines";
+            self.airlineLabel.text = @"Multiple Airlines";
         }
 
         if (!airline) {
             airline = outboundAirline;
         } else if (![airline isEqualToString:outboundAirline]) {
-            return @"Multiple Airlines";
+            self.airlineLabel.text = @"Multiple Airlines";
         }
     }
 
     NameMappingHelper *helper = [NameMappingHelper sharedInstance];
-    return [helper carrierNameForCode:airline];
+    NSString *carrierName = [helper carrierNameForCode:airline];
+    self.airlineLabel.text = carrierName;
 }
 
 // if a flight uses a single airline, return the airline

@@ -6,10 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightDetailViewController">
             <connections>
-                <outlet property="containerView" destination="i5M-Pr-FkT" id="mIo-RH-fAC"/>
-                <outlet property="costLabel" destination="v5z-nY-xlK" id="LhJ-EV-QMh"/>
-                <outlet property="outboundFlightDetailView" destination="vbe-cA-eGo" id="xLe-DK-yrt"/>
-                <outlet property="returnFlightDetailView" destination="lqJ-gb-7qp" id="hZT-H2-eAu"/>
+                <outlet property="tableView" destination="d1O-lQ-yhl" id="406-lN-wjw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,83 +15,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-4I-fQc">
-                    <rect key="frame" x="277" y="413" width="35" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="q70-M7-8CU"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
-                    <state key="normal" title="Buy!">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onBuyButton:" destination="-1" eventType="touchUpInside" id="bnR-gK-b7K"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ss-QM-Wfl">
-                    <rect key="frame" x="8" y="413" width="79" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="zSJ-xT-tRl"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
-                    <state key="normal" title="Start Over">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onStartOverButton:" destination="-1" eventType="touchUpInside" id="mZL-vg-bxl"/>
-                    </connections>
-                </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx3-ip-DxI">
-                    <rect key="frame" x="112" y="445" width="95" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="tO7-L6-SjE"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
-                    <state key="normal" title="Tell A Friend">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onTellAFriendButton:" destination="-1" eventType="touchUpInside" id="wrl-Od-DNT"/>
-                    </connections>
-                </button>
-                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-cA-eGo" customClass="OneWayFlightDetailView">
-                    <rect key="frame" x="8" y="8" width="304" height="180"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="180" id="uh4-l2-YUR"/>
-                    </constraints>
-                </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5z-nY-xlK">
-                    <rect key="frame" x="8" y="384" width="304" height="21"/>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-gb-7qp" customClass="OneWayFlightDetailView">
-                    <rect key="frame" x="8" y="196" width="304" height="180"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="180" id="Ewb-7U-24x"/>
-                    </constraints>
-                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-lQ-yhl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="9F5-4I-fQc" secondAttribute="trailing" constant="8" id="4Dc-ZI-nWt"/>
-                <constraint firstItem="3ss-QM-Wfl" firstAttribute="top" secondItem="v5z-nY-xlK" secondAttribute="bottom" constant="8" id="5Uk-98-LIN"/>
-                <constraint firstItem="vbe-cA-eGo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" placeholder="YES" id="5tq-rK-9dw"/>
-                <constraint firstItem="3ss-QM-Wfl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="G9I-8E-Pkk"/>
-                <constraint firstItem="lqJ-gb-7qp" firstAttribute="top" secondItem="vbe-cA-eGo" secondAttribute="bottom" constant="8" id="Ig6-Gq-UoG"/>
-                <constraint firstAttribute="trailing" secondItem="vbe-cA-eGo" secondAttribute="trailing" constant="8" id="KUH-nV-PpR"/>
-                <constraint firstItem="lqJ-gb-7qp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LUD-uR-cx2"/>
-                <constraint firstAttribute="trailing" secondItem="v5z-nY-xlK" secondAttribute="trailing" constant="8" id="M66-7C-YED"/>
-                <constraint firstItem="vbe-cA-eGo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PTa-bZ-ARv"/>
-                <constraint firstItem="nx3-ip-DxI" firstAttribute="top" secondItem="v5z-nY-xlK" secondAttribute="bottom" constant="40" id="Qot-cY-xzt"/>
-                <constraint firstAttribute="trailing" secondItem="lqJ-gb-7qp" secondAttribute="trailing" constant="8" id="b9l-DT-xvT"/>
-                <constraint firstItem="v5z-nY-xlK" firstAttribute="top" secondItem="lqJ-gb-7qp" secondAttribute="bottom" constant="8" id="bF4-iH-vAb"/>
-                <constraint firstAttribute="centerX" secondItem="nx3-ip-DxI" secondAttribute="centerX" id="n9g-65-e5v"/>
-                <constraint firstItem="v5z-nY-xlK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="t0S-yQ-6Ca"/>
-                <constraint firstItem="9F5-4I-fQc" firstAttribute="top" secondItem="v5z-nY-xlK" secondAttribute="bottom" constant="8" id="xiL-OO-n2w"/>
+                <constraint firstItem="d1O-lQ-yhl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3yu-z6-vjb"/>
+                <constraint firstAttribute="bottom" secondItem="d1O-lQ-yhl" secondAttribute="bottom" id="QbB-SD-QeH"/>
+                <constraint firstItem="d1O-lQ-yhl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UaS-Bj-ebN"/>
+                <constraint firstAttribute="trailing" secondItem="d1O-lQ-yhl" secondAttribute="trailing" id="sBs-17-Sh7"/>
             </constraints>
             <point key="canvasLocation" x="375" y="742"/>
         </view>
