@@ -17,8 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
-@property (weak, nonatomic) IBOutlet UIImageView *cityView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketButton;
+@property (weak, nonatomic) IBOutlet UIImageView *cityView;
 
 @end
 
@@ -56,9 +56,9 @@
 
 - (void)setFavoriteButtonImage {
     if (self.city.isFavorited) {
-        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-on"] forState:UIControlStateNormal];
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-on"] forState:UIControlStateNormal];
     } else {
-        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-off"] forState:UIControlStateNormal];
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-off"] forState:UIControlStateNormal];
     }
 }
 

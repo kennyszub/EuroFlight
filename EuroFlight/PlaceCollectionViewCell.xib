@@ -15,7 +15,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-tA-M0K">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
                     </imageView>
-                    <view opaque="NO" clipsSubviews="YES" alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6v-b0-EeW">
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6v-b0-EeW">
                         <rect key="frame" x="0.0" y="100" width="150" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -46,6 +46,7 @@
             </constraints>
             <size key="customSize" width="246" height="252"/>
             <connections>
+                <outlet property="labelBackgroundView" destination="A6v-b0-EeW" id="sHd-DK-Kue"/>
                 <outlet property="nameLabel" destination="4KD-W0-OMJ" id="xxy-Pk-YrU"/>
                 <outlet property="placeView" destination="9Jb-tA-M0K" id="4No-mp-eEp"/>
             </connections>
