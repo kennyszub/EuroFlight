@@ -28,12 +28,13 @@ NSString * const kDestinationAirportParamsKey = @"destinationAirport";
 
 - (void)tripsWithParams:(NSDictionary *)params completion:(void (^)(NSArray *trips, NSError *error))completion {
     NSString *destinationAirport = params[kDestinationAirportParamsKey];
-
     NSDictionary *tripsResponse = [TripClient getSampleResponseForAirport:destinationAirport];
-    NSArray *trips = [Trip tripsWithArray:tripsResponse[@"trips"][@"tripOption"]];
 
     // TODO make sure this is thread-safe (when this actually becomes part of a network call)
+    // NOTE: this has to happen before the call to tripsWithArray because we need to parse all the metadata first
     [[NameMappingHelper sharedInstance] parseTripData:[tripsResponse valueForKeyPath:@"trips.data"]];
+
+    NSArray *trips = [Trip tripsWithArray:tripsResponse[@"trips"][@"tripOption"]];
 
     completion(trips, nil);
 }

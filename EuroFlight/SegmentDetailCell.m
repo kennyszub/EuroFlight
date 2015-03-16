@@ -8,6 +8,7 @@
 
 #import "SegmentDetailCell.h"
 #import "NameMappingHelper.h"
+#import <UIImageView+AFNetworking.h>
 
 #define kMinutesInHour 60
 
@@ -42,6 +43,8 @@ static NSDateFormatter *timeFormatter;
 
 - (void)setSegment:(FlightSegment *)segment {
     _segment = segment;
+
+    [self.airlineLogoImageView setImageWithURL:[NSURL URLWithString:segment.airlineImageURL]];
 
     NameMappingHelper *helper = [NameMappingHelper sharedInstance];
     self.airlineLabel.text = [helper carrierNameForCode:segment.airline];

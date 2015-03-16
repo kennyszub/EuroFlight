@@ -44,7 +44,9 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"SegmentDetailCell" bundle:nil] forCellReuseIdentifier:kSegmentDetailCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"LayoverDetailCell" bundle:nil] forCellReuseIdentifier:kLayoverDetailCellIdentifier];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
     [self setupBuyButton];
 }
 
@@ -56,7 +58,6 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     UIView *buyButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 50)];
     buyButtonView.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
 
-    // TODO iphone 6 gives a width of 320 even though the true width is 375... no idea why
     UIButton *buyButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 2.5, width - 10, 45)];
     buyButton.layer.cornerRadius = 5;
     buyButton.layer.masksToBounds = NO;
@@ -73,10 +74,6 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     [buyButton addTarget:self action:@selector(onBuyButton:) forControlEvents:UIControlEventTouchUpInside];
 
     [buyButtonView addSubview:buyButton];
-
-//    NSLog(@"width: %f", width);
-//    NSLog(@"view width: %f", buyButtonView.frame.size.width);
-//    NSLog(@"button width: %f", buyButton.frame.size.width);
 
     self.tableView.tableHeaderView = buyButtonView;
 }

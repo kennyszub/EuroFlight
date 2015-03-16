@@ -11,6 +11,7 @@
 #import "FlightSegment.h"
 #import "CurrencyFormatter.h"
 #import "NameMappingHelper.h"
+#import "GoogleSearchClient.h"
 #import <UIImageView+AFNetworking.h>
 
 @interface FlightResultGroupCell ()
@@ -75,6 +76,11 @@
     NameMappingHelper *helper = [NameMappingHelper sharedInstance];
     NSString *carrierName = [helper carrierNameForCode:airline];
     self.airlineLabel.text = carrierName;
+
+    // grab a flight segment and use the logo
+    Flight *flight = ((Trip *)trips[0]).outboundFlight;
+    FlightSegment *segment = flight.flightSegments[0];
+    [self.airlineLogoImageView setImageWithURL:[NSURL URLWithString:segment.airlineImageURL]];
 }
 
 // if a flight uses a single airline, return the airline

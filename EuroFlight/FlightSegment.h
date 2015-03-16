@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *flightNumber;
 @property (nonatomic, assign) NSInteger duration;
 @property (nonatomic, assign) NSInteger connectionDuration;
+@property (nonatomic, strong) NSString *airlineImageURL;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -14,21 +14,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-takeoff" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-cG-kWi">
-                        <rect key="frame" x="8" y="8" width="40" height="16"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-takeoff" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-cG-kWi">
+                        <rect key="frame" x="8" y="8" width="50" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="ElR-Jr-9su"/>
-                            <constraint firstAttribute="width" constant="40" id="GU6-Mm-cht"/>
+                            <constraint firstAttribute="width" constant="50" id="GU6-Mm-cht"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="British Airways" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JU-th-plH">
-                        <rect key="frame" x="56" y="8" width="105" height="17.5"/>
+                        <rect key="frame" x="66" y="8" width="105" height="17.5"/>
                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVc-tw-WyJ">
-                        <rect key="frame" x="165" y="8" width="27" height="17.5"/>
+                        <rect key="frame" x="175" y="8" width="27" height="17.5"/>
                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
