@@ -44,6 +44,41 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"SegmentDetailCell" bundle:nil] forCellReuseIdentifier:kSegmentDetailCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"LayoverDetailCell" bundle:nil] forCellReuseIdentifier:kLayoverDetailCellIdentifier];
+
+    [self setupBuyButton];
+}
+
+- (void)setupBuyButton {
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.trip.currencyType];
+
+    CGFloat width = self.view.frame.size.width;
+
+    UIView *buyButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 50)];
+    buyButtonView.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
+
+    // TODO iphone 6 gives a width of 320 even though the true width is 375... no idea why
+    UIButton *buyButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 2.5, width - 10, 45)];
+    buyButton.layer.cornerRadius = 5;
+    buyButton.layer.masksToBounds = NO;
+    buyButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    buyButton.layer.shadowOpacity = 0.1;
+    buyButton.layer.shadowRadius = 2;
+    buyButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+    [buyButton setTitle:[NSString stringWithFormat:@"Buy Now for %@", [formatter stringFromNumber:@(self.trip.flightCost)]] forState:UIControlStateNormal];
+    buyButton.titleLabel.textColor = [UIColor whiteColor];
+    buyButton.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
+    buyButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    buyButton.backgroundColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1];
+    buyButton.tintColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1];
+    [buyButton addTarget:self action:@selector(onBuyButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    [buyButtonView addSubview:buyButton];
+
+//    NSLog(@"width: %f", width);
+//    NSLog(@"view width: %f", buyButtonView.frame.size.width);
+//    NSLog(@"button width: %f", buyButton.frame.size.width);
+
+    self.tableView.tableHeaderView = buyButtonView;
 }
 
 - (void)didReceiveMemoryWarning {
