@@ -17,6 +17,9 @@
 static NSDateFormatter *dateTimeParser;
 
 static NSMutableSet *requestedAirlines;
+// in-memory cache of airline URLs, stores airline as key and logo URL as value
+// initially pulls from NSUserDefaults
+static NSMutableDictionary *airlineToURL;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
@@ -26,6 +29,9 @@ static NSMutableSet *requestedAirlines;
         }
         if (!requestedAirlines) {
             [FlightSegment initRequestedAirlines];
+        }
+        if (!airlineToURL) {
+            [FlightSegment initAirlineToURL];
         }
         
         NSArray *legDictionaries = dictionary[@"leg"];
@@ -46,30 +52,8 @@ static NSMutableSet *requestedAirlines;
         self.duration = [dictionary[@"duration"] integerValue];
         self.connectionDuration = [dictionary[@"connectionDuration"] integerValue];
 
-        NSString *airlineImageURL = [[NSUserDefaults standardUserDefaults] stringForKey:[self userDefaultsKeyWithAirline]];
-        if (!airlineImageURL) {
-            if (![requestedAirlines containsObject:self.airline]) {
-                // if we haven't already requested this airline, do so
-//                NSLog(@"making google search request for %@", self.airline);
-                [requestedAirlines addObject:self.airline];
-
-                NameMappingHelper *helper = [NameMappingHelper sharedInstance];
-                NSString *query = [NSString stringWithFormat:@"%@ logo", [helper carrierNameForCode:self.airline]];
-
-                [[GoogleSearchClient sharedInstance] imageSearchWithQuery:query completion:^(NSArray *urls, NSError *error) {
-                    if (error) {
-                        NSLog(@"Error fetching logo for %@: %@", self.airline, error);
-                    } else {
-                        if (urls.count > 0) {
-                            self.airlineImageURL = urls[0];
-                        }
-                    }
-                }];
-            }
-        } else {
-//            NSLog(@"loading image URL for %@ from user defaults: %@", self.airline, airlineImageURL);
-            self.airlineImageURL = airlineImageURL;
-        }
+        // UNCOMMENT THIS after rate limits have expired (100/day)
+//        [self getAirlineURL];
     }
     
     return self;
@@ -84,20 +68,69 @@ static NSMutableSet *requestedAirlines;
     requestedAirlines = [NSMutableSet set];
 }
 
-NSString * const kUserDefaultsAirlineImagesKeyBase = @"AirlineImagesKeyBase";
+- (void)getAirlineURL {
+    NSString *airlineImageURL = airlineToURL[self.airline];
+    if (!airlineImageURL) {
+        if (![requestedAirlines containsObject:self.airline]) {
+            // if we haven't already requested this airline, do so
+//            NSLog(@"making google search request for %@", self.airline);
+            [requestedAirlines addObject:self.airline];
+
+            NameMappingHelper *helper = [NameMappingHelper sharedInstance];
+            NSString *query = [NSString stringWithFormat:@"%@ logo", [helper carrierNameForCode:self.airline]];
+
+            [[GoogleSearchClient sharedInstance] imageSearchWithQuery:query completion:^(NSArray *urls, NSError *error) {
+                if (error) {
+                    NSLog(@"Error fetching logo for %@: %@", self.airline, error);
+                } else {
+                    if (urls.count > 0) {
+                        self.airlineImageURL = urls[0];
+                        airlineToURL[self.airline] = urls[0];
+                    }
+                }
+            }];
+        }
+    } else {
+//        NSLog(@"loading image URL for %@ from user defaults: %@", self.airline, airlineImageURL);
+        self.airlineImageURL = airlineImageURL;
+    }
+}
+
+NSString * const kUserDefaultsAirlineImagesKey = @"AirlineImagesKey";
+
++ (void)initAirlineToURL {
+    if (!airlineToURL) {
+        NSDictionary *dict = [[NSUserDefaults standardUserDefaults] dictionaryForKey:kUserDefaultsAirlineImagesKey];
+        if (!dict) {
+            airlineToURL = [NSMutableDictionary dictionary];
+        } else {
+            airlineToURL = [dict mutableCopy];
+        }
+    }
+}
 
 - (NSString *)airlineImageURL {
-    return [[NSUserDefaults standardUserDefaults] stringForKey:[self userDefaultsKeyWithAirline]];
+    [FlightSegment initAirlineToURL];
+    if (!_airlineImageURL && airlineToURL[self.airline]) {
+        self.airlineImageURL = airlineToURL[self.airline];
+    }
+
+    return _airlineImageURL;
 }
 
 - (void)setAirlineImageURL:(NSString *)airlineImageURL {
     _airlineImageURL = airlineImageURL;
-    [[NSUserDefaults standardUserDefaults] setValue:airlineImageURL forKey:[self userDefaultsKeyWithAirline]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [FlightSegment initAirlineToURL];
+    airlineToURL[self.airline] = airlineImageURL;
+
+    // for now, persist all image URLs to disk
+    // TODO this might be too slow, so remove this and call it once somewhere else
+    [FlightSegment saveAirlineImageURLs];
 }
 
-- (NSString *)userDefaultsKeyWithAirline {
-    return [NSString stringWithFormat:@"%@%@", kUserDefaultsAirlineImagesKeyBase, self.airline];
++ (void)saveAirlineImageURLs {
+    [[NSUserDefaults standardUserDefaults] setObject:airlineToURL forKey:kUserDefaultsAirlineImagesKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end
