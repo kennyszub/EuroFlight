@@ -44,6 +44,8 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"SegmentDetailCell" bundle:nil] forCellReuseIdentifier:kSegmentDetailCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"LayoverDetailCell" bundle:nil] forCellReuseIdentifier:kLayoverDetailCellIdentifier];
+
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -90,14 +92,7 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return [self numCellsForFlight:self.trip.outboundFlight];
-        case 1:
-            return [self numCellsForFlight:self.trip.returnFlight];
-        default:
-            return 0;
-    }
+    return [self numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -105,6 +100,8 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
         // segment cell
         SegmentDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kSegmentDetailCellIdentifier forIndexPath:indexPath];
         cell.segment = [self segmentForIndexPath:indexPath];
+        cell.showTriangleView = indexPath.row > 0;
+        cell.nextCellWillShowTriangleView = indexPath.row < [self numberOfRowsInSection:indexPath.section] - 1;
         [self setupBordersForCell:cell];
 
         return cell;
@@ -155,6 +152,17 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     }
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         cell.layoutMargins = UIEdgeInsetsZero;
+    }
+}
+
+- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return [self numCellsForFlight:self.trip.outboundFlight];
+        case 1:
+            return [self numCellsForFlight:self.trip.returnFlight];
+        default:
+            return 0;
     }
 }
 

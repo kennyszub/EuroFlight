@@ -9,6 +9,7 @@
 #import "SegmentDetailCell.h"
 #import "NameMappingHelper.h"
 #import <UIImageView+AFNetworking.h>
+#import "TriangleView.h"
 
 #define kMinutesInHour 60
 
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *departureCityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *arrivalCityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalFlightDurationLabel;
+@property (nonatomic, strong) TriangleView *triangleView;
 
 @end
 
@@ -40,6 +42,9 @@
 }
 
 static NSDateFormatter *timeFormatter;
+
+#define kTriangleBaseLength 15
+#define kTriangleSideLength 8
 
 - (void)setSegment:(FlightSegment *)segment {
     _segment = segment;
@@ -60,6 +65,19 @@ static NSDateFormatter *timeFormatter;
     self.totalFlightDurationLabel.text = [self durationAsString:segment.duration];
 }
 
+- (void)setShowTriangleView:(BOOL)showTriangleView {
+    _showTriangleView = showTriangleView;
+
+    if (showTriangleView) {
+        self.triangleView = [[TriangleView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - kTriangleBaseLength) / 2.0, 0, kTriangleBaseLength, kTriangleSideLength)];
+        self.triangleView.fillColor = [UIColor groupTableViewBackgroundColor];
+        self.triangleView.backgroundColor = [UIColor whiteColor];
+        [self.contentView addSubview:self.triangleView];
+    } else {
+        self.triangleView = nil;
+    }
+}
+
 - (NSString *)durationAsString:(NSInteger)duration {
     NSInteger numHours = duration / kMinutesInHour;
     NSInteger numMinutes = duration - (kMinutesInHour * numHours);
@@ -75,6 +93,36 @@ static NSDateFormatter *timeFormatter;
             timeFormatter.dateFormat = @"H:mm a";
         });
     }
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    CGFloat rectWidth = CGRectGetWidth(rect);
+    CGFloat rectHeight = CGRectGetHeight(rect);
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
+    CGContextSetLineWidth(context, 0.5f);
+
+    if (self.showTriangleView) {
+        // showing triangle view, so draw the top border with a gap
+        CGContextMoveToPoint(context, 0.0f, 0.0f);
+        CGContextAddLineToPoint(context, (rectWidth - kTriangleBaseLength) / 2.0, 0.0f);
+        CGContextMoveToPoint(context, (rectWidth + kTriangleBaseLength) / 2.0, 0.0f);
+        CGContextAddLineToPoint(context, rectWidth, 0.0f);
+    } else {
+        // not showing triangle view, so draw the top border
+        CGContextMoveToPoint(context, 0.0f, 0.0f);
+        CGContextAddLineToPoint(context, rectWidth, 0.0f);
+    }
+
+    if (!self.nextCellWillShowTriangleView) {
+        // next cell won't show a triangle view, so draw a full bottom border
+        CGContextMoveToPoint(context, 0.0f, rectHeight);
+        CGContextAddLineToPoint(context, rectWidth, rectHeight);
+    }
+
+    CGContextStrokePath(context);
 }
 
 @end

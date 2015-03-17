@@ -12,5 +12,7 @@
 @interface SegmentDetailCell : UITableViewCell
 
 @property (nonatomic, strong) FlightSegment *segment;
+@property (nonatomic, assign) BOOL showTriangleView;
+@property (nonatomic, assign) BOOL nextCellWillShowTriangleView;
 
 @end
