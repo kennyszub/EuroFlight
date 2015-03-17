@@ -105,12 +105,14 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
         // segment cell
         SegmentDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kSegmentDetailCellIdentifier forIndexPath:indexPath];
         cell.segment = [self segmentForIndexPath:indexPath];
+        [self setupBordersForCell:cell];
 
         return cell;
     } else {
         // layover cell
         LayoverDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kLayoverDetailCellIdentifier forIndexPath:indexPath];
         cell.segment = [self segmentForIndexPath:indexPath];
+        [self setupBordersForCell:cell];
 
         return cell;
     }
@@ -142,6 +144,19 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
 }
 
 #pragma mark - Private methods
+
+- (void)setupBordersForCell:(UITableViewCell *)cell {
+    // change the default margin of the table divider length
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        cell.preservesSuperviewLayoutMargins = NO;
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+}
 
 - (NSInteger)numCellsForFlight:(Flight *)flight {
     return 1 + 2 * (flight.flightSegments.count - 1);

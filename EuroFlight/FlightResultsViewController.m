@@ -74,11 +74,15 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
         // cell is a flight result
         FlightResultCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kFlightResultCellIdentifier forIndexPath:indexPath];
         cell.trip = [self tripForIndexPath:indexPath];
+        [self setupBordersForCell:cell];
+
         return cell;
     } else {
         // cell is a flight grouping
         FlightResultGroupCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kFlightResultGroupCellIdentifier forIndexPath:indexPath];
         cell.trips = [self tripsForSection:indexPath.section];
+        [self setupBordersForCell:cell];
+
         return cell;
     }
 }
@@ -115,6 +119,19 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 }
 
 #pragma mark - Private methods
+
+- (void)setupBordersForCell:(UITableViewCell *)cell {
+    // change the default margin of the table divider length
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        cell.preservesSuperviewLayoutMargins = NO;
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+}
 
 - (void)collapseSubItemsInSection:(NSInteger)section {
     NSMutableArray *indexPaths = [NSMutableArray array];

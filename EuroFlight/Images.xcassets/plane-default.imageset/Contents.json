@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "plane-default.png"
+      "filename" : "Airplane Mode On-100.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "plane-default-1.png"
+      "filename" : "Airplane Mode On-100-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "plane-default-2.png"
+      "filename" : "Airplane Mode On-100-2.png"
     }
   ],
   "info" : {

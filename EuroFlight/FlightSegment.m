@@ -52,8 +52,7 @@ static NSMutableDictionary *airlineToURL;
         self.duration = [dictionary[@"duration"] integerValue];
         self.connectionDuration = [dictionary[@"connectionDuration"] integerValue];
 
-        // UNCOMMENT THIS after rate limits have expired (100/day)
-//        [self getAirlineURL];
+        [self getAirlineURL];
     }
     
     return self;
@@ -85,7 +84,8 @@ static NSMutableDictionary *airlineToURL;
                 } else {
                     if (urls.count > 0) {
                         self.airlineImageURL = urls[0];
-                        airlineToURL[self.airline] = urls[0];
+                        // persist to disk
+                        [FlightSegment saveAirlineImageURLs];
                     }
                 }
             }];
@@ -122,10 +122,6 @@ NSString * const kUserDefaultsAirlineImagesKey = @"AirlineImagesKey";
     _airlineImageURL = airlineImageURL;
     [FlightSegment initAirlineToURL];
     airlineToURL[self.airline] = airlineImageURL;
-
-    // for now, persist all image URLs to disk
-    // TODO this might be too slow, so remove this and call it once somewhere else
-    [FlightSegment saveAirlineImageURLs];
 }
 
 + (void)saveAirlineImageURLs {

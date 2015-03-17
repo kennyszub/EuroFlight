@@ -39,7 +39,7 @@
                             <constraint firstAttribute="width" constant="16" id="cH6-Z5-N1A"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-takeoff" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-2c-JNY">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-logo-default" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-2c-JNY">
                         <rect key="frame" x="100" y="14" width="30" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="Ph8-Zn-AUi"/>
@@ -71,7 +71,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="plane-takeoff" width="256" height="256"/>
+        <image name="plane-logo-default" width="100" height="100"/>
         <image name="right-dropdown" width="512" height="512"/>
     </resources>
 </document>

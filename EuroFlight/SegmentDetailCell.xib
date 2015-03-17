@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-takeoff" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-cG-kWi">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-logo-default" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-cG-kWi">
                         <rect key="frame" x="8" y="8" width="50" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="ElR-Jr-9su"/>
@@ -116,7 +116,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="plane-landing" width="256" height="256"/>
-        <image name="plane-takeoff" width="256" height="256"/>
+        <image name="plane-landing" width="100" height="100"/>
+        <image name="plane-logo-default" width="100" height="100"/>
+        <image name="plane-takeoff" width="100" height="100"/>
     </resources>
 </document>
