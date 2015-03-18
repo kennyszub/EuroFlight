@@ -89,14 +89,14 @@ static NSArray *_allCountries;
                   @"airportCodes" : @[@"MAD"]},
                 @{@"city" : @"Ibiza",
                   @"airportCodes" : @[@"IBZ"]},
-                @{@"city" : @"Badajoz",
-                  @"airportCodes" : @[@"BJZ"]},
-                @{@"city" : @"Pamplona",
-                  @"airportCodes" : @[@"PNA"]},
+//                @{@"city" : @"Badajoz",
+//                  @"airportCodes" : @[@"BJZ"]},
+//                @{@"city" : @"Pamplona",
+//                  @"airportCodes" : @[@"PNA"]},
                 @{@"city" : @"Valencia",
-                  @"airportCodes" : @[@"VLC"]},
-                @{@"city" : @"Vigo",
-                  @"airportCodes" : @[@"VGO"]}]
+                  @"airportCodes" : @[@"VLC"]}]
+//                @{@"city" : @"Vigo",
+//                  @"airportCodes" : @[@"VGO"]}]
           },
       @{
           @"countryName" : @"France",
@@ -133,16 +133,16 @@ static NSArray *_allCountries;
       @{
           @"countryName" : @"Italy",
           @"cities" :
-              @[@{@"city" : @"Florence",
-                  @"airportCodes" : @[@"FLR"]},
-                @{@"city" : @"Venice",
+//              @[@{@"city" : @"Florence",
+//                  @"airportCodes" : @[@"FLR"]},
+                @[@{@"city" : @"Venice",
                   @"airportCodes" : @[@"VCE"]},
                 @{@"city" : @"Rome",
                   @"airportCodes" : @[@"FCO"]},
                 @{@"city" : @"Pisa",
-                  @"airportCodes" : @[@"PSA"]},
-                @{@"city" : @"Torino",
-                  @"airportCodes" : @[@"TRN"]}]
+                  @"airportCodes" : @[@"PSA"]}]
+//                @{@"city" : @"Torino",
+//                  @"airportCodes" : @[@"TRN"]}]
           },
       @{
           @"countryName" : @"Sweden",
@@ -162,8 +162,8 @@ static NSArray *_allCountries;
                   @"airportCodes" : @[@"TXL", @"SXF"]},
                 @{@"city" : @"Frankfurt",
                   @"airportCodes" : @[@"FRA"]},
-                @{@"city" : @"Laage",
-                  @"airportCodes" : @[@"RLG"]},
+//                @{@"city" : @"Laage",
+//                  @"airportCodes" : @[@"RLG"]},
                 @{@"city" : @"Leipzig",
                   @"airportCodes" : @[@"LEJ"]}]
           },
@@ -185,11 +185,11 @@ static NSArray *_allCountries;
           @"countryName" : @"Austria",
           @"cities" :
               @[@{@"city" : @"Vienna",
-                  @"airportCodes" : @[@"VIE"]},
-                @{@"city" : @"Klagenfurt",
-                  @"airportCodes" : @[@"KLU"]},
-                @{@"city" : @"Linz",
-                  @"airportCodes" : @[@"LNZ"]}]
+                  @"airportCodes" : @[@"VIE"]}]
+//                @{@"city" : @"Klagenfurt",
+//                  @"airportCodes" : @[@"KLU"]}
+//                @{@"city" : @"Linz",
+//                  @"airportCodes" : @[@"LNZ"]}]
           },
       @{
           @"countryName" : @"Iceland",
@@ -203,26 +203,26 @@ static NSArray *_allCountries;
               @[@{@"city" : @"Brussels",
                   @"airportCodes" : @[@"BRU"]}]
           },
-      @{
-          @"countryName" : @"Turkey",
-          @"cities" :
-              @[@{@"city" : @"Istanbul",
-                  @"airportCodes" : @[@"IST"]}]
-          },
-      @{
-          @"countryName" : @"Finland",
-          @"cities" :
-              @[@{@"city" : @"Kajaani",
-                  @"airportCodes" : @[@"KAJ"]}]
-          },
-      @{
-          @"countryName" : @"Greece",
-          @"cities" :
-              @[@{@"city" : @"Alexandroupolis",
-                  @"airportCodes" : @[@"AXD"]},
-                @{@"city" : @"Chios",
-                  @"airportCodes" : @[@"JKH"]}]
-          },
+//      @{
+//          @"countryName" : @"Turkey",
+//          @"cities" :
+//              @[@{@"city" : @"Istanbul",
+//                  @"airportCodes" : @[@"IST"]}]
+//          },
+//      @{
+//          @"countryName" : @"Finland",
+//          @"cities" :
+//              @[@{@"city" : @"Kajaani",
+//                  @"airportCodes" : @[@"KAJ"]}]
+//          },
+//      @{
+//          @"countryName" : @"Greece",
+//          @"cities" :
+//              @[@{@"city" : @"Alexandroupolis",
+//                  @"airportCodes" : @[@"AXD"]},
+//                @{@"city" : @"Chios",
+//                  @"airportCodes" : @[@"JKH"]}]
+//          },
       @{
           @"countryName" : @"Poland",
           @"cities" :
@@ -246,13 +246,13 @@ static NSArray *_allCountries;
           @"cities" :
               @[@{@"city" : @"Belgrade",
                   @"airportCodes" : @[@"BEG"]}]
-          },
-      @{
-          @"countryName" : @"Turkey",
-          @"cities" :
-              @[@{@"city" : @"Konya",
-                  @"airportCodes" : @[@"KYA"]}]
           }
+//      @{
+//          @"countryName" : @"Turkey",
+//          @"cities" :
+//              @[@{@"city" : @"Konya",
+//                  @"airportCodes" : @[@"KYA"]}]
+//          }
       ];
     
     return destinations;
