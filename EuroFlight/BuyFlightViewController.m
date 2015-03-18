@@ -24,10 +24,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.containerView.frame configuration:config];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:config];
 
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
-    // TODO the webview seems to only size to a 5S???
     [self.containerView addSubview:webView];
 }
 
