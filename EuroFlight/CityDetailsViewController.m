@@ -12,13 +12,19 @@
 #import "FavoritesManager.h"
 #import "UIImageView+AFNetworking.h"
 #import "CurrencyFormatter.h"
+#import "EventCell.h"
+#import "DescriptionCell.h"
+#import "EventDetailViewController.h"
+#import "PlaceCollectionCell.h"
 
-@interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+NSInteger const kHeaderHeight = 100;
+
+@interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketButton;
-@property (weak, nonatomic) IBOutlet UIImageView *cityView;
+@property (strong, nonatomic) UIImageView *headerView;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -27,13 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    [self.collectionView registerNib:[UINib nibWithNibName:@"PlaceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PlaceCollectionViewCell"];
+//    self.collectionView.delegate = self;
+//    self.collectionView.dataSource = self;
+//    [self.collectionView registerNib:[UINib nibWithNibName:@"PlaceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PlaceCollectionViewCell"];
     
     self.title = self.city.name;
-    self.descriptionLabel.text = self.city.summary;
-    [self.cityView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
+//    self.descriptionLabel.text = self.city.summary;
+//    [self.cityView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
 
     [self setFavoriteButtonImage];
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.city.currencyType];
@@ -41,6 +47,41 @@
     [self.ticketButton setTitle:[NSString stringWithFormat:@"Find tickets from %@", price] forState:UIControlStateNormal];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 100;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"EventCell" bundle:nil] forCellReuseIdentifier:@"EventCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DescriptionCell" bundle:nil] forCellReuseIdentifier:@"DescriptionCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"PlaceCollectionCell" bundle:nil] forCellReuseIdentifier:@"PlaceCollectionCell"];
+    
+    UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -kHeaderHeight, self.tableView.bounds.size.width, kHeaderHeight)];
+    headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    headerView.contentMode = UIViewContentModeScaleAspectFill;
+    headerView.clipsToBounds = YES;
+    
+    [headerView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
+    [self.tableView insertSubview:headerView atIndex:0];
+    
+    self.headerView = headerView;
+    self.tableView.contentInset = UIEdgeInsetsMake(kHeaderHeight, 0, 0, 0);
+    self.tableView.contentOffset = CGPointMake(0, -kHeaderHeight);
+
+}
+
+-(void)updateHeaderView {
+    CGRect headerRect = CGRectMake(0, -kHeaderHeight, self.tableView.bounds.size.width, kHeaderHeight);
+    if (self.tableView.contentOffset.y < -kHeaderHeight) {
+        headerRect.origin.y = self.tableView.contentOffset.y;
+        headerRect.size.height = -self.tableView.contentOffset.y;
+    }
+    self.headerView.frame = headerRect;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self updateHeaderView];
 }
 
 - (IBAction)onTickets:(id)sender {
@@ -78,6 +119,56 @@
 }
 
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (self.city.events.count == 0) {
+        return 2;
+    } else {
+        return 3;
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 1 && self.city.events.count > 0) {
+        return self.city.events.count;
+    } else {
+        return 1;
+    }
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        DescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DescriptionCell"];
+        cell.descriptionLabel.text = self.city.summary;
+        return cell;
+    } else if (indexPath.section == 1 && self.city.events.count > 0) {
+        EventCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventCell"];
+        cell.event = self.city.events[indexPath.row];
+        return cell;
+    } else {
+        PlaceCollectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PlaceCollectionCell"];
+        cell.collectionView.delegate = self;
+        cell.collectionView.dataSource = self;
+        [cell.collectionView registerNib:[UINib nibWithNibName:@"PlaceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PlaceCollectionViewCell"];
+        return cell;
+    }
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Description";
+    } else if (section == 1 && self.city.events.count > 0){
+        return @"Events";
+    } else {
+        return @"Attractions";
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    EventDetailViewController *vc = [[EventDetailViewController alloc] init];
+    vc.event = [self.city.events objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 /*
  #pragma mark - Navigation

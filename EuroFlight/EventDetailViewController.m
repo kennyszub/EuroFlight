@@ -13,7 +13,6 @@
 @interface EventDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *countryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *eventView;
 
@@ -26,8 +25,7 @@
     // Do any additional setup after loading the view from its nib.
     self.title = self.event.name;
     self.dateLabel.text = self.event.dateString;
-    self.cityLabel.text = self.event.cityString;
-    self.countryLabel.text = self.event.countryString;
+    self.cityLabel.text = self.event.locationString;
     self.descriptionLabel.text = self.event.summary;
     [self.eventView setImageWithURL:[NSURL URLWithString:self.event.photoURL]];
     
@@ -47,9 +45,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)onNext:(id)sender {
+- (IBAction)onTickets:(id)sender {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = self.event.city;
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

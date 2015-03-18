@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailViewController">
             <connections>
                 <outlet property="cityLabel" destination="6I3-SD-Y8D" id="Afk-oT-8cO"/>
-                <outlet property="countryLabel" destination="u8x-kD-g1c" id="uvz-wy-A1o"/>
                 <outlet property="dateLabel" destination="ZyS-io-Rvc" id="qui-Du-j0Q"/>
                 <outlet property="descriptionLabel" destination="3pM-v3-ray" id="pL3-3s-bAA"/>
                 <outlet property="eventView" destination="hS2-sU-o3r" id="uUS-MU-nxK"/>
@@ -26,19 +25,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-v3-ray">
-                    <rect key="frame" x="8" y="277" width="290" height="24"/>
+                    <rect key="frame" x="8" y="251" width="290" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-SD-Y8D">
-                    <rect key="frame" x="8" y="220" width="31" height="24"/>
-                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-kD-g1c">
-                    <rect key="frame" x="8" y="245" width="62" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-SD-Y8D">
+                    <rect key="frame" x="8" y="219" width="66" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -49,29 +42,34 @@
                         <constraint firstAttribute="height" constant="186" id="xvY-uX-oDT"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-jx-f5V">
-                    <rect key="frame" x="228" y="194" width="84" height="30"/>
-                    <state key="normal" title="Find Tickets">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSJ-Sm-4Xf">
+                    <rect key="frame" x="8" y="510" width="304" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.6389645934" blue="0.75245386359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gGu-EN-BAe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                    <state key="normal" title="Find tickets">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="onNext:" destination="-1" eventType="touchUpInside" id="fKY-NH-3Xq"/>
+                        <action selector="onTickets:" destination="-1" eventType="touchUpInside" id="rQu-Le-D4C"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="u8x-kD-g1c" firstAttribute="top" secondItem="6I3-SD-Y8D" secondAttribute="bottom" constant="2" id="6DG-3U-YSg"/>
+                <constraint firstItem="ZSJ-Sm-4Xf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="1hs-P3-gK7"/>
+                <constraint firstAttribute="trailing" secondItem="ZSJ-Sm-4Xf" secondAttribute="trailing" constant="8" id="48f-Vz-3UE"/>
                 <constraint firstItem="6I3-SD-Y8D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7gp-gL-4An"/>
+                <constraint firstItem="3pM-v3-ray" firstAttribute="top" secondItem="6I3-SD-Y8D" secondAttribute="bottom" constant="8" id="D63-wj-bja"/>
                 <constraint firstItem="hS2-sU-o3r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EEh-a5-kmC"/>
                 <constraint firstItem="hS2-sU-o3r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FIR-db-fKH"/>
-                <constraint firstAttribute="trailing" secondItem="zpF-jx-f5V" secondAttribute="trailing" constant="8" id="Ivn-Gl-maI"/>
                 <constraint firstAttribute="trailing" secondItem="3pM-v3-ray" secondAttribute="trailing" constant="22" id="KFC-hn-dd9"/>
-                <constraint firstItem="u8x-kD-g1c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="MYb-Hx-RMv"/>
                 <constraint firstItem="ZyS-io-Rvc" firstAttribute="top" secondItem="hS2-sU-o3r" secondAttribute="bottom" constant="10" id="X5v-Ji-Dy6"/>
-                <constraint firstItem="zpF-jx-f5V" firstAttribute="top" secondItem="hS2-sU-o3r" secondAttribute="bottom" constant="8" id="eIr-VY-RQv"/>
+                <constraint firstAttribute="bottom" secondItem="ZSJ-Sm-4Xf" secondAttribute="bottom" constant="8" id="dgx-50-yeX"/>
                 <constraint firstItem="6I3-SD-Y8D" firstAttribute="top" secondItem="ZyS-io-Rvc" secondAttribute="bottom" id="fvj-e0-J6l"/>
-                <constraint firstItem="3pM-v3-ray" firstAttribute="top" secondItem="u8x-kD-g1c" secondAttribute="bottom" constant="8" id="g34-a6-fYU"/>
                 <constraint firstItem="ZyS-io-Rvc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="lwa-O1-LTG"/>
                 <constraint firstAttribute="trailing" secondItem="hS2-sU-o3r" secondAttribute="trailing" id="op3-4x-D3s"/>
                 <constraint firstItem="3pM-v3-ray" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qkw-Xn-MVb"/>

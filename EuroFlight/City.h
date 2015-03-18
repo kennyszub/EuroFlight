@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray *trips;
 @property (nonatomic, assign) float lowestCost;
-@property (nonatomic, strong) NSArray *events;
+@property (nonatomic, strong) NSMutableArray *events;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *summary;
 @property (nonatomic, strong) NSArray *places;
