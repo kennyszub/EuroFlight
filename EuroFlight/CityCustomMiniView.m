@@ -7,10 +7,13 @@
 //
 
 #import "CityCustomMiniView.h"
+#import "CurrencyFormatter.h"
 
 @interface CityCustomMiniView ()
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -42,11 +45,28 @@
 - (void)setCity:(City *)city {
     _city = city;
     self.cityNameLabel.text = city.name;
+    NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:city.currencyType];
+    NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
+    self.priceLabel.text = [NSString stringWithFormat:@"from: %@", price];
+    [self setFavoriteButtonImageForCity:city];
 }
 
 - (IBAction)didTapCityView:(UITapGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
         [self.delegate cityView:self didTapCity:self.city];
+    }
+}
+
+- (IBAction)onFavoriteButton:(id)sender {
+    [self.city setFavoritedState:!self.city.isFavorited];
+    [self setFavoriteButtonImageForCity:self.city];
+}
+
+- (void)setFavoriteButtonImageForCity:(City *)city {
+    if (city.isFavorited) {
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-on"] forState:UIControlStateNormal];
+    } else {
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-off"] forState:UIControlStateNormal];
     }
 }
 

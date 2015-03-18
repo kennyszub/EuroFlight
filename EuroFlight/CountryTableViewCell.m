@@ -138,13 +138,13 @@
     if (showViews) {
         CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
         self.topOfCityLabelConstraint.constant -= constantChange;
-        self.bottomOfCityLabelConstraint.constant += constantChange;
+//        self.bottomOfCityLabelConstraint.constant += constantChange;
         [UIView animateWithDuration:0.4 animations:^{
             [self.contentView layoutIfNeeded];
         }];
     } else {
-        self.topOfCityLabelConstraint.constant = 138;
-        self.bottomOfCityLabelConstraint.constant = 112;
+        self.topOfCityLabelConstraint.constant = 127;
+//        self.bottomOfCityLabelConstraint.constant = 112;
         [UIView animateWithDuration:0.4 animations:^{
             [self.contentView layoutIfNeeded];
         }];
@@ -163,11 +163,11 @@
     if (cellIsSelected) {
         CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
         self.topOfCityLabelConstraint.constant -= constantChange;
-        self.bottomOfCityLabelConstraint.constant += constantChange;
+//        self.bottomOfCityLabelConstraint.constant += constantChange;
         [self.contentView layoutIfNeeded];
     } else {
-        self.topOfCityLabelConstraint.constant = 138;
-        self.bottomOfCityLabelConstraint.constant = 112;
+        self.topOfCityLabelConstraint.constant = 127;
+//        self.bottomOfCityLabelConstraint.constant = 112;
         [self.contentView layoutIfNeeded];
     }
 }

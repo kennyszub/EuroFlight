@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="cityNameLabel" destination="7ed-0l-fWL" id="EbR-mp-ob2"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Px4-F4-oHi"/>
+                <outlet property="favoriteButton" destination="S22-Iz-L64" id="Bvy-Oi-e52"/>
+                <outlet property="priceLabel" destination="GpA-Ca-A5G" id="zJI-sN-Z6l"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,15 +20,43 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-GY-5gW">
                     <rect key="frame" x="0.0" y="0.0" width="451" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-0l-fWL">
-                            <rect key="frame" x="204" y="14" width="46" height="21"/>
-                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S22-Iz-L64">
+                            <rect key="frame" x="8" y="15" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="Xr6-SW-rVw"/>
+                                <constraint firstAttribute="width" constant="16" id="ebM-Bc-OeE"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="favorite-off">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="nK1-H3-nVA"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from: $123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpA-Ca-A5G">
+                            <rect key="frame" x="360" y="14" width="83" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Barcelona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-0l-fWL">
+                            <rect key="frame" x="40" y="13" width="312" height="21"/>
+                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="0.35000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="GpA-Ca-A5G" secondAttribute="trailing" constant="8" id="53Y-9H-eD3"/>
+                        <constraint firstItem="GpA-Ca-A5G" firstAttribute="leading" secondItem="7ed-0l-fWL" secondAttribute="trailing" constant="8" id="BKX-vt-lWT"/>
+                        <constraint firstItem="7ed-0l-fWL" firstAttribute="leading" secondItem="S22-Iz-L64" secondAttribute="trailing" constant="16" id="Dqt-aD-zjP"/>
+                        <constraint firstItem="S22-Iz-L64" firstAttribute="leading" secondItem="Fgz-GY-5gW" secondAttribute="leading" constant="8" id="Lbe-9k-eLN"/>
+                        <constraint firstItem="7ed-0l-fWL" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="13" id="QDG-HY-uWW"/>
+                        <constraint firstItem="S22-Iz-L64" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="15" id="hhD-WJ-UhE"/>
+                        <constraint firstItem="GpA-Ca-A5G" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="14" id="kJ9-IV-hPE"/>
+                    </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="axT-BU-fzv" appends="YES" id="iy2-b6-Baj"/>
                     </connections>
@@ -34,13 +64,13 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Fgz-GY-5gW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KCw-IQ-L4V"/>
-                <constraint firstAttribute="trailing" secondItem="Fgz-GY-5gW" secondAttribute="trailing" id="V3p-2G-OU1"/>
-                <constraint firstAttribute="bottom" secondItem="Fgz-GY-5gW" secondAttribute="bottom" id="eg4-eW-nBj"/>
-                <constraint firstItem="Fgz-GY-5gW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h1w-bL-rA7"/>
+                <constraint firstItem="Fgz-GY-5gW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PVM-98-KG2"/>
+                <constraint firstAttribute="bottom" secondItem="Fgz-GY-5gW" secondAttribute="bottom" id="cnr-WS-Ihg"/>
+                <constraint firstItem="Fgz-GY-5gW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kZ4-YO-hu7"/>
+                <constraint firstAttribute="trailing" secondItem="Fgz-GY-5gW" secondAttribute="trailing" id="pfg-3r-AYP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="739.5" y="224"/>
+            <point key="canvasLocation" x="739.5" y="227"/>
         </view>
         <tapGestureRecognizer id="axT-BU-fzv">
             <connections>
@@ -48,4 +78,7 @@
             </connections>
         </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="favorite-off" width="50" height="50"/>
+    </resources>
 </document>
