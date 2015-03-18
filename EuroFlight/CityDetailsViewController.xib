@@ -6,10 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityDetailsViewController">
             <connections>
-                <outlet property="cityView" destination="tJs-Ng-Xrf" id="i7L-Pd-GIY"/>
-                <outlet property="collectionView" destination="IOd-eM-y08" id="M5v-GW-1AL"/>
-                <outlet property="descriptionLabel" destination="oQP-XV-Rch" id="Xwx-Am-Gld"/>
-                <outlet property="favoriteButton" destination="FEP-6s-6o6" id="7RZ-rw-sfP"/>
+                <outlet property="favoriteButton" destination="qHY-HE-VSb" id="1SP-kq-K9N"/>
+                <outlet property="tableView" destination="OBe-Nx-yXn" id="Dbf-4n-qrr"/>
                 <outlet property="ticketButton" destination="yMN-0I-fsd" id="IUh-A5-M3g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,12 +17,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-Ng-Xrf">
-                    <rect key="frame" x="0.0" y="64" width="320" height="200"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="t9v-lZ-4ds"/>
-                    </constraints>
-                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBe-Nx-yXn">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="502"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-0I-fsd">
                     <rect key="frame" x="8" y="510" width="304" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.63896459341049194" blue="0.75245386362075806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,53 +36,30 @@
                         <action selector="onTickets:" destination="-1" eventType="touchUpInside" id="NkK-l2-y5z"/>
                     </connections>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IOd-eM-y08">
-                    <rect key="frame" x="0.0" y="264" width="320" height="120"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHY-HE-VSb">
+                    <rect key="frame" x="278" y="80" width="22" height="22"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="3c4-Jz-LsL"/>
+                        <constraint firstAttribute="height" constant="22" id="8vu-bh-5Si"/>
+                        <constraint firstAttribute="width" constant="22" id="wf9-EK-mjM"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="dzD-KM-eaX">
-                        <size key="itemSize" width="130" height="110"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="3" minY="0.0" maxX="3" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEP-6s-6o6">
-                    <rect key="frame" x="287" y="74" width="22" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="22" id="1bp-g2-uF8"/>
-                        <constraint firstAttribute="width" constant="22" id="aPq-Xf-Tqt"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="favorite-white-off">
+                    <state key="normal" image="favorite-white-off">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="S7A-hL-B1f"/>
+                        <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="l0a-ZI-VSn"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-XV-Rch">
-                    <rect key="frame" x="15" y="424" width="290" height="19"/>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="IOd-eM-y08" firstAttribute="top" secondItem="tJs-Ng-Xrf" secondAttribute="bottom" id="16v-wc-VfE"/>
-                <constraint firstItem="oQP-XV-Rch" firstAttribute="top" secondItem="IOd-eM-y08" secondAttribute="bottom" constant="40" id="3vV-eg-1Qe"/>
-                <constraint firstAttribute="trailing" secondItem="tJs-Ng-Xrf" secondAttribute="trailing" id="7Hj-6t-4WO"/>
-                <constraint firstAttribute="trailing" secondItem="oQP-XV-Rch" secondAttribute="trailing" constant="15" id="Eia-fS-cBu"/>
-                <constraint firstItem="IOd-eM-y08" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LP7-zL-zQ6"/>
-                <constraint firstAttribute="trailing" secondItem="IOd-eM-y08" secondAttribute="trailing" id="Pum-N7-9dF"/>
-                <constraint firstItem="tJs-Ng-Xrf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QE3-hN-TqQ"/>
-                <constraint firstAttribute="trailing" secondItem="FEP-6s-6o6" secondAttribute="trailing" constant="11" id="WOl-te-BDT"/>
+                <constraint firstItem="qHY-HE-VSb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="60p-AR-6cC"/>
+                <constraint firstItem="OBe-Nx-yXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KWz-ZB-KZJ"/>
+                <constraint firstItem="OBe-Nx-yXn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZaZ-4I-OWT"/>
+                <constraint firstAttribute="trailing" secondItem="OBe-Nx-yXn" secondAttribute="trailing" id="fF0-xl-KD3"/>
                 <constraint firstAttribute="bottom" secondItem="yMN-0I-fsd" secondAttribute="bottom" constant="8" id="hdy-CY-lFI"/>
-                <constraint firstItem="tJs-Ng-Xrf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="l6O-ho-bJH"/>
+                <constraint firstItem="yMN-0I-fsd" firstAttribute="top" secondItem="OBe-Nx-yXn" secondAttribute="bottom" constant="8" id="ljJ-XJ-P3O"/>
                 <constraint firstItem="yMN-0I-fsd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="obQ-0z-Vsg"/>
-                <constraint firstItem="FEP-6s-6o6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="sTj-te-ZLL"/>
-                <constraint firstItem="oQP-XV-Rch" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="x3J-pG-Wap"/>
+                <constraint firstAttribute="trailing" secondItem="qHY-HE-VSb" secondAttribute="trailing" constant="20" id="opT-p8-Ujx"/>
                 <constraint firstAttribute="trailing" secondItem="yMN-0I-fsd" secondAttribute="trailing" constant="8" id="xAZ-Tc-MGV"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

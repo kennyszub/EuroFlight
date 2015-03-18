@@ -8,6 +8,9 @@
 
 #import "Event.h"
 #import "KimonoClient.h"
+#import "AirportClient.h"
+#import "PlacesClient.h"
+#import "Airport.h"
 
 @implementation Event
 static NSArray *_events = nil;
@@ -35,12 +38,15 @@ static NSDateFormatter *dateTimeParser;
         self.photoURL = dictionary[@"photoURL"];
         self.dateString = dictionary[@"date"];
         
+        self.locationString = dictionary[@"city"];
         NSArray *components = [dictionary[@"city"] componentsSeparatedByString:@", "];
         self.cityString = components[0];
         if (components.count > 1) {
             self.countryString = components[1];
         }
+        
         [self parseDateString:self.dateString];
+        
     }
     return self;
 }
@@ -66,6 +72,33 @@ static NSDateFormatter *dateTimeParser;
     }
 
     return array;
+}
+
++ (void)connectCitiesAndEvents {
+    for (Event *event in [self allEvents]) {
+        [[PlacesClient sharedInstance] searchWithQuery:event.locationString success:^(AFHTTPRequestOperation *operation, id response) {
+            NSDictionary *location = response[@"results"][0][@"geometry"][@"location"];
+            
+            [[AirportClient sharedInstance] searchAirportByLatitude:[location[@"lat"] doubleValue]longitude:[location[@"lng"] doubleValue] completion:^(NSMutableArray *airports, NSError *error) {
+                if (airports.count > 0) {
+                    Airport *airport = airports[0];
+                    event.airport = airport;
+                    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name like %@", airport.city];
+                    
+                    NSArray *matchingCities = [event.country.cities filteredArrayUsingPredicate:predicate];
+                    if (matchingCities.count > 0) {
+                        City *city = [matchingCities objectAtIndex:0];
+                        event.city = city;
+                        [city.events addObject:event];
+                    }
+                    
+                    NSLog(@", %@, %@, %@", airport.code, airport.city, airport.country);
+                }
+            }];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"failed");
+        }];
+    }
 }
 
 + (void)initDateTimeParser {

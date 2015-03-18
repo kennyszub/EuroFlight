@@ -59,6 +59,7 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
         NSString *truncatedSummary = [regex stringByReplacingMatchesInString:summary options:0 range:NSMakeRange(0, [summary length]) withTemplate:@""];
         self.summary = truncatedSummary;
         self.imageURL = [KimonoClient sharedInstance].cityImages[self.name];
+        self.events = [NSMutableArray array];
     }
     return self;
 }

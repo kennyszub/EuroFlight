@@ -11,6 +11,7 @@
 #import "ResultsViewController.h"
 #import "Event.h"
 
+
 @implementation Country
 
 
@@ -41,7 +42,9 @@
             NSPredicate *cityPredicate = [NSPredicate predicateWithFormat:@"name like %@", event.cityString];
             NSArray *matchingCities = [self.cities filteredArrayUsingPredicate:cityPredicate];
             if (matchingCities.count > 0) {
-                event.city = [matchingCities objectAtIndex:0];
+                City *city = [matchingCities objectAtIndex:0];
+                event.city = city;
+                [city.events addObject:event];
             }
         }
         self.events = matchingEvents;
@@ -67,6 +70,8 @@ static NSArray *_allCountries;
             Country *country = [[Country alloc] initWithDictionary:countryDictionary];
             [countries addObject:country];
         }
+        
+        //[Event connectCitiesAndEvents];
         _allCountries = countries;
     }
     return _allCountries;

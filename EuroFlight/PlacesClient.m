@@ -24,11 +24,13 @@ NSString * const kApiKey = @"AIzaSyD8qHwJn4c7FFdSNDEtu19Cot2UlP3WHnc";
     return instance;
 }
 
-- (AFHTTPRequestOperation *)searchWithCity:(NSString *)city success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    
-    NSDictionary *params = @{@"key" : kApiKey, @"query" : [NSString stringWithFormat:@"attractions in %@", city]};
-    
+- (AFHTTPRequestOperation *)searchWithQuery:(NSString *)query success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+        NSDictionary *params = @{@"key" : kApiKey, @"query" : query};
     return [self GET:@"https://maps.googleapis.com/maps/api/place/textsearch/json" parameters:params success:success failure:failure];
+}
+
+- (AFHTTPRequestOperation *)searchWithCity:(NSString *)city success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    return [self searchWithQuery:[NSString stringWithFormat:@"attractions in %@", city]success:success failure:failure];
 }
 
 + (NSString *)photoURLWithPhotoReference:(NSString *)reference maxWidth:(NSInteger)width {

@@ -15,6 +15,8 @@
 
 - (AFHTTPRequestOperation *)searchWithCity:(NSString *)city success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (AFHTTPRequestOperation *)searchWithQuery:(NSString *)query success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 + (NSString *)photoURLWithPhotoReference:(NSString *)reference maxWidth:(NSInteger)width;
 
 @end
