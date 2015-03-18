@@ -40,7 +40,8 @@
         for (CityCustomMiniView *cityview in self.customViews) {
             cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
         }
-//        [self showCityViews:selected];
+        // apply state with animation
+//        [self showCityViews:YES];
     }
     
 
@@ -120,28 +121,55 @@
     [requestOperation start];
 }
 
-- (void)showCityViews:(BOOL)showViews {
-    CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
-    self.topOfCityLabelConstraint.constant -= constantChange;
-    self.bottomOfCityLabelConstraint.constant += constantChange;
-    [UIView animateWithDuration:0.5 animations:^{
-        [self.contentView layoutIfNeeded];
-    }];
-    for (CityCustomMiniView *cityView in self.customViews) {
-        [UIView transitionWithView:cityView duration:0.4 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-            cityView.hidden = !showViews;
-        } completion:nil];
-    }
-}
-
 - (void)cityView:(CityCustomMiniView *)view didTapCity:(City *)city {
     [self.delegate didTapCity:city];
 }
 
-- (void)setCountryCellSelected:(BOOL)cellIsSelected {
-    _countryCellSelected = cellIsSelected;
-    [self showCityViews:cellIsSelected];
 
+
+- (void)showCityViews:(BOOL)showViews {
+    // apply state with animation
+
+    for (CityCustomMiniView *cityView in self.customViews) {
+        [UIView transitionWithView:cityView duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            cityView.hidden = !showViews;
+        } completion:nil];
+    }
+    if (showViews) {
+        CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
+        self.topOfCityLabelConstraint.constant -= constantChange;
+        self.bottomOfCityLabelConstraint.constant += constantChange;
+        [UIView animateWithDuration:0.4 animations:^{
+            [self.contentView layoutIfNeeded];
+        }];
+    } else {
+        self.topOfCityLabelConstraint.constant = 138;
+        self.bottomOfCityLabelConstraint.constant = 112;
+        [UIView animateWithDuration:0.4 animations:^{
+            [self.contentView layoutIfNeeded];
+        }];
+    }
+}
+
+
+
+- (void)setCountryCellSelected:(BOOL)cellIsSelected {
+    // apply state immediately
+
+    _countryCellSelected = cellIsSelected;
+    for (CityCustomMiniView *cityView in self.customViews) {
+        cityView.hidden = !cellIsSelected;
+    }
+    if (cellIsSelected) {
+        CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
+        self.topOfCityLabelConstraint.constant -= constantChange;
+        self.bottomOfCityLabelConstraint.constant += constantChange;
+        [self.contentView layoutIfNeeded];
+    } else {
+        self.topOfCityLabelConstraint.constant = 138;
+        self.bottomOfCityLabelConstraint.constant = 112;
+        [self.contentView layoutIfNeeded];
+    }
 }
 
 - (IBAction)onEventTap:(id)sender {

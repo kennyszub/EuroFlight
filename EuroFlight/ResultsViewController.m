@@ -104,10 +104,13 @@
     CountryTableViewCell *cell = (CountryTableViewCell *) [self.tableView cellForRowAtIndexPath:indexPath];
     if ([self.indexPathsOfSelectedCells containsObject:indexPath]) {
         [self.indexPathsOfSelectedCells removeObject:indexPath];
-        cell.countryCellSelected = NO;
+        [cell showCityViews:NO];
+//        cell.countryCellSelected = NO;
     } else {
         [self.indexPathsOfSelectedCells addObject:indexPath];
-        cell.countryCellSelected = YES;
+        [cell showCityViews:YES];
+
+//        cell.countryCellSelected = YES;
     }
 }
 

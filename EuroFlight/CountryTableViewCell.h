@@ -24,5 +24,6 @@
 @property (nonatomic, weak) id<CountryTableViewCellDelegate> delegate;
 @property (nonatomic, assign) NSInteger eventIndex;
 @property (nonatomic, assign) BOOL countryCellSelected;
+- (void)showCityViews:(BOOL)showViews; // call this to animate the showing/hiding of the city views
 
 @end
