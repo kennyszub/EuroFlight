@@ -17,7 +17,7 @@
 #import "EventDetailViewController.h"
 #import "PlaceCollectionCell.h"
 
-NSInteger const kHeaderHeight = 100;
+NSInteger const kHeaderHeight = 150;
 
 @interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
@@ -68,6 +68,8 @@ NSInteger const kHeaderHeight = 100;
     self.headerView = headerView;
     self.tableView.contentInset = UIEdgeInsetsMake(kHeaderHeight, 0, 0, 0);
     self.tableView.contentOffset = CGPointMake(0, -kHeaderHeight);
+    
+    [self.view insertSubview:self.favoriteButton aboveSubview:self.tableView];
 
 }
 
