@@ -141,24 +141,30 @@
 - (void)showCityViews:(BOOL)showViews {
     // apply state with animation
 
-    for (CityCustomMiniView *cityView in self.customViews) {
-        [UIView transitionWithView:cityView duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-            cityView.hidden = !showViews;
-        } completion:nil];
-    }
     if (showViews) {
         CGFloat constantChange = self.topOfCityLabelConstraint.constant - 10;
         self.topOfCityLabelConstraint.constant -= constantChange;
-//        self.bottomOfCityLabelConstraint.constant += constantChange;
         [UIView animateWithDuration:0.4 animations:^{
             [self.contentView layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            for (CityCustomMiniView *cityView in self.customViews) {
+                [UIView transitionWithView:cityView duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                    cityView.hidden = !showViews;
+                } completion:nil];
+            }
         }];
     } else {
-        self.topOfCityLabelConstraint.constant = 127;
-//        self.bottomOfCityLabelConstraint.constant = 112;
-        [UIView animateWithDuration:0.4 animations:^{
-            [self.contentView layoutIfNeeded];
-        }];
+        
+        for (CityCustomMiniView *cityView in self.customViews) {
+            [UIView transitionWithView:cityView duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                cityView.hidden = !showViews;
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.4 animations:^{
+                    self.topOfCityLabelConstraint.constant = 127;
+                    [self.contentView layoutIfNeeded];
+                }];
+            }];
+        }
     }
 }
 
