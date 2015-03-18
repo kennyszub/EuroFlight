@@ -132,6 +132,10 @@
     [self.delegate didTapCity:city];
 }
 
+- (void)cityView:(CityCustomMiniView *)view didTapInfo:(City *)city {
+    [self.delegate didTapInfo:city];
+}
+
 
 
 - (void)showCityViews:(BOOL)showViews {

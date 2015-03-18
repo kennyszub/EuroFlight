@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet UIButton *infoButton;
 
 @end
 
@@ -64,10 +65,13 @@
 
 - (void)setFavoriteButtonImageForCity:(City *)city {
     if (city.isFavorited) {
-        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-on"] forState:UIControlStateNormal];
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-on"] forState:UIControlStateNormal];
     } else {
-        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-off"] forState:UIControlStateNormal];
+        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-off"] forState:UIControlStateNormal];
     }
+}
+- (IBAction)onInfoButton:(id)sender {
+    [self.delegate cityView:self didTapInfo:self.city];
 }
 
 /*

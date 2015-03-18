@@ -134,6 +134,12 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)didTapInfo:(City *)city {
+    CityDetailsViewController *vc = [[CityDetailsViewController alloc] init];
+    vc.city = city;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)onFavoritesButton {
     if (!self.isFavoritesOnly) {
         NSPredicate *favoritedPredicate = [NSPredicate predicateWithFormat:@"favoritedCities[SIZE] > 0"];

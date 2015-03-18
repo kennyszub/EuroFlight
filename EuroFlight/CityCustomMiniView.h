@@ -13,6 +13,7 @@
 @protocol CityCustomMiniViewDelegate <NSObject>
 
 - (void)cityView:(CityCustomMiniView *)view didTapCity:(City *)city;
+- (void)cityView:(CityCustomMiniView *)view didTapInfo:(City *)city;
 
 @end
 @interface CityCustomMiniView : UIView

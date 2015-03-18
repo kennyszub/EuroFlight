@@ -16,6 +16,7 @@
 
 - (void)didTapEvent:(CountryTableViewCell *)cell;
 - (void)didTapCity:(City *)city;
+- (void)didTapInfo:(City *)city;
 @end
 
 @interface CountryTableViewCell : UITableViewCell

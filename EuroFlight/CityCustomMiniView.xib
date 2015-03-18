@@ -9,6 +9,7 @@
                 <outlet property="cityNameLabel" destination="7ed-0l-fWL" id="EbR-mp-ob2"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Px4-F4-oHi"/>
                 <outlet property="favoriteButton" destination="S22-Iz-L64" id="Bvy-Oi-e52"/>
+                <outlet property="infoButton" destination="qxO-wr-uWw" id="7Xh-yl-K67"/>
                 <outlet property="priceLabel" destination="GpA-Ca-A5G" id="zJI-sN-Z6l"/>
             </connections>
         </placeholder>
@@ -40,22 +41,38 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Barcelona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-0l-fWL">
-                            <rect key="frame" x="40" y="13" width="312" height="21"/>
+                            <rect key="frame" x="40" y="13" width="85" height="21"/>
                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-wr-uWw">
+                            <rect key="frame" x="139" y="14" width="22" height="22"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onInfoButton:" destination="-1" eventType="touchUpInside" id="Ex8-qI-Qv1"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="0.35000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="GpA-Ca-A5G" secondAttribute="trailing" constant="8" id="53Y-9H-eD3"/>
-                        <constraint firstItem="GpA-Ca-A5G" firstAttribute="leading" secondItem="7ed-0l-fWL" secondAttribute="trailing" constant="8" id="BKX-vt-lWT"/>
                         <constraint firstItem="7ed-0l-fWL" firstAttribute="leading" secondItem="S22-Iz-L64" secondAttribute="trailing" constant="16" id="Dqt-aD-zjP"/>
                         <constraint firstItem="S22-Iz-L64" firstAttribute="leading" secondItem="Fgz-GY-5gW" secondAttribute="leading" constant="8" id="Lbe-9k-eLN"/>
                         <constraint firstItem="7ed-0l-fWL" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="13" id="QDG-HY-uWW"/>
+                        <constraint firstItem="GpA-Ca-A5G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qxO-wr-uWw" secondAttribute="trailing" constant="8" id="gIH-G0-njD"/>
                         <constraint firstItem="S22-Iz-L64" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="15" id="hhD-WJ-UhE"/>
                         <constraint firstItem="GpA-Ca-A5G" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="14" id="kJ9-IV-hPE"/>
+                        <constraint firstItem="qxO-wr-uWw" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="14" id="qdR-e4-rFg"/>
+                        <constraint firstItem="qxO-wr-uWw" firstAttribute="leading" secondItem="7ed-0l-fWL" secondAttribute="trailing" constant="14" id="vr8-IA-ksR"/>
                     </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="axT-BU-fzv" appends="YES" id="iy2-b6-Baj"/>
