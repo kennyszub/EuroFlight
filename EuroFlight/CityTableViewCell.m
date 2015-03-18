@@ -21,6 +21,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    // TODO DELETE THIS CLASS
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -38,7 +38,8 @@
 
     if (selected) {
         for (CityCustomMiniView *cityview in self.customViews) {
-            cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
+//            cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
+            cityview.backgroundColor = [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
         }
         // apply state with animation
 //        [self showCityViews:YES];
@@ -52,7 +53,9 @@
     [super setHighlighted:highlighted animated:animated];
     if (highlighted) {
         for (CityCustomMiniView *cityview in self.customViews) {
-            cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
+//            cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
+            cityview.backgroundColor = [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
+
         }
     }
 }
@@ -93,13 +96,17 @@
 - (void)createCityViews {
     self.customViews = [[NSMutableArray alloc] init];
     
-    int countryRowHeight = 300;
+//    int countryRowHeight = 300;
     int cityRowHeight = 44;
-    for (int i = 1; i <= self.country.cities.count; i++) {
-        int y = countryRowHeight - (cityRowHeight * i);
-        CityCustomMiniView *cityView = [[CityCustomMiniView alloc] initWithFrame:CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, 44)];
-        cityView.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
-        cityView.city = self.country.cities[i - 1];
+    int initialPos = 60;
+    for (int i = 0; i < self.country.cities.count; i++) {
+//        int y = countryRowHeight - (cityRowHeight * i);
+        int y = initialPos + (cityRowHeight * i);
+        CityCustomMiniView *cityView = [[CityCustomMiniView alloc] initWithFrame:CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, cityRowHeight)];
+//        cityView.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
+        cityView.backgroundColor = [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
+
+        cityView.city = self.country.cities[i];
         cityView.delegate = self;
         [self.contentView addSubview:cityView];
         [self.customViews addObject:cityView];
@@ -136,7 +143,7 @@
         } completion:nil];
     }
     if (showViews) {
-        CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
+        CGFloat constantChange = self.topOfCityLabelConstraint.constant - 10;
         self.topOfCityLabelConstraint.constant -= constantChange;
 //        self.bottomOfCityLabelConstraint.constant += constantChange;
         [UIView animateWithDuration:0.4 animations:^{
@@ -161,7 +168,7 @@
         cityView.hidden = !cellIsSelected;
     }
     if (cellIsSelected) {
-        CGFloat constantChange = self.topOfCityLabelConstraint.constant - 5;
+        CGFloat constantChange = self.topOfCityLabelConstraint.constant - 10;
         self.topOfCityLabelConstraint.constant -= constantChange;
 //        self.bottomOfCityLabelConstraint.constant += constantChange;
         [self.contentView layoutIfNeeded];
