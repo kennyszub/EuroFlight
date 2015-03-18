@@ -36,6 +36,8 @@
 		C43028231AB51F0400DA2B18 /* OneWayRoundTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028211AB51F0400DA2B18 /* OneWayRoundTripCell.m */; };
 		C43028241AB51F0400DA2B18 /* OneWayRoundTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43028221AB51F0400DA2B18 /* OneWayRoundTripCell.xib */; };
 		C43028281AB53FBC00DA2B18 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028271AB53FBC00DA2B18 /* UIImage+Util.m */; };
+		C43028301AB7F89900DA2B18 /* CityCustomMiniView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C430282F1AB7F89900DA2B18 /* CityCustomMiniView.xib */; };
+		C43028331AB7F91200DA2B18 /* CityCustomMiniView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028321AB7F91200DA2B18 /* CityCustomMiniView.m */; };
 		C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D831AAB9B830023FDC3 /* LaunchScreen.xib */; };
 		C4FA0D911AAB9B830023FDC3 /* EuroFlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D901AAB9B830023FDC3 /* EuroFlightTests.m */; };
 		C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA41AABA5B50023FDC3 /* Flight.m */; };
@@ -169,6 +171,9 @@
 		C43028221AB51F0400DA2B18 /* OneWayRoundTripCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayRoundTripCell.xib; sourceTree = "<group>"; };
 		C43028261AB53FBC00DA2B18 /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
 		C43028271AB53FBC00DA2B18 /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
+		C430282F1AB7F89900DA2B18 /* CityCustomMiniView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityCustomMiniView.xib; sourceTree = "<group>"; };
+		C43028311AB7F91200DA2B18 /* CityCustomMiniView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCustomMiniView.h; sourceTree = "<group>"; };
+		C43028321AB7F91200DA2B18 /* CityCustomMiniView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCustomMiniView.m; sourceTree = "<group>"; };
 		C4FA0D711AAB9B830023FDC3 /* EuroFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuroFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FA0D751AAB9B830023FDC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FA0D761AAB9B830023FDC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -356,6 +361,22 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		C43028291AB67D2300DA2B18 /* ResultViewController Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C4FA0DC61AABDFC60023FDC3 /* CountryTableViewCell.h */,
+				C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */,
+				C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */,
+				C4FA0DCB1AABDFDA0023FDC3 /* CityTableViewCell.h */,
+				C4FA0DCC1AABDFDA0023FDC3 /* CityTableViewCell.m */,
+				C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */,
+				C43028311AB7F91200DA2B18 /* CityCustomMiniView.h */,
+				C43028321AB7F91200DA2B18 /* CityCustomMiniView.m */,
+				C430282F1AB7F89900DA2B18 /* CityCustomMiniView.xib */,
+			);
+			name = "ResultViewController Cells";
+			sourceTree = "<group>";
+		};
 		C4FA0D681AAB9B820023FDC3 = {
 			isa = PBXGroup;
 			children = (
@@ -453,12 +474,7 @@
 				113E2AA91AB923C400DAAFA3 /* DescriptionCell.m */,
 				113E2AAA1AB923C400DAAFA3 /* DescriptionCell.xib */,
 				C430280B1AB507CE00DA2B18 /* HomeViewController Cells */,
-				C4FA0DC61AABDFC60023FDC3 /* CountryTableViewCell.h */,
-				C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */,
-				C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */,
-				C4FA0DCB1AABDFDA0023FDC3 /* CityTableViewCell.h */,
-				C4FA0DCC1AABDFDA0023FDC3 /* CityTableViewCell.m */,
-				C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */,
+				C43028291AB67D2300DA2B18 /* ResultViewController Cells */,
 				EBA521191AABF4B80081E88A /* FlightResultCell.h */,
 				EBA5211A1AABF4B80081E88A /* FlightResultCell.m */,
 				EBA5211B1AABF4B80081E88A /* FlightResultCell.xib */,
@@ -735,6 +751,7 @@
 				EBA521181AABF3290081E88A /* FlightResultsViewController.xib in Resources */,
 				EB72B24B1AB01671004503D1 /* FCO.txt in Resources */,
 				EB72B2661AB3F327004503D1 /* OneWayFlightResultView.xib in Resources */,
+				C43028301AB7F89900DA2B18 /* CityCustomMiniView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +836,7 @@
 				11873B1C1AAD7D990050D5DA /* EventDetailViewController.m in Sources */,
 				C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */,
 				113E2AAB1AB923C400DAAFA3 /* DescriptionCell.m in Sources */,
+				C43028331AB7F91200DA2B18 /* CityCustomMiniView.m in Sources */,
 				C43028281AB53FBC00DA2B18 /* UIImage+Util.m in Sources */,
 				EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */,
 				EBA521171AABF3290081E88A /* FlightResultsViewController.m in Sources */,

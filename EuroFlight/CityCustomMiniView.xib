@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityCustomMiniView">
+            <connections>
+                <outlet property="cityNameLabel" destination="7ed-0l-fWL" id="EbR-mp-ob2"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Px4-F4-oHi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="451" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-GY-5gW">
+                    <rect key="frame" x="0.0" y="0.0" width="451" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-0l-fWL">
+                            <rect key="frame" x="204" y="14" width="46" height="21"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="0.35000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="axT-BU-fzv" appends="YES" id="iy2-b6-Baj"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Fgz-GY-5gW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KCw-IQ-L4V"/>
+                <constraint firstAttribute="trailing" secondItem="Fgz-GY-5gW" secondAttribute="trailing" id="V3p-2G-OU1"/>
+                <constraint firstAttribute="bottom" secondItem="Fgz-GY-5gW" secondAttribute="bottom" id="eg4-eW-nBj"/>
+                <constraint firstItem="Fgz-GY-5gW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h1w-bL-rA7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="739.5" y="224"/>
+        </view>
+        <tapGestureRecognizer id="axT-BU-fzv">
+            <connections>
+                <action selector="didTapCityView:" destination="-1" id="m9h-sd-KDd"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

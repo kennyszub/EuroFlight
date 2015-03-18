@@ -21,16 +21,19 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - KNSemiModalViewController (0.3)
+  - NYXImagesKit (2.3)
   - THCalendarDatePicker (1.0.0):
     - KNSemiModalViewController (~> 0.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - NYXImagesKit
   - THCalendarDatePicker (~> 1.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   KNSemiModalViewController: 6fb1e2f6a4d84238b524cb705e91118b0fa6bbc9
+  NYXImagesKit: 1c9f228ae78fab475d267b3b3a1308e0fba11731
   THCalendarDatePicker: c482d4f630262bae6fe88113d0298f54bad1fd9d
 
 COCOAPODS: 0.35.0

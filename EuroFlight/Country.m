@@ -137,8 +137,9 @@ static NSArray *_allCountries;
           @"cities" :
               @[@{@"city" : @"Stockholm",
                   @"airportCodes" : @[@"ARN"]},
-                @{@"city" : @"Gothenburg",
-                  @"airportCodes" : @[@"GOT"]}]
+// Commented because the Gothenburg image sucks               @{@"city" : @"Gothenburg", 
+//                  @"airportCodes" : @[@"GOT"]}
+                ]
           },
       @{
           @"countryName" : @"Germany",

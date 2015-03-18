@@ -14,6 +14,8 @@
 #import "CityDetailsViewController.h"
 #import "Event.h"
 #import "EventDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
+#import "FlightResultsViewController.h"
 
 @interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate, CountryTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,9 +23,8 @@
 @property (strong, nonatomic) NSArray *allCountries;
 // keeps track of the countries we're currently displaying (i.e. all or favorites-only)
 @property (strong, nonatomic) NSArray *countries;
-@property (nonatomic, assign) NSInteger currentExpandedIndex;
-@property (nonatomic, strong) NSMutableSet *expandedSections;
 @property (nonatomic, assign) BOOL isFavoritesOnly;
+@property (nonatomic, strong) NSMutableSet *indexPathsOfSelectedCells;
 
 @end
 
@@ -37,9 +38,11 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"CountryTableViewCell" bundle:nil] forCellReuseIdentifier:@"CountryTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"CityTableViewCell" bundle:nil] forCellReuseIdentifier:@"CityTableViewCell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     self.title = @"Flight Results";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.indexPathsOfSelectedCells = [[NSMutableSet alloc] init];
 
     // set up favorites button
     UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
@@ -63,8 +66,6 @@
         self.countries = [Country initCountries];
         self.allCountries = self.countries;
         [self sortCountriesList];
-        self.currentExpandedIndex = -1;
-        self.expandedSections = [[NSMutableSet alloc] init];
     }
     return self;
 }
@@ -83,79 +84,50 @@
 #pragma mark Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
-    if (sectionExpanded && indexPath.row > 0) { // cell is child
-        CityTableViewCell *cityCell = [self.tableView dequeueReusableCellWithIdentifier:@"CityTableViewCell"];
-        cityCell.city = [((Country *) self.countries[indexPath.section]) citiesWithFavorite:self.isFavoritesOnly][indexPath.row - 1];
-        return cityCell;
-    } else {
-        CountryTableViewCell *countryCell =  [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell"];
-        countryCell.country = (Country *) self.countries[indexPath.section];
-        countryCell.delegate = self;
-        return countryCell;
-    }
-    
+    CountryTableViewCell *countryCell =  [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell" forIndexPath:indexPath];
+    countryCell.country = (Country *) self.countries[indexPath.row];
+    countryCell.delegate = self;
+    countryCell.countryCellSelected = [self.indexPathsOfSelectedCells containsObject:indexPath];
+    return countryCell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    BOOL sectionExpanded = [self.expandedSections containsObject:@(section)];
-    if (sectionExpanded) {
-        return [((Country *) self.countries[section]) citiesWithFavorite:self.isFavoritesOnly].count + 1;
-    } else {
-        return 1;
-    }
+    return self.countries.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.countries.count;
+    return 1;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    BOOL sectionExpanded = [self.expandedSections containsObject:@(indexPath.section)];
-    if (sectionExpanded && indexPath.row > 0) { // cell is child
-        CityDetailsViewController *vc = [[CityDetailsViewController alloc] init];
-        vc.city = [((Country *)self.countries[indexPath.section]) citiesWithFavorite:self.isFavoritesOnly][indexPath.row - 1];
-        [self.navigationController pushViewController:vc animated:YES];
-        return;
-    }
-    
-    [self.tableView beginUpdates];
-    if (sectionExpanded) {
-        [self.expandedSections removeObject:@(indexPath.section)];
-        [self collapseSubItemsInSection:indexPath.section];
+    CountryTableViewCell *cell = (CountryTableViewCell *) [self.tableView cellForRowAtIndexPath:indexPath];
+    if ([self.indexPathsOfSelectedCells containsObject:indexPath]) {
+        [self.indexPathsOfSelectedCells removeObject:indexPath];
+        cell.countryCellSelected = NO;
     } else {
-        [self.expandedSections addObject:@(indexPath.section)];
-        [self expandSubItemsInSection:indexPath.section];
+        [self.indexPathsOfSelectedCells addObject:indexPath];
+        cell.countryCellSelected = YES;
     }
-    [self.tableView endUpdates];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
+    return 300;
 }
 
-- (void)collapseSubItemsInSection:(NSInteger)section {
-    NSMutableArray *indexPaths = [NSMutableArray new];
-    for (NSInteger i = 1; i <= [((Country *) self.countries[section]) citiesWithFavorite:self.isFavoritesOnly].count; i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
-    }
-    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-}
-
-- (void)expandSubItemsInSection:(NSInteger)section {
-    NSMutableArray *indexPaths = [NSMutableArray new];
-    NSArray *currentSubItems = [((Country *) self.countries[section]) citiesWithFavorite:self.isFavoritesOnly];
-    NSInteger insertPos = 1;
-    for (int i = 0; i < currentSubItems.count; i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:insertPos++ inSection:section]];
-    }
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 300;
 }
 
 - (void)didTapEvent:(CountryTableViewCell *)cell {
     EventDetailViewController *vc = [[EventDetailViewController alloc] init];
     vc.event = [cell.country.events objectAtIndex:cell.eventIndex];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)didTapCity:(City *)city {
+    FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
+    vc.city = city;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -168,7 +140,6 @@
     }
 
     [self sortCountriesList];
-    [self.expandedSections removeAllObjects];
     self.isFavoritesOnly = !self.isFavoritesOnly;
     [self.tableView reloadData];
 }

@@ -29,6 +29,7 @@
     // Configure the view for the selected state
 }
 
+
 - (void)setCity:(City *)city {
     _city = city;
     self.cityNameLabel.text = city.name;
