@@ -65,6 +65,25 @@
 		EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */; };
 		EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */; };
 		EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */; };
+		EB4469011AB9658200DB116B /* KLU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469001AB9658200DB116B /* KLU.txt */; };
+		EB4469031AB9665700DB116B /* LNZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469021AB9665700DB116B /* LNZ.txt */; };
+		EB4469051AB966A100DB116B /* KAJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469041AB966A100DB116B /* KAJ.txt */; };
+		EB4469071AB9671100DB116B /* RLG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469061AB9671100DB116B /* RLG.txt */; };
+		EB4469091AB9673600DB116B /* LEJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469081AB9673600DB116B /* LEJ.txt */; };
+		EB44690B1AB9676E00DB116B /* AXD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44690A1AB9676E00DB116B /* AXD.txt */; };
+		EB44690D1AB9679400DB116B /* JKH.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44690C1AB9679400DB116B /* JKH.txt */; };
+		EB44690F1AB967F700DB116B /* PSA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44690E1AB967F700DB116B /* PSA.txt */; };
+		EB4469111AB9682200DB116B /* TRN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469101AB9682200DB116B /* TRN.txt */; };
+		EB4469131AB96DDC00DB116B /* GDN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469121AB96DDC00DB116B /* GDN.txt */; };
+		EB4469151AB9704200DB116B /* OPO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469141AB9704200DB116B /* OPO.txt */; };
+		EB4469191AB9707900DB116B /* LED.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469181AB9707900DB116B /* LED.txt */; };
+		EB44691B1AB9709E00DB116B /* BEG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44691A1AB9709E00DB116B /* BEG.txt */; };
+		EB44691D1AB9710D00DB116B /* BJZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44691C1AB9710D00DB116B /* BJZ.txt */; };
+		EB44691F1AB9713000DB116B /* PNA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44691E1AB9713000DB116B /* PNA.txt */; };
+		EB4469211AB9714F00DB116B /* VLC.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469201AB9714F00DB116B /* VLC.txt */; };
+		EB4469231AB9717100DB116B /* VGO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469221AB9717100DB116B /* VGO.txt */; };
+		EB4469251AB9719E00DB116B /* GVA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469241AB9719E00DB116B /* GVA.txt */; };
+		EB4469271AB971C000DB116B /* KYA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469261AB971C000DB116B /* KYA.txt */; };
 		EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */; };
 		EB72B22B1AAEDE47004503D1 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */; };
 		EB72B22D1AB00E18004503D1 /* AMS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B22C1AB00E18004503D1 /* AMS.txt */; };
@@ -227,6 +246,25 @@
 		EB08A40B1AAD349C001C2AA3 /* NameMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameMappingHelper.h; sourceTree = "<group>"; };
 		EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameMappingHelper.m; sourceTree = "<group>"; };
 		EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayFlightDetailView.xib; sourceTree = "<group>"; };
+		EB4469001AB9658200DB116B /* KLU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KLU.txt; sourceTree = "<group>"; };
+		EB4469021AB9665700DB116B /* LNZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LNZ.txt; sourceTree = "<group>"; };
+		EB4469041AB966A100DB116B /* KAJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KAJ.txt; sourceTree = "<group>"; };
+		EB4469061AB9671100DB116B /* RLG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RLG.txt; sourceTree = "<group>"; };
+		EB4469081AB9673600DB116B /* LEJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LEJ.txt; sourceTree = "<group>"; };
+		EB44690A1AB9676E00DB116B /* AXD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AXD.txt; sourceTree = "<group>"; };
+		EB44690C1AB9679400DB116B /* JKH.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JKH.txt; sourceTree = "<group>"; };
+		EB44690E1AB967F700DB116B /* PSA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PSA.txt; sourceTree = "<group>"; };
+		EB4469101AB9682200DB116B /* TRN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TRN.txt; sourceTree = "<group>"; };
+		EB4469121AB96DDC00DB116B /* GDN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GDN.txt; sourceTree = "<group>"; };
+		EB4469141AB9704200DB116B /* OPO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OPO.txt; sourceTree = "<group>"; };
+		EB4469181AB9707900DB116B /* LED.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LED.txt; sourceTree = "<group>"; };
+		EB44691A1AB9709E00DB116B /* BEG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BEG.txt; sourceTree = "<group>"; };
+		EB44691C1AB9710D00DB116B /* BJZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BJZ.txt; sourceTree = "<group>"; };
+		EB44691E1AB9713000DB116B /* PNA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PNA.txt; sourceTree = "<group>"; };
+		EB4469201AB9714F00DB116B /* VLC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VLC.txt; sourceTree = "<group>"; };
+		EB4469221AB9717100DB116B /* VGO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VGO.txt; sourceTree = "<group>"; };
+		EB4469241AB9719E00DB116B /* GVA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GVA.txt; sourceTree = "<group>"; };
+		EB4469261AB971C000DB116B /* KYA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KYA.txt; sourceTree = "<group>"; };
 		EB72B2271AAEDE47004503D1 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
@@ -627,6 +665,25 @@
 				EB72B24E1AB017A3004503D1 /* BRU.txt */,
 				EB72B2501AB0187B004503D1 /* IST.txt */,
 				EB72B2521AB018CB004503D1 /* ARN.txt */,
+				EB4469001AB9658200DB116B /* KLU.txt */,
+				EB4469021AB9665700DB116B /* LNZ.txt */,
+				EB4469041AB966A100DB116B /* KAJ.txt */,
+				EB4469061AB9671100DB116B /* RLG.txt */,
+				EB4469081AB9673600DB116B /* LEJ.txt */,
+				EB44690A1AB9676E00DB116B /* AXD.txt */,
+				EB44690C1AB9679400DB116B /* JKH.txt */,
+				EB44690E1AB967F700DB116B /* PSA.txt */,
+				EB4469101AB9682200DB116B /* TRN.txt */,
+				EB4469121AB96DDC00DB116B /* GDN.txt */,
+				EB4469141AB9704200DB116B /* OPO.txt */,
+				EB4469181AB9707900DB116B /* LED.txt */,
+				EB44691A1AB9709E00DB116B /* BEG.txt */,
+				EB44691C1AB9710D00DB116B /* BJZ.txt */,
+				EB44691E1AB9713000DB116B /* PNA.txt */,
+				EB4469201AB9714F00DB116B /* VLC.txt */,
+				EB4469221AB9717100DB116B /* VGO.txt */,
+				EB4469241AB9719E00DB116B /* GVA.txt */,
+				EB4469261AB971C000DB116B /* KYA.txt */,
 			);
 			name = "Sample Flight Data";
 			sourceTree = "<group>";
@@ -724,12 +781,21 @@
 				EB72B2491AB0161A004503D1 /* VCE.txt in Resources */,
 				113E2AB61AB925FA00DAAFA3 /* EventCell.xib in Resources */,
 				EB72B2311AB01009004503D1 /* DUB.txt in Resources */,
+				EB4469111AB9682200DB116B /* TRN.txt in Resources */,
+				EB4469131AB96DDC00DB116B /* GDN.txt in Resources */,
+				EB4469051AB966A100DB116B /* KAJ.txt in Resources */,
 				EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */,
 				EB72B24F1AB017A3004503D1 /* BRU.txt in Resources */,
+				EB44690B1AB9676E00DB116B /* AXD.txt in Resources */,
+				EB44691D1AB9710D00DB116B /* BJZ.txt in Resources */,
+				EB4469151AB9704200DB116B /* OPO.txt in Resources */,
 				C43028151AB50B9F00DA2B18 /* DateSelectionCell.xib in Resources */,
 				EB72B2431AB01537004503D1 /* ZRH.txt in Resources */,
+				EB4469191AB9707900DB116B /* LED.txt in Resources */,
+				EB4469011AB9658200DB116B /* KLU.txt in Resources */,
 				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
 				EB735C251AB9412B00386362 /* FavoritesResultCell.xib in Resources */,
+				EB4469031AB9665700DB116B /* LNZ.txt in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
 				EBA7FA9F1AB6539600760622 /* LayoverDetailCell.xib in Resources */,
 				EB72B23B1AB01414004503D1 /* MUC.txt in Resources */,
@@ -742,25 +808,35 @@
 				EB72B22F1AB00F9D004503D1 /* BUD.txt in Resources */,
 				EB72B2351AB01089004503D1 /* FLR.txt in Resources */,
 				C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */,
+				EB4469251AB9719E00DB116B /* GVA.txt in Resources */,
+				EB44691B1AB9709E00DB116B /* BEG.txt in Resources */,
 				C4FA0DE41AAEC2CD0023FDC3 /* AirportSearchResultsControllerViewController.xib in Resources */,
 				C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */,
 				113E2AAC1AB923C400DAAFA3 /* DescriptionCell.xib in Resources */,
 				C43028101AB507FA00DA2B18 /* DepartureCityCell.xib in Resources */,
 				EB72B2471AB015C2004503D1 /* FRA.txt in Resources */,
 				EBA7FAA11AB6639900760622 /* FlightDetailSectionHeaderView.xib in Resources */,
+				EB44691F1AB9713000DB116B /* PNA.txt in Resources */,
+				EB4469271AB971C000DB116B /* KYA.txt in Resources */,
 				EBA5210C1AABE1950081E88A /* BCN.txt in Resources */,
+				EB4469071AB9671100DB116B /* RLG.txt in Resources */,
 				EB72B2391AB01380004503D1 /* IBZ.txt in Resources */,
 				EBA5211D1AABF4B80081E88A /* FlightResultCell.xib in Resources */,
 				EB72B22D1AB00E18004503D1 /* AMS.txt in Resources */,
+				EB4469091AB9673600DB116B /* LEJ.txt in Resources */,
+				EB44690F1AB967F700DB116B /* PSA.txt in Resources */,
 				EBA521131AABE3330081E88A /* NCE.txt in Resources */,
 				EB72B22B1AAEDE47004503D1 /* FavoritesViewController.xib in Resources */,
 				EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */,
 				EB72B2451AB01593004503D1 /* VIE.txt in Resources */,
 				EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */,
+				EB4469211AB9714F00DB116B /* VLC.txt in Resources */,
 				11873B1D1AAD7D990050D5DA /* EventDetailViewController.xib in Resources */,
 				EB72B2531AB018CB004503D1 /* ARN.txt in Resources */,
 				117F87C41AAFF40900C1E24C /* PlaceCollectionViewCell.xib in Resources */,
+				EB44690D1AB9679400DB116B /* JKH.txt in Resources */,
 				EB72B25D1AB04468004503D1 /* BuyFlightViewController.xib in Resources */,
+				EB4469231AB9717100DB116B /* VGO.txt in Resources */,
 				EBA521111AABE2FE0081E88A /* ORY.txt in Resources */,
 				EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */,
 				EBA7FA9A1AB6538000760622 /* SegmentDetailCell.xib in Resources */,
