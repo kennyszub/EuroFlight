@@ -44,6 +44,7 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"FlightResultCell" bundle:nil] forCellReuseIdentifier:kFlightResultCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"FlightResultGroupCell" bundle:nil] forCellReuseIdentifier:kFlightResultGroupCellIdentifier];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
