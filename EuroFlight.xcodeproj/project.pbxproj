@@ -475,34 +475,13 @@
 				113E2AAA1AB923C400DAAFA3 /* DescriptionCell.xib */,
 				C430280B1AB507CE00DA2B18 /* HomeViewController Cells */,
 				C43028291AB67D2300DA2B18 /* ResultViewController Cells */,
-				EBA521191AABF4B80081E88A /* FlightResultCell.h */,
-				EBA5211A1AABF4B80081E88A /* FlightResultCell.m */,
-				EBA5211B1AABF4B80081E88A /* FlightResultCell.xib */,
-				EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */,
-				EB08A4041AAC3948001C2AA3 /* OneWayFlightDetailView.h */,
-				EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */,
+				EB19EE121AB97C91008258C1 /* FlightResultsViewController Cells */,
+				EB19EE131AB97CBB008258C1 /* FlightDetailViewController Cells */,
 				117F87C11AAFF40900C1E24C /* PlaceCollectionViewCell.m */,
 				117F87C21AAFF40900C1E24C /* PlaceCollectionViewCell.xib */,
 				C4FA0DE51AAEC5B20023FDC3 /* AirportTableViewCell.h */,
 				C4FA0DE61AAEC5B20023FDC3 /* AirportTableViewCell.m */,
 				C4FA0DE71AAEC5B20023FDC3 /* AirportTableViewCell.xib */,
-				EB72B2651AB3F327004503D1 /* OneWayFlightResultView.xib */,
-				EB72B2671AB3F655004503D1 /* OneWayFlightResultView.h */,
-				EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */,
-				EBA7FA881AB56CA100760622 /* FlightResultGroupCell.h */,
-				EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */,
-				EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */,
-				EBA7FA961AB6538000760622 /* SegmentDetailCell.h */,
-				EBA7FA971AB6538000760622 /* SegmentDetailCell.m */,
-				EBA7FA981AB6538000760622 /* SegmentDetailCell.xib */,
-				EBA7FA9B1AB6539600760622 /* LayoverDetailCell.h */,
-				EBA7FA9C1AB6539600760622 /* LayoverDetailCell.m */,
-				EBA7FA9D1AB6539600760622 /* LayoverDetailCell.xib */,
-				EBA7FAA01AB6639900760622 /* FlightDetailSectionHeaderView.xib */,
-				EBA7FAA21AB6656100760622 /* FlightDetailSectionHeaderView.h */,
-				EBA7FAA31AB6656100760622 /* FlightDetailSectionHeaderView.m */,
-				EB735C181AB819EE00386362 /* TriangleView.h */,
-				EB735C191AB819EE00386362 /* TriangleView.m */,
 				EB735C211AB9412B00386362 /* FavoritesResultCell.h */,
 				EB735C221AB9412B00386362 /* FavoritesResultCell.m */,
 				EB735C231AB9412B00386362 /* FavoritesResultCell.xib */,
@@ -581,6 +560,43 @@
 				C43028091AB4DED200DA2B18 /* LocationManager.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		EB19EE121AB97C91008258C1 /* FlightResultsViewController Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EBA521191AABF4B80081E88A /* FlightResultCell.h */,
+				EBA5211A1AABF4B80081E88A /* FlightResultCell.m */,
+				EBA5211B1AABF4B80081E88A /* FlightResultCell.xib */,
+				EB72B2651AB3F327004503D1 /* OneWayFlightResultView.xib */,
+				EB72B2671AB3F655004503D1 /* OneWayFlightResultView.h */,
+				EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */,
+				EBA7FA881AB56CA100760622 /* FlightResultGroupCell.h */,
+				EBA7FA891AB56CA100760622 /* FlightResultGroupCell.m */,
+				EBA7FA8A1AB56CA100760622 /* FlightResultGroupCell.xib */,
+			);
+			name = "FlightResultsViewController Cells";
+			sourceTree = "<group>";
+		};
+		EB19EE131AB97CBB008258C1 /* FlightDetailViewController Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */,
+				EB08A4041AAC3948001C2AA3 /* OneWayFlightDetailView.h */,
+				EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */,
+				EBA7FA961AB6538000760622 /* SegmentDetailCell.h */,
+				EBA7FA971AB6538000760622 /* SegmentDetailCell.m */,
+				EBA7FA981AB6538000760622 /* SegmentDetailCell.xib */,
+				EBA7FA9B1AB6539600760622 /* LayoverDetailCell.h */,
+				EBA7FA9C1AB6539600760622 /* LayoverDetailCell.m */,
+				EBA7FA9D1AB6539600760622 /* LayoverDetailCell.xib */,
+				EBA7FAA01AB6639900760622 /* FlightDetailSectionHeaderView.xib */,
+				EBA7FAA21AB6656100760622 /* FlightDetailSectionHeaderView.h */,
+				EBA7FAA31AB6656100760622 /* FlightDetailSectionHeaderView.m */,
+				EB735C181AB819EE00386362 /* TriangleView.h */,
+				EB735C191AB819EE00386362 /* TriangleView.m */,
+			);
+			name = "FlightDetailViewController Cells";
 			sourceTree = "<group>";
 		};
 		EBA5210D1AABE2800081E88A /* Sample Flight Data */ = {
