@@ -8,11 +8,11 @@
 
 #import "FavoritesViewController.h"
 #import "City.h"
-#import "CityTableViewCell.h"
 #import "FavoritesManager.h"
 #import "CityDetailsViewController.h"
+#import "FavoritesResultCell.h"
 
-NSString * const kCityCellIdentifier = @"CityCell";
+NSString * const kFavoritesResultCellIdentifier = @"FavoritesResultCell";
 
 @interface FavoritesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -31,10 +31,11 @@ NSString * const kCityCellIdentifier = @"CityCell";
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView registerNib:[UINib nibWithNibName:@"CityTableViewCell" bundle:nil] forCellReuseIdentifier:kCityCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"FavoritesResultCell" bundle:nil] forCellReuseIdentifier:kFavoritesResultCellIdentifier];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     self.cities = [[FavoritesManager sharedInstance] favoritedCities];
+    [self sortCitiesList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +50,7 @@ NSString * const kCityCellIdentifier = @"CityCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCityCellIdentifier];
+    FavoritesResultCell *cell = [tableView dequeueReusableCellWithIdentifier:kFavoritesResultCellIdentifier];
 
     cell.city = self.cities[indexPath.row];
 
@@ -64,6 +65,20 @@ NSString * const kCityCellIdentifier = @"CityCell";
     CityDetailsViewController *cdvc = [[CityDetailsViewController alloc] init];
     cdvc.city = self.cities[indexPath.row];
     [self.navigationController pushViewController:cdvc animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 300;
+}
+
+#pragma mark - Private methods
+
+- (void)sortCitiesList {
+    self.cities = [self.cities sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        float price1 = ((City *) obj1).lowestCost;
+        float price2 = ((City *) obj2).lowestCost;
+        return [@(price1) compare:@(price2)];
+    }];
 }
 
 @end

@@ -86,6 +86,8 @@
 		EB72B2661AB3F327004503D1 /* OneWayFlightResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2651AB3F327004503D1 /* OneWayFlightResultView.xib */; };
 		EB72B2691AB3F655004503D1 /* OneWayFlightResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */; };
 		EB735C1A1AB819EE00386362 /* TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB735C191AB819EE00386362 /* TriangleView.m */; };
+		EB735C241AB9412B00386362 /* FavoritesResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB735C221AB9412B00386362 /* FavoritesResultCell.m */; };
+		EB735C251AB9412B00386362 /* FavoritesResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB735C231AB9412B00386362 /* FavoritesResultCell.xib */; };
 		EB91F1BF1AB6C573000A815F /* GoogleSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB91F1BE1AB6C573000A815F /* GoogleSearchClient.m */; };
 		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
 		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
@@ -239,6 +241,9 @@
 		EB72B2681AB3F655004503D1 /* OneWayFlightResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneWayFlightResultView.m; sourceTree = "<group>"; };
 		EB735C181AB819EE00386362 /* TriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleView.h; sourceTree = "<group>"; };
 		EB735C191AB819EE00386362 /* TriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleView.m; sourceTree = "<group>"; };
+		EB735C211AB9412B00386362 /* FavoritesResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesResultCell.h; sourceTree = "<group>"; };
+		EB735C221AB9412B00386362 /* FavoritesResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesResultCell.m; sourceTree = "<group>"; };
+		EB735C231AB9412B00386362 /* FavoritesResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesResultCell.xib; sourceTree = "<group>"; };
 		EB91F1BD1AB6C573000A815F /* GoogleSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchClient.h; sourceTree = "<group>"; };
 		EB91F1BE1AB6C573000A815F /* GoogleSearchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchClient.m; sourceTree = "<group>"; };
 		EBA521091AABDDC20081E88A /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
@@ -464,6 +469,9 @@
 				EBA7FAA31AB6656100760622 /* FlightDetailSectionHeaderView.m */,
 				EB735C181AB819EE00386362 /* TriangleView.h */,
 				EB735C191AB819EE00386362 /* TriangleView.m */,
+				EB735C211AB9412B00386362 /* FavoritesResultCell.h */,
+				EB735C221AB9412B00386362 /* FavoritesResultCell.m */,
+				EB735C231AB9412B00386362 /* FavoritesResultCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -663,6 +671,7 @@
 				C43028151AB50B9F00DA2B18 /* DateSelectionCell.xib in Resources */,
 				EB72B2431AB01537004503D1 /* ZRH.txt in Resources */,
 				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
+				EB735C251AB9412B00386362 /* FavoritesResultCell.xib in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
 				EBA7FA9F1AB6539600760622 /* LayoverDetailCell.xib in Resources */,
 				EB72B23B1AB01414004503D1 /* MUC.txt in Resources */,
@@ -794,6 +803,7 @@
 				11873B0C1AABF9FD0050D5DA /* CityDetailsViewController.m in Sources */,
 				11A389931AABE017006BA0F1 /* (null) in Sources */,
 				EBA7FA9E1AB6539600760622 /* LayoverDetailCell.m in Sources */,
+				EB735C241AB9412B00386362 /* FavoritesResultCell.m in Sources */,
 				11873B181AAD49A70050D5DA /* KimonoClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
