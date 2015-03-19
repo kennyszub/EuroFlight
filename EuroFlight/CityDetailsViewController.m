@@ -30,6 +30,10 @@ NSInteger const kHeaderHeight = 150;
 
 @implementation CityDetailsViewController
 
+- (void)dealloc {
+    self.tableView.delegate = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
