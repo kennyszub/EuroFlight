@@ -305,15 +305,10 @@ enum Weeks {
     [datePicker setAllowSelectionOfSelectedDate:YES];
     [datePicker setDisableHistorySelection:YES];
     [datePicker setDisableFutureSelection:NO];
-    [datePicker setSelectedBackgroundColor:[UIColor colorWithRed:125/255.0 green:208/255.0 blue:0/255.0 alpha:1.0]];
+    [datePicker setSelectedBackgroundColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]];
     [datePicker setCurrentDateColor:[UIColor colorWithRed:242/255.0 green:121/255.0 blue:53/255.0 alpha:1.0]];
-    [datePicker setCurrentDateColorSelected:[UIColor yellowColor]];
-    //    __weak typeof(self) weakSelf = self;
-    
+    [datePicker setCurrentDateColorSelected:[UIColor redColor]];    
     [datePicker setDateHasItemsCallback:^BOOL(NSDate *date) {
-        // FIXME uncheck to make markers appear on dates, but these aren't called each time calendar displayed
-        //        return [weakSelf isSameDayWithDate1:weakSelf.outboundDate date2:date]
-        //        || [weakSelf isSameDayWithDate1:weakSelf.returnDate date2:date];
         return NO;
     }];
 }
