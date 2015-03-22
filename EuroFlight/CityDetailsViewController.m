@@ -16,15 +16,17 @@
 #import "DescriptionCell.h"
 #import "EventDetailViewController.h"
 #import "PlaceCollectionCell.h"
+#import "PlacesViewController.h"
 
 NSInteger const kHeaderHeight = 150;
 
-@interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface CityDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketButton;
 @property (strong, nonatomic) UIImageView *headerView;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (nonatomic, assign) BOOL isPresenting;
 
 @end
 
@@ -124,6 +126,61 @@ NSInteger const kHeaderHeight = 150;
     return self.city.places.count;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    PlacesViewController *vc = [[PlacesViewController alloc] init];
+    vc.places = self.city.places;
+    vc.startingIndex = indexPath.row;
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    vc.transitioningDelegate = self;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.isPresenting = YES;
+    return self;
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.isPresenting = NO;
+    return self;
+}
+
+//- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
+//    
+//}
+//
+//- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
+//    
+//}
+
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
+    return 0.5;
+}
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    if (self.isPresenting) {
+        toViewController.view.frame = fromViewController.view.bounds;
+        [containerView addSubview:toViewController.view];
+        toViewController.view.alpha = 0;
+        //toViewController.view.transform = CGAffineTransformMakeScale(0,0);
+        [UIView animateWithDuration:0.5 animations:^{
+            toViewController.view.alpha = 1;
+            //toViewController.view.transform = CGAffineTransformMakeScale(1, 1);
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    } else {
+        [UIView animateWithDuration:0.5 animations:^{
+            fromViewController.view.alpha = 0;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+            [fromViewController.view removeFromSuperview];
+        }];
+    }
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.city.events.count == 0) {
@@ -161,7 +218,7 @@ NSInteger const kHeaderHeight = 150;
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Description";
+        return @"Overview";
     } else if (section == 1 && self.city.events.count > 0){
         return @"Events";
     } else {

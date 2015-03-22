@@ -133,9 +133,9 @@ static NSArray *_allCountries;
       @{
           @"countryName" : @"Italy",
           @"cities" :
-//              @[@{@"city" : @"Florence",
-//                  @"airportCodes" : @[@"FLR"]},
-                @[@{@"city" : @"Venice",
+              @[@{@"city" : @"Florence",
+                  @"airportCodes" : @[@"FLR"]},
+                @{@"city" : @"Venice",
                   @"airportCodes" : @[@"VCE"]},
                 @{@"city" : @"Rome",
                   @"airportCodes" : @[@"FCO"]},
@@ -203,12 +203,14 @@ static NSArray *_allCountries;
               @[@{@"city" : @"Brussels",
                   @"airportCodes" : @[@"BRU"]}]
           },
-//      @{
-//          @"countryName" : @"Turkey",
-//          @"cities" :
-//              @[@{@"city" : @"Istanbul",
-//                  @"airportCodes" : @[@"IST"]}]
-//          },
+      @{
+          @"countryName" : @"Turkey",
+          @"cities" :
+              @[@{@"city" : @"Istanbul",
+                  @"airportCodes" : @[@"IST"]},]
+//                  @{@"city" : @"Konya",
+//                  @"airportCodes" : @[@"KYA"]}]
+          },
 //      @{
 //          @"countryName" : @"Finland",
 //          @"cities" :
@@ -247,12 +249,6 @@ static NSArray *_allCountries;
               @[@{@"city" : @"Belgrade",
                   @"airportCodes" : @[@"BEG"]}]
           }
-//      @{
-//          @"countryName" : @"Turkey",
-//          @"cities" :
-//              @[@{@"city" : @"Konya",
-//                  @"airportCodes" : @[@"KYA"]}]
-//          }
       ];
     
     return destinations;

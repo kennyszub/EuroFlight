@@ -17,12 +17,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBe-Nx-yXn">
-                    <rect key="frame" x="0.0" y="64" width="320" height="438"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" rowHeight="44" sectionHeaderHeight="5" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBe-Nx-yXn">
+                    <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-0I-fsd">
-                    <rect key="frame" x="8" y="510" width="304" height="50"/>
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.63896459341049194" blue="0.75245386362075806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="45s-b1-np6"/>
@@ -50,17 +50,17 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="qHY-HE-VSb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="60p-AR-6cC"/>
                 <constraint firstItem="OBe-Nx-yXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="KWz-ZB-KZJ"/>
                 <constraint firstItem="OBe-Nx-yXn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZaZ-4I-OWT"/>
                 <constraint firstAttribute="trailing" secondItem="OBe-Nx-yXn" secondAttribute="trailing" id="fF0-xl-KD3"/>
-                <constraint firstAttribute="bottom" secondItem="yMN-0I-fsd" secondAttribute="bottom" constant="8" id="hdy-CY-lFI"/>
-                <constraint firstItem="yMN-0I-fsd" firstAttribute="top" secondItem="OBe-Nx-yXn" secondAttribute="bottom" constant="8" id="ljJ-XJ-P3O"/>
-                <constraint firstItem="yMN-0I-fsd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="obQ-0z-Vsg"/>
+                <constraint firstAttribute="bottom" secondItem="yMN-0I-fsd" secondAttribute="bottom" id="hdy-CY-lFI"/>
+                <constraint firstItem="yMN-0I-fsd" firstAttribute="top" secondItem="OBe-Nx-yXn" secondAttribute="bottom" id="ljJ-XJ-P3O"/>
+                <constraint firstItem="yMN-0I-fsd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="obQ-0z-Vsg"/>
                 <constraint firstAttribute="trailing" secondItem="qHY-HE-VSb" secondAttribute="trailing" constant="20" id="opT-p8-Ujx"/>
-                <constraint firstAttribute="trailing" secondItem="yMN-0I-fsd" secondAttribute="trailing" constant="8" id="xAZ-Tc-MGV"/>
+                <constraint firstAttribute="trailing" secondItem="yMN-0I-fsd" secondAttribute="trailing" id="xAZ-Tc-MGV"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="201" y="439"/>
