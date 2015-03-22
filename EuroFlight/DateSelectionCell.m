@@ -7,6 +7,7 @@
 //
 
 #import "DateSelectionCell.h"
+#import "UIImage+Util.h"
 
 @interface DateSelectionCell ()
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -19,6 +20,8 @@
 - (void)awakeFromNib {
     // Initialization code
     self.backgroundColor = [UIColor clearColor];
+    UIImage *grayColor = [UIImage imageWithColor:[UIColor colorWithRed:0.839 green:0.839 blue:0.839 alpha:0.2]];
+    self.selectedBackgroundView = [[UIImageView alloc] initWithImage:grayColor]; /*#d6d6d6*/
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

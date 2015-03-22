@@ -9,6 +9,7 @@
 #import "DepartureCityCell.h"
 #import "LocationManager.h"
 #import "AirportClient.h"
+#import "UIImage+Util.h"
 
 @interface DepartureCityCell ()
 @property (weak, nonatomic) IBOutlet UILabel *airportCodeLabel;
@@ -23,11 +24,12 @@
     // Initialization code
     [self setUpAirport];
     self.backgroundColor = [UIColor clearColor];
+    UIImage *grayColor = [UIImage imageWithColor:[UIColor colorWithRed:0.839 green:0.839 blue:0.839 alpha:0.2]];
+    self.selectedBackgroundView = [[UIImageView alloc] initWithImage:grayColor]; /*#d6d6d6*/
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
