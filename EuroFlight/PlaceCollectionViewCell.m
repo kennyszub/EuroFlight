@@ -11,10 +11,7 @@
 
 @interface PlaceCollectionViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *placeView;
 @property (weak, nonatomic) IBOutlet UIView *labelBackgroundView;
-
-
 @end
 
 @implementation PlaceCollectionViewCell

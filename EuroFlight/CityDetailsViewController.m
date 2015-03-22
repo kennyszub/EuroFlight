@@ -17,6 +17,7 @@
 #import "EventDetailViewController.h"
 #import "PlaceCollectionCell.h"
 #import "PlacesViewController.h"
+#import "PlacesScrollCustomView.h"
 
 NSInteger const kHeaderHeight = 150;
 
@@ -27,6 +28,8 @@ NSInteger const kHeaderHeight = 150;
 @property (strong, nonatomic) UIImageView *headerView;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (nonatomic, assign) BOOL isPresenting;
+@property (nonatomic, strong) UIImageView *transitionView;
+@property (nonatomic, strong) UIView *blackView;
 
 @end
 
@@ -130,6 +133,10 @@ NSInteger const kHeaderHeight = 150;
     PlacesViewController *vc = [[PlacesViewController alloc] init];
     vc.places = self.city.places;
     vc.startingIndex = indexPath.row;
+    UIImageView *placeView =((PlaceCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath]).placeView;
+    self.transitionView = [[UIImageView alloc] initWithImage:placeView.image];
+    self.transitionView.frame = [collectionView convertRect:[collectionView layoutAttributesForItemAtIndexPath:indexPath].frame toView:self.view];
+    self.transitionView.contentMode = UIViewContentModeScaleAspectFill;
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
     [self presentViewController:vc animated:YES completion:nil];
@@ -159,25 +166,43 @@ NSInteger const kHeaderHeight = 150;
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIView *containerView = [transitionContext containerView];
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    PlacesViewController *toViewController = (PlacesViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     if (self.isPresenting) {
+        self.blackView = [[UIView alloc] initWithFrame:fromViewController.view.frame];
+        self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+        self.transitionView.clipsToBounds = YES;
+        [containerView addSubview:self.blackView];
+        [containerView addSubview:self.transitionView];
+        self.blackView.alpha = 0;
         toViewController.view.frame = fromViewController.view.bounds;
         [containerView addSubview:toViewController.view];
         toViewController.view.alpha = 0;
-        //toViewController.view.transform = CGAffineTransformMakeScale(0,0);
-        [UIView animateWithDuration:0.5 animations:^{
-            toViewController.view.alpha = 1;
-            //toViewController.view.transform = CGAffineTransformMakeScale(1, 1);
+        CGFloat widthScale = self.view.frame.size.width / self.transitionView.image.size.width;
+        CGFloat heightScale = (self.view.frame.size.height - 200) / self.transitionView.image.size.height;
+        CGFloat scale = (widthScale > heightScale) ? heightScale : widthScale;
+        [UIView animateWithDuration:0.4 animations:^{
+            self.blackView.alpha = 1;
+            self.transitionView.center = self.view.center;
+            self.transitionView.bounds = CGRectMake(0, 0, self.transitionView.image.size.width, self.transitionView.image.size.height);
+            self.transitionView.transform = CGAffineTransformMakeScale(scale, scale);
         } completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
+            [UIView animateWithDuration:0.1 animations:^{
+                toViewController.view.alpha = 1;
+            } completion:^(BOOL finished) {
+                [transitionContext completeTransition:YES];
+                [self.transitionView removeFromSuperview];
+            }];
         }];
     } else {
         [UIView animateWithDuration:0.5 animations:^{
             fromViewController.view.alpha = 0;
+            self.blackView.alpha = 0;
+            self.transitionView.alpha = 0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
             [fromViewController.view removeFromSuperview];
+            [self.blackView removeFromSuperview];
         }];
     }
 }

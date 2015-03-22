@@ -12,8 +12,8 @@
 #import "PlacesScrollCustomView.h"
 
 @interface PlacesViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 

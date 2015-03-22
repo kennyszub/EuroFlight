@@ -11,4 +11,5 @@
 
 @interface PlaceCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) Place *place;
+@property (weak, nonatomic) IBOutlet UIImageView *placeView;
 @end

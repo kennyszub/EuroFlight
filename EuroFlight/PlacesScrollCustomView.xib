@@ -12,7 +12,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="100" width="320" height="368"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="CrM-Nq-GRp" secondAttribute="centerY" id="MFP-Nl-9CI"/>
                 <constraint firstItem="CrM-Nq-GRp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QJx-f5-77S"/>
