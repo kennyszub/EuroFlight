@@ -16,22 +16,23 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="LHR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c0-fo-X8P">
                         <rect key="frame" x="19" y="8" width="133" height="81"/>
                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="66"/>
-                        <color key="textColor" red="0.15294117647058825" green="0.62352941176470589" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London Heathrow Airport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-bI-9R9">
                         <rect key="frame" x="19" y="89" width="202" height="20"/>
                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London, United Kingdom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2Y-rC-HNU">
                         <rect key="frame" x="19" y="112" width="199" height="20"/>
                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="4c0-fo-X8P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6xj-R1-G6v"/>
                     <constraint firstItem="Jbz-bI-9R9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="Bde-Uq-yZu"/>

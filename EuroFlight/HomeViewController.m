@@ -74,6 +74,7 @@ enum Weeks {
     [self.tableView registerNib:[UINib nibWithNibName:@"DateSelectionCell" bundle:nil] forCellReuseIdentifier:@"DateSelectionCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"OneWayRoundTripCell" bundle:nil] forCellReuseIdentifier:@"OneWayRoundTripCell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     self.isRoundTrip = YES;
 
     // set up favorites button
@@ -84,6 +85,12 @@ enum Weeks {
     [favoritesImageView addGestureRecognizer:tapGesture];
     UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
     self.navigationItem.rightBarButtonItem = favoritesButton;
+    
+    // set background picture
+    UIImageView *budapestView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"budapestCropped"]];
+    [budapestView setFrame:self.tableView.frame];
+    self.tableView.backgroundView = budapestView;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -97,8 +104,6 @@ enum Weeks {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void)onFavoritesButton {
     FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
@@ -168,11 +173,13 @@ enum Weeks {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         DepartureCityCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DepartureCityCell"];
+        cell.separatorInset = UIEdgeInsetsMake(0.f, self.view.frame.size.width, 0.f, 0.f);
         return cell;
 
     } else if (indexPath.row == 1) {
         OneWayRoundTripCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"OneWayRoundTripCell"];
         cell.delegate = self;
+        cell.separatorInset = UIEdgeInsetsMake(0.f, self.view.frame.size.width, 0.f, 0.f);
         return cell;
     } else if (indexPath.row == 2) {
         DateSelectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DateSelectionCell"];

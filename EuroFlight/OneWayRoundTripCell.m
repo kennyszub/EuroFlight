@@ -19,13 +19,19 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundColor = [UIColor clearColor];
+    
+    [self setUpOneWayButton];
+    [self setUpRoundTripButton];
+
+    self.roundTripButton.selected = YES;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [self setUpOneWayButton];
-    [self setUpRoundTripButton];
-    
+
+    self.roundTripButton.frame = CGRectMake(0, 0, self.frame.size.width / 2.0, self.frame.size.height);
+    self.oneWayButton.frame = CGRectMake(self.frame.size.width / 2.0, 0, self.frame.size.width / 2.0, self.frame.size.height);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,7 +41,7 @@
 }
 
 - (void)setUpRoundTripButton {
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / 2.0, self.frame.size.height)];
+    UIButton *button = [[UIButton alloc] init];
     [button setTitle:@"Round-trip" forState:UIControlStateNormal];
     button.titleLabel.textColor = [UIColor whiteColor];
     button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
@@ -45,14 +51,13 @@
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateHighlighted];
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateSelected];
 
-    button.selected = YES;
     [button addTarget:self action:@selector(onRoundTripButton) forControlEvents:UIControlEventTouchUpInside];
     self.roundTripButton = button;
     [self addSubview:button];
 }
 
 - (void)setUpOneWayButton {
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width / 2.0, 0, self.frame.size.width / 2.0, self.frame.size.height)];
+    UIButton *button = [[UIButton alloc] init];
     [button setTitle:@"One-way" forState:UIControlStateNormal];
     button.titleLabel.textColor = [UIColor whiteColor];
     button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
@@ -62,22 +67,26 @@
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateHighlighted];
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateSelected];
 
-
+    button.selected = NO;
     self.oneWayButton = button;
     [button addTarget:self action:@selector(onOneWayButton) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:button];
 }
 
 - (void)onOneWayButton {
-    self.roundTripButton.selected = NO;
-    self.oneWayButton.selected = YES;
-    [self.delegate oneWayRoundTripCellDelegate:self didSelectRoundTrip:NO];
+    if (self.roundTripButton.selected) {
+        self.roundTripButton.selected = NO;
+        self.oneWayButton.selected = YES;
+        [self.delegate oneWayRoundTripCellDelegate:self didSelectRoundTrip:NO];
+    }
 }
 
 - (void)onRoundTripButton {
-    self.oneWayButton.selected = NO;
-    self.roundTripButton.selected = YES;
-    [self.delegate oneWayRoundTripCellDelegate:self didSelectRoundTrip:YES];
+    if (self.oneWayButton.selected) {
+        self.oneWayButton.selected = NO;
+        self.roundTripButton.selected = YES;
+        [self.delegate oneWayRoundTripCellDelegate:self didSelectRoundTrip:YES];
+    }
 }
 
 @end

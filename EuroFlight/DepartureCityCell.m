@@ -22,6 +22,7 @@
 - (void)awakeFromNib {
     // Initialization code
     [self setUpAirport];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
