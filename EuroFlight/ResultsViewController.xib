@@ -21,7 +21,6 @@
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="exI-M0-Pfg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1wi-gE-Why"/>
                 <constraint firstItem="exI-M0-Pfg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B9H-Xu-hnO"/>

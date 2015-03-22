@@ -58,6 +58,7 @@
     return min;
 }
 
+
 // TODO for now, keep a static reference to the list of all countries once initialized
 // this way we can grab the countries from multiple places
 static NSArray *_allCountries;

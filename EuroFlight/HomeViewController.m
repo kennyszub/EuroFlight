@@ -90,7 +90,6 @@ enum Weeks {
     UIImageView *budapestView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"budapestCropped"]];
     [budapestView setFrame:self.tableView.frame];
     self.tableView.backgroundView = budapestView;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

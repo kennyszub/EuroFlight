@@ -120,7 +120,11 @@
     AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        UIImage *filteredImage = [self getFilteredImage:responseObject];
+        self.backgroundView = [[UIImageView alloc] initWithImage:responseObject];
+        GPUImagePicture *imageSource = [[GPUImagePicture alloc] initWithImage:responseObject];
+        [self applyFilterToGPUImageView:imageSource];
+        
+        UIImage *filteredImage = [self.levelsFilter imageFromCurrentFramebuffer];
         UIImage *brightImage = [self getBrightenedImage:filteredImage];
         self.backgroundView = [[UIImageView alloc] initWithImage:filteredImage];
         self.selectedBackgroundView = [[UIImageView alloc] initWithImage:brightImage];
@@ -137,6 +141,12 @@
 
 - (void)cityView:(CityCustomMiniView *)view didTapInfo:(City *)city {
     [self.delegate didTapInfo:city];
+}
+
+- (void)applyFilterToGPUImageView:(GPUImagePicture *)image {
+    [image addTarget:self.levelsFilter];
+    [self.levelsFilter useNextFrameForImageCapture];
+    [image processImage];
 }
 
 - (UIImage *)getFilteredImage:(UIImage *)image {
