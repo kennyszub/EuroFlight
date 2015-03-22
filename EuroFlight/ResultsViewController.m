@@ -128,7 +128,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)didTapCity:(City *)city {
+- (void)didTapCityPrice:(City *)city {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = city;
     [self.navigationController pushViewController:vc animated:YES];

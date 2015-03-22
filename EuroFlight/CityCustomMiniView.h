@@ -12,7 +12,7 @@
 @class CityCustomMiniView;
 @protocol CityCustomMiniViewDelegate <NSObject>
 
-- (void)cityView:(CityCustomMiniView *)view didTapCity:(City *)city;
+- (void)cityView:(CityCustomMiniView *)view didTapCityPrice:(City *)city;
 - (void)cityView:(CityCustomMiniView *)view didTapInfo:(City *)city;
 
 @end

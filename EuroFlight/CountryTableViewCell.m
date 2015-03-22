@@ -12,9 +12,10 @@
 #import "Event.h"
 #import "Context.h"
 #import "CurrencyFormatter.h"
-#import "UIImage+Filtering.h"
 #import "AFNetworking.h"
 #import "CityCustomMiniView.h"
+#import "GPUImage.h"
+
 
 @interface CountryTableViewCell () <CityCustomMiniViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *countryName;
@@ -22,7 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *eventButton;
 @property (nonatomic, strong) NSMutableArray *customViews;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topOfCityLabelConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomOfCityLabelConstraint;
+@property (nonatomic, strong) GPUImageLevelsFilter *levelsFilter;
+@property (nonatomic, strong) GPUImageBrightnessFilter *brightnessFilter;
 
 @end
 
@@ -30,7 +32,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
-//    [self hideCountryLabels];
+
+    GPUImageLevelsFilter *levelsFilter = [[GPUImageLevelsFilter alloc] init];
+    
+    [levelsFilter setRedMin:0 gamma:1 max:255.0/255.0 minOut:0 maxOut:220/255.0];
+    [levelsFilter setGreenMin:0 gamma:1 max:255.0/255.0 minOut:0 maxOut:220/255.0];
+    [levelsFilter setBlueMin:0 gamma:1 max:255.0/255.0 minOut:0 maxOut:200/255.0];
+    self.levelsFilter = levelsFilter;
+    
+    GPUImageBrightnessFilter *brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
+    [brightnessFilter setBrightness:0.04];
+    self.brightnessFilter = brightnessFilter;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -38,14 +50,9 @@
 
     if (selected) {
         for (CityCustomMiniView *cityview in self.customViews) {
-//            cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
             cityview.backgroundColor = [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
         }
-        // apply state with animation
-//        [self showCityViews:YES];
     }
-    
-
     // Configure the view for the selected state
 }
 
@@ -53,9 +60,7 @@
     [super setHighlighted:highlighted animated:animated];
     if (highlighted) {
         for (CityCustomMiniView *cityview in self.customViews) {
-//            cityview.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
             cityview.backgroundColor = [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
-
         }
     }
 }
@@ -96,14 +101,11 @@
 - (void)createCityViews {
     self.customViews = [[NSMutableArray alloc] init];
     
-//    int countryRowHeight = 300;
     int cityRowHeight = 44;
     int initialPos = 60;
     for (int i = 0; i < self.country.cities.count; i++) {
-//        int y = countryRowHeight - (cityRowHeight * i);
         int y = initialPos + (cityRowHeight * i);
         CityCustomMiniView *cityView = [[CityCustomMiniView alloc] initWithFrame:CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, cityRowHeight)];
-//        cityView.backgroundColor = [UIColor colorWithRed:0.698 green:0.698 blue:0.698 alpha:0.35]; /*#b2b2b2*/
         cityView.backgroundColor = [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
 
         cityView.city = self.country.cities[i];
@@ -118,9 +120,10 @@
     AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        UIImageView *countryImage = [[UIImageView alloc] initWithImage:responseObject];
-        self.backgroundView = countryImage;
-        self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[countryImage.image brightenWithValue:30]];
+        UIImage *filteredImage = [self getFilteredImage:responseObject];
+        UIImage *brightImage = [self getBrightenedImage:filteredImage];
+        self.backgroundView = [[UIImageView alloc] initWithImage:filteredImage];
+        self.selectedBackgroundView = [[UIImageView alloc] initWithImage:brightImage];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Image error: %@", error);
@@ -128,12 +131,27 @@
     [requestOperation start];
 }
 
-- (void)cityView:(CityCustomMiniView *)view didTapCity:(City *)city {
-    [self.delegate didTapCity:city];
+- (void)cityView:(CityCustomMiniView *)view didTapCityPrice:(City *)city {
+    [self.delegate didTapCityPrice:city];
 }
 
 - (void)cityView:(CityCustomMiniView *)view didTapInfo:(City *)city {
     [self.delegate didTapInfo:city];
+}
+
+- (UIImage *)getFilteredImage:(UIImage *)image {
+    return [self.levelsFilter imageByFilteringImage:image];
+    // Temperature filters below:
+//    UIImage *levelsImage = [levelsFilter imageByFilteringImage:image];
+//
+//    GPUImageWhiteBalanceFilter *whiteBalanceFilter = [[GPUImageWhiteBalanceFilter alloc] init];
+//    [whiteBalanceFilter setTemperature:9000];
+//    
+//    return [whiteBalanceFilter imageByFilteringImage:levelsImage];
+}
+
+- (UIImage *)getBrightenedImage:(UIImage *)image {
+    return [self.brightnessFilter imageByFilteringImage:image];
 }
 
 

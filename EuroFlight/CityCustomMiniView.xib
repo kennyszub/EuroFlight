@@ -9,8 +9,8 @@
                 <outlet property="cityNameLabel" destination="7ed-0l-fWL" id="EbR-mp-ob2"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Px4-F4-oHi"/>
                 <outlet property="favoriteButton" destination="S22-Iz-L64" id="Bvy-Oi-e52"/>
-                <outlet property="infoButton" destination="qxO-wr-uWw" id="7Xh-yl-K67"/>
-                <outlet property="priceLabel" destination="GpA-Ca-A5G" id="zJI-sN-Z6l"/>
+                <outlet property="longPressGestureRecognizer" destination="JBL-yM-p7t" id="uvr-jj-Gqr"/>
+                <outlet property="priceButton" destination="KeI-eB-oNr" id="dlK-rc-xJ0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,47 +34,35 @@
                                 <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="nK1-H3-nVA"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from: $123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpA-Ca-A5G">
-                            <rect key="frame" x="360" y="14" width="83" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Barcelona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-0l-fWL">
                             <rect key="frame" x="40" y="13" width="85" height="21"/>
                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-wr-uWw">
-                            <rect key="frame" x="139" y="14" width="22" height="22"/>
-                            <state key="normal">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeI-eB-oNr">
+                            <rect key="frame" x="364" y="9" width="79" height="31"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                            <state key="normal" title="from $124">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onInfoButton:" destination="-1" eventType="touchUpInside" id="Ex8-qI-Qv1"/>
+                                <action selector="didTapPrice:" destination="-1" eventType="touchUpInside" id="i5Q-gd-KWp"/>
                             </connections>
                         </button>
                     </subviews>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="GpA-Ca-A5G" secondAttribute="trailing" constant="8" id="53Y-9H-eD3"/>
+                        <constraint firstAttribute="trailing" secondItem="KeI-eB-oNr" secondAttribute="trailing" constant="8" id="2On-qM-7A5"/>
+                        <constraint firstItem="KeI-eB-oNr" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="9" id="Dne-B1-DgX"/>
                         <constraint firstItem="7ed-0l-fWL" firstAttribute="leading" secondItem="S22-Iz-L64" secondAttribute="trailing" constant="16" id="Dqt-aD-zjP"/>
                         <constraint firstItem="S22-Iz-L64" firstAttribute="leading" secondItem="Fgz-GY-5gW" secondAttribute="leading" constant="8" id="Lbe-9k-eLN"/>
                         <constraint firstItem="7ed-0l-fWL" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="13" id="QDG-HY-uWW"/>
-                        <constraint firstItem="GpA-Ca-A5G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qxO-wr-uWw" secondAttribute="trailing" constant="8" id="gIH-G0-njD"/>
                         <constraint firstItem="S22-Iz-L64" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="15" id="hhD-WJ-UhE"/>
-                        <constraint firstItem="GpA-Ca-A5G" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="14" id="kJ9-IV-hPE"/>
-                        <constraint firstItem="qxO-wr-uWw" firstAttribute="top" secondItem="Fgz-GY-5gW" secondAttribute="top" constant="14" id="qdR-e4-rFg"/>
-                        <constraint firstItem="qxO-wr-uWw" firstAttribute="leading" secondItem="7ed-0l-fWL" secondAttribute="trailing" constant="14" id="vr8-IA-ksR"/>
                     </constraints>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="axT-BU-fzv" appends="YES" id="iy2-b6-Baj"/>
+                        <outletCollection property="gestureRecognizers" destination="JBL-yM-p7t" appends="YES" id="f9a-se-CKi"/>
                     </connections>
                 </view>
             </subviews>
@@ -88,11 +76,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="739.5" y="227"/>
         </view>
-        <tapGestureRecognizer id="axT-BU-fzv">
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="JBL-yM-p7t">
             <connections>
-                <action selector="didTapCityView:" destination="-1" id="m9h-sd-KDd"/>
+                <action selector="onCellLongPress:" destination="-1" id="HB7-QH-3NB"/>
             </connections>
-        </tapGestureRecognizer>
+        </pongPressGestureRecognizer>
     </objects>
     <resources>
         <image name="favorite-off" width="50" height="50"/>

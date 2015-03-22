@@ -9,13 +9,14 @@
 #import "CityCustomMiniView.h"
 #import "CurrencyFormatter.h"
 
-@interface CityCustomMiniView ()
+@interface CityCustomMiniView () <UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
-@property (weak, nonatomic) IBOutlet UIButton *infoButton;
-
+@property (nonatomic, assign) CGPoint initialPressPosition;
+@property (nonatomic, assign) BOOL touchIsValid;
+@property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property (weak, nonatomic) IBOutlet UIButton *priceButton;
 @end
 
 @implementation CityCustomMiniView
@@ -41,6 +42,7 @@
     [nib instantiateWithOwner:self options:nil];
     self.contentView.frame = self.bounds;
     [self addSubview:self.contentView];
+    self.longPressGestureRecognizer.delegate = self;
 }
 
 - (void)setCity:(City *)city {
@@ -48,14 +50,48 @@
     self.cityNameLabel.text = city.name;
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:city.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
-    self.priceLabel.text = [NSString stringWithFormat:@"from: %@", price];
+    [self.priceButton setTitle:[NSString stringWithFormat:@"from: %@", price] forState:UIControlStateNormal];
     [self setFavoriteButtonImageForCity:city];
 }
 
-- (IBAction)didTapCityView:(UITapGestureRecognizer *)sender {
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        [self.delegate cityView:self didTapCity:self.city];
+- (IBAction)didTapPrice:(id)sender {
+    [self.delegate cityView:self didTapCityPrice:self.city];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (touch.view == self.favoriteButton || touch.view == self.priceButton) {
+        return NO;
+    } else {
+        return YES;
     }
+}
+
+- (IBAction)onCellLongPress:(UILongPressGestureRecognizer *)sender {
+    CGPoint currentPoint = [sender locationInView:self];
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        self.initialPressPosition = currentPoint;
+        self.touchIsValid = YES;
+        self.backgroundColor= [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.65];
+    } else if (sender.state == UIGestureRecognizerStateChanged) {
+        
+        int changeInX = abs(self.initialPressPosition.x - [sender locationInView:self].x);
+        int changeInY = abs(self.initialPressPosition.y - [sender locationInView:self].y);
+        
+        if (changeInX > 5 || changeInY > 5) {
+            self.backgroundColor= [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
+            self.touchIsValid = NO;
+        }
+
+    } else if (sender.state == UIGestureRecognizerStateEnded) {
+        int changeInX = abs(self.initialPressPosition.x - [sender locationInView:self].x);
+        int changeInY = abs(self.initialPressPosition.y - [sender locationInView:self].y);
+        
+        self.backgroundColor= [UIColor colorWithRed:0.208 green:0.208 blue:0.208 alpha:0.35];
+        if ((changeInX <= 5 || changeInY <= 5) && self.touchIsValid) {
+            [self.delegate cityView:self didTapInfo:self.city];
+        }
+    }
+
 }
 
 - (IBAction)onFavoriteButton:(id)sender {
@@ -69,9 +105,6 @@
     } else {
         [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-off"] forState:UIControlStateNormal];
     }
-}
-- (IBAction)onInfoButton:(id)sender {
-    [self.delegate cityView:self didTapInfo:self.city];
 }
 
 /*

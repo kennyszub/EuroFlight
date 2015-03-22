@@ -15,7 +15,7 @@
 @protocol CountryTableViewCellDelegate <NSObject>
 
 - (void)didTapEvent:(CountryTableViewCell *)cell;
-- (void)didTapCity:(City *)city;
+- (void)didTapCityPrice:(City *)city;
 - (void)didTapInfo:(City *)city;
 @end
 
