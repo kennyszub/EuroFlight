@@ -44,7 +44,7 @@
 static NSDateFormatter *timeFormatter;
 
 #define kTriangleBaseLength 15
-#define kTriangleSideLength 8
+#define kTriangleHeight 7
 
 - (void)setSegment:(FlightSegment *)segment {
     _segment = segment;
@@ -69,7 +69,7 @@ static NSDateFormatter *timeFormatter;
     _showTriangleView = showTriangleView;
 
     if (showTriangleView) {
-        self.triangleView = [[TriangleView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - kTriangleBaseLength) / 2.0, 0, kTriangleBaseLength, kTriangleSideLength)];
+        self.triangleView = [[TriangleView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - kTriangleBaseLength) / 2.0, 0, kTriangleBaseLength, kTriangleHeight)];
         self.triangleView.fillColor = [UIColor groupTableViewBackgroundColor];
         self.triangleView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:self.triangleView];
@@ -90,7 +90,7 @@ static NSDateFormatter *timeFormatter;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             timeFormatter = [[NSDateFormatter alloc] init];
-            timeFormatter.dateFormat = @"H:mm a";
+            timeFormatter.dateFormat = @"h:mm a";
         });
     }
 }

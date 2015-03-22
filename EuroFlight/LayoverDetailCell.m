@@ -27,13 +27,13 @@
 }
 
 #define kTriangleBaseLength 15
-#define kTriangleSideLength 8
+#define kTriangleHeight 7
 
 - (void)setSegment:(FlightSegment *)segment {
     _segment = segment;
     self.layoverDetailLabel.text = [NSString stringWithFormat:@"%@ layover in %@", [self durationAsString:segment.connectionDuration], segment.destinationAirportCode];
 
-    self.triangleView = [[TriangleView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - kTriangleBaseLength) / 2.0, 0, kTriangleBaseLength, kTriangleSideLength)];
+    self.triangleView = [[TriangleView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - kTriangleBaseLength) / 2.0, 0, kTriangleBaseLength, kTriangleHeight)];
     self.triangleView.fillColor = [UIColor whiteColor];
     self.triangleView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.contentView addSubview:self.triangleView];

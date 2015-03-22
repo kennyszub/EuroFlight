@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightDetailViewController">
             <connections>
+                <outlet property="buyButton" destination="g3R-DF-yZE" id="DXZ-b4-gqv"/>
                 <outlet property="tableView" destination="d1O-lQ-yhl" id="406-lN-wjw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,16 +17,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-lQ-yhl">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                     <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3R-DF-yZE">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <color key="backgroundColor" red="0.1529411765" green="0.62352941179999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nxF-Gd-IJi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                    <state key="normal" title="Buy now for $150">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBuyButton:" destination="-1" eventType="touchUpInside" id="V8Z-Cw-3oF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="d1O-lQ-yhl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3yu-z6-vjb"/>
-                <constraint firstAttribute="bottom" secondItem="d1O-lQ-yhl" secondAttribute="bottom" id="QbB-SD-QeH"/>
+                <constraint firstItem="g3R-DF-yZE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4SN-rg-yFS"/>
+                <constraint firstAttribute="trailing" secondItem="g3R-DF-yZE" secondAttribute="trailing" id="RsV-PY-DKh"/>
                 <constraint firstItem="d1O-lQ-yhl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UaS-Bj-ebN"/>
+                <constraint firstAttribute="bottom" secondItem="g3R-DF-yZE" secondAttribute="bottom" id="e2m-m1-sd6"/>
                 <constraint firstAttribute="trailing" secondItem="d1O-lQ-yhl" secondAttribute="trailing" id="sBs-17-Sh7"/>
+                <constraint firstItem="g3R-DF-yZE" firstAttribute="top" secondItem="d1O-lQ-yhl" secondAttribute="bottom" id="thd-Hs-4md"/>
             </constraints>
             <point key="canvasLocation" x="375" y="742"/>
         </view>
