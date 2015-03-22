@@ -22,6 +22,9 @@
 #import "DateSelectionCell.h"
 #import "OneWayRoundTripCell.h"
 #import "UIImage+Util.h"
+#import "PlaneLoadingView.h"
+
+#define ENABLE_LOADING_VIEW 0
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
 @property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
@@ -146,9 +149,27 @@ enum Weeks {
         self.dateErrorLabel.hidden = NO;
     } else {
         self.dateErrorLabel.hidden = YES;
-        ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
-        [self.navigationController pushViewController:rvc animated:YES];
+
+        if (ENABLE_LOADING_VIEW) {
+            // show the loading HUD
+            PlaneLoadingView *hud = [[PlaneLoadingView alloc] init];
+            [self.view addSubview:hud];
+            [hud show:YES];
+
+            [NSTimer scheduledTimerWithTimeInterval:8 target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
+        } else {
+            ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
+            [self.navigationController pushViewController:rvc animated:YES];
+        }
     }
+}
+
+- (void)hideHud:(NSTimer *)timer {
+    PlaneLoadingView *hud = timer.userInfo;
+    [hud hide:YES];
+
+    ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
+    [self.navigationController pushViewController:rvc animated:YES];
 }
 
 - (void)oneWayRoundTripCellDelegate:(OneWayRoundTripCell *)cell didSelectRoundTrip:(BOOL)isRoundTrip {

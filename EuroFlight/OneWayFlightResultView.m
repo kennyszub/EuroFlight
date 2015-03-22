@@ -101,11 +101,11 @@ static NSDateFormatter *timeFormatter;
     NSInteger minutes = duration - (hours * kMinutesInHour);
 
     if (minutes == 0) {
-        return [NSString stringWithFormat:@"%ld", hours];
+        return [NSString stringWithFormat:@"%ldh", hours];
     } else if (minutes <= 30) {
-        return [NSString stringWithFormat:@"%ld.5", hours];
+        return [NSString stringWithFormat:@"%ld.5h", hours];
     } else {
-        return [NSString stringWithFormat:@"%ld", hours + 1];
+        return [NSString stringWithFormat:@"%ldh", hours + 1];
     }
 }
 

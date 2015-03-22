@@ -64,12 +64,16 @@
         if (!outboundAirline || !returnAirline || ![outboundAirline isEqualToString:returnAirline]) {
             // outbound and return airlines are different
             self.airlineLabel.text = @"Multiple Airlines";
+            self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+            return;
         }
 
         if (!airline) {
             airline = outboundAirline;
         } else if (![airline isEqualToString:outboundAirline]) {
             self.airlineLabel.text = @"Multiple Airlines";
+            self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+            return;
         }
     }
 
