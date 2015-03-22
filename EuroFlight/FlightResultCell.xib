@@ -22,7 +22,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eh5-fC-J4M" customClass="OneWayFlightResultView">
-                        <rect key="frame" x="8" y="36" width="304" height="19.5"/>
+                        <rect key="frame" x="8" y="36" width="304" height="20"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="VX3-hj-39m"/>
