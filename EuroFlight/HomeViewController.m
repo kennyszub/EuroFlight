@@ -35,6 +35,7 @@
 @property (strong, nonatomic)  UILabel *dateErrorLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, assign) BOOL isRoundTrip;
+@property (nonatomic, strong) UIButton *searchButton;
 
 enum Weeks {
     SUNDAY = 1,
@@ -93,13 +94,18 @@ enum Weeks {
     UIImageView *budapestView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"budapestCropped"]];
     [budapestView setFrame:self.tableView.frame];
     self.tableView.backgroundView = budapestView;
+    
+    [self addSearchButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self addSearchButton];
-    [self addErrorLabel];
+    [self addErrorLabel]; // TODO this is resulting in an error label getting created every time viewWillAppear is called
+    
+    // set frame of search button
+    CGFloat frameWidth = self.view.frame.size.width;
+    self.searchButton.frame = CGRectMake((frameWidth - (frameWidth - 20)) / 2.0, self.view.frame.size.height - 60, frameWidth - 20, 50);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -118,8 +124,7 @@ enum Weeks {
 }
 
 - (void)addSearchButton {
-    CGFloat frameWidth = self.view.frame.size.width;
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((frameWidth - (frameWidth - 20)) / 2.0, self.view.frame.size.height - 60, frameWidth - 20, 50)];
+    UIButton *button = [[UIButton alloc] init];
     button.layer.cornerRadius = 3;
     button.clipsToBounds = YES;
     [button setTitle: @"Search Flights" forState:UIControlStateNormal];
@@ -128,9 +133,11 @@ enum Weeks {
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateNormal];
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:0.5]] forState:UIControlStateHighlighted];
-    [self.view addSubview:button];
     
     [button addTarget:self action:@selector(onSearchButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
+    self.searchButton = button;
 }
 
 - (void)addErrorLabel {
