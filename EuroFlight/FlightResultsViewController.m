@@ -11,6 +11,7 @@
 #import "FlightDetailViewController.h"
 #import "FlightResultGroupCell.h"
 #import "Trip.h"
+#import "ZoomTransition.h"
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
@@ -25,6 +26,10 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 @property (nonatomic, strong) NSArray *tripCosts;
 
 @property (nonatomic, strong) NSMutableSet *expandedSections;
+
+@property (nonatomic, assign) BOOL isPresenting;
+@property (nonatomic, strong) UIView *blackView;
+@property (nonatomic, strong) BaseTransition *transition;
 
 @end
 
@@ -47,6 +52,8 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+
+    self.transition = [[ZoomTransition alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,8 +104,13 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
         // selected cell is flight result
         FlightDetailViewController *vc = [[FlightDetailViewController alloc] init];
         vc.trip = [self tripForIndexPath:indexPath];
+
+//        vc.modalPresentationStyle = UIModalPresentationCustom;
+//        vc.transitioningDelegate = self.transition;
+//
+//        [self presentViewController:vc animated:YES completion:nil];
+
         [self.navigationController pushViewController:vc animated:YES];
-        return;
     } else {
         // selected cell is flight grouping
         FlightResultGroupCell *cell = (FlightResultGroupCell *)[tableView cellForRowAtIndexPath:indexPath];

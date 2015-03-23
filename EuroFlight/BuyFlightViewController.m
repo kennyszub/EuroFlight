@@ -13,9 +13,14 @@
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
+- (IBAction)onCloseButton:(id)sender;
+
 @end
 
 @implementation BuyFlightViewController
+
+// TODO the nib is currently set up as iPhone 6 because of the weird clipping issue
+// don't think it's worth my time to figure out right now so just setting it to iPhone 6 by default
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,4 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onCloseButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

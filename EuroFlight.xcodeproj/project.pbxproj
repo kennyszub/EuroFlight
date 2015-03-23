@@ -69,6 +69,8 @@
 		EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A4051AAC3948001C2AA3 /* OneWayFlightDetailView.m */; };
 		EB08A40D1AAD349C001C2AA3 /* NameMappingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */; };
 		EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */; };
+		EB42F4DB1ABF82500004A9B8 /* BaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F4DA1ABF82500004A9B8 /* BaseTransition.m */; };
+		EB42F4DE1ABF899A0004A9B8 /* ZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F4DD1ABF899A0004A9B8 /* ZoomTransition.m */; };
 		EB4469011AB9658200DB116B /* KLU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469001AB9658200DB116B /* KLU.txt */; };
 		EB4469031AB9665700DB116B /* LNZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469021AB9665700DB116B /* LNZ.txt */; };
 		EB4469051AB966A100DB116B /* KAJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469041AB966A100DB116B /* KAJ.txt */; };
@@ -267,6 +269,11 @@
 		EB08A40B1AAD349C001C2AA3 /* NameMappingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameMappingHelper.h; sourceTree = "<group>"; };
 		EB08A40C1AAD349C001C2AA3 /* NameMappingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameMappingHelper.m; sourceTree = "<group>"; };
 		EB3EF1311AAC38B60008FF9E /* OneWayFlightDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWayFlightDetailView.xib; sourceTree = "<group>"; };
+		EB42F4D91ABF82500004A9B8 /* BaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTransition.h; sourceTree = "<group>"; };
+		EB42F4DA1ABF82500004A9B8 /* BaseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTransition.m; sourceTree = "<group>"; };
+		EB42F4DC1ABF899A0004A9B8 /* ZoomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomTransition.h; sourceTree = "<group>"; };
+		EB42F4DD1ABF899A0004A9B8 /* ZoomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomTransition.m; sourceTree = "<group>"; };
+		EB42F4DF1ABF8A050004A9B8 /* BaseTransitionPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransitionPrivate.h; sourceTree = "<group>"; };
 		EB4469001AB9658200DB116B /* KLU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KLU.txt; sourceTree = "<group>"; };
 		EB4469021AB9665700DB116B /* LNZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LNZ.txt; sourceTree = "<group>"; };
 		EB4469041AB966A100DB116B /* KAJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KAJ.txt; sourceTree = "<group>"; };
@@ -645,6 +652,11 @@
 				EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */,
 				C43028081AB4DED200DA2B18 /* LocationManager.h */,
 				C43028091AB4DED200DA2B18 /* LocationManager.m */,
+				EB42F4D91ABF82500004A9B8 /* BaseTransition.h */,
+				EB42F4DA1ABF82500004A9B8 /* BaseTransition.m */,
+				EB42F4DF1ABF8A050004A9B8 /* BaseTransitionPrivate.h */,
+				EB42F4DC1ABF899A0004A9B8 /* ZoomTransition.h */,
+				EB42F4DD1ABF899A0004A9B8 /* ZoomTransition.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -992,6 +1004,7 @@
 				117F3FFC1AB94F9C00D2D5A3 /* PlaceCollectionCell.m in Sources */,
 				EBA7FAA41AB6656100760622 /* FlightDetailSectionHeaderView.m in Sources */,
 				C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */,
+				EB42F4DE1ABF899A0004A9B8 /* ZoomTransition.m in Sources */,
 				C43028231AB51F0400DA2B18 /* OneWayRoundTripCell.m in Sources */,
 				C4FA0DB11AABA86A0023FDC3 /* Event.m in Sources */,
 				C4FA0DE31AAEC2CD0023FDC3 /* AirportSearchResultsControllerViewController.m in Sources */,
@@ -1009,6 +1022,7 @@
 				113E2AB51AB925FA00DAAFA3 /* EventCell.m in Sources */,
 				C430280F1AB507FA00DA2B18 /* DepartureCityCell.m in Sources */,
 				EB72B2561AB032D7004503D1 /* CurrencyFormatter.m in Sources */,
+				EB42F4DB1ABF82500004A9B8 /* BaseTransition.m in Sources */,
 				11873B071AABF9BF0050D5DA /* AppDelegate.m in Sources */,
 				11873B081AABF9BF0050D5DA /* Context.m in Sources */,
 				C4FA0DDC1AAEB96B0023FDC3 /* AirportClient.m in Sources */,

@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyFlightViewController">
             <connections>
-                <outlet property="containerView" destination="AJD-r1-LcP" id="dtj-xl-rf4"/>
+                <outlet property="containerView" destination="Ioe-ag-HCL" id="xKh-XA-4M1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-r1-LcP">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yml-Vj-ai8">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                    <state key="normal" title="X">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onCloseButton:" destination="-1" eventType="touchUpInside" id="Nwp-EM-SY5"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-ag-HCL">
+                    <rect key="frame" x="0.0" y="30" width="375" height="637"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="AJD-r1-LcP" secondAttribute="bottom" id="0C2-qy-cev"/>
-                <constraint firstItem="AJD-r1-LcP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aGf-FZ-LRO"/>
-                <constraint firstItem="AJD-r1-LcP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hts-pW-2S8"/>
-                <constraint firstAttribute="trailing" secondItem="AJD-r1-LcP" secondAttribute="trailing" id="zhU-vv-NC0"/>
+                <constraint firstAttribute="trailing" secondItem="Ioe-ag-HCL" secondAttribute="trailing" id="7Ef-se-hcO"/>
+                <constraint firstItem="yml-Vj-ai8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bT9-mP-49p"/>
+                <constraint firstItem="Ioe-ag-HCL" firstAttribute="top" secondItem="yml-Vj-ai8" secondAttribute="bottom" id="kiA-yZ-uTW"/>
+                <constraint firstItem="yml-Vj-ai8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t8V-WW-f77"/>
+                <constraint firstAttribute="bottom" secondItem="Ioe-ag-HCL" secondAttribute="bottom" id="tIf-ov-2dx"/>
+                <constraint firstItem="Ioe-ag-HCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uZp-l2-UCh"/>
             </constraints>
-            <point key="canvasLocation" x="325" y="248"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="198.5" y="211.5"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -16,6 +16,7 @@
 #import "SegmentDetailCell.h"
 #import "FlightDetailSectionHeaderView.h"
 #import <WebKit/WebKit.h>
+#import "ZoomTransition.h"
 
 @interface FlightDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,6 +26,8 @@
 - (IBAction)onStartOverButton:(id)sender;
 - (IBAction)onBuyButton:(id)sender;
 - (IBAction)onTellAFriendButton:(id)sender;
+
+@property (nonatomic, strong) BaseTransition *transition;
 
 @end
 
@@ -47,6 +50,8 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     [self.tableView registerNib:[UINib nibWithNibName:@"LayoverDetailCell" bundle:nil] forCellReuseIdentifier:kLayoverDetailCellIdentifier];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    self.transition = [[ZoomTransition alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,30 +61,6 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
 - (void)setupBuyButton {
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.trip.currencyType];
     [self.buyButton setTitle:[NSString stringWithFormat:@"Buy now for %@", [formatter stringFromNumber:@(self.trip.flightCost)]] forState:UIControlStateNormal];
-
-//    CGFloat width = self.view.frame.size.width;
-//
-//    UIView *buyButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 50)];
-//    buyButtonView.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
-//
-//    UIButton *buyButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 2.5, width - 10, 45)];
-//    buyButton.layer.cornerRadius = 5;
-//    buyButton.layer.masksToBounds = NO;
-//    buyButton.layer.shadowColor = [UIColor blackColor].CGColor;
-//    buyButton.layer.shadowOpacity = 0.1;
-//    buyButton.layer.shadowRadius = 2;
-//    buyButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-//    [buyButton setTitle:[NSString stringWithFormat:@"Buy Now for %@", [formatter stringFromNumber:@(self.trip.flightCost)]] forState:UIControlStateNormal];
-//    buyButton.titleLabel.textColor = [UIColor whiteColor];
-//    buyButton.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
-//    buyButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-//    buyButton.backgroundColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1];
-//    buyButton.tintColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1];
-//    [buyButton addTarget:self action:@selector(onBuyButton:) forControlEvents:UIControlEventTouchUpInside];
-//
-//    [buyButtonView addSubview:buyButton];
-//
-//    self.tableView.tableHeaderView = buyButtonView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -196,14 +177,17 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
 
     NSString *sourceAirport = self.trip.sourceAirportCode;
     NSString *destinationAirport = self.trip.destinationAirportCode;
-    NSString *departureDate = [formatter stringFromDate:((FlightSegment *)self.trip.outboundFlight.flightSegments[0]).departureDate ];
+    NSString *departureDate = [formatter stringFromDate:((FlightSegment *)self.trip.outboundFlight.flightSegments[0]).departureDate];
     NSString *returnDate = [formatter stringFromDate:((FlightSegment *)self.trip.returnFlight.flightSegments[0]).departureDate];
     NSString *urlString = [NSString stringWithFormat:@"%@/%@-%@/%@/%@", kKayakBaseURL, sourceAirport, destinationAirport, departureDate, returnDate];
 
     BuyFlightViewController *bfvc = [[BuyFlightViewController alloc] init];
     bfvc.url = urlString;
 
-    [self.navigationController pushViewController:bfvc animated:YES];
+    bfvc.modalTransitionStyle = UIModalPresentationCustom;
+    bfvc.transitioningDelegate = self.transition;
+
+    [self presentViewController:bfvc animated:YES completion:nil];
 }
 
 - (IBAction)onTellAFriendButton:(id)sender {
