@@ -9,7 +9,6 @@
 #import "ResultsViewController.h"
 #import "Country.h"
 #import "CountryTableViewCell.h"
-#import "CityTableViewCell.h"
 #import "City.h"
 #import "CityDetailsViewController.h"
 #import "Event.h"
@@ -37,7 +36,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"CountryTableViewCell" bundle:nil] forCellReuseIdentifier:@"CountryTableViewCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"CityTableViewCell" bundle:nil] forCellReuseIdentifier:@"CityTableViewCell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
@@ -106,12 +104,9 @@
     if ([self.indexPathsOfSelectedCells containsObject:indexPath]) {
         [self.indexPathsOfSelectedCells removeObject:indexPath];
         [cell showCityViews:NO];
-//        cell.countryCellSelected = NO;
     } else {
         [self.indexPathsOfSelectedCells addObject:indexPath];
         [cell showCityViews:YES];
-
-//        cell.countryCellSelected = YES;
     }
 }
 
@@ -146,21 +141,6 @@
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:fvc];
     nvc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:nvc animated:YES completion:nil];
-    
-//    [UIView transitionWithView:self.navigationController.view duration:0.75 options:UIViewAnimationOptionTransitionFlipFromRight | UIViewAnimationOptionLayoutSubviews animations:^{
-//        [self.navigationController pushViewController:fvc animated:NO];
-//    } completion:nil];
-//
-//    if (!self.isFavoritesOnly) {
-//        NSPredicate *favoritedPredicate = [NSPredicate predicateWithFormat:@"favoritedCities[SIZE] > 0"];
-//        self.countries = [self.allCountries filteredArrayUsingPredicate:favoritedPredicate];
-//    } else {
-//        self.countries = self.allCountries;
-//    }
-//
-//    [self sortCountriesList];
-//    self.isFavoritesOnly = !self.isFavoritesOnly;
-//    [self.tableView reloadData];
 }
 
 - (void)sortCountriesList {

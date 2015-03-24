@@ -52,8 +52,6 @@
 		C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DC31AABDEF20023FDC3 /* ResultsViewController.xib */; };
 		C4FA0DC91AABDFC60023FDC3 /* CountryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */; };
 		C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */; };
-		C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DCC1AABDFDA0023FDC3 /* CityTableViewCell.m */; };
-		C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */; };
 		C4FA0DD01AABEE0F0023FDC3 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA71AABA6930023FDC3 /* Trip.m */; };
 		C4FA0DD11AABEE0F0023FDC3 /* FlightSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA11AABA5520023FDC3 /* FlightSegment.m */; };
 		C4FA0DD21AABEE0F0023FDC3 /* TripClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DBA1AABC1C80023FDC3 /* TripClient.m */; };
@@ -251,9 +249,6 @@
 		C4FA0DC61AABDFC60023FDC3 /* CountryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryTableViewCell.h; sourceTree = "<group>"; };
 		C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryTableViewCell.m; sourceTree = "<group>"; };
 		C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
-		C4FA0DCB1AABDFDA0023FDC3 /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
-		C4FA0DCC1AABDFDA0023FDC3 /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
-		C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		C4FA0DDA1AAEB96B0023FDC3 /* AirportClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirportClient.h; sourceTree = "<group>"; };
 		C4FA0DDB1AAEB96B0023FDC3 /* AirportClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportClient.m; sourceTree = "<group>"; };
 		C4FA0DDD1AAEBDE00023FDC3 /* Airport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
@@ -464,9 +459,6 @@
 				C4FA0DC61AABDFC60023FDC3 /* CountryTableViewCell.h */,
 				C4FA0DC71AABDFC60023FDC3 /* CountryTableViewCell.m */,
 				C4FA0DC81AABDFC60023FDC3 /* CountryTableViewCell.xib */,
-				C4FA0DCB1AABDFDA0023FDC3 /* CityTableViewCell.h */,
-				C4FA0DCC1AABDFDA0023FDC3 /* CityTableViewCell.m */,
-				C4FA0DCD1AABDFDA0023FDC3 /* CityTableViewCell.xib */,
 				C43028311AB7F91200DA2B18 /* CityCustomMiniView.h */,
 				C43028321AB7F91200DA2B18 /* CityCustomMiniView.m */,
 				C430282F1AB7F89900DA2B18 /* CityCustomMiniView.xib */,
@@ -882,7 +874,6 @@
 				EB72B22F1AB00F9D004503D1 /* BUD.txt in Resources */,
 				116185B01ABE3CB3006275B7 /* PlacesScrollCustomView.xib in Resources */,
 				EB72B2351AB01089004503D1 /* FLR.txt in Resources */,
-				C4FA0DCF1AABDFDA0023FDC3 /* CityTableViewCell.xib in Resources */,
 				EB4469251AB9719E00DB116B /* GVA.txt in Resources */,
 				EB7665D11ABF34EF0094D6C3 /* POZ.txt in Resources */,
 				EB7665BF1ABBF57C0094D6C3 /* LIS.txt in Resources */,
@@ -979,7 +970,6 @@
 			files = (
 				C43028141AB50B9F00DA2B18 /* DateSelectionCell.m in Sources */,
 				EB91F1BF1AB6C573000A815F /* GoogleSearchClient.m in Sources */,
-				C4FA0DCE1AABDFDA0023FDC3 /* CityTableViewCell.m in Sources */,
 				C430280A1AB4DED200DA2B18 /* LocationManager.m in Sources */,
 				C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */,
 				EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */,
