@@ -13,7 +13,6 @@
 #import "PlacesClient.h"
 #import "KimonoClient.h"
 #import "Event.h"
-#import "FavoritesViewController.h"
 #import "AirportSearchResultsControllerViewController.h"
 #import "Context.h"
 #import "LocationManager.h"
@@ -82,15 +81,6 @@ enum Weeks {
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.isRoundTrip = YES;
-
-    // set up favorites button
-    UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
-    favoritesImageView.frame = CGRectMake(0, 0, 20, 20);
-    favoritesImageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onFavoritesButton)];
-    [favoritesImageView addGestureRecognizer:tapGesture];
-    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
-    self.navigationItem.rightBarButtonItem = favoritesButton;
     
     // set background picture
     UIImageView *budapestView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"budapestCropped"]];
@@ -113,11 +103,6 @@ enum Weeks {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)onFavoritesButton {
-    FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
-    [self.navigationController pushViewController:fvc animated:YES];
 }
 
 - (void)airportSearchResultsControllerViewController:(AirportSearchResultsControllerViewController *)airportsController didSelectAirport:(Airport *)airport {
