@@ -92,6 +92,7 @@ enum Weeks {
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     
     [self addErrorLabel]; // TODO this is resulting in an error label getting created every time viewWillAppear is called
     
