@@ -71,7 +71,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0], NSForegroundColorAttributeName,
-      [UIFont fontWithName:@"Verdana" size:25.0f], NSFontAttributeName,
+      [UIFont fontWithName:@"Verdana" size:21.0f], NSFontAttributeName,
       
       nil]];
     [[UINavigationBar appearance] setTranslucent:YES]; // this fixes the UISearchBar overlapping the status bar for some reason??

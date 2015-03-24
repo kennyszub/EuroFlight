@@ -63,7 +63,6 @@
             [self.placeSummaries setObject:item[@"description"] forKey:item[@"name"][@"text"]];
             [self.cityImages setObject:item[@"image"] forKey:item[@"name"][@"text"]];
         }
-        [Country initCountries]; // this will initialize the shared _allCountries array
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed getting summaries %@", error.description);
     }];

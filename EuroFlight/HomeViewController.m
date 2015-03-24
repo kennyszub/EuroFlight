@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, assign) BOOL isRoundTrip;
 @property (nonatomic, strong) UIButton *searchButton;
+@property (nonatomic, strong) ResultsViewController *rvc;
 
 enum Weeks {
     SUNDAY = 1,
@@ -162,7 +163,7 @@ enum Weeks {
             PlaneLoadingView *hud = [[PlaneLoadingView alloc] init];
             [self.view addSubview:hud];
             [hud show:YES];
-
+            self.rvc = [[ResultsViewController alloc] initWithResults];
             [NSTimer scheduledTimerWithTimeInterval:8 target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
         } else {
             ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
@@ -175,8 +176,7 @@ enum Weeks {
     PlaneLoadingView *hud = timer.userInfo;
     [hud hide:YES];
 
-    ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
-    [self.navigationController pushViewController:rvc animated:YES];
+    [self.navigationController pushViewController:self.rvc animated:YES];
 }
 
 - (void)oneWayRoundTripCellDelegate:(OneWayRoundTripCell *)cell didSelectRoundTrip:(BOOL)isRoundTrip {

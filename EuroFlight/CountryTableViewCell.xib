@@ -13,15 +13,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1j-C4-hyj">
-                        <rect key="frame" x="0.0" y="132" width="117" height="30"/>
-                        <state key="normal" title="Upcoming event!">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="onEventTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0gu-oz-5yC"/>
-                        </connections>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRy-kY-OzQ">
                         <rect key="frame" x="0.0" y="127" width="328" height="46"/>
                         <subviews>
@@ -55,7 +46,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="countryName" destination="95b-r3-L6U" id="Go1-Od-JTL"/>
-                <outlet property="eventButton" destination="W1j-C4-hyj" id="hQd-b5-OWL"/>
                 <outlet property="lowestPriceLabel" destination="JX2-O9-vrS" id="jM9-C7-iua"/>
                 <outlet property="topOfCityLabelConstraint" destination="F5p-Cw-Jwg" id="hLQ-Rt-bvO"/>
             </connections>

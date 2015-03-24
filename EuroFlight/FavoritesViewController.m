@@ -11,6 +11,7 @@
 #import "FavoritesManager.h"
 #import "CityDetailsViewController.h"
 #import "FavoritesResultCell.h"
+#import "CountryTableViewCell.h"
 
 NSString * const kFavoritesResultCellIdentifier = @"FavoritesResultCell";
 
@@ -26,21 +27,34 @@ NSString * const kFavoritesResultCellIdentifier = @"FavoritesResultCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
     self.title = @"Favorites";
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"FavoritesResultCell" bundle:nil] forCellReuseIdentifier:kFavoritesResultCellIdentifier];
+
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     self.cities = [[FavoritesManager sharedInstance] favoritedCities];
     [self sortCitiesList];
+    
+    // set up favorites button
+    UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
+    favoritesImageView.frame = CGRectMake(0, 0, 20, 20);
+    favoritesImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onFavoritesButton)];
+    [favoritesImageView addGestureRecognizer:tapGesture];
+    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
+    self.navigationItem.rightBarButtonItem = favoritesButton;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)onFavoritesButton {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource methods
@@ -51,7 +65,6 @@ NSString * const kFavoritesResultCellIdentifier = @"FavoritesResultCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FavoritesResultCell *cell = [tableView dequeueReusableCellWithIdentifier:kFavoritesResultCellIdentifier];
-
     cell.city = self.cities[indexPath.row];
 
     return cell;

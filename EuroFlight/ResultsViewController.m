@@ -16,6 +16,7 @@
 #import "EventDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "FlightResultsViewController.h"
+#import "FavoritesViewController.h"
 
 @interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate, CountryTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -141,16 +142,25 @@
 }
 
 - (void)onFavoritesButton {
-    if (!self.isFavoritesOnly) {
-        NSPredicate *favoritedPredicate = [NSPredicate predicateWithFormat:@"favoritedCities[SIZE] > 0"];
-        self.countries = [self.allCountries filteredArrayUsingPredicate:favoritedPredicate];
-    } else {
-        self.countries = self.allCountries;
-    }
-
-    [self sortCountriesList];
-    self.isFavoritesOnly = !self.isFavoritesOnly;
-    [self.tableView reloadData];
+    FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:fvc];
+    nvc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:nvc animated:YES completion:nil];
+    
+//    [UIView transitionWithView:self.navigationController.view duration:0.75 options:UIViewAnimationOptionTransitionFlipFromRight | UIViewAnimationOptionLayoutSubviews animations:^{
+//        [self.navigationController pushViewController:fvc animated:NO];
+//    } completion:nil];
+//
+//    if (!self.isFavoritesOnly) {
+//        NSPredicate *favoritedPredicate = [NSPredicate predicateWithFormat:@"favoritedCities[SIZE] > 0"];
+//        self.countries = [self.allCountries filteredArrayUsingPredicate:favoritedPredicate];
+//    } else {
+//        self.countries = self.allCountries;
+//    }
+//
+//    [self sortCountriesList];
+//    self.isFavoritesOnly = !self.isFavoritesOnly;
+//    [self.tableView reloadData];
 }
 
 - (void)sortCountriesList {

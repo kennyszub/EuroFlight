@@ -71,7 +71,6 @@
             [view removeFromSuperview];
         }
     }
-
 }
 
 
@@ -120,7 +119,6 @@
     AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.backgroundView = [[UIImageView alloc] initWithImage:responseObject];
         GPUImagePicture *imageSource = [[GPUImagePicture alloc] initWithImage:responseObject];
         [self applyFilterToGPUImageView:imageSource];
         
@@ -208,11 +206,9 @@
     if (cellIsSelected) {
         CGFloat constantChange = self.topOfCityLabelConstraint.constant - 10;
         self.topOfCityLabelConstraint.constant -= constantChange;
-//        self.bottomOfCityLabelConstraint.constant += constantChange;
         [self.contentView layoutIfNeeded];
     } else {
         self.topOfCityLabelConstraint.constant = 127;
-//        self.bottomOfCityLabelConstraint.constant = 112;
         [self.contentView layoutIfNeeded];
     }
 }
