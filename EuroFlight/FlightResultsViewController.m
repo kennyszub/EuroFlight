@@ -12,6 +12,7 @@
 #import "FlightResultGroupCell.h"
 #import "Trip.h"
 #import "ZoomTransition.h"
+#import "Context.h"
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
@@ -39,7 +40,7 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = self.city.name;
+    [self setupTitleLabel];
 
     self.tripGroupings = [self groupTrips];
     self.expandedSections = [[NSMutableSet alloc] init];
@@ -132,6 +133,46 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 }
 
 #pragma mark - Private methods
+
+static NSDateFormatter *dateFormatter;
+
+- (void)setupTitleLabel {
+    [FlightResultsViewController initDateFormatter];
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+    label.backgroundColor = [UIColor clearColor];
+    label.numberOfLines = 2;
+    label.font = [UIFont fontWithName:@"Verdana" size:14.0];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0];
+
+    Trip *trip = self.city.trips[0];
+    NSString *roundTripText;
+    NSString *dateText;
+    if ([Context currentContext].isRoundTrip) {
+        roundTripText = @"Round-trip";
+        dateText = [NSString stringWithFormat:@"%@ - %@",
+                    [dateFormatter stringFromDate:[Context currentContext].departureDate],
+                    [dateFormatter stringFromDate:[Context currentContext].returnDate]];
+    } else {
+        roundTripText = @"One-way";
+        dateText = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[Context currentContext].departureDate]];
+    }
+    label.text = [NSString stringWithFormat:@"%@ - %@ %@\n%@", [Context currentContext].originAirport,
+                  trip.destinationAirportCode, roundTripText, dateText];
+
+    self.navigationItem.titleView = label;
+}
+
++ (void)initDateFormatter {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!dateFormatter) {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"MMM d";
+        }
+    });
+}
 
 - (void)setupBordersForCell:(UITableViewCell *)cell {
     // change the default margin of the table divider length
