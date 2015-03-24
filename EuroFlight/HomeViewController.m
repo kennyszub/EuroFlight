@@ -37,6 +37,7 @@
 @property (nonatomic, assign) BOOL isRoundTrip;
 @property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic, strong) ResultsViewController *rvc;
+@property (nonatomic, assign) BOOL tableIsHidden;
 
 enum Weeks {
     SUNDAY = 1,
@@ -91,6 +92,9 @@ enum Weeks {
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    self.tableIsHidden = NO;
+    self.searchButton.hidden = NO;
+    
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     
@@ -153,6 +157,7 @@ enum Weeks {
 
             self.rvc = [[ResultsViewController alloc] initWithResults];
             [NSTimer scheduledTimerWithTimeInterval:LOADING_VIEW_DURATION target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
+            [self fadeOutTableView];
         } else {
             ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
             [self.navigationController pushViewController:rvc animated:YES];
@@ -183,6 +188,12 @@ enum Weeks {
     }
 }
 
+- (void)fadeOutTableView {
+    self.tableIsHidden = YES;
+    self.searchButton.hidden = YES;
+    [self.tableView reloadData];
+}
+
 #pragma mark Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -211,7 +222,9 @@ enum Weeks {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.isRoundTrip) {
+    if (self.tableIsHidden) {
+        return 0;
+    } else if (self.isRoundTrip) {
         return 4;
     } else {
         return 3;
