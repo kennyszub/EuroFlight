@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *upcomingLabel;
 
 
 @end
@@ -36,6 +37,11 @@
     [self.eventView setImageWithURL:[NSURL URLWithString:event.photoURL]];
     self.dateLabel.text = event.dateString;
     self.nameLabel.text = event.name;
+    if ([[NSDate dateWithTimeIntervalSinceNow:60*60*24*30] compare:event.startDate] == NSOrderedDescending) {
+        self.upcomingLabel.hidden = NO;
+    } else {
+        self.upcomingLabel.hidden = YES;
+    }
 }
 
 @end

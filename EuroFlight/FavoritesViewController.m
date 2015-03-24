@@ -39,7 +39,7 @@ NSString * const kFavoritesResultCellIdentifier = @"FavoritesResultCell";
     [self sortCitiesList];
     
     // set up favorites button
-    UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-on"]];
+    UIImageView *favoritesImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favorite-off"]];
     favoritesImageView.frame = CGRectMake(0, 0, 20, 20);
     favoritesImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onFavoritesButton)];
