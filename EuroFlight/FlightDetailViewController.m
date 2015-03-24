@@ -17,6 +17,7 @@
 #import "FlightDetailSectionHeaderView.h"
 #import <WebKit/WebKit.h>
 #import "ZoomTransition.h"
+#import "Context.h"
 
 @interface FlightDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -73,7 +74,10 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
 #pragma mark - UITableViewDataSource methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    if ([Context currentContext].isRoundTrip) {
+        return 2;
+    }
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

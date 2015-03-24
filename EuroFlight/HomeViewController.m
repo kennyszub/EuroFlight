@@ -25,6 +25,7 @@
 #import "PlaneLoadingView.h"
 
 #define ENABLE_LOADING_VIEW 0
+#define LOADING_VIEW_DURATION 2
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
 @property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
@@ -163,8 +164,9 @@ enum Weeks {
             PlaneLoadingView *hud = [[PlaneLoadingView alloc] init];
             [self.view addSubview:hud];
             [hud show:YES];
+
             self.rvc = [[ResultsViewController alloc] initWithResults];
-            [NSTimer scheduledTimerWithTimeInterval:8 target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:LOADING_VIEW_DURATION target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
         } else {
             ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
             [self.navigationController pushViewController:rvc animated:YES];

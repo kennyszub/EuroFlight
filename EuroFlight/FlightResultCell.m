@@ -9,11 +9,14 @@
 #import "FlightResultCell.h"
 #import "CurrencyFormatter.h"
 #import "OneWayFlightResultView.h"
+#import "Context.h"
 
 @interface FlightResultCell ()
 
 @property (weak, nonatomic) IBOutlet OneWayFlightResultView *outboundFlightView;
 @property (weak, nonatomic) IBOutlet OneWayFlightResultView *returnFlightView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *returnFlightViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *outboundFlightBottomConstraint;
 
 @end
 
@@ -36,8 +39,18 @@ static NSDateFormatter *dateTimeFormatter;
 
     self.outboundFlightView.flight = trip.outboundFlight;
     self.outboundFlightView.isOutboundFlight = YES;
-    self.returnFlightView.flight = trip.returnFlight;
-    self.returnFlightView.isOutboundFlight = NO;
+
+    if ([Context currentContext].isRoundTrip) {
+        self.returnFlightView.flight = trip.returnFlight;
+        self.returnFlightView.isOutboundFlight = NO;
+        self.returnFlightViewHeightConstraint.constant = 20;
+        self.outboundFlightBottomConstraint.constant = 8;
+        self.returnFlightView.hidden = NO;
+    } else {
+        self.returnFlightViewHeightConstraint.constant = 0;
+        self.outboundFlightBottomConstraint.constant = 0;
+        self.returnFlightView.hidden = YES;
+    }
 }
 
 @end

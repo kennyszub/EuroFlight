@@ -40,8 +40,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="outboundFlightBottomConstraint" destination="OuL-n4-jKC" id="VZW-8X-QGB"/>
                 <outlet property="outboundFlightView" destination="aDK-Iu-eIw" id="vDZ-g9-Zuf"/>
                 <outlet property="returnFlightView" destination="eh5-fC-J4M" id="K5l-fD-oJy"/>
+                <outlet property="returnFlightViewHeightConstraint" destination="VX3-hj-39m" id="4ov-US-OpN"/>
             </connections>
             <point key="canvasLocation" x="375" y="771"/>
         </tableViewCell>

@@ -13,6 +13,7 @@
 #import "NameMappingHelper.h"
 #import "GoogleSearchClient.h"
 #import <UIImageView+AFNetworking.h>
+#import "Context.h"
 
 @interface FlightResultGroupCell ()
 
@@ -59,13 +60,23 @@
     NSString *airline = nil;
     for (Trip *trip in trips) {
         NSString *outboundAirline = [self singleAirlineForFlight:trip.outboundFlight];
-        NSString *returnAirline = [self singleAirlineForFlight:trip.returnFlight];
 
-        if (!outboundAirline || !returnAirline || ![outboundAirline isEqualToString:returnAirline]) {
-            // outbound and return airlines are different
-            self.airlineLabel.text = @"Multiple Airlines";
-            self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
-            return;
+        if ([Context currentContext].isRoundTrip) {
+            NSString *returnAirline = [self singleAirlineForFlight:trip.returnFlight];
+
+            if (!outboundAirline || !returnAirline || ![outboundAirline isEqualToString:returnAirline]) {
+                // outbound and return airlines are different
+                self.airlineLabel.text = @"Multiple Airlines";
+                self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+                return;
+            }
+        } else {
+            if (!outboundAirline) {
+                // this should never happen
+                self.airlineLabel.text = @"Multiple Airlines";
+                self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+                return;
+            }
         }
 
         if (!airline) {

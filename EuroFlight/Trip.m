@@ -8,6 +8,7 @@
 
 #import "Trip.h"
 #import "Flight.h"
+#import "Context.h"
 
 @implementation Trip
 
@@ -54,6 +55,14 @@ static NSRegularExpression *currencyRegex;
         NSRange currencyAmountRange = [match rangeAtIndex:2];
         self.currencyType = [currencyString substringWithRange:currencyTypeRange];
         self.flightCost = [[currencyString substringWithRange:currencyAmountRange] floatValue];
+    }
+}
+
+- (float)flightCost {
+    if ([Context currentContext].isRoundTrip) {
+        return _flightCost;
+    } else {
+        return _flightCost / 2;
     }
 }
 
