@@ -24,7 +24,7 @@
 #import "PlaneLoadingView.h"
 
 #define ENABLE_LOADING_VIEW 0
-#define LOADING_VIEW_DURATION 2
+#define LOADING_VIEW_DURATION 5
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
 @property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
@@ -37,7 +37,7 @@
 @property (nonatomic, assign) BOOL isRoundTrip;
 @property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic, strong) ResultsViewController *rvc;
-@property (nonatomic, assign) BOOL tableIsHidden;
+@property (nonatomic, strong) UIImageView *backgroundImage;
 
 enum Weeks {
     SUNDAY = 1,
@@ -85,15 +85,19 @@ enum Weeks {
     
     // set background picture
     UIImageView *budapestView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"budapestCropped"]];
-    [budapestView setFrame:self.tableView.frame];
-    self.tableView.backgroundView = budapestView;
+    [self.view addSubview:budapestView];
+    [budapestView.superview sendSubviewToBack:budapestView];
+    self.backgroundImage = budapestView;
+    self.tableView.backgroundColor = [UIColor clearColor];
     
     [self addSearchButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.tableIsHidden = NO;
+    [self.backgroundImage setFrame:self.view.bounds];
+    self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0f);
     self.searchButton.hidden = NO;
+    self.tableView.hidden = NO;
     
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
@@ -189,9 +193,19 @@ enum Weeks {
 }
 
 - (void)fadeOutTableView {
-    self.tableIsHidden = YES;
+    [UIView transitionWithView:self.tableView
+                      duration:1.1
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
+    [UIView transitionWithView:self.searchButton
+                      duration:1.1
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
+    
+    self.tableView.hidden = YES;
     self.searchButton.hidden = YES;
-    [self.tableView reloadData];
 }
 
 #pragma mark Table view methods
@@ -222,9 +236,7 @@ enum Weeks {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.tableIsHidden) {
-        return 0;
-    } else if (self.isRoundTrip) {
+    if (self.isRoundTrip) {
         return 4;
     } else {
         return 3;
