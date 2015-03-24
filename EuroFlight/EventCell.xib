@@ -21,18 +21,18 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8D-sR-Rb6">
-                        <rect key="frame" x="90" y="15" width="49" height="20"/>
-                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
+                        <rect key="frame" x="90" y="15" width="46" height="19"/>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lu-H1-a6G">
-                        <rect key="frame" x="90" y="37" width="40" height="19"/>
-                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                        <rect key="frame" x="90" y="36" width="38" height="18"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upcoming" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5C-6f-LdD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5C-6f-LdD">
                         <rect key="frame" x="90" y="57" width="75" height="19"/>
                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
                         <color key="textColor" red="0.87523049116134644" green="0.0" blue="0.18291321396827698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,12 +42,14 @@
                 <constraints>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3lu-H1-a6G" secondAttribute="trailing" constant="8" id="6Bz-NB-A9u"/>
                     <constraint firstAttribute="bottom" secondItem="X3W-8E-UYv" secondAttribute="bottom" constant="15" id="A1F-5a-e4V"/>
+                    <constraint firstItem="d5C-6f-LdD" firstAttribute="leading" secondItem="X3W-8E-UYv" secondAttribute="trailing" constant="22" id="CFy-Lv-Ii8"/>
                     <constraint firstItem="X3W-8E-UYv" firstAttribute="top" secondItem="a8D-sR-Rb6" secondAttribute="top" id="CvU-Cm-XvS"/>
                     <constraint firstItem="X3W-8E-UYv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="R00-mv-Zew"/>
                     <constraint firstItem="3lu-H1-a6G" firstAttribute="top" secondItem="a8D-sR-Rb6" secondAttribute="bottom" constant="3" id="fwY-90-7tG"/>
                     <constraint firstItem="X3W-8E-UYv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="g3V-Dg-pHc"/>
                     <constraint firstItem="3lu-H1-a6G" firstAttribute="leading" secondItem="X3W-8E-UYv" secondAttribute="trailing" constant="22" id="pGS-vy-4za"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="a8D-sR-Rb6" secondAttribute="trailing" constant="8" id="qjL-rw-fIf"/>
+                    <constraint firstItem="X3W-8E-UYv" firstAttribute="bottom" secondItem="d5C-6f-LdD" secondAttribute="bottom" id="tJP-U8-mBz"/>
                     <constraint firstItem="a8D-sR-Rb6" firstAttribute="leading" secondItem="X3W-8E-UYv" secondAttribute="trailing" constant="22" id="zg0-Rm-Ygh"/>
                 </constraints>
             </tableViewCellContentView>

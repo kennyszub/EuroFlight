@@ -37,10 +37,13 @@
     [self.eventView setImageWithURL:[NSURL URLWithString:event.photoURL]];
     self.dateLabel.text = event.dateString;
     self.nameLabel.text = event.name;
-    if ([[NSDate dateWithTimeIntervalSinceNow:60*60*24*30] compare:event.startDate] == NSOrderedDescending) {
+    if ([[NSDate dateWithTimeIntervalSinceNow:60*60*24*45] compare:event.startDate] == NSOrderedAscending) {
+        self.upcomingLabel.hidden = YES;
+    } else if ([[NSDate date] compare:event.startDate] == NSOrderedAscending) {
         self.upcomingLabel.hidden = NO;
     } else {
         self.upcomingLabel.hidden = YES;
+        self.contentView.alpha = 0.5;
     }
 }
 

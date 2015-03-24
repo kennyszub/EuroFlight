@@ -70,6 +70,12 @@ static NSDateFormatter *dateTimeParser;
             }
         }
     }
+    
+    array = [[array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSDate *date1 = ((Event *) obj1).startDate;
+        NSDate *date2 = ((Event *) obj2).startDate;
+        return [date1 compare:date2];
+    }] mutableCopy];
 
     return array;
 }

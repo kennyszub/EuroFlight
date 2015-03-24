@@ -39,14 +39,21 @@
         NSArray *matchingEvents = [array filteredArrayUsingPredicate:predicate];
         for (Event *event in matchingEvents) {
             event.country = self;
-            NSPredicate *cityPredicate = [NSPredicate predicateWithFormat:@"name like %@", event.cityString];
-            NSArray *matchingCities = [self.cities filteredArrayUsingPredicate:cityPredicate];
-            if (matchingCities.count > 0) {
-                City *city = [matchingCities objectAtIndex:0];
+            if (self.cities.count == 1) {
+                City *city = self.cities[0];
                 event.city = city;
                 [city.events addObject:event];
+            } else {
+                NSPredicate *cityPredicate = [NSPredicate predicateWithFormat:@"name like %@", event.cityString];
+                NSArray *matchingCities = [self.cities filteredArrayUsingPredicate:cityPredicate];
+                if (matchingCities.count > 0) {
+                    City *city = [matchingCities objectAtIndex:0];
+                    event.city = city;
+                    [city.events addObject:event];
+                }
             }
         }
+        
         self.events = matchingEvents;
     }
     return self;
@@ -152,7 +159,7 @@ static NSArray *_allCountries;
           @"cities" :
               @[@{@"city" : @"Stockholm",
                   @"airportCodes" : @[@"ARN"]},
-// Commented because the Gothenburg image sucks               @{@"city" : @"Gothenburg", 
+// Commented because the Gothenburg image sucks               @{@"city" : @"Gothenburg",
 //                  @"airportCodes" : @[@"GOT"]}
                 ]
           },
