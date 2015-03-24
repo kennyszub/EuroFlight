@@ -18,6 +18,18 @@
 
 @implementation ZoomTransition
 
+- (instancetype)init {
+    self = [super init];
+
+    if (self) {
+        // default scaling factors
+        self.xScale = 0.95;
+        self.yScale = 0.95;
+    }
+
+    return self;
+}
+
 - (void)presentTransitionInContainerView:(UIView *)containerView fromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController {
     self.blackView = [[UIView alloc] initWithFrame:containerView.frame];
     self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
@@ -29,7 +41,7 @@
     toViewController.view.transform = CGAffineTransformMakeScale(0, 0);
     [UIView animateWithDuration:self.duration animations:^{
         toViewController.view.alpha = 1;
-        toViewController.view.transform = CGAffineTransformMakeScale(0.95, 0.95);
+        toViewController.view.transform = CGAffineTransformMakeScale(self.xScale, self.yScale);
         self.blackView.alpha = 1;
     } completion:^(BOOL finished) {
         [self.transitionContext completeTransition:YES];

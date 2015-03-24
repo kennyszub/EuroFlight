@@ -27,7 +27,7 @@
 - (IBAction)onBuyButton:(id)sender;
 - (IBAction)onTellAFriendButton:(id)sender;
 
-@property (nonatomic, strong) BaseTransition *transition;
+@property (nonatomic, strong) ZoomTransition *transition;
 
 @end
 
@@ -52,6 +52,8 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     self.transition = [[ZoomTransition alloc] init];
+    self.transition.xScale = 1;
+    self.transition.yScale = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

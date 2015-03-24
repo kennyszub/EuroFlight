@@ -10,4 +10,7 @@
 
 @interface ZoomTransition : BaseTransition
 
+@property (nonatomic, assign) float xScale;
+@property (nonatomic, assign) float yScale;
+
 @end
