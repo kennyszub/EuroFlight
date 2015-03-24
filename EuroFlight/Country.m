@@ -72,7 +72,7 @@ static NSArray *_allCountries;
             [countries addObject:country];
         }
         
-        //[Event connectCitiesAndEvents];
+        //[Event connectCitiesAndEvents]; - this was a failed attempt to match events to closest cities
         _allCountries = countries;
     }
     return _allCountries;

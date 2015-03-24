@@ -29,6 +29,7 @@ NSInteger const kHeaderHeight = 150;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (nonatomic, assign) BOOL isPresenting;
 @property (nonatomic, strong) UIImageView *transitionView;
+@property (nonatomic, strong) UIView *whiteView;
 @property (nonatomic, strong) UIView *blackView;
 
 @end
@@ -42,13 +43,8 @@ NSInteger const kHeaderHeight = 150;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    self.collectionView.delegate = self;
-//    self.collectionView.dataSource = self;
-//    [self.collectionView registerNib:[UINib nibWithNibName:@"PlaceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PlaceCollectionViewCell"];
     
     self.title = self.city.name;
-//    self.descriptionLabel.text = self.city.summary;
-//    [self.cityView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
 
     [self setFavoriteButtonImage];
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.city.currencyType];
@@ -166,34 +162,69 @@ NSInteger const kHeaderHeight = 150;
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIView *containerView = [transitionContext containerView];
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    PlacesViewController *toViewController = (PlacesViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     if (self.isPresenting) {
-        self.blackView = [[UIView alloc] initWithFrame:fromViewController.view.frame];
-        self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
-        self.transitionView.clipsToBounds = YES;
-        [containerView addSubview:self.blackView];
-        [containerView addSubview:self.transitionView];
-        self.blackView.alpha = 0;
-        toViewController.view.frame = fromViewController.view.bounds;
-        [containerView addSubview:toViewController.view];
-        toViewController.view.alpha = 0;
-        CGFloat widthScale = self.view.frame.size.width / self.transitionView.image.size.width;
-        CGFloat heightScale = (self.view.frame.size.height - 200) / self.transitionView.image.size.height;
-        CGFloat scale = (widthScale > heightScale) ? heightScale : widthScale;
-        [UIView animateWithDuration:0.4 animations:^{
-            self.blackView.alpha = 1;
-            self.transitionView.center = self.view.center;
-            self.transitionView.bounds = CGRectMake(0, 0, self.transitionView.image.size.width, self.transitionView.image.size.height);
-            self.transitionView.transform = CGAffineTransformMakeScale(scale, scale);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.1 animations:^{
-                toViewController.view.alpha = 1;
+        if ([toViewController isKindOfClass:[PlacesViewController class]]) {
+            self.blackView = [[UIView alloc] initWithFrame:fromViewController.view.frame];
+            self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+            self.transitionView.clipsToBounds = YES;
+            [containerView addSubview:self.blackView];
+            [containerView addSubview:self.transitionView];
+            self.blackView.alpha = 0;
+            toViewController.view.frame = fromViewController.view.bounds;
+            [containerView addSubview:toViewController.view];
+            toViewController.view.alpha = 0;
+            CGFloat widthScale = self.view.frame.size.width / self.transitionView.image.size.width;
+            CGFloat heightScale = (self.view.frame.size.height - 200) / self.transitionView.image.size.height;
+            CGFloat scale = (widthScale > heightScale) ? heightScale : widthScale;
+            [UIView animateWithDuration:0.4 animations:^{
+                self.blackView.alpha = 1;
+                self.transitionView.center = self.view.center;
+                self.transitionView.bounds = CGRectMake(0, 0, self.transitionView.image.size.width, self.transitionView.image.size.height);
+                self.transitionView.transform = CGAffineTransformMakeScale(scale, scale);
             } completion:^(BOOL finished) {
-                [transitionContext completeTransition:YES];
-                [self.transitionView removeFromSuperview];
+                [UIView animateWithDuration:0.1 animations:^{
+                    toViewController.view.alpha = 1;
+                } completion:^(BOOL finished) {
+                    [transitionContext completeTransition:YES];
+                    [self.transitionView removeFromSuperview];
+                }];
             }];
-        }];
+        } else {
+            toViewController.view.alpha = 0;
+            self.blackView = [[UIView alloc] initWithFrame:fromViewController.view.frame];
+            self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+            self.blackView.alpha = 0;
+            self.transitionView.clipsToBounds = YES;
+            CGFloat scale = 300 / self.transitionView.frame.size.width;
+            toViewController.view.frame = CGRectMake(0, 0, 300, 550);
+            toViewController.view.center = self.view.center;
+            [containerView addSubview:self.blackView];
+            self.whiteView = [[UIView alloc] initWithFrame:CGRectMake(self.transitionView.frame.origin.x, self.transitionView.frame.origin.y+self.transitionView.frame.size.height, 300/scale, 0)];
+            self.whiteView.backgroundColor = [UIColor whiteColor];
+            //self.whiteView.bounds = CGRectMake(0, 0, self.whiteView.bounds.size.width, 0);
+            [containerView addSubview:self.transitionView];
+            [containerView addSubview:self.whiteView];
+            [containerView addSubview:toViewController.view];
+            [UIView animateWithDuration:0.4 animations:^{
+                self.blackView.alpha = 1;
+                self.transitionView.transform = CGAffineTransformMakeScale(scale, scale);
+                self.transitionView.center = CGPointMake(self.view.center.x, self.view.center.y - 175);
+                self.transitionView.bounds = CGRectMake(0, 0, 300/scale, 200/scale);
+                self.whiteView.center = CGPointMake(self.view.center.x, self.view.center.y+100);
+                self.whiteView.transform = CGAffineTransformMakeScale(scale, scale);
+                self.whiteView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y-75, 300, 350);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.1 animations:^{
+                    toViewController.view.alpha = 1;
+                } completion:^(BOOL finished) {
+                    [transitionContext completeTransition:YES];
+                    [self.transitionView removeFromSuperview];
+                    [self.whiteView removeFromSuperview];
+                }];
+            }];
+        }
     } else {
         [UIView animateWithDuration:0.5 animations:^{
             fromViewController.view.alpha = 0;
@@ -255,7 +286,13 @@ NSInteger const kHeaderHeight = 150;
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     EventDetailViewController *vc = [[EventDetailViewController alloc] init];
     vc.event = [self.city.events objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:vc animated:YES];
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    vc.transitioningDelegate = self;
+    UIImageView *eventView =((EventCell *)[tableView cellForRowAtIndexPath:indexPath]).eventView;
+    self.transitionView = [[UIImageView alloc] initWithImage:eventView.image];
+    self.transitionView.frame = [[tableView cellForRowAtIndexPath:indexPath] convertRect:eventView.frame toView:self.view];
+    self.transitionView.contentMode = UIViewContentModeScaleAspectFill;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 /*

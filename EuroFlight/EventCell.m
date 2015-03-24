@@ -11,7 +11,6 @@
 
 @interface EventCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *eventView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
@@ -22,6 +21,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.eventView.layer.cornerRadius = 3;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
