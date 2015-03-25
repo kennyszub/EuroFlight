@@ -70,6 +70,7 @@
 		EB42F4DB1ABF82500004A9B8 /* BaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F4DA1ABF82500004A9B8 /* BaseTransition.m */; };
 		EB42F4DE1ABF899A0004A9B8 /* ZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F4DD1ABF899A0004A9B8 /* ZoomTransition.m */; };
 		EB42F51E1AC284570004A9B8 /* FlightDetailsTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */; };
+		EB42F5211AC293100004A9B8 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */; };
 		EB4469011AB9658200DB116B /* KLU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469001AB9658200DB116B /* KLU.txt */; };
 		EB4469031AB9665700DB116B /* LNZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469021AB9665700DB116B /* LNZ.txt */; };
 		EB4469051AB966A100DB116B /* KAJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469041AB966A100DB116B /* KAJ.txt */; };
@@ -272,6 +273,8 @@
 		EB42F4DF1ABF8A050004A9B8 /* BaseTransitionPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransitionPrivate.h; sourceTree = "<group>"; };
 		EB42F51C1AC284570004A9B8 /* FlightDetailsTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailsTransition.h; sourceTree = "<group>"; };
 		EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailsTransition.m; sourceTree = "<group>"; };
+		EB42F51F1AC293100004A9B8 /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
 		EB4469001AB9658200DB116B /* KLU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KLU.txt; sourceTree = "<group>"; };
 		EB4469021AB9665700DB116B /* LNZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LNZ.txt; sourceTree = "<group>"; };
 		EB4469041AB966A100DB116B /* KAJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KAJ.txt; sourceTree = "<group>"; };
@@ -654,6 +657,8 @@
 				EB42F4DD1ABF899A0004A9B8 /* ZoomTransition.m */,
 				EB42F51C1AC284570004A9B8 /* FlightDetailsTransition.h */,
 				EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */,
+				EB42F51F1AC293100004A9B8 /* NavigationControllerDelegate.h */,
+				EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -999,6 +1004,7 @@
 				117F3FFC1AB94F9C00D2D5A3 /* PlaceCollectionCell.m in Sources */,
 				EBA7FAA41AB6656100760622 /* FlightDetailSectionHeaderView.m in Sources */,
 				C4FA0DAB1AABA72F0023FDC3 /* City.m in Sources */,
+				EB42F5211AC293100004A9B8 /* NavigationControllerDelegate.m in Sources */,
 				EB42F4DE1ABF899A0004A9B8 /* ZoomTransition.m in Sources */,
 				C43028231AB51F0400DA2B18 /* OneWayRoundTripCell.m in Sources */,
 				C4FA0DB11AABA86A0023FDC3 /* Event.m in Sources */,

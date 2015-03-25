@@ -17,7 +17,7 @@
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
-@interface FlightResultsViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
+@interface FlightResultsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -60,14 +60,6 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.navigationController.delegate = self;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    self.navigationController.delegate = nil;
 }
 
 #pragma mark - UITableViewDataSource methods
@@ -138,19 +130,6 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
-}
-
-#pragma mark - UINavigationControllerDelegate methods
-
-- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                   animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                fromViewController:(UIViewController *)fromVC
-                                                  toViewController:(UIViewController *)toVC  {
-    if (operation == UINavigationControllerOperationPush) {
-        return self.transition;
-    }
-
-    return nil;
 }
 
 #pragma mark - Private methods

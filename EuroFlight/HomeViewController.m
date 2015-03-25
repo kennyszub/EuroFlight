@@ -22,6 +22,7 @@
 #import "OneWayRoundTripCell.h"
 #import "UIImage+Util.h"
 #import "PlaneLoadingView.h"
+#import "NavigationControllerDelegate.h"
 
 #define ENABLE_LOADING_VIEW 0
 #define LOADING_VIEW_DURATION 5
@@ -38,6 +39,7 @@
 @property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic, strong) ResultsViewController *rvc;
 @property (nonatomic, strong) UIImageView *backgroundImage;
+@property (nonatomic, strong) NavigationControllerDelegate *navigationDelegate;
 
 enum Weeks {
     SUNDAY = 1,
@@ -91,6 +93,13 @@ enum Weeks {
     self.tableView.backgroundColor = [UIColor clearColor];
     
     [self addSearchButton];
+
+    self.navigationDelegate = [[NavigationControllerDelegate alloc] init];
+    self.navigationController.delegate = self.navigationDelegate;
+}
+
+- (void)dealloc {
+    self.navigationController.delegate = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
