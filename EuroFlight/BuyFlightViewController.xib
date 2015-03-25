@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyFlightViewController">
             <connections>
                 <outlet property="containerView" destination="Ioe-ag-HCL" id="xKh-XA-4M1"/>
+                <outlet property="toolbar" destination="aKn-Zi-Gjv" id="9vX-hF-HNn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,26 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yml-Vj-ai8">
-                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                    <state key="normal" title="X">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onCloseButton:" destination="-1" eventType="touchUpInside" id="Nwp-EM-SY5"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-ag-HCL">
-                    <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKn-Zi-Gjv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" systemItem="stop" id="pGt-3D-8hc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onCloseButton:" destination="-1" id="cgI-s4-Z7l"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Ioe-ag-HCL" secondAttribute="trailing" id="7Ef-se-hcO"/>
-                <constraint firstItem="yml-Vj-ai8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bT9-mP-49p"/>
-                <constraint firstItem="Ioe-ag-HCL" firstAttribute="top" secondItem="yml-Vj-ai8" secondAttribute="bottom" id="kiA-yZ-uTW"/>
-                <constraint firstItem="yml-Vj-ai8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t8V-WW-f77"/>
+                <constraint firstAttribute="trailing" secondItem="aKn-Zi-Gjv" secondAttribute="trailing" id="bdm-XX-A23"/>
+                <constraint firstItem="aKn-Zi-Gjv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ikb-eI-oGJ"/>
+                <constraint firstItem="aKn-Zi-Gjv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nsf-4A-YKC"/>
+                <constraint firstItem="Ioe-ag-HCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oaS-IF-eqo"/>
                 <constraint firstAttribute="bottom" secondItem="Ioe-ag-HCL" secondAttribute="bottom" id="tIf-ov-2dx"/>
                 <constraint firstItem="Ioe-ag-HCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uZp-l2-UCh"/>
             </constraints>
