@@ -49,9 +49,11 @@
     button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     button.clipsToBounds = YES;
-    [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:207/255.0 green:207/255.0 blue:207/255.0 alpha:1.0]] forState:UIControlStateNormal];
-    [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateHighlighted];
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateSelected];
+    [button setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:0.553 green:0.553 blue:0.553 alpha:1]] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:0.553 green:0.553 blue:0.553 alpha:1]] forState:UIControlStateHighlighted];
+
+
 
     [button addTarget:self action:@selector(onRoundTripButton) forControlEvents:UIControlEventTouchUpInside];
     self.roundTripButton = button;
@@ -65,9 +67,9 @@
     button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     button.clipsToBounds = YES;
-    [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:207/255.0 green:207/255.0 blue:207/255.0 alpha:1.0]] forState:UIControlStateNormal];
-    [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateHighlighted];
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateSelected];
+    [button setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:0.553 green:0.553 blue:0.553 alpha:1]] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:0.553 green:0.553 blue:0.553 alpha:1]] forState:UIControlStateHighlighted];
 
     button.selected = NO;
     self.oneWayButton = button;

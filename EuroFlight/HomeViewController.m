@@ -23,7 +23,7 @@
 #import "UIImage+Util.h"
 #import "PlaneLoadingView.h"
 
-#define ENABLE_LOADING_VIEW 0
+#define ENABLE_LOADING_VIEW 1
 #define LOADING_VIEW_DURATION 5
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
@@ -31,7 +31,7 @@
 @property (nonatomic, strong) THDatePickerViewController *returnDatePicker;
 @property (nonatomic, strong) NSDate *outboundDate;
 @property (nonatomic, strong) NSDate *returnDate;
-@property (nonatomic, retain) NSDateFormatter *formatter;
+@property (nonatomic, strong) NSDateFormatter *formatter;
 @property (strong, nonatomic)  UILabel *dateErrorLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, assign) BOOL isRoundTrip;
