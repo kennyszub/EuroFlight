@@ -27,7 +27,7 @@ NSInteger const kHeaderHeight = 150;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketButton;
 @property (strong, nonatomic) UIImageView *headerView;
-@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong, nonatomic) UIButton *button;
 @property (nonatomic, assign) BOOL isPresenting;
 @property (nonatomic, strong) UIImageView *transitionView;
 @property (nonatomic, strong) UIView *whiteView;
@@ -48,7 +48,6 @@ NSInteger const kHeaderHeight = 150;
     
     self.title = self.city.name;
 
-    [self setFavoriteButtonImage];
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.city.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
     [self.ticketButton setTitle:[NSString stringWithFormat:@"Find tickets from %@", price] forState:UIControlStateNormal];
@@ -70,14 +69,26 @@ NSInteger const kHeaderHeight = 150;
     headerView.clipsToBounds = YES;
     
     [headerView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(headerView.frame.size.width - 20, 20, 22, 22)];
+    [button addTarget:self
+               action:@selector(onFavoriteButton:)
+     forControlEvents:UIControlEventTouchUpInside];
+    button.userInteractionEnabled = YES;
+    headerView.userInteractionEnabled = YES;
+    self.button = button;
+    [self setFavoriteButtonImage];
+    [headerView addSubview:button];
     [self.tableView insertSubview:headerView atIndex:0];
     
     self.headerView = headerView;
     self.tableView.contentInset = UIEdgeInsetsMake(kHeaderHeight, 0, 0, 0);
     self.tableView.contentOffset = CGPointMake(0, -kHeaderHeight);
-    
-    [self.view insertSubview:self.favoriteButton aboveSubview:self.tableView];
+}
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.button.frame = CGRectMake(self.headerView.frame.size.width - 42, 20, 22, 22);
 }
 
 -(void)updateHeaderView {
@@ -110,9 +121,9 @@ NSInteger const kHeaderHeight = 150;
 
 - (void)setFavoriteButtonImage {
     if (self.city.isFavorited) {
-        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-on"] forState:UIControlStateNormal];
+        [self.button setBackgroundImage:[UIImage imageNamed:@"favorite-white-on"] forState:UIControlStateNormal];
     } else {
-        [self.favoriteButton setBackgroundImage:[UIImage imageNamed:@"favorite-white-off"] forState:UIControlStateNormal];
+        [self.button setBackgroundImage:[UIImage imageNamed:@"favorite-white-off"] forState:UIControlStateNormal];
     }
 }
 

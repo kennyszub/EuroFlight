@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityDetailsViewController">
             <connections>
-                <outlet property="favoriteButton" destination="qHY-HE-VSb" id="1SP-kq-K9N"/>
                 <outlet property="tableView" destination="OBe-Nx-yXn" id="Dbf-4n-qrr"/>
                 <outlet property="ticketButton" destination="yMN-0I-fsd" id="IUh-A5-M3g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,39 +35,21 @@
                         <action selector="onTickets:" destination="-1" eventType="touchUpInside" id="NkK-l2-y5z"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHY-HE-VSb">
-                    <rect key="frame" x="278" y="80" width="22" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="22" id="8vu-bh-5Si"/>
-                        <constraint firstAttribute="width" constant="22" id="wf9-EK-mjM"/>
-                    </constraints>
-                    <state key="normal" image="favorite-white-off">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onFavoriteButton:" destination="-1" eventType="touchUpInside" id="l0a-ZI-VSn"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="qHY-HE-VSb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="60p-AR-6cC"/>
                 <constraint firstItem="OBe-Nx-yXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="KWz-ZB-KZJ"/>
                 <constraint firstItem="OBe-Nx-yXn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZaZ-4I-OWT"/>
                 <constraint firstAttribute="trailing" secondItem="OBe-Nx-yXn" secondAttribute="trailing" id="fF0-xl-KD3"/>
                 <constraint firstAttribute="bottom" secondItem="yMN-0I-fsd" secondAttribute="bottom" id="hdy-CY-lFI"/>
                 <constraint firstItem="yMN-0I-fsd" firstAttribute="top" secondItem="OBe-Nx-yXn" secondAttribute="bottom" id="ljJ-XJ-P3O"/>
                 <constraint firstItem="yMN-0I-fsd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="obQ-0z-Vsg"/>
-                <constraint firstAttribute="trailing" secondItem="qHY-HE-VSb" secondAttribute="trailing" constant="20" id="opT-p8-Ujx"/>
                 <constraint firstAttribute="trailing" secondItem="yMN-0I-fsd" secondAttribute="trailing" id="xAZ-Tc-MGV"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="201" y="439"/>
         </view>
     </objects>
-    <resources>
-        <image name="favorite-white-off" width="50" height="50"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
