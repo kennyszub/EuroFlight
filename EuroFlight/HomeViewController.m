@@ -114,8 +114,8 @@ enum Weeks {
     [self addErrorLabel]; // TODO this is resulting in an error label getting created every time viewWillAppear is called
     
     // set frame of search button
-    CGFloat frameWidth = self.view.frame.size.width;
-    self.searchButton.frame = CGRectMake((frameWidth - (frameWidth - 20)) / 2.0, self.view.frame.size.height - 60, frameWidth - 20, 50);
+    CGFloat frameWidth = self.view.bounds.size.width;
+    self.searchButton.frame = CGRectMake((frameWidth - (frameWidth - 20)) / 2.0, self.view.bounds.size.height - 60, frameWidth - 20, 50);
 }
 
 - (void)didReceiveMemoryWarning {

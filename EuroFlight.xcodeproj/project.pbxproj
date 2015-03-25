@@ -42,6 +42,7 @@
 		C43028281AB53FBC00DA2B18 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028271AB53FBC00DA2B18 /* UIImage+Util.m */; };
 		C43028301AB7F89900DA2B18 /* CityCustomMiniView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C430282F1AB7F89900DA2B18 /* CityCustomMiniView.xib */; };
 		C43028331AB7F91200DA2B18 /* CityCustomMiniView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43028321AB7F91200DA2B18 /* CityCustomMiniView.m */; };
+		C4F17FB41AC3448700540A09 /* PushTiltTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F17FB31AC3448700540A09 /* PushTiltTransition.m */; };
 		C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FA0D831AAB9B830023FDC3 /* LaunchScreen.xib */; };
 		C4FA0D911AAB9B830023FDC3 /* EuroFlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0D901AAB9B830023FDC3 /* EuroFlightTests.m */; };
 		C4FA0DA51AABA5B50023FDC3 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA0DA41AABA5B50023FDC3 /* Flight.m */; };
@@ -217,6 +218,8 @@
 		C430282F1AB7F89900DA2B18 /* CityCustomMiniView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityCustomMiniView.xib; sourceTree = "<group>"; };
 		C43028311AB7F91200DA2B18 /* CityCustomMiniView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCustomMiniView.h; sourceTree = "<group>"; };
 		C43028321AB7F91200DA2B18 /* CityCustomMiniView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCustomMiniView.m; sourceTree = "<group>"; };
+		C4F17FB21AC3448700540A09 /* PushTiltTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTiltTransition.h; sourceTree = "<group>"; };
+		C4F17FB31AC3448700540A09 /* PushTiltTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTiltTransition.m; sourceTree = "<group>"; };
 		C4FA0D711AAB9B830023FDC3 /* EuroFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuroFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FA0D751AAB9B830023FDC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FA0D761AAB9B830023FDC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -664,6 +667,8 @@
 				EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */,
 				EB42F51F1AC293100004A9B8 /* NavigationControllerDelegate.h */,
 				EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */,
+				C4F17FB21AC3448700540A09 /* PushTiltTransition.h */,
+				C4F17FB31AC3448700540A09 /* PushTiltTransition.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -988,6 +993,7 @@
 				C430280A1AB4DED200DA2B18 /* LocationManager.m in Sources */,
 				C4FA0DD31AABEE0F0023FDC3 /* Country.m in Sources */,
 				EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */,
+				C4F17FB41AC3448700540A09 /* PushTiltTransition.m in Sources */,
 				EB735C1A1AB819EE00386362 /* TriangleView.m in Sources */,
 				C4FA0DD01AABEE0F0023FDC3 /* Trip.m in Sources */,
 				C4FA0DE81AAEC5B20023FDC3 /* AirportTableViewCell.m in Sources */,
