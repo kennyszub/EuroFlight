@@ -23,7 +23,7 @@
 #import "UIImage+Util.h"
 #import "PlaneLoadingView.h"
 
-#define ENABLE_LOADING_VIEW 1
+#define ENABLE_LOADING_VIEW 0
 #define LOADING_VIEW_DURATION 5
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
