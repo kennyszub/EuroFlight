@@ -94,6 +94,10 @@ NSInteger const kHeaderHeight = 150;
 }
 
 - (IBAction)onTickets:(id)sender {
+    [self pushToFlightResults];
+}
+
+- (void)pushToFlightResults {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = self.city;
     [self.navigationController pushViewController:vc animated:YES];
@@ -232,8 +236,10 @@ NSInteger const kHeaderHeight = 150;
             [transitionContext completeTransition:YES];
             [fromViewController.view removeFromSuperview];
             [self.blackView removeFromSuperview];
+            if ([fromViewController isKindOfClass:[EventDetailViewController class]] && ((EventDetailViewController *) fromViewController).selectedTickets) {
+                [self pushToFlightResults];
+            }
         }];
-        
     }
 }
 

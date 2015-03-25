@@ -9,6 +9,7 @@
 #import "EventDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "FlightResultsViewController.h"
+#import "Context.h"
 
 NSInteger const kScrollHeaderHeight = 200;
 
@@ -72,6 +73,9 @@ NSInteger const kScrollHeaderHeight = 200;
 */
 - (IBAction)onTickets:(id)sender {
     self.selectedTickets = YES;
+    [Context currentContext].departureDate = [NSDate dateWithTimeInterval:-60*60*24 sinceDate: self.event.startDate];
+    [Context currentContext].returnDate = [NSDate dateWithTimeInterval:60*60*24 sinceDate:self.event.endDate];
+    NSLog(@"%@ %@", [Context currentContext].departureDate, [Context currentContext].returnDate);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)onCloseButton:(id)sender {

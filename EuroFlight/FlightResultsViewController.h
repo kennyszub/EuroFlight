@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "City.h"
+#import "PlaneLoadingView.h"
 
 @interface FlightResultsViewController : UIViewController
 
 @property (nonatomic, strong) City *city;
+@property (nonatomic, strong) PlaneLoadingView *hud;
 
 @end

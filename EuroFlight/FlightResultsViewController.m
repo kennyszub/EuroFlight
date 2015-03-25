@@ -14,6 +14,7 @@
 #import "Context.h"
 #import "FlightDetailsTransition.h"
 
+
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
@@ -39,6 +40,7 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.tableView.alpha = 0;
 
     [self setupTitleLabel];
 
@@ -55,6 +57,21 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
     self.transition = [[FlightDetailsTransition alloc] init];
+}
+
+- (void)hideHud {
+    [self.hud hide:YES];
+    [UIView animateWithDuration:0.15 animations:^{
+        self.tableView.alpha = 1;
+    }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.hud = [[PlaneLoadingView alloc] init];
+    [self.view addSubview:self.hud];
+    [self.hud show:YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval:3.6 target:self selector:@selector(hideHud) userInfo:nil repeats:NO];
 }
 
 - (void)didReceiveMemoryWarning {
