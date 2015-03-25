@@ -82,14 +82,14 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
 - (void)viewDidAppear:(BOOL)animated {
     // TODO only show the HUD when self.city.skyscannerTrips is nil/empty?
-    self.hud = [[PlaneLoadingView alloc] init];
-    [self.view addSubview:self.hud];
-    [self.hud show:YES];
+    if (!self.city.skyscannerTrips) {
+        self.hud = [[PlaneLoadingView alloc] init];
+        [self.view addSubview:self.hud];
+        [self.hud show:YES];
 
-    // TODO this check doesn't actually work for all cases (since hideHud is only called from
-    // the skyscanner code on viewDidLoad)
-    if (!USE_SKYSCANNER) {
-        [NSTimer scheduledTimerWithTimeInterval:3.6 target:self selector:@selector(hideHud) userInfo:nil repeats:NO];
+        if (!USE_SKYSCANNER) {
+            [NSTimer scheduledTimerWithTimeInterval:3.6 target:self selector:@selector(hideHud) userInfo:nil repeats:NO];
+        }
     }
 }
 

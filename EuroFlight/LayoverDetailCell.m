@@ -31,7 +31,16 @@
 
 - (void)setSegment:(FlightSegment *)segment {
     _segment = segment;
-    self.layoverDetailLabel.text = [NSString stringWithFormat:@"%@ layover in %@", [self durationAsString:segment.connectionDuration], segment.destinationAirportCode];
+
+    NSInteger connectionDuration = segment.connectionDuration;
+    if (connectionDuration <= 0) {
+        // for skyscanner segments, we store connectionDuration as 0
+        // compute this on the fly
+        NSTimeInterval difference = [self.secondSegment.departureDate timeIntervalSinceDate:self.segment.arrivalDate];
+        connectionDuration = (NSInteger)(difference / 60);
+    }
+
+    self.layoverDetailLabel.text = [NSString stringWithFormat:@"%@ layover in %@", [self durationAsString:connectionDuration], segment.destinationAirportCode];
 
     self.triangleView = [[TriangleView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - kTriangleBaseLength) / 2.0, 0, kTriangleBaseLength, kTriangleHeight)];
     self.triangleView.fillColor = [UIColor whiteColor];

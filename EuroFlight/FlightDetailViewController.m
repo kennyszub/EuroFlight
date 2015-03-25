@@ -97,6 +97,8 @@ NSString * const kLayoverDetailCellIdentifier = @"LayoverDetailCell";
     } else {
         // layover cell
         LayoverDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kLayoverDetailCellIdentifier forIndexPath:indexPath];
+        cell.secondSegment = [self segmentForIndexPath:[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section]];
+        // HACK: the secondSegment MUST be set before the segment
         cell.segment = [self segmentForIndexPath:indexPath];
         [self setupBordersForCell:cell];
 

@@ -13,4 +13,7 @@
 
 @property (nonatomic, strong) FlightSegment *segment;
 
+// hack needed for skyscanner because they don't return connection duration
+@property (nonatomic, strong) FlightSegment *secondSegment;
+
 @end
