@@ -166,6 +166,7 @@ static NSDateFormatter *dateFormatter;
         if (!dateFormatter) {
             dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateFormat = @"MMM d";
+            dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
         }
     });
 }
@@ -217,14 +218,19 @@ static NSDateFormatter *dateFormatter;
 }
 
 - (IBAction)onBuyButton:(id)sender {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"y-MM-dd";
+    NSString *urlString;
+    if (self.trip.bookingURL) {
+        urlString = self.trip.bookingURL;
+    } else {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"y-MM-dd";
 
-    NSString *sourceAirport = self.trip.sourceAirportCode;
-    NSString *destinationAirport = self.trip.destinationAirportCode;
-    NSString *departureDate = [formatter stringFromDate:((FlightSegment *)self.trip.outboundFlight.flightSegments[0]).departureDate];
-    NSString *returnDate = [formatter stringFromDate:((FlightSegment *)self.trip.returnFlight.flightSegments[0]).departureDate];
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@-%@/%@/%@", kKayakBaseURL, sourceAirport, destinationAirport, departureDate, returnDate];
+        NSString *sourceAirport = self.trip.sourceAirportCode;
+        NSString *destinationAirport = self.trip.destinationAirportCode;
+        NSString *departureDate = [formatter stringFromDate:((FlightSegment *)self.trip.outboundFlight.flightSegments[0]).departureDate];
+        NSString *returnDate = [formatter stringFromDate:((FlightSegment *)self.trip.returnFlight.flightSegments[0]).departureDate];
+        urlString = [NSString stringWithFormat:@"%@/%@-%@/%@/%@", kKayakBaseURL, sourceAirport, destinationAirport, departureDate, returnDate];
+    }
 
     BuyFlightViewController *bfvc = [[BuyFlightViewController alloc] init];
     bfvc.url = urlString;

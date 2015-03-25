@@ -68,6 +68,7 @@
                 // outbound and return airlines are different
                 self.airlineLabel.text = @"Multiple Airlines";
                 self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+                self.airlineLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
                 return;
             }
         } else {
@@ -75,6 +76,7 @@
                 // this should never happen
                 self.airlineLabel.text = @"Multiple Airlines";
                 self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+                self.airlineLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
                 return;
             }
         }
@@ -84,18 +86,24 @@
         } else if (![airline isEqualToString:outboundAirline]) {
             self.airlineLabel.text = @"Multiple Airlines";
             self.airlineLogoImageView.image = [UIImage imageNamed:@"plane-logo-default"];
+            self.airlineLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
             return;
         }
     }
-
-    NameMappingHelper *helper = [NameMappingHelper sharedInstance];
-    NSString *carrierName = [helper carrierNameForCode:airline];
-    self.airlineLabel.text = carrierName;
 
     // grab a flight segment and use the logo
     Flight *flight = ((Trip *)trips[0]).outboundFlight;
     FlightSegment *segment = flight.flightSegments[0];
     [self.airlineLogoImageView setImageWithURL:[NSURL URLWithString:segment.airlineImageURL]];
+    self.airlineLogoImageView.contentMode = UIViewContentModeScaleAspectFill;
+
+    if (segment.airlineName) {
+        self.airlineLabel.text = segment.airlineName;
+    } else {
+        NameMappingHelper *helper = [NameMappingHelper sharedInstance];
+        NSString *carrierName = [helper carrierNameForCode:airline];
+        self.airlineLabel.text = carrierName;
+    }
 }
 
 // if a flight uses a single airline, return the airline

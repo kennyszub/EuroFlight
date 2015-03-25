@@ -10,6 +10,7 @@
 #import "NameMappingHelper.h"
 #import <UIImageView+AFNetworking.h>
 #import "TriangleView.h"
+#import "Context.h"
 
 #define kMinutesInHour 60
 
@@ -52,7 +53,12 @@ static NSDateFormatter *timeFormatter;
     [self.airlineLogoImageView setImageWithURL:[NSURL URLWithString:segment.airlineImageURL]];
 
     NameMappingHelper *helper = [NameMappingHelper sharedInstance];
-    self.airlineLabel.text = [helper carrierNameForCode:segment.airline];
+    if (segment.airlineName) {
+        self.airlineLabel.text = segment.airlineName;
+    } else {
+        NSString *carrierName = [helper carrierNameForCode:segment.airline];
+        self.airlineLabel.text = carrierName;
+    }
     self.flightNumberLabel.text = segment.flightNumber;
 
     [SegmentDetailCell initTimeFormatter];
@@ -91,6 +97,7 @@ static NSDateFormatter *timeFormatter;
         dispatch_once(&onceToken, ^{
             timeFormatter = [[NSDateFormatter alloc] init];
             timeFormatter.dateFormat = @"h:mm a";
+            timeFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
         });
     }
 }

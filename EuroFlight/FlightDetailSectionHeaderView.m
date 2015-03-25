@@ -7,6 +7,7 @@
 //
 
 #import "FlightDetailSectionHeaderView.h"
+#import "Context.h"
 
 #define kMinutesInHour 60
 
@@ -58,6 +59,7 @@ static NSDateFormatter *formatter;
     dispatch_once(&onceToken, ^{
         formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"EEEE, M/d";
+        formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
     });
 }
 

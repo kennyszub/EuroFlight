@@ -14,6 +14,7 @@
 #import "Trip.h"
 #import "KimonoClient.h"
 #import "FavoritesManager.h"
+#import "SkyscannerClient.h"
 
 @interface City ()
 
@@ -23,6 +24,17 @@
 
 @implementation City
 
+- (void)initSkyscannerTripsWithCompletion:(void (^)())completion {
+    [[SkyscannerClient sharedInstance] flightSearchWithDestinationAirport:self.airportCodes[0] completion:^(NSArray *results, NSError *error) {
+        if (error) {
+            NSLog(@"error retrieving flights to %@ from Skyscanner: %@", self.airportCodes[0], error);
+        } else {
+            self.skyscannerTrips = results;
+            completion();
+        }
+    }];
+}
+
 NSString * const kPlaceDataPrefix = @"PlaceData";
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
@@ -30,8 +42,8 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
     if (self) {
         self.name = dictionary[@"city"];
         self.trips = [[NSMutableArray alloc] init];
-        NSArray *airportCodes = dictionary[@"airportCodes"];
-        for (NSString *airportCode in airportCodes) {
+        self.airportCodes = dictionary[@"airportCodes"];
+        for (NSString *airportCode in self.airportCodes) {
             [self makeFlightRequestWithAirportCode:airportCode];
         }
         

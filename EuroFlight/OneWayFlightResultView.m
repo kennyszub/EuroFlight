@@ -7,6 +7,7 @@
 //
 
 #import "OneWayFlightResultView.h"
+#import "Context.h"
 
 #define kMinutesInHour 60
 
@@ -81,6 +82,7 @@ static NSDateFormatter *timeFormatter;
         if (!dateFormatter) {
             dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateFormat = @"M/d";
+            dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
         }
     });
 }
@@ -91,6 +93,7 @@ static NSDateFormatter *timeFormatter;
         if (!timeFormatter) {
             timeFormatter = [[NSDateFormatter alloc] init];
             timeFormatter.dateFormat = @"h:mm a";
+            timeFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
         }
     });
 }

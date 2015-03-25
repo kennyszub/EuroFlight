@@ -8,6 +8,7 @@
 
 #import "Trip.h"
 #import "Flight.h"
+#import "FlightSegment.h"
 #import "Context.h"
 
 @implementation Trip
@@ -21,6 +22,23 @@
     
     [self parseCurrencyString:dictionary[@"saleTotal"]];
     
+    return self;
+}
+
+- (id)initWithSkyscannerDictionary:(NSDictionary *)dictionary flights:(NSDictionary *)flights places:(NSDictionary *)places carriers:(NSDictionary *)carriers {
+    self = [super init];
+    if (self) {
+        self.outboundFlight = flights[dictionary[@"OutboundLegId"]];
+        self.returnFlight = flights[dictionary[@"InboundLegId"]];
+    }
+
+    // TODO this is hardcoded for now
+    self.currencyType = @"GBP";
+    // TODO this just gets the first pricing option
+    NSDictionary *pricingOptions = dictionary[@"PricingOptions"][0];
+    self.flightCost = [pricingOptions[@"Price"] floatValue];
+    self.bookingURL = pricingOptions[@"DeeplinkUrl"];
+
     return self;
 }
 
@@ -39,6 +57,43 @@
     }
     
     return trips;
+}
+
++ (NSArray *)tripsWithSkyscannerDictionary:(NSDictionary *)dictionary {
+    NSMutableArray *trips = [[NSMutableArray alloc] init];
+
+    // dictionary of place id => place dictionary
+    NSDictionary *places = [self parsePlaces:dictionary[@"Places"]];
+    // dictionary of carrier id => carrier dictionary
+    NSDictionary *carriers = [self parseCarriers:dictionary[@"Carriers"]];
+    // dictionary of flight id => Flight object
+    NSDictionary *flights = [Flight flightsWithSkyscannerDictionary:dictionary places:places carriers:carriers];
+
+    for (NSDictionary *trip in dictionary[@"Itineraries"]) {
+        [trips addObject:[[Trip alloc] initWithSkyscannerDictionary:trip flights:flights places:places carriers:carriers]];
+    }
+
+    return trips;
+}
+
++ (NSDictionary *)parsePlaces:(NSArray *)places {
+    NSMutableDictionary *results = [[NSMutableDictionary alloc] init];
+
+    for (NSDictionary *place in places) {
+        results[place[@"Id"]] = place;
+    }
+
+    return results;
+}
+
++ (NSDictionary *)parseCarriers:(NSArray *)carriers {
+    NSMutableDictionary *results = [[NSMutableDictionary alloc] init];
+
+    for (NSDictionary *carrier in carriers) {
+        results[carrier[@"Id"]] = carrier;
+    }
+
+    return results;
 }
 
 static NSRegularExpression *currencyRegex;

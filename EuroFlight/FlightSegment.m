@@ -21,6 +21,51 @@ static NSMutableSet *requestedAirlines;
 // initially pulls from NSUserDefaults
 static NSMutableDictionary *airlineToURL;
 
++ (NSDictionary *)segmentsWithSkyscannerDictionary:(NSDictionary *)dictionary places:(NSDictionary *)places carriers:(NSDictionary *)carriers {
+    NSMutableDictionary *segments = [[NSMutableDictionary alloc] init];
+
+    NSArray *segmentArray = dictionary[@"Segments"];
+    for (NSDictionary *segment in segmentArray) {
+        segments[segment[@"Id"]] = [[FlightSegment alloc] initWithSkyscannerDictionary:segment places:places carriers:carriers];
+    }
+
+    return segments;
+}
+
+static NSDateFormatter *skyscannerDateTimeParser;
+
+- (id)initWithSkyscannerDictionary:(NSDictionary *)dictionary places:(NSDictionary *)places carriers:(NSDictionary *)carriers {
+    self = [super init];
+    if (self) {
+        [FlightSegment initSkyscannerDateTimeParser];
+
+        self.sourceAirportCode = places[dictionary[@"OriginStation"]][@"Code"];
+        self.destinationAirportCode = places[dictionary[@"DestinationStation"]][@"Code"];
+        self.departureDate = [skyscannerDateTimeParser dateFromString:dictionary[@"DepartureDateTime"]];
+        self.arrivalDate = [skyscannerDateTimeParser dateFromString:dictionary[@"ArrivalDateTime"]];
+
+        self.flightNumber = dictionary[@"FlightNumber"];
+        self.duration = [dictionary[@"Duration"] integerValue];
+        self.connectionDuration = 0; // TODO any way to get this or should we just compute it on the fly in the view?
+        self.airline = carriers[dictionary[@"Carrier"]][@"Code"];
+        self.airlineName = carriers[dictionary[@"Carrier"]][@"Name"];
+        // TODO should be okay to just set it like this
+        self.airlineImageURL = carriers[dictionary[@"Carrier"]][@"ImageUrl"];
+    }
+
+    return self;
+}
+
++ (void)initSkyscannerDateTimeParser {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!skyscannerDateTimeParser) {
+            skyscannerDateTimeParser = [[NSDateFormatter alloc] init];
+            skyscannerDateTimeParser.dateFormat = @"y'-'MM'-'dd'T'HH':'mm':'ss";
+        }
+    });
+}
+
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {

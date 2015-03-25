@@ -17,7 +17,9 @@
 @property (nonatomic, strong) NSString *currencyType;
 @property (nonatomic, strong) Flight *outboundFlight;
 @property (nonatomic, strong) Flight *returnFlight;
+@property (nonatomic, strong) NSString *bookingURL;
 
 + (NSArray *)tripsWithArray:(NSArray *)array;
++ (NSArray *)tripsWithSkyscannerDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -19,4 +19,6 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
++ (NSDictionary *)flightsWithSkyscannerDictionary:(NSDictionary *)dictionary places:(NSDictionary *)places carriers:(NSDictionary *)carriers;
+
 @end

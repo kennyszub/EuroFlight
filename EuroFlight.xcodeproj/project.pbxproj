@@ -71,6 +71,7 @@
 		EB42F4DE1ABF899A0004A9B8 /* ZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F4DD1ABF899A0004A9B8 /* ZoomTransition.m */; };
 		EB42F51E1AC284570004A9B8 /* FlightDetailsTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */; };
 		EB42F5211AC293100004A9B8 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */; };
+		EB42F5271AC2B5CA0004A9B8 /* SkyscannerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F5261AC2B5CA0004A9B8 /* SkyscannerClient.m */; };
 		EB4469011AB9658200DB116B /* KLU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469001AB9658200DB116B /* KLU.txt */; };
 		EB4469031AB9665700DB116B /* LNZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469021AB9665700DB116B /* LNZ.txt */; };
 		EB4469051AB966A100DB116B /* KAJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469041AB966A100DB116B /* KAJ.txt */; };
@@ -275,6 +276,8 @@
 		EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailsTransition.m; sourceTree = "<group>"; };
 		EB42F51F1AC293100004A9B8 /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
 		EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		EB42F5251AC2B5CA0004A9B8 /* SkyscannerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerClient.h; sourceTree = "<group>"; };
+		EB42F5261AC2B5CA0004A9B8 /* SkyscannerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerClient.m; sourceTree = "<group>"; };
 		EB4469001AB9658200DB116B /* KLU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KLU.txt; sourceTree = "<group>"; };
 		EB4469021AB9665700DB116B /* LNZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LNZ.txt; sourceTree = "<group>"; };
 		EB4469041AB966A100DB116B /* KAJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KAJ.txt; sourceTree = "<group>"; };
@@ -635,6 +638,8 @@
 				C4FA0DDB1AAEB96B0023FDC3 /* AirportClient.m */,
 				EB91F1BD1AB6C573000A815F /* GoogleSearchClient.h */,
 				EB91F1BE1AB6C573000A815F /* GoogleSearchClient.m */,
+				EB42F5251AC2B5CA0004A9B8 /* SkyscannerClient.h */,
+				EB42F5261AC2B5CA0004A9B8 /* SkyscannerClient.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -995,6 +1000,7 @@
 				117F87C31AAFF40900C1E24C /* PlaceCollectionViewCell.m in Sources */,
 				EB08A4061AAC3948001C2AA3 /* OneWayFlightDetailView.m in Sources */,
 				EB7665DA1ABF3E600094D6C3 /* PlaneLoadingView.m in Sources */,
+				EB42F5271AC2B5CA0004A9B8 /* SkyscannerClient.m in Sources */,
 				EBDB6BEA1AAEBA8200F24818 /* FavoritesManager.m in Sources */,
 				C4FA0DC91AABDFC60023FDC3 /* CountryTableViewCell.m in Sources */,
 				C4FA0DDF1AAEBDE00023FDC3 /* Airport.m in Sources */,

@@ -20,7 +20,13 @@
 @property (nonatomic, strong) NSString *currencyType;
 @property (nonatomic, assign, readonly) BOOL isFavorited;
 
+// trips from the skyscanner API
+@property (nonatomic, strong) NSArray *skyscannerTrips;
+@property (nonatomic, strong) NSArray *airportCodes;
+
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)setFavoritedState:(BOOL)state;
+
+- (void)initSkyscannerTripsWithCompletion:(void (^)())completion;
 
 @end

@@ -14,6 +14,7 @@
 #import "Context.h"
 #import "FlightDetailsTransition.h"
 
+#define USE_SKYSCANNER 0
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
@@ -33,6 +34,8 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 @property (nonatomic, strong) UIView *blackView;
 @property (nonatomic, strong) FlightDetailsTransition *transition;
 
+@property (nonatomic, strong) NSArray *skyscannerTrips;
+
 @end
 
 @implementation FlightResultsViewController
@@ -42,9 +45,19 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
     // Do any additional setup after loading the view from its nib.
     self.tableView.alpha = 0;
 
+    if (USE_SKYSCANNER) {
+        [self.city initSkyscannerTripsWithCompletion:^{
+            self.tripGroupings = [self groupTrips:self.city.skyscannerTrips];
+            [self.tableView reloadData];
+        }];
+        self.tripGroupings = [NSDictionary dictionary];
+        self.tripCosts = [NSArray array];
+    } else {
+        self.tripGroupings = [self groupTrips:self.city.trips];
+    }
+
     [self setupTitleLabel];
 
-    self.tripGroupings = [self groupTrips];
     self.expandedSections = [[NSMutableSet alloc] init];
 
     self.tableView.delegate = self;
@@ -187,6 +200,7 @@ static NSDateFormatter *dateFormatter;
         if (!dateFormatter) {
             dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateFormat = @"MMM d";
+            dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
         }
     });
 }
@@ -222,10 +236,10 @@ static NSDateFormatter *dateFormatter;
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
 }
 
-- (NSDictionary *)groupTrips {
+- (NSDictionary *)groupTrips:(NSArray *)trips {
     NSMutableDictionary *groupings = [NSMutableDictionary dictionary];
 
-    for (Trip *trip in self.city.trips) {
+    for (Trip *trip in trips) {
         NSNumber *cost = @(trip.flightCost);
         NSMutableArray *arr;
         if (!groupings[cost]) {

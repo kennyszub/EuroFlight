@@ -30,6 +30,8 @@ static Context *_currentContext;
         [comps setMonth:3];
         [comps setYear:2015];
         _currentContext.returnDate = [gregorian dateFromComponents:comps];
+
+        _currentContext.timeZone = @"GMT";
     }
     return _currentContext;
 }

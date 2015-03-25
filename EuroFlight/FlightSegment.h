@@ -20,6 +20,11 @@
 @property (nonatomic, assign) NSInteger connectionDuration;
 @property (nonatomic, strong) NSString *airlineImageURL;
 
+// only set for Skyscanner flight segments
+@property (nonatomic, strong) NSString *airlineName;
+
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+
++ (NSDictionary *)segmentsWithSkyscannerDictionary:(NSDictionary *)dictionary places:(NSDictionary *)places carriers:(NSDictionary *)carriers;
 
 @end
