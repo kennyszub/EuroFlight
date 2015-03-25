@@ -52,6 +52,7 @@
     UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
     self.navigationItem.rightBarButtonItem = favoritesButton;
     self.isFavoritesOnly = NO;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -122,7 +123,7 @@
     return 300;
 }
 
-- (void)didTapEvent:(CountryTableViewCell *)cell {
+- (void)didTapEvent:(CountryTableViewCell *)cell { // FIXME not being used, can be deleted
     EventDetailViewController *vc = [[EventDetailViewController alloc] init];
     vc.event = [cell.country.events objectAtIndex:cell.eventIndex];
     [self.navigationController pushViewController:vc animated:YES];
