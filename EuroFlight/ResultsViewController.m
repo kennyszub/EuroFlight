@@ -17,7 +17,9 @@
 #import "FlightResultsViewController.h"
 #import "FavoritesViewController.h"
 
-@interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate, CountryTableViewCellDelegate>
+#define TRANSITION_DURATION 0.55
+
+@interface ResultsViewController () <UITableViewDataSource, UITableViewDelegate, CountryTableViewCellDelegate, UIViewControllerAnimatedTransitioning>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 // keeps track of all countries
 @property (strong, nonatomic) NSArray *allCountries;
@@ -73,6 +75,68 @@
     }
     return self;
 }
+
+#pragma mark transition methods
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+    return TRANSITION_DURATION;
+}
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView]; // contains source and destination views
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    CATransform3D rotationTransform = CATransform3DIdentity;
+    rotationTransform.m34 = 1.0 / -500;
+    rotationTransform = CATransform3DRotate(rotationTransform, - 40.0f * M_PI / 180.0f, 0, 1, 0.0f);
+    
+    CATransform3D reverseRotationTransform = CATransform3DIdentity;
+    reverseRotationTransform.m34 = 1.0 / -500;
+    reverseRotationTransform = CATransform3DRotate(reverseRotationTransform, 40.0f * M_PI / 180.0f, 0, 1, 0.0f);
+    
+    CATransform3D noTransform = CATransform3DIdentity;
+    noTransform = CATransform3DRotate(noTransform, 0, 0, 0, 0.0f);
+    
+    // TODO should be using bounds, not frame
+    
+    if ([fromViewController isKindOfClass:[ResultsViewController class]]) { // is presenting
+        [containerView addSubview:toViewController.view];
+        toViewController.view.frame = CGRectMake(self.view.frame.size.width + 18, 0, self.view.frame.size.width, self.view.frame.size.height);
+
+        toViewController.view.layer.transform = reverseRotationTransform;
+        
+        [UIView animateWithDuration:TRANSITION_DURATION animations:^{
+            toViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+            fromViewController.view.frame = CGRectMake(-self.view.frame.size.width - 18, 0, self.view.frame.size.width, self.view.frame.size.height);
+            
+            fromViewController.view.layer.transform = rotationTransform;
+            toViewController.view.layer.transform = noTransform;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    } else { // must be dismissing
+        [containerView addSubview:toViewController.view];
+        toViewController.view.frame = CGRectMake(- fromViewController.view.frame.size.width - 18, 0, fromViewController.view.frame.size.width, fromViewController.view.frame.size.height);
+        
+        toViewController.view.layer.transform = rotationTransform;
+        
+        [UIView animateWithDuration:TRANSITION_DURATION animations:^{
+            toViewController.view.frame = CGRectMake(0, 0, fromViewController.view.frame.size.width, fromViewController.view.frame.size.height);
+            fromViewController.view.frame = CGRectMake(fromViewController.view.frame.size.width + 18, 0, fromViewController.view.frame.size.width, fromViewController.view.frame.size.height);
+            
+            fromViewController.view.layer.transform = reverseRotationTransform;
+            toViewController.view.layer.transform = noTransform;
+            
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    }
+}
+
+
+
+
+
 
 #pragma mark helper methods
 + (NSComparisonResult)compareFloats:(float)first secondFloat:(float)second {

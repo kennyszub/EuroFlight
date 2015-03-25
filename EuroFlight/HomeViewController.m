@@ -95,7 +95,7 @@ enum Weeks {
     [self addSearchButton];
 
     self.navigationDelegate = [[NavigationControllerDelegate alloc] init];
-    self.navigationController.delegate = self.navigationDelegate;
+    self.navigationController.delegate = self.navigationDelegate; // this tells the navigation controller to check the navigationDelegate for custom transitions - returns nil otherwise which does a standard transition
 }
 
 - (void)dealloc {
