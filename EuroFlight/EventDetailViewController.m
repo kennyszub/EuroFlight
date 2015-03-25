@@ -71,10 +71,8 @@ NSInteger const kScrollHeaderHeight = 200;
 }
 */
 - (IBAction)onTickets:(id)sender {
-    FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
-    vc.city = self.event.city;
-    
-    [self.navigationController pushViewController:vc animated:YES];
+    self.selectedTickets = YES;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)onCloseButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

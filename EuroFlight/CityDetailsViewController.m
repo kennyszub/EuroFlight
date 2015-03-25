@@ -18,6 +18,7 @@
 #import "PlaceCollectionCell.h"
 #import "PlacesViewController.h"
 #import "PlacesScrollCustomView.h"
+#import "PlaneLoadingView.h"
 
 NSInteger const kHeaderHeight = 150;
 
@@ -31,6 +32,7 @@ NSInteger const kHeaderHeight = 150;
 @property (nonatomic, strong) UIImageView *transitionView;
 @property (nonatomic, strong) UIView *whiteView;
 @property (nonatomic, strong) UIView *blackView;
+@property (nonatomic, strong) UIView *blueView;
 
 @end
 
@@ -148,14 +150,6 @@ NSInteger const kHeaderHeight = 150;
     return self;
 }
 
-//- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
-//    
-//}
-//
-//- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
-//    
-//}
-
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
     return 0.5;
 }
@@ -203,9 +197,11 @@ NSInteger const kHeaderHeight = 150;
             [containerView addSubview:self.blackView];
             self.whiteView = [[UIView alloc] initWithFrame:CGRectMake(self.transitionView.frame.origin.x, self.transitionView.frame.origin.y+self.transitionView.frame.size.height, 300/scale, 0)];
             self.whiteView.backgroundColor = [UIColor whiteColor];
-            //self.whiteView.bounds = CGRectMake(0, 0, self.whiteView.bounds.size.width, 0);
+            self.blueView = [[UIView alloc] initWithFrame:self.whiteView.frame];
+            self.blueView.backgroundColor = [[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0];
             [containerView addSubview:self.transitionView];
             [containerView addSubview:self.whiteView];
+            [containerView addSubview:self.blueView];
             [containerView addSubview:toViewController.view];
             [UIView animateWithDuration:0.4 animations:^{
                 self.blackView.alpha = 1;
@@ -213,8 +209,9 @@ NSInteger const kHeaderHeight = 150;
                 self.transitionView.center = CGPointMake(self.view.center.x, self.view.center.y - 175);
                 self.transitionView.bounds = CGRectMake(0, 0, 300/scale, 200/scale);
                 self.whiteView.center = CGPointMake(self.view.center.x, self.view.center.y+100);
-                self.whiteView.transform = CGAffineTransformMakeScale(scale, scale);
                 self.whiteView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y-75, 300, 350);
+                self.blueView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y + 225, 300, 50);
+                self.blueView.center = CGPointMake(self.view.center.x, self.view.center.y+250);
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.1 animations:^{
                     toViewController.view.alpha = 1;
@@ -222,6 +219,7 @@ NSInteger const kHeaderHeight = 150;
                     [transitionContext completeTransition:YES];
                     [self.transitionView removeFromSuperview];
                     [self.whiteView removeFromSuperview];
+                    [self.blueView removeFromSuperview];
                 }];
             }];
         }
@@ -235,6 +233,7 @@ NSInteger const kHeaderHeight = 150;
             [fromViewController.view removeFromSuperview];
             [self.blackView removeFromSuperview];
         }];
+        
     }
 }
 

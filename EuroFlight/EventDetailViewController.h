@@ -12,5 +12,5 @@
 @interface EventDetailViewController : UIViewController
 
 @property (nonatomic, strong) Event *event;
-
+@property (nonatomic, assign) BOOL selectedTickets;
 @end

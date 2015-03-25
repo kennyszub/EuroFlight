@@ -18,9 +18,21 @@
         self.cityImages = [[NSMutableDictionary alloc] init];
         self.eventImages = [[NSMutableDictionary alloc] init];
         self.eventDetails = [[NSMutableDictionary alloc] init];
-        [self getSummaries];
-        [self getEventImages];
-        [self getEventDetails];
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        
+        NSOperation *summariesOperation = [self getSummaries];
+        NSOperation *eventImagesOperation = [self getEventImages];
+        NSOperation *eventDetailsOperation = [self getEventDetails];
+        
+        NSOperation *initCountriesOperation = [NSBlockOperation blockOperationWithBlock:^{
+            [Country initCountries];
+        }];
+        
+        [initCountriesOperation addDependency:summariesOperation];
+        [initCountriesOperation addDependency:eventImagesOperation];
+        [initCountriesOperation addDependency:eventDetailsOperation];
+        
+        [queue addOperation:initCountriesOperation];
     }
     return self;
 }
@@ -57,8 +69,9 @@
     return [self GET:@"https://www.kimonolabs.com/api/7vyz5imi" parameters:params success:success failure:failure];
 }
 
-- (void)getSummaries {
-    [self fetchSummariesWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+- (AFHTTPRequestOperation *)getSummaries {
+    return [self fetchSummariesWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"get summaries");
         for (NSDictionary *item in response[@"results"][@"descriptions"]) {
             [self.placeSummaries setObject:item[@"description"] forKey:item[@"name"][@"text"]];
             [self.cityImages setObject:item[@"image"] forKey:item[@"name"][@"text"]];
@@ -68,8 +81,9 @@
     }];
 }
 
-- (void)getEventImages {
-    [self fetchEventImagesWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+- (AFHTTPRequestOperation *)getEventImages {
+    return [self fetchEventImagesWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"get event images");
         for (NSDictionary *item in response[@"results"][@"events"]) {
             [self.eventImages setObject:item[@"imageUrl"][@"src"] forKey:item[@"event"][@"text"]];
         }
@@ -78,8 +92,9 @@
     }];
 }
 
-- (void)getEventDetails {
-    [self fetchEventDetailsWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+- (AFHTTPRequestOperation *)getEventDetails {
+    return [self fetchEventDetailsWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"get event details");
         for (NSDictionary *item in response[@"results"][@"eventDetails"]) {
             [self.eventDetails setObject:item forKey:item[@"name"]];
         }
