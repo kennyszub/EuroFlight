@@ -196,6 +196,7 @@
 - (void)didTapCityPrice:(City *)city {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = city;
+    vc.showHUD = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

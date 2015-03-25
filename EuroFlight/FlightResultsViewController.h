@@ -14,5 +14,5 @@
 
 @property (nonatomic, strong) City *city;
 @property (nonatomic, strong) PlaneLoadingView *hud;
-
+@property (nonatomic, assign) BOOL showHUD;
 @end

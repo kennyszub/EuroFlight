@@ -14,7 +14,7 @@
 #import "Context.h"
 #import "FlightDetailsTransition.h"
 
-#define USE_SKYSCANNER 0
+#define USE_SKYSCANNER 1
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
@@ -82,7 +82,7 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
 - (void)viewDidAppear:(BOOL)animated {
     // TODO only show the HUD when self.city.skyscannerTrips is nil/empty?
-    if (!self.city.skyscannerTrips) {
+    if (self.showHUD) {
         self.hud = [[PlaneLoadingView alloc] init];
         [self.view addSubview:self.hud];
         [self.hud show:YES];
@@ -90,6 +90,7 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
         if (!USE_SKYSCANNER) {
             [NSTimer scheduledTimerWithTimeInterval:3.6 target:self selector:@selector(hideHud) userInfo:nil repeats:NO];
         }
+        self.showHUD = NO;
     }
 }
 

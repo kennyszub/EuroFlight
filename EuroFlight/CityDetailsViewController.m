@@ -70,7 +70,7 @@ NSInteger const kHeaderHeight = 150;
     
     [headerView setImageWithURL:[NSURL URLWithString:self.city.imageURL]];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(headerView.frame.size.width - 20, 20, 22, 22)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(headerView.frame.size.width - 42, 20, 22, 22)];
     [button addTarget:self
                action:@selector(onFavoriteButton:)
      forControlEvents:UIControlEventTouchUpInside];
@@ -111,10 +111,11 @@ NSInteger const kHeaderHeight = 150;
 - (void)pushToFlightResults {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = self.city;
+    vc.showHUD = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)onFavoriteButton:(id)sender {
+- (void)onFavoriteButton:(id)sender {
     [self.city setFavoritedState:!self.city.isFavorited];
     [self setFavoriteButtonImage];
 }
