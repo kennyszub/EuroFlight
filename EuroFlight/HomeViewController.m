@@ -208,6 +208,10 @@ enum Weeks {
     self.searchButton.hidden = YES;
 }
 
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
