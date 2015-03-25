@@ -11,13 +11,13 @@
 #import "FlightDetailViewController.h"
 #import "FlightResultGroupCell.h"
 #import "Trip.h"
-#import "ZoomTransition.h"
 #import "Context.h"
+#import "FlightDetailsTransition.h"
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
-@interface FlightResultsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FlightResultsViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -30,7 +30,7 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
 @property (nonatomic, assign) BOOL isPresenting;
 @property (nonatomic, strong) UIView *blackView;
-@property (nonatomic, strong) BaseTransition *transition;
+@property (nonatomic, strong) FlightDetailsTransition *transition;
 
 @end
 
@@ -54,12 +54,20 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
-    self.transition = [[ZoomTransition alloc] init];
+    self.transition = [[FlightDetailsTransition alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.delegate = self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.delegate = nil;
 }
 
 #pragma mark - UITableViewDataSource methods
@@ -130,6 +138,19 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+#pragma mark - UINavigationControllerDelegate methods
+
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC  {
+    if (operation == UINavigationControllerOperationPush) {
+        return self.transition;
+    }
+
+    return nil;
 }
 
 #pragma mark - Private methods
