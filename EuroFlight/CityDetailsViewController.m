@@ -33,6 +33,7 @@ NSInteger const kHeaderHeight = 150;
 @property (nonatomic, strong) UIView *whiteView;
 @property (nonatomic, strong) UIView *blackView;
 @property (nonatomic, strong) UIView *blueView;
+@property (nonatomic, assign) CGRect originalFrame;
 
 @end
 
@@ -209,6 +210,7 @@ NSInteger const kHeaderHeight = 150;
             self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
             self.blackView.alpha = 0;
             self.transitionView.clipsToBounds = YES;
+            self.originalFrame = self.transitionView.frame;
             CGFloat scale = 300 / self.transitionView.frame.size.width;
             toViewController.view.frame = CGRectMake(0, 0, 300, 550);
             toViewController.view.center = self.view.center;
@@ -235,25 +237,44 @@ NSInteger const kHeaderHeight = 150;
                     toViewController.view.alpha = 1;
                 } completion:^(BOOL finished) {
                     [transitionContext completeTransition:YES];
-                    [self.transitionView removeFromSuperview];
-                    [self.whiteView removeFromSuperview];
-                    [self.blueView removeFromSuperview];
                 }];
             }];
         }
     } else {
-        [UIView animateWithDuration:0.5 animations:^{
-            fromViewController.view.alpha = 0;
-            self.blackView.alpha = 0;
-            self.transitionView.alpha = 0;
-        } completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
-            [fromViewController.view removeFromSuperview];
-            [self.blackView removeFromSuperview];
-            if ([fromViewController isKindOfClass:[EventDetailViewController class]] && ((EventDetailViewController *) fromViewController).selectedTickets) {
-                [self pushToFlightResults];
-            }
-        }];
+        if ([fromViewController isKindOfClass:[EventDetailViewController class]]) {
+            [UIView animateWithDuration:0.1 animations:^{
+                fromViewController.view.alpha = 0;
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.4 animations:^{
+                    self.blackView.alpha = 0;
+                    self.transitionView.transform = CGAffineTransformIdentity;
+                    self.transitionView.frame = self.originalFrame;
+                    self.transitionView.layer.cornerRadius = 3;
+                    self.blueView.frame = CGRectMake(self.originalFrame.origin.x, self.originalFrame.origin.y + self.originalFrame.size.height, self.originalFrame.size.width, 0);
+                    self.whiteView.frame = self.blueView.frame;
+                } completion:^(BOOL finished) {
+                    [transitionContext completeTransition:YES];
+                    [fromViewController.view removeFromSuperview];
+                    [self.blackView removeFromSuperview];
+                    [self.whiteView removeFromSuperview];
+                    [self.blueView removeFromSuperview];
+                    if ([fromViewController isKindOfClass:[EventDetailViewController class]] && ((EventDetailViewController *) fromViewController).selectedTickets) {
+                        [self pushToFlightResults];
+                    }
+                    
+                }];
+            }];
+        } else {
+            [UIView animateWithDuration:0.5 animations:^{
+                fromViewController.view.alpha = 0;
+                self.blackView.alpha = 0;
+                self.transitionView.alpha = 0;
+            } completion:^(BOOL finished) {
+                [transitionContext completeTransition:YES];
+                [fromViewController.view removeFromSuperview];
+                [self.blackView removeFromSuperview];
+            }];
+        }
     }
 }
 
