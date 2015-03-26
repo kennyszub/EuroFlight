@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyFlightViewController">
@@ -17,29 +17,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-ag-HCL">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKn-Zi-Gjv">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="aKn-Zi-Gjv">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <items>
                         <barButtonItem title="Item" systemItem="stop" id="pGt-3D-8hc">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onCloseButton:" destination="-1" id="cgI-s4-Z7l"/>
                             </connections>
                         </barButtonItem>
                     </items>
-                    <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Ioe-ag-HCL" secondAttribute="trailing" id="7Ef-se-hcO"/>
+                <constraint firstItem="Ioe-ag-HCL" firstAttribute="top" secondItem="aKn-Zi-Gjv" secondAttribute="bottom" id="GJe-jf-Z87"/>
                 <constraint firstAttribute="trailing" secondItem="aKn-Zi-Gjv" secondAttribute="trailing" id="bdm-XX-A23"/>
                 <constraint firstItem="aKn-Zi-Gjv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ikb-eI-oGJ"/>
-                <constraint firstItem="aKn-Zi-Gjv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nsf-4A-YKC"/>
-                <constraint firstItem="Ioe-ag-HCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oaS-IF-eqo"/>
+                <constraint firstItem="aKn-Zi-Gjv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="nsf-4A-YKC"/>
                 <constraint firstAttribute="bottom" secondItem="Ioe-ag-HCL" secondAttribute="bottom" id="tIf-ov-2dx"/>
                 <constraint firstItem="Ioe-ag-HCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uZp-l2-UCh"/>
             </constraints>

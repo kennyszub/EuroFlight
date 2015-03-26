@@ -26,12 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
-    [self.toolbar setBackgroundImage:[UIImage new]
-                  forToolbarPosition:UIBarPositionAny
-                          barMetrics:UIBarMetricsDefault];
-    [self.toolbar setShadowImage:[UIImage new]
-              forToolbarPosition:UIToolbarPositionAny];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
