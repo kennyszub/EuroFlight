@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <items>
                         <barButtonItem title="Item" systemItem="stop" id="pGt-3D-8hc">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.0" green="0.6389645934" blue="0.75245386359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onCloseButton:" destination="-1" id="cgI-s4-Z7l"/>
                             </connections>
