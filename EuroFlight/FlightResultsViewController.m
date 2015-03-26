@@ -14,7 +14,7 @@
 #import "Context.h"
 #import "FlightDetailsTransition.h"
 
-#define USE_SKYSCANNER 1
+#define USE_SKYSCANNER 0
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
