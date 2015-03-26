@@ -23,11 +23,11 @@
                                                   toViewController:(UIViewController *)toVC  {
     if ([fromVC isKindOfClass:[FlightResultsViewController class]] && [toVC isKindOfClass:[FlightDetailViewController class]]) {
         if (operation == UINavigationControllerOperationPush) {
-            return [[FlightDetailsTransition alloc] init];
+            return [[PushTiltTransition alloc] initWithPushTransition:YES];
         }
     } else if ([fromVC isKindOfClass:[FlightDetailViewController class]] && [toVC isKindOfClass:[FlightResultsViewController class]]) {
         if (operation == UINavigationControllerOperationPop) {
-            return [[FlightDetailsTransition alloc] init];
+            return [[PushTiltTransition alloc] initWithPushTransition:NO];
         }
     } else if ([fromVC isKindOfClass:[ResultsViewController class]] && [toVC isKindOfClass:[CityDetailsViewController class]]) {
         if (operation == UINavigationControllerOperationPush) {
@@ -52,6 +52,14 @@
             return [[PushTiltTransition alloc] initWithPushTransition:YES];
         }
     } else if ([toVC isKindOfClass:[HomeViewController class]] && [fromVC isKindOfClass:[ResultsViewController class]]) {
+        if (operation == UINavigationControllerOperationPop) {
+            return [[PushTiltTransition alloc] initWithPushTransition:NO];
+        }
+    } else if ([toVC isKindOfClass:[FlightResultsViewController class]] && [fromVC isKindOfClass:[ResultsViewController class]]) {
+        if (operation == UINavigationControllerOperationPush) {
+            return [[PushTiltTransition alloc] initWithPushTransition:YES];
+        }
+    } else if ([toVC isKindOfClass:[ResultsViewController class]] && [fromVC isKindOfClass:[FlightResultsViewController class]]) {
         if (operation == UINavigationControllerOperationPop) {
             return [[PushTiltTransition alloc] initWithPushTransition:NO];
         }
