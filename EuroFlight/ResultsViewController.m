@@ -54,7 +54,9 @@
     UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithCustomView:favoritesImageView];
     self.navigationItem.rightBarButtonItem = favoritesButton;
     self.isFavoritesOnly = NO;
-    
+
+    // add observer for when cities get favorited
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityWasFavorited) name:FavoritedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -157,6 +159,10 @@
         float price2 = ((Country *) obj2).lowestCost;
         return [ResultsViewController compareFloats:price1 secondFloat:price2];
     }];
+}
+
+- (void)cityWasFavorited {
+    [self.tableView reloadData];
 }
 
 @end

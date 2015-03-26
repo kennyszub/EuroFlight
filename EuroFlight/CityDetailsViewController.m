@@ -118,6 +118,8 @@ NSInteger const kHeaderHeight = 150;
 - (void)onFavoriteButton:(id)sender {
     [self.city setFavoritedState:!self.city.isFavorited];
     [self setFavoriteButtonImage];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:FavoritedNotification object:self];
 }
 
 - (void)setFavoriteButtonImage {

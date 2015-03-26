@@ -16,6 +16,8 @@
 #import "FavoritesManager.h"
 #import "SkyscannerClient.h"
 
+NSString * const FavoritedNotification = @"FavoritedNotification";
+
 @interface City ()
 
 @property (nonatomic, strong) NSDictionary *summaries;

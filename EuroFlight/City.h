@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const FavoritedNotification;
+
 @interface City : NSObject
 
 @property (nonatomic, strong) NSMutableArray *trips;
