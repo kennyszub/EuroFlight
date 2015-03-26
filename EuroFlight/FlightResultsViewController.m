@@ -172,9 +172,11 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 #pragma mark - Private methods
 
 static NSDateFormatter *dateFormatter;
+static NSDateFormatter *formatterNoTimeZone;
 
 - (void)setupTitleLabel {
     [FlightResultsViewController initDateFormatter];
+    [FlightResultsViewController initFormatterNoTimeZone];
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
     label.backgroundColor = [UIColor clearColor];
@@ -207,7 +209,17 @@ static NSDateFormatter *dateFormatter;
         if (!dateFormatter) {
             dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateFormat = @"MMM d";
-            dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
+//            dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
+        }
+    });
+}
+
++ (void)initFormatterNoTimeZone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!formatterNoTimeZone) {
+            formatterNoTimeZone = [[NSDateFormatter alloc] init];
+            formatterNoTimeZone.dateFormat = @"MMM d";
         }
     });
 }
