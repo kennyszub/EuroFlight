@@ -16,6 +16,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "FlightResultsViewController.h"
 #import "FavoritesViewController.h"
+#import "Context.h"
 
 #define TRANSITION_DURATION 0.55
 
@@ -41,7 +42,7 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-    self.title = @"Flight Results";
+    [self setupTitleLabel];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.indexPathsOfSelectedCells = [[NSMutableSet alloc] init];
 
@@ -163,6 +164,41 @@
 
 - (void)cityWasFavorited {
     [self.tableView reloadData];
+}
+
+static NSDateFormatter *dateFormatter;
+
+- (void)setupTitleLabel {
+    [ResultsViewController initDateFormatter];
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+    label.backgroundColor = [UIColor clearColor];
+    label.numberOfLines = 2;
+    label.font = [UIFont fontWithName:@"Verdana" size:14.0];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0];
+
+    NSString *dateText;
+    if ([Context currentContext].isRoundTrip) {
+        dateText = [NSString stringWithFormat:@"%@ - %@",
+                    [dateFormatter stringFromDate:[Context currentContext].departureDate],
+                    [dateFormatter stringFromDate:[Context currentContext].returnDate]];
+    } else {
+        dateText = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[Context currentContext].departureDate]];
+    }
+    label.text = [NSString stringWithFormat:@"Flight Results\n%@", dateText];
+
+    self.navigationItem.titleView = label;
+}
+
++ (void)initDateFormatter {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!dateFormatter) {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"MMM d";
+        }
+    });
 }
 
 @end

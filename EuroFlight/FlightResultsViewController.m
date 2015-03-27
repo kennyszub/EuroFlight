@@ -14,7 +14,7 @@
 #import "Context.h"
 #import "FlightDetailsTransition.h"
 
-#define USE_SKYSCANNER 1
+#define USE_SKYSCANNER 0
 
 NSString * const kFlightResultCellIdentifier = @"FlightResultCell";
 NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
@@ -172,11 +172,9 @@ NSString * const kFlightResultGroupCellIdentifier = @"FlightResultGroupCell";
 #pragma mark - Private methods
 
 static NSDateFormatter *dateFormatter;
-static NSDateFormatter *formatterNoTimeZone;
 
 - (void)setupTitleLabel {
     [FlightResultsViewController initDateFormatter];
-    [FlightResultsViewController initFormatterNoTimeZone];
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
     label.backgroundColor = [UIColor clearColor];
@@ -209,17 +207,6 @@ static NSDateFormatter *formatterNoTimeZone;
         if (!dateFormatter) {
             dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateFormat = @"MMM d";
-//            dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:[Context currentContext].timeZone];
-        }
-    });
-}
-
-+ (void)initFormatterNoTimeZone {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (!formatterNoTimeZone) {
-            formatterNoTimeZone = [[NSDateFormatter alloc] init];
-            formatterNoTimeZone.dateFormat = @"MMM d";
         }
     });
 }
