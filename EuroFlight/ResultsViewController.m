@@ -93,7 +93,7 @@
 #pragma mark Table view methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CountryTableViewCell *countryCell =  [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell" forIndexPath:indexPath];
+    CountryTableViewCell *countryCell = [self.tableView dequeueReusableCellWithIdentifier:@"CountryTableViewCell" forIndexPath:indexPath];
     countryCell.country = (Country *) self.countries[indexPath.row];
     countryCell.delegate = self;
     countryCell.countryCellSelected = [self.indexPathsOfSelectedCells containsObject:indexPath];

@@ -80,7 +80,7 @@
     self.countryName.text = country.name;
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:country.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.country.lowestCost]];
-    self.lowestPriceLabel.text = [NSString stringWithFormat:@"From %@", price];
+    self.lowestPriceLabel.text = [NSString stringWithFormat:@"from %@", price];
 
     [self setCountryImage];
     

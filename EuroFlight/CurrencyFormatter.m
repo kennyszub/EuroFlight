@@ -19,6 +19,7 @@
             sharedFormatter = [[NSNumberFormatter alloc] init];
             [sharedFormatter setCurrencyCode:code];
             [sharedFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+            [sharedFormatter setMaximumFractionDigits:0];
         }
     });
     return sharedFormatter;

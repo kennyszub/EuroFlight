@@ -53,7 +53,7 @@
     self.cityNameLabel.text = city.name;
 
     NSNumberFormatter *currencyFormatter = [CurrencyFormatter formatterWithCurrencyCode:city.currencyType];
-    self.costLabel.text = [NSString stringWithFormat:@"From %@", [currencyFormatter stringFromNumber:@(city.lowestCost)]];
+    self.costLabel.text = [NSString stringWithFormat:@"from %@", [currencyFormatter stringFromNumber:@(city.lowestCost)]];
 }
 
 - (void)setCountryImage {

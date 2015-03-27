@@ -50,7 +50,7 @@
     self.cityNameLabel.text = city.name;
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:city.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
-    [self.priceButton setTitle:[NSString stringWithFormat:@"from: %@", price] forState:UIControlStateNormal];
+    [self.priceButton setTitle:[NSString stringWithFormat:@"from %@", price] forState:UIControlStateNormal];
     [self setFavoriteButtonImageForCity:city];
 }
 
