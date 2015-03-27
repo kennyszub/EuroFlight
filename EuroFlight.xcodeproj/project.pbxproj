@@ -73,47 +73,8 @@
 		EB42F51E1AC284570004A9B8 /* FlightDetailsTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F51D1AC284570004A9B8 /* FlightDetailsTransition.m */; };
 		EB42F5211AC293100004A9B8 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */; };
 		EB42F5271AC2B5CA0004A9B8 /* SkyscannerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42F5261AC2B5CA0004A9B8 /* SkyscannerClient.m */; };
-		EB4469011AB9658200DB116B /* KLU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469001AB9658200DB116B /* KLU.txt */; };
-		EB4469031AB9665700DB116B /* LNZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469021AB9665700DB116B /* LNZ.txt */; };
-		EB4469051AB966A100DB116B /* KAJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469041AB966A100DB116B /* KAJ.txt */; };
-		EB4469071AB9671100DB116B /* RLG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469061AB9671100DB116B /* RLG.txt */; };
-		EB4469091AB9673600DB116B /* LEJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469081AB9673600DB116B /* LEJ.txt */; };
-		EB44690B1AB9676E00DB116B /* AXD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44690A1AB9676E00DB116B /* AXD.txt */; };
-		EB44690D1AB9679400DB116B /* JKH.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44690C1AB9679400DB116B /* JKH.txt */; };
-		EB44690F1AB967F700DB116B /* PSA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44690E1AB967F700DB116B /* PSA.txt */; };
-		EB4469111AB9682200DB116B /* TRN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469101AB9682200DB116B /* TRN.txt */; };
-		EB4469131AB96DDC00DB116B /* GDN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469121AB96DDC00DB116B /* GDN.txt */; };
-		EB4469151AB9704200DB116B /* OPO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469141AB9704200DB116B /* OPO.txt */; };
-		EB4469191AB9707900DB116B /* LED.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469181AB9707900DB116B /* LED.txt */; };
-		EB44691B1AB9709E00DB116B /* BEG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44691A1AB9709E00DB116B /* BEG.txt */; };
-		EB44691D1AB9710D00DB116B /* BJZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44691C1AB9710D00DB116B /* BJZ.txt */; };
-		EB44691F1AB9713000DB116B /* PNA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB44691E1AB9713000DB116B /* PNA.txt */; };
-		EB4469211AB9714F00DB116B /* VLC.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469201AB9714F00DB116B /* VLC.txt */; };
-		EB4469231AB9717100DB116B /* VGO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469221AB9717100DB116B /* VGO.txt */; };
-		EB4469251AB9719E00DB116B /* GVA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469241AB9719E00DB116B /* GVA.txt */; };
-		EB4469271AB971C000DB116B /* KYA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB4469261AB971C000DB116B /* KYA.txt */; };
 		EB72B22A1AAEDE47004503D1 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */; };
 		EB72B22B1AAEDE47004503D1 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */; };
-		EB72B22D1AB00E18004503D1 /* AMS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B22C1AB00E18004503D1 /* AMS.txt */; };
-		EB72B22F1AB00F9D004503D1 /* BUD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B22E1AB00F9D004503D1 /* BUD.txt */; };
-		EB72B2311AB01009004503D1 /* DUB.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2301AB01009004503D1 /* DUB.txt */; };
-		EB72B2331AB01031004503D1 /* EDI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2321AB01031004503D1 /* EDI.txt */; };
-		EB72B2351AB01089004503D1 /* FLR.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2341AB01089004503D1 /* FLR.txt */; };
-		EB72B2371AB01325004503D1 /* GOT.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2361AB01325004503D1 /* GOT.txt */; };
-		EB72B2391AB01380004503D1 /* IBZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2381AB01380004503D1 /* IBZ.txt */; };
-		EB72B23B1AB01414004503D1 /* MUC.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B23A1AB01414004503D1 /* MUC.txt */; };
-		EB72B23D1AB01457004503D1 /* TXL.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B23C1AB01457004503D1 /* TXL.txt */; };
-		EB72B23F1AB0149B004503D1 /* SXF.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B23E1AB0149B004503D1 /* SXF.txt */; };
-		EB72B2411AB0150B004503D1 /* OSL.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2401AB0150B004503D1 /* OSL.txt */; };
-		EB72B2431AB01537004503D1 /* ZRH.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2421AB01537004503D1 /* ZRH.txt */; };
-		EB72B2451AB01593004503D1 /* VIE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2441AB01593004503D1 /* VIE.txt */; };
-		EB72B2471AB015C2004503D1 /* FRA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2461AB015C2004503D1 /* FRA.txt */; };
-		EB72B2491AB0161A004503D1 /* VCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2481AB0161A004503D1 /* VCE.txt */; };
-		EB72B24B1AB01671004503D1 /* FCO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B24A1AB01671004503D1 /* FCO.txt */; };
-		EB72B24D1AB01758004503D1 /* KEF.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B24C1AB01758004503D1 /* KEF.txt */; };
-		EB72B24F1AB017A3004503D1 /* BRU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B24E1AB017A3004503D1 /* BRU.txt */; };
-		EB72B2511AB0187B004503D1 /* IST.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2501AB0187B004503D1 /* IST.txt */; };
-		EB72B2531AB018CB004503D1 /* ARN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB72B2521AB018CB004503D1 /* ARN.txt */; };
 		EB72B2561AB032D7004503D1 /* CurrencyFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */; };
 		EB72B2581AB03CCA004503D1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB72B2571AB03CCA004503D1 /* WebKit.framework */; };
 		EB72B25C1AB04468004503D1 /* BuyFlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72B25A1AB04468004503D1 /* BuyFlightViewController.m */; };
@@ -123,23 +84,51 @@
 		EB735C1A1AB819EE00386362 /* TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB735C191AB819EE00386362 /* TriangleView.m */; };
 		EB735C241AB9412B00386362 /* FavoritesResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB735C221AB9412B00386362 /* FavoritesResultCell.m */; };
 		EB735C251AB9412B00386362 /* FavoritesResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB735C231AB9412B00386362 /* FavoritesResultCell.xib */; };
-		EB7665BF1ABBF57C0094D6C3 /* LIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665BE1ABBF57C0094D6C3 /* LIS.txt */; };
-		EB7665C11ABBF5B60094D6C3 /* KRK.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665C01ABBF5B60094D6C3 /* KRK.txt */; };
-		EB7665C31ABBF6140094D6C3 /* MXP.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665C21ABBF6140094D6C3 /* MXP.txt */; };
-		EB7665C51ABBF6970094D6C3 /* DME.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665C41ABBF6970094D6C3 /* DME.txt */; };
-		EB7665C71ABF33A00094D6C3 /* PRG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665C61ABF33A00094D6C3 /* PRG.txt */; };
-		EB7665C91ABF33CA0094D6C3 /* ATH.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665C81ABF33CA0094D6C3 /* ATH.txt */; };
-		EB7665CB1ABF34530094D6C3 /* SZG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665CA1ABF34530094D6C3 /* SZG.txt */; };
-		EB7665CD1ABF34840094D6C3 /* LYS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665CC1ABF34840094D6C3 /* LYS.txt */; };
-		EB7665CF1ABF34C90094D6C3 /* WAW.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665CE1ABF34C90094D6C3 /* WAW.txt */; };
-		EB7665D11ABF34EF0094D6C3 /* POZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7665D01ABF34EF0094D6C3 /* POZ.txt */; };
 		EB7665DA1ABF3E600094D6C3 /* PlaneLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7665D91ABF3E600094D6C3 /* PlaneLoadingView.m */; };
+		EB7A40B51AC602FF00F13379 /* AMS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A408A1AC602FF00F13379 /* AMS.txt */; };
+		EB7A40B61AC602FF00F13379 /* ARN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A408B1AC602FF00F13379 /* ARN.txt */; };
+		EB7A40B71AC602FF00F13379 /* ATH.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A408C1AC602FF00F13379 /* ATH.txt */; };
+		EB7A40B81AC602FF00F13379 /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A408D1AC602FF00F13379 /* BCN.txt */; };
+		EB7A40B91AC602FF00F13379 /* BEG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A408E1AC602FF00F13379 /* BEG.txt */; };
+		EB7A40BA1AC602FF00F13379 /* BRU.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A408F1AC602FF00F13379 /* BRU.txt */; };
+		EB7A40BB1AC602FF00F13379 /* BUD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40901AC602FF00F13379 /* BUD.txt */; };
+		EB7A40BC1AC602FF00F13379 /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40911AC602FF00F13379 /* CDG.txt */; };
+		EB7A40BD1AC602FF00F13379 /* DME.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40921AC602FF00F13379 /* DME.txt */; };
+		EB7A40BE1AC602FF00F13379 /* DUB.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40931AC602FF00F13379 /* DUB.txt */; };
+		EB7A40BF1AC602FF00F13379 /* EDI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40941AC602FF00F13379 /* EDI.txt */; };
+		EB7A40C01AC602FF00F13379 /* FCO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40951AC602FF00F13379 /* FCO.txt */; };
+		EB7A40C11AC602FF00F13379 /* FLR.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40961AC602FF00F13379 /* FLR.txt */; };
+		EB7A40C21AC602FF00F13379 /* FRA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40971AC602FF00F13379 /* FRA.txt */; };
+		EB7A40C31AC602FF00F13379 /* GDN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40981AC602FF00F13379 /* GDN.txt */; };
+		EB7A40C41AC602FF00F13379 /* GVA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40991AC602FF00F13379 /* GVA.txt */; };
+		EB7A40C51AC602FF00F13379 /* IBZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A409A1AC602FF00F13379 /* IBZ.txt */; };
+		EB7A40C61AC602FF00F13379 /* IST.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A409B1AC602FF00F13379 /* IST.txt */; };
+		EB7A40C71AC602FF00F13379 /* KEF.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A409C1AC602FF00F13379 /* KEF.txt */; };
+		EB7A40C81AC602FF00F13379 /* KRK.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A409D1AC602FF00F13379 /* KRK.txt */; };
+		EB7A40C91AC602FF00F13379 /* LED.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A409E1AC602FF00F13379 /* LED.txt */; };
+		EB7A40CA1AC602FF00F13379 /* LEJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A409F1AC602FF00F13379 /* LEJ.txt */; };
+		EB7A40CB1AC602FF00F13379 /* LIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A01AC602FF00F13379 /* LIS.txt */; };
+		EB7A40CC1AC602FF00F13379 /* LYS.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A11AC602FF00F13379 /* LYS.txt */; };
+		EB7A40CD1AC602FF00F13379 /* MAD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A21AC602FF00F13379 /* MAD.txt */; };
+		EB7A40CE1AC602FF00F13379 /* MUC.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A31AC602FF00F13379 /* MUC.txt */; };
+		EB7A40CF1AC602FF00F13379 /* MXP.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A41AC602FF00F13379 /* MXP.txt */; };
+		EB7A40D01AC602FF00F13379 /* NCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A51AC602FF00F13379 /* NCE.txt */; };
+		EB7A40D11AC602FF00F13379 /* OPO.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A61AC602FF00F13379 /* OPO.txt */; };
+		EB7A40D21AC602FF00F13379 /* ORY.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A71AC602FF00F13379 /* ORY.txt */; };
+		EB7A40D31AC602FF00F13379 /* OSL.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A81AC602FF00F13379 /* OSL.txt */; };
+		EB7A40D41AC602FF00F13379 /* POZ.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40A91AC602FF00F13379 /* POZ.txt */; };
+		EB7A40D51AC602FF00F13379 /* PRG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40AA1AC602FF00F13379 /* PRG.txt */; };
+		EB7A40D61AC602FF00F13379 /* PSA.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40AB1AC602FF00F13379 /* PSA.txt */; };
+		EB7A40D71AC602FF00F13379 /* SXF.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40AC1AC602FF00F13379 /* SXF.txt */; };
+		EB7A40D81AC602FF00F13379 /* SZG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40AD1AC602FF00F13379 /* SZG.txt */; };
+		EB7A40D91AC602FF00F13379 /* TRN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40AE1AC602FF00F13379 /* TRN.txt */; };
+		EB7A40DA1AC602FF00F13379 /* TXL.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40AF1AC602FF00F13379 /* TXL.txt */; };
+		EB7A40DB1AC602FF00F13379 /* VCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40B01AC602FF00F13379 /* VCE.txt */; };
+		EB7A40DC1AC602FF00F13379 /* VIE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40B11AC602FF00F13379 /* VIE.txt */; };
+		EB7A40DD1AC602FF00F13379 /* VLC.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40B21AC602FF00F13379 /* VLC.txt */; };
+		EB7A40DE1AC602FF00F13379 /* WAW.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40B31AC602FF00F13379 /* WAW.txt */; };
+		EB7A40DF1AC602FF00F13379 /* ZRH.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7A40B41AC602FF00F13379 /* ZRH.txt */; };
 		EB91F1BF1AB6C573000A815F /* GoogleSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB91F1BE1AB6C573000A815F /* GoogleSearchClient.m */; };
-		EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521091AABDDC20081E88A /* CDG.txt */; };
-		EBA5210C1AABE1950081E88A /* BCN.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210B1AABE1950081E88A /* BCN.txt */; };
-		EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA5210E1AABE2CE0081E88A /* MAD.txt */; };
-		EBA521111AABE2FE0081E88A /* ORY.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521101AABE2FE0081E88A /* ORY.txt */; };
-		EBA521131AABE3330081E88A /* NCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBA521121AABE3330081E88A /* NCE.txt */; };
 		EBA521171AABF3290081E88A /* FlightResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA521151AABF3290081E88A /* FlightResultsViewController.m */; };
 		EBA521181AABF3290081E88A /* FlightResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA521161AABF3290081E88A /* FlightResultsViewController.xib */; };
 		EBA5211C1AABF4B80081E88A /* FlightResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA5211A1AABF4B80081E88A /* FlightResultCell.m */; };
@@ -281,48 +270,9 @@
 		EB42F5201AC293100004A9B8 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
 		EB42F5251AC2B5CA0004A9B8 /* SkyscannerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyscannerClient.h; sourceTree = "<group>"; };
 		EB42F5261AC2B5CA0004A9B8 /* SkyscannerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyscannerClient.m; sourceTree = "<group>"; };
-		EB4469001AB9658200DB116B /* KLU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KLU.txt; sourceTree = "<group>"; };
-		EB4469021AB9665700DB116B /* LNZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LNZ.txt; sourceTree = "<group>"; };
-		EB4469041AB966A100DB116B /* KAJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KAJ.txt; sourceTree = "<group>"; };
-		EB4469061AB9671100DB116B /* RLG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RLG.txt; sourceTree = "<group>"; };
-		EB4469081AB9673600DB116B /* LEJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LEJ.txt; sourceTree = "<group>"; };
-		EB44690A1AB9676E00DB116B /* AXD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AXD.txt; sourceTree = "<group>"; };
-		EB44690C1AB9679400DB116B /* JKH.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JKH.txt; sourceTree = "<group>"; };
-		EB44690E1AB967F700DB116B /* PSA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PSA.txt; sourceTree = "<group>"; };
-		EB4469101AB9682200DB116B /* TRN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TRN.txt; sourceTree = "<group>"; };
-		EB4469121AB96DDC00DB116B /* GDN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GDN.txt; sourceTree = "<group>"; };
-		EB4469141AB9704200DB116B /* OPO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OPO.txt; sourceTree = "<group>"; };
-		EB4469181AB9707900DB116B /* LED.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LED.txt; sourceTree = "<group>"; };
-		EB44691A1AB9709E00DB116B /* BEG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BEG.txt; sourceTree = "<group>"; };
-		EB44691C1AB9710D00DB116B /* BJZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BJZ.txt; sourceTree = "<group>"; };
-		EB44691E1AB9713000DB116B /* PNA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PNA.txt; sourceTree = "<group>"; };
-		EB4469201AB9714F00DB116B /* VLC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VLC.txt; sourceTree = "<group>"; };
-		EB4469221AB9717100DB116B /* VGO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VGO.txt; sourceTree = "<group>"; };
-		EB4469241AB9719E00DB116B /* GVA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GVA.txt; sourceTree = "<group>"; };
-		EB4469261AB971C000DB116B /* KYA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KYA.txt; sourceTree = "<group>"; };
 		EB72B2271AAEDE47004503D1 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		EB72B2281AAEDE47004503D1 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		EB72B2291AAEDE47004503D1 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
-		EB72B22C1AB00E18004503D1 /* AMS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AMS.txt; sourceTree = "<group>"; };
-		EB72B22E1AB00F9D004503D1 /* BUD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BUD.txt; sourceTree = "<group>"; };
-		EB72B2301AB01009004503D1 /* DUB.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DUB.txt; sourceTree = "<group>"; };
-		EB72B2321AB01031004503D1 /* EDI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EDI.txt; sourceTree = "<group>"; };
-		EB72B2341AB01089004503D1 /* FLR.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FLR.txt; sourceTree = "<group>"; };
-		EB72B2361AB01325004503D1 /* GOT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GOT.txt; sourceTree = "<group>"; };
-		EB72B2381AB01380004503D1 /* IBZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBZ.txt; sourceTree = "<group>"; };
-		EB72B23A1AB01414004503D1 /* MUC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MUC.txt; sourceTree = "<group>"; };
-		EB72B23C1AB01457004503D1 /* TXL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TXL.txt; sourceTree = "<group>"; };
-		EB72B23E1AB0149B004503D1 /* SXF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SXF.txt; sourceTree = "<group>"; };
-		EB72B2401AB0150B004503D1 /* OSL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OSL.txt; sourceTree = "<group>"; };
-		EB72B2421AB01537004503D1 /* ZRH.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZRH.txt; sourceTree = "<group>"; };
-		EB72B2441AB01593004503D1 /* VIE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VIE.txt; sourceTree = "<group>"; };
-		EB72B2461AB015C2004503D1 /* FRA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FRA.txt; sourceTree = "<group>"; };
-		EB72B2481AB0161A004503D1 /* VCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VCE.txt; sourceTree = "<group>"; };
-		EB72B24A1AB01671004503D1 /* FCO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FCO.txt; sourceTree = "<group>"; };
-		EB72B24C1AB01758004503D1 /* KEF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KEF.txt; sourceTree = "<group>"; };
-		EB72B24E1AB017A3004503D1 /* BRU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BRU.txt; sourceTree = "<group>"; };
-		EB72B2501AB0187B004503D1 /* IST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IST.txt; sourceTree = "<group>"; };
-		EB72B2521AB018CB004503D1 /* ARN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARN.txt; sourceTree = "<group>"; };
 		EB72B2541AB032D7004503D1 /* CurrencyFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyFormatter.h; sourceTree = "<group>"; };
 		EB72B2551AB032D7004503D1 /* CurrencyFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyFormatter.m; sourceTree = "<group>"; };
 		EB72B2571AB03CCA004503D1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -337,25 +287,53 @@
 		EB735C211AB9412B00386362 /* FavoritesResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesResultCell.h; sourceTree = "<group>"; };
 		EB735C221AB9412B00386362 /* FavoritesResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesResultCell.m; sourceTree = "<group>"; };
 		EB735C231AB9412B00386362 /* FavoritesResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesResultCell.xib; sourceTree = "<group>"; };
-		EB7665BE1ABBF57C0094D6C3 /* LIS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LIS.txt; sourceTree = "<group>"; };
-		EB7665C01ABBF5B60094D6C3 /* KRK.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KRK.txt; sourceTree = "<group>"; };
-		EB7665C21ABBF6140094D6C3 /* MXP.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MXP.txt; sourceTree = "<group>"; };
-		EB7665C41ABBF6970094D6C3 /* DME.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DME.txt; sourceTree = "<group>"; };
-		EB7665C61ABF33A00094D6C3 /* PRG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PRG.txt; sourceTree = "<group>"; };
-		EB7665C81ABF33CA0094D6C3 /* ATH.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATH.txt; sourceTree = "<group>"; };
-		EB7665CA1ABF34530094D6C3 /* SZG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SZG.txt; sourceTree = "<group>"; };
-		EB7665CC1ABF34840094D6C3 /* LYS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LYS.txt; sourceTree = "<group>"; };
-		EB7665CE1ABF34C90094D6C3 /* WAW.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WAW.txt; sourceTree = "<group>"; };
-		EB7665D01ABF34EF0094D6C3 /* POZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = POZ.txt; sourceTree = "<group>"; };
 		EB7665D81ABF3E600094D6C3 /* PlaneLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneLoadingView.h; sourceTree = "<group>"; };
 		EB7665D91ABF3E600094D6C3 /* PlaneLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneLoadingView.m; sourceTree = "<group>"; };
+		EB7A408A1AC602FF00F13379 /* AMS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AMS.txt; sourceTree = "<group>"; };
+		EB7A408B1AC602FF00F13379 /* ARN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARN.txt; sourceTree = "<group>"; };
+		EB7A408C1AC602FF00F13379 /* ATH.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATH.txt; sourceTree = "<group>"; };
+		EB7A408D1AC602FF00F13379 /* BCN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCN.txt; sourceTree = "<group>"; };
+		EB7A408E1AC602FF00F13379 /* BEG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BEG.txt; sourceTree = "<group>"; };
+		EB7A408F1AC602FF00F13379 /* BRU.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BRU.txt; sourceTree = "<group>"; };
+		EB7A40901AC602FF00F13379 /* BUD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BUD.txt; sourceTree = "<group>"; };
+		EB7A40911AC602FF00F13379 /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
+		EB7A40921AC602FF00F13379 /* DME.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DME.txt; sourceTree = "<group>"; };
+		EB7A40931AC602FF00F13379 /* DUB.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DUB.txt; sourceTree = "<group>"; };
+		EB7A40941AC602FF00F13379 /* EDI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EDI.txt; sourceTree = "<group>"; };
+		EB7A40951AC602FF00F13379 /* FCO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FCO.txt; sourceTree = "<group>"; };
+		EB7A40961AC602FF00F13379 /* FLR.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FLR.txt; sourceTree = "<group>"; };
+		EB7A40971AC602FF00F13379 /* FRA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FRA.txt; sourceTree = "<group>"; };
+		EB7A40981AC602FF00F13379 /* GDN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GDN.txt; sourceTree = "<group>"; };
+		EB7A40991AC602FF00F13379 /* GVA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GVA.txt; sourceTree = "<group>"; };
+		EB7A409A1AC602FF00F13379 /* IBZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBZ.txt; sourceTree = "<group>"; };
+		EB7A409B1AC602FF00F13379 /* IST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IST.txt; sourceTree = "<group>"; };
+		EB7A409C1AC602FF00F13379 /* KEF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KEF.txt; sourceTree = "<group>"; };
+		EB7A409D1AC602FF00F13379 /* KRK.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KRK.txt; sourceTree = "<group>"; };
+		EB7A409E1AC602FF00F13379 /* LED.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LED.txt; sourceTree = "<group>"; };
+		EB7A409F1AC602FF00F13379 /* LEJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LEJ.txt; sourceTree = "<group>"; };
+		EB7A40A01AC602FF00F13379 /* LIS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LIS.txt; sourceTree = "<group>"; };
+		EB7A40A11AC602FF00F13379 /* LYS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LYS.txt; sourceTree = "<group>"; };
+		EB7A40A21AC602FF00F13379 /* MAD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MAD.txt; sourceTree = "<group>"; };
+		EB7A40A31AC602FF00F13379 /* MUC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MUC.txt; sourceTree = "<group>"; };
+		EB7A40A41AC602FF00F13379 /* MXP.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MXP.txt; sourceTree = "<group>"; };
+		EB7A40A51AC602FF00F13379 /* NCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NCE.txt; sourceTree = "<group>"; };
+		EB7A40A61AC602FF00F13379 /* OPO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OPO.txt; sourceTree = "<group>"; };
+		EB7A40A71AC602FF00F13379 /* ORY.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ORY.txt; sourceTree = "<group>"; };
+		EB7A40A81AC602FF00F13379 /* OSL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OSL.txt; sourceTree = "<group>"; };
+		EB7A40A91AC602FF00F13379 /* POZ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = POZ.txt; sourceTree = "<group>"; };
+		EB7A40AA1AC602FF00F13379 /* PRG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PRG.txt; sourceTree = "<group>"; };
+		EB7A40AB1AC602FF00F13379 /* PSA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PSA.txt; sourceTree = "<group>"; };
+		EB7A40AC1AC602FF00F13379 /* SXF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SXF.txt; sourceTree = "<group>"; };
+		EB7A40AD1AC602FF00F13379 /* SZG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SZG.txt; sourceTree = "<group>"; };
+		EB7A40AE1AC602FF00F13379 /* TRN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TRN.txt; sourceTree = "<group>"; };
+		EB7A40AF1AC602FF00F13379 /* TXL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TXL.txt; sourceTree = "<group>"; };
+		EB7A40B01AC602FF00F13379 /* VCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VCE.txt; sourceTree = "<group>"; };
+		EB7A40B11AC602FF00F13379 /* VIE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VIE.txt; sourceTree = "<group>"; };
+		EB7A40B21AC602FF00F13379 /* VLC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VLC.txt; sourceTree = "<group>"; };
+		EB7A40B31AC602FF00F13379 /* WAW.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WAW.txt; sourceTree = "<group>"; };
+		EB7A40B41AC602FF00F13379 /* ZRH.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZRH.txt; sourceTree = "<group>"; };
 		EB91F1BD1AB6C573000A815F /* GoogleSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchClient.h; sourceTree = "<group>"; };
 		EB91F1BE1AB6C573000A815F /* GoogleSearchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchClient.m; sourceTree = "<group>"; };
-		EBA521091AABDDC20081E88A /* CDG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDG.txt; sourceTree = "<group>"; };
-		EBA5210B1AABE1950081E88A /* BCN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BCN.txt; sourceTree = "<group>"; };
-		EBA5210E1AABE2CE0081E88A /* MAD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MAD.txt; sourceTree = "<group>"; };
-		EBA521101AABE2FE0081E88A /* ORY.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ORY.txt; sourceTree = "<group>"; };
-		EBA521121AABE3330081E88A /* NCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NCE.txt; sourceTree = "<group>"; };
 		EBA521141AABF3290081E88A /* FlightResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightResultsViewController.h; sourceTree = "<group>"; };
 		EBA521151AABF3290081E88A /* FlightResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightResultsViewController.m; sourceTree = "<group>"; };
 		EBA521161AABF3290081E88A /* FlightResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightResultsViewController.xib; sourceTree = "<group>"; };
@@ -713,60 +691,49 @@
 		EBA5210D1AABE2800081E88A /* Sample Flight Data */ = {
 			isa = PBXGroup;
 			children = (
-				EBA521091AABDDC20081E88A /* CDG.txt */,
-				EBA5210B1AABE1950081E88A /* BCN.txt */,
-				EBA5210E1AABE2CE0081E88A /* MAD.txt */,
-				EBA521101AABE2FE0081E88A /* ORY.txt */,
-				EBA521121AABE3330081E88A /* NCE.txt */,
-				EB72B22C1AB00E18004503D1 /* AMS.txt */,
-				EB72B22E1AB00F9D004503D1 /* BUD.txt */,
-				EB72B2301AB01009004503D1 /* DUB.txt */,
-				EB72B2321AB01031004503D1 /* EDI.txt */,
-				EB72B2341AB01089004503D1 /* FLR.txt */,
-				EB72B2361AB01325004503D1 /* GOT.txt */,
-				EB72B2381AB01380004503D1 /* IBZ.txt */,
-				EB72B23A1AB01414004503D1 /* MUC.txt */,
-				EB72B23C1AB01457004503D1 /* TXL.txt */,
-				EB72B23E1AB0149B004503D1 /* SXF.txt */,
-				EB72B2401AB0150B004503D1 /* OSL.txt */,
-				EB72B2421AB01537004503D1 /* ZRH.txt */,
-				EB72B2441AB01593004503D1 /* VIE.txt */,
-				EB72B2461AB015C2004503D1 /* FRA.txt */,
-				EB72B2481AB0161A004503D1 /* VCE.txt */,
-				EB72B24A1AB01671004503D1 /* FCO.txt */,
-				EB72B24C1AB01758004503D1 /* KEF.txt */,
-				EB72B24E1AB017A3004503D1 /* BRU.txt */,
-				EB72B2501AB0187B004503D1 /* IST.txt */,
-				EB72B2521AB018CB004503D1 /* ARN.txt */,
-				EB4469001AB9658200DB116B /* KLU.txt */,
-				EB4469021AB9665700DB116B /* LNZ.txt */,
-				EB4469041AB966A100DB116B /* KAJ.txt */,
-				EB4469061AB9671100DB116B /* RLG.txt */,
-				EB4469081AB9673600DB116B /* LEJ.txt */,
-				EB44690A1AB9676E00DB116B /* AXD.txt */,
-				EB44690C1AB9679400DB116B /* JKH.txt */,
-				EB44690E1AB967F700DB116B /* PSA.txt */,
-				EB4469101AB9682200DB116B /* TRN.txt */,
-				EB4469121AB96DDC00DB116B /* GDN.txt */,
-				EB4469141AB9704200DB116B /* OPO.txt */,
-				EB4469181AB9707900DB116B /* LED.txt */,
-				EB44691A1AB9709E00DB116B /* BEG.txt */,
-				EB44691C1AB9710D00DB116B /* BJZ.txt */,
-				EB44691E1AB9713000DB116B /* PNA.txt */,
-				EB4469201AB9714F00DB116B /* VLC.txt */,
-				EB4469221AB9717100DB116B /* VGO.txt */,
-				EB4469241AB9719E00DB116B /* GVA.txt */,
-				EB4469261AB971C000DB116B /* KYA.txt */,
-				EB7665BE1ABBF57C0094D6C3 /* LIS.txt */,
-				EB7665C01ABBF5B60094D6C3 /* KRK.txt */,
-				EB7665C21ABBF6140094D6C3 /* MXP.txt */,
-				EB7665C41ABBF6970094D6C3 /* DME.txt */,
-				EB7665C61ABF33A00094D6C3 /* PRG.txt */,
-				EB7665C81ABF33CA0094D6C3 /* ATH.txt */,
-				EB7665CA1ABF34530094D6C3 /* SZG.txt */,
-				EB7665CC1ABF34840094D6C3 /* LYS.txt */,
-				EB7665CE1ABF34C90094D6C3 /* WAW.txt */,
-				EB7665D01ABF34EF0094D6C3 /* POZ.txt */,
+				EB7A408A1AC602FF00F13379 /* AMS.txt */,
+				EB7A408B1AC602FF00F13379 /* ARN.txt */,
+				EB7A408C1AC602FF00F13379 /* ATH.txt */,
+				EB7A408D1AC602FF00F13379 /* BCN.txt */,
+				EB7A408E1AC602FF00F13379 /* BEG.txt */,
+				EB7A408F1AC602FF00F13379 /* BRU.txt */,
+				EB7A40901AC602FF00F13379 /* BUD.txt */,
+				EB7A40911AC602FF00F13379 /* CDG.txt */,
+				EB7A40921AC602FF00F13379 /* DME.txt */,
+				EB7A40931AC602FF00F13379 /* DUB.txt */,
+				EB7A40941AC602FF00F13379 /* EDI.txt */,
+				EB7A40951AC602FF00F13379 /* FCO.txt */,
+				EB7A40961AC602FF00F13379 /* FLR.txt */,
+				EB7A40971AC602FF00F13379 /* FRA.txt */,
+				EB7A40981AC602FF00F13379 /* GDN.txt */,
+				EB7A40991AC602FF00F13379 /* GVA.txt */,
+				EB7A409A1AC602FF00F13379 /* IBZ.txt */,
+				EB7A409B1AC602FF00F13379 /* IST.txt */,
+				EB7A409C1AC602FF00F13379 /* KEF.txt */,
+				EB7A409D1AC602FF00F13379 /* KRK.txt */,
+				EB7A409E1AC602FF00F13379 /* LED.txt */,
+				EB7A409F1AC602FF00F13379 /* LEJ.txt */,
+				EB7A40A01AC602FF00F13379 /* LIS.txt */,
+				EB7A40A11AC602FF00F13379 /* LYS.txt */,
+				EB7A40A21AC602FF00F13379 /* MAD.txt */,
+				EB7A40A31AC602FF00F13379 /* MUC.txt */,
+				EB7A40A41AC602FF00F13379 /* MXP.txt */,
+				EB7A40A51AC602FF00F13379 /* NCE.txt */,
+				EB7A40A61AC602FF00F13379 /* OPO.txt */,
+				EB7A40A71AC602FF00F13379 /* ORY.txt */,
+				EB7A40A81AC602FF00F13379 /* OSL.txt */,
+				EB7A40A91AC602FF00F13379 /* POZ.txt */,
+				EB7A40AA1AC602FF00F13379 /* PRG.txt */,
+				EB7A40AB1AC602FF00F13379 /* PSA.txt */,
+				EB7A40AC1AC602FF00F13379 /* SXF.txt */,
+				EB7A40AD1AC602FF00F13379 /* SZG.txt */,
+				EB7A40AE1AC602FF00F13379 /* TRN.txt */,
+				EB7A40AF1AC602FF00F13379 /* TXL.txt */,
+				EB7A40B01AC602FF00F13379 /* VCE.txt */,
+				EB7A40B11AC602FF00F13379 /* VIE.txt */,
+				EB7A40B21AC602FF00F13379 /* VLC.txt */,
+				EB7A40B31AC602FF00F13379 /* WAW.txt */,
+				EB7A40B41AC602FF00F13379 /* ZRH.txt */,
 			);
 			name = "Sample Flight Data";
 			sourceTree = "<group>";
@@ -853,91 +820,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7A40D21AC602FF00F13379 /* ORY.txt in Resources */,
+				EB7A40D61AC602FF00F13379 /* PSA.txt in Resources */,
+				EB7A40CE1AC602FF00F13379 /* MUC.txt in Resources */,
+				EB7A40C01AC602FF00F13379 /* FCO.txt in Resources */,
 				117F3FFD1AB94F9C00D2D5A3 /* PlaceCollectionCell.xib in Resources */,
-				EB72B23F1AB0149B004503D1 /* SXF.txt in Resources */,
-				EB7665C91ABF33CA0094D6C3 /* ATH.txt in Resources */,
-				EB72B2511AB0187B004503D1 /* IST.txt in Resources */,
 				C4FA0D851AAB9B830023FDC3 /* LaunchScreen.xib in Resources */,
 				C4FA0DE91AAEC5B20023FDC3 /* AirportTableViewCell.xib in Resources */,
 				EBA7FA8C1AB56CA100760622 /* FlightResultGroupCell.xib in Resources */,
+				EB7A40DC1AC602FF00F13379 /* VIE.txt in Resources */,
+				EB7A40DF1AC602FF00F13379 /* ZRH.txt in Resources */,
+				EB7A40BB1AC602FF00F13379 /* BUD.txt in Resources */,
 				C4FA0DD41AABEE0F0023FDC3 /* Images.xcassets in Resources */,
-				EB72B24D1AB01758004503D1 /* KEF.txt in Resources */,
-				EB7665CF1ABF34C90094D6C3 /* WAW.txt in Resources */,
-				EB72B2491AB0161A004503D1 /* VCE.txt in Resources */,
+				EB7A40BE1AC602FF00F13379 /* DUB.txt in Resources */,
 				113E2AB61AB925FA00DAAFA3 /* EventCell.xib in Resources */,
-				EB72B2311AB01009004503D1 /* DUB.txt in Resources */,
-				EB4469111AB9682200DB116B /* TRN.txt in Resources */,
-				EB7665C31ABBF6140094D6C3 /* MXP.txt in Resources */,
-				EB4469131AB96DDC00DB116B /* GDN.txt in Resources */,
-				EB4469051AB966A100DB116B /* KAJ.txt in Resources */,
 				EB3EF1321AAC38B60008FF9E /* OneWayFlightDetailView.xib in Resources */,
-				EB72B24F1AB017A3004503D1 /* BRU.txt in Resources */,
-				EB44690B1AB9676E00DB116B /* AXD.txt in Resources */,
-				EB44691D1AB9710D00DB116B /* BJZ.txt in Resources */,
-				EB4469151AB9704200DB116B /* OPO.txt in Resources */,
+				EB7A40BA1AC602FF00F13379 /* BRU.txt in Resources */,
 				C43028151AB50B9F00DA2B18 /* DateSelectionCell.xib in Resources */,
-				EB72B2431AB01537004503D1 /* ZRH.txt in Resources */,
-				EB4469191AB9707900DB116B /* LED.txt in Resources */,
-				EB4469011AB9658200DB116B /* KLU.txt in Resources */,
+				EB7A40DB1AC602FF00F13379 /* VCE.txt in Resources */,
 				C4FA0DD51AABEE0F0023FDC3 /* HomeViewController.xib in Resources */,
 				EB735C251AB9412B00386362 /* FavoritesResultCell.xib in Resources */,
-				EB4469031AB9665700DB116B /* LNZ.txt in Resources */,
 				C4FA0DC51AABDEF20023FDC3 /* ResultsViewController.xib in Resources */,
+				EB7A40CB1AC602FF00F13379 /* LIS.txt in Resources */,
+				EB7A40C81AC602FF00F13379 /* KRK.txt in Resources */,
 				EBA7FA9F1AB6539600760622 /* LayoverDetailCell.xib in Resources */,
-				EB72B23B1AB01414004503D1 /* MUC.txt in Resources */,
 				C43028241AB51F0400DA2B18 /* OneWayRoundTripCell.xib in Resources */,
-				EB72B2371AB01325004503D1 /* GOT.txt in Resources */,
-				EB72B2411AB0150B004503D1 /* OSL.txt in Resources */,
-				EB72B2331AB01031004503D1 /* EDI.txt in Resources */,
-				EB72B23D1AB01457004503D1 /* TXL.txt in Resources */,
+				EB7A40D41AC602FF00F13379 /* POZ.txt in Resources */,
 				11873B0D1AABF9FD0050D5DA /* CityDetailsViewController.xib in Resources */,
-				EB72B22F1AB00F9D004503D1 /* BUD.txt in Resources */,
+				EB7A40B71AC602FF00F13379 /* ATH.txt in Resources */,
+				EB7A40CF1AC602FF00F13379 /* MXP.txt in Resources */,
+				EB7A40B91AC602FF00F13379 /* BEG.txt in Resources */,
 				116185B01ABE3CB3006275B7 /* PlacesScrollCustomView.xib in Resources */,
-				EB72B2351AB01089004503D1 /* FLR.txt in Resources */,
-				EB4469251AB9719E00DB116B /* GVA.txt in Resources */,
-				EB7665D11ABF34EF0094D6C3 /* POZ.txt in Resources */,
-				EB7665BF1ABBF57C0094D6C3 /* LIS.txt in Resources */,
-				EB44691B1AB9709E00DB116B /* BEG.txt in Resources */,
+				EB7A40B81AC602FF00F13379 /* BCN.txt in Resources */,
 				C4FA0DE41AAEC2CD0023FDC3 /* AirportSearchResultsControllerViewController.xib in Resources */,
+				EB7A40D71AC602FF00F13379 /* SXF.txt in Resources */,
+				EB7A40D11AC602FF00F13379 /* OPO.txt in Resources */,
 				C4FA0DCA1AABDFC60023FDC3 /* CountryTableViewCell.xib in Resources */,
+				EB7A40D91AC602FF00F13379 /* TRN.txt in Resources */,
 				116185AB1ABE1C25006275B7 /* PlacesViewController.xib in Resources */,
+				EB7A40CC1AC602FF00F13379 /* LYS.txt in Resources */,
+				EB7A40C91AC602FF00F13379 /* LED.txt in Resources */,
 				113E2AAC1AB923C400DAAFA3 /* DescriptionCell.xib in Resources */,
 				C43028101AB507FA00DA2B18 /* DepartureCityCell.xib in Resources */,
-				EB72B2471AB015C2004503D1 /* FRA.txt in Resources */,
 				EBA7FAA11AB6639900760622 /* FlightDetailSectionHeaderView.xib in Resources */,
-				EB44691F1AB9713000DB116B /* PNA.txt in Resources */,
-				EB4469271AB971C000DB116B /* KYA.txt in Resources */,
-				EBA5210C1AABE1950081E88A /* BCN.txt in Resources */,
-				EB7665C51ABBF6970094D6C3 /* DME.txt in Resources */,
-				EB4469071AB9671100DB116B /* RLG.txt in Resources */,
-				EB72B2391AB01380004503D1 /* IBZ.txt in Resources */,
+				EB7A40DD1AC602FF00F13379 /* VLC.txt in Resources */,
 				EBA5211D1AABF4B80081E88A /* FlightResultCell.xib in Resources */,
-				EB72B22D1AB00E18004503D1 /* AMS.txt in Resources */,
-				EB7665CB1ABF34530094D6C3 /* SZG.txt in Resources */,
-				EB4469091AB9673600DB116B /* LEJ.txt in Resources */,
-				EB44690F1AB967F700DB116B /* PSA.txt in Resources */,
-				EBA521131AABE3330081E88A /* NCE.txt in Resources */,
-				EB7665CD1ABF34840094D6C3 /* LYS.txt in Resources */,
+				EB7A40C71AC602FF00F13379 /* KEF.txt in Resources */,
+				EB7A40BD1AC602FF00F13379 /* DME.txt in Resources */,
+				EB7A40B51AC602FF00F13379 /* AMS.txt in Resources */,
 				EB72B22B1AAEDE47004503D1 /* FavoritesViewController.xib in Resources */,
+				EB7A40C41AC602FF00F13379 /* GVA.txt in Resources */,
 				EBA521221AABFFE60081E88A /* FlightDetailViewController.xib in Resources */,
-				EB72B2451AB01593004503D1 /* VIE.txt in Resources */,
-				EBA5210F1AABE2CE0081E88A /* MAD.txt in Resources */,
-				EB4469211AB9714F00DB116B /* VLC.txt in Resources */,
+				EB7A40C21AC602FF00F13379 /* FRA.txt in Resources */,
+				EB7A40DA1AC602FF00F13379 /* TXL.txt in Resources */,
+				EB7A40BC1AC602FF00F13379 /* CDG.txt in Resources */,
 				11873B1D1AAD7D990050D5DA /* EventDetailViewController.xib in Resources */,
-				EB72B2531AB018CB004503D1 /* ARN.txt in Resources */,
-				EB7665C71ABF33A00094D6C3 /* PRG.txt in Resources */,
 				117F87C41AAFF40900C1E24C /* PlaceCollectionViewCell.xib in Resources */,
-				EB7665C11ABBF5B60094D6C3 /* KRK.txt in Resources */,
-				EB44690D1AB9679400DB116B /* JKH.txt in Resources */,
+				EB7A40D81AC602FF00F13379 /* SZG.txt in Resources */,
+				EB7A40B61AC602FF00F13379 /* ARN.txt in Resources */,
+				EB7A40C11AC602FF00F13379 /* FLR.txt in Resources */,
 				EB72B25D1AB04468004503D1 /* BuyFlightViewController.xib in Resources */,
-				EB4469231AB9717100DB116B /* VGO.txt in Resources */,
-				EBA521111AABE2FE0081E88A /* ORY.txt in Resources */,
-				EBA5210A1AABDDC20081E88A /* CDG.txt in Resources */,
+				EB7A40CA1AC602FF00F13379 /* LEJ.txt in Resources */,
 				EBA7FA9A1AB6538000760622 /* SegmentDetailCell.xib in Resources */,
+				EB7A40C61AC602FF00F13379 /* IST.txt in Resources */,
+				EB7A40DE1AC602FF00F13379 /* WAW.txt in Resources */,
+				EB7A40C51AC602FF00F13379 /* IBZ.txt in Resources */,
 				EBA521181AABF3290081E88A /* FlightResultsViewController.xib in Resources */,
-				EB72B24B1AB01671004503D1 /* FCO.txt in Resources */,
+				EB7A40C31AC602FF00F13379 /* GDN.txt in Resources */,
+				EB7A40BF1AC602FF00F13379 /* EDI.txt in Resources */,
 				EB72B2661AB3F327004503D1 /* OneWayFlightResultView.xib in Resources */,
+				EB7A40D01AC602FF00F13379 /* NCE.txt in Resources */,
+				EB7A40D31AC602FF00F13379 /* OSL.txt in Resources */,
 				C43028301AB7F89900DA2B18 /* CityCustomMiniView.xib in Resources */,
+				EB7A40D51AC602FF00F13379 /* PRG.txt in Resources */,
+				EB7A40CD1AC602FF00F13379 /* MAD.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
