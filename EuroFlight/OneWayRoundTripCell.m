@@ -46,7 +46,7 @@
     UIButton *button = [[UIButton alloc] init];
     [button setTitle:@"Round-trip" forState:UIControlStateNormal];
     button.titleLabel.textColor = [UIColor whiteColor];
-    button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     button.clipsToBounds = YES;
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateSelected];
@@ -64,7 +64,7 @@
     UIButton *button = [[UIButton alloc] init];
     [button setTitle:@"One-way" forState:UIControlStateNormal];
     button.titleLabel.textColor = [UIColor whiteColor];
-    button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     button.clipsToBounds = YES;
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateSelected];

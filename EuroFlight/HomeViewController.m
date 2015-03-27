@@ -134,7 +134,7 @@ enum Weeks {
     button.clipsToBounds = YES;
     [button setTitle: @"Search Flights" forState:UIControlStateNormal];
     button.titleLabel.textColor = [UIColor whiteColor];
-    button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:15];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0]] forState:UIControlStateNormal];
     [button setBackgroundImage:[UIImage imageWithColor:[[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:0.5]] forState:UIControlStateHighlighted];
@@ -149,7 +149,7 @@ enum Weeks {
     CGFloat frameWidth = self.view.frame.size.width;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, frameWidth, 20)];
     label.text = @"Select a departure date prior to the return date";
-    label.font = [UIFont fontWithName:@"Verdana" size:13];
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor redColor];
     self.dateErrorLabel = label;

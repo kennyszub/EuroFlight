@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="451" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S22-Iz-L64">
-                            <rect key="frame" x="12" y="15" width="20" height="20"/>
+                            <rect key="frame" x="12" y="15" width="20" height="19.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="Xr6-SW-rVw"/>
                                 <constraint firstAttribute="width" constant="20" id="ebM-Bc-OeE"/>
@@ -75,7 +75,7 @@
                 <constraint firstAttribute="trailing" secondItem="Fgz-GY-5gW" secondAttribute="trailing" id="pfg-3r-AYP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="739.5" y="227"/>
+            <point key="canvasLocation" x="739.5" y="227.5"/>
         </view>
         <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="JBL-yM-p7t">
             <connections>
