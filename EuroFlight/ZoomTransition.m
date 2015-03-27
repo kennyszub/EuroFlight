@@ -49,6 +49,7 @@
 }
 
 - (void)dismissTransitionInContainerView:(UIView *)containerView fromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController {
+    [containerView insertSubview:toViewController.view belowSubview:self.blackView];
     [UIView animateWithDuration:self.duration animations:^{
         fromViewController.view.alpha = 0;
         fromViewController.view.transform = CGAffineTransformMakeScale(0.0001, 0.0001);
