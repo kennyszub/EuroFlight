@@ -179,7 +179,7 @@ static NSDateFormatter *dateFormatter;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
     label.backgroundColor = [UIColor clearColor];
     label.numberOfLines = 2;
-    label.font = [UIFont fontWithName:@"Verdana" size:14.0];
+    label.font = [UIFont fontWithName:@"HelveticaNeue" size:14.0];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor colorWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0];
 

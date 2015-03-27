@@ -26,7 +26,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="nxF-Gd-IJi"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                     <state key="normal" title="Buy now for $150">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

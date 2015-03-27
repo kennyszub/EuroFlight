@@ -23,29 +23,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k74-4F-90d">
-                    <rect key="frame" x="4" y="8" width="30" height="15"/>
+                    <rect key="frame" x="4" y="8" width="30" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="Um3-PM-MaZ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LHR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-m8-0iY">
-                    <rect key="frame" x="36" y="8" width="27" height="15"/>
+                    <rect key="frame" x="36" y="8" width="27" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="27" id="1tK-zX-tmL"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYG-ZB-cnp">
-                    <rect key="frame" x="65" y="8" width="55" height="15"/>
+                    <rect key="frame" x="65" y="8" width="55" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="AFS-Ui-spx"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -55,22 +55,22 @@
                         <constraint firstAttribute="width" constant="27" id="Iow-rM-r7D"/>
                         <constraint firstAttribute="height" constant="15" id="e5b-QI-Jwd"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTs-9E-Wdk">
-                    <rect key="frame" x="169" y="8" width="55" height="15"/>
+                    <rect key="frame" x="169" y="8" width="55" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="CSa-CL-Ed5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eD-ph-l04">
-                    <rect key="frame" x="244" y="8" width="20" height="15"/>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <rect key="frame" x="247" y="8" width="17" height="14.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -81,7 +81,7 @@
                         <constraint firstAttribute="height" constant="16" id="dq9-rv-O9B"/>
                     </constraints>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="flight-duration-icon" translatesAutoresizingMaskIntoConstraints="NO" id="aqi-W7-qUy">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="flight-duration-icon" translatesAutoresizingMaskIntoConstraints="NO" id="aqi-W7-qUy">
                     <rect key="frame" x="226" y="7" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="MgP-9n-aMZ"/>
@@ -89,11 +89,11 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nonstop" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-px-aLc">
-                    <rect key="frame" x="266" y="8" width="50" height="15"/>
+                    <rect key="frame" x="266" y="8" width="50" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="WW0-cS-ZtG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
