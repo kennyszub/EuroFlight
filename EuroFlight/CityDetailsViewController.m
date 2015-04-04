@@ -109,19 +109,6 @@ NSInteger const kHeaderHeight = 150;
     [self pushToFlightResults];
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    
-//    UILabel *myLabel = [[UILabel alloc] init];
-//    myLabel.frame = CGRectMake(20, 8, 320, 20);
-//    myLabel.font = [UIFont boldSystemFontOfSize:18];
-//    myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
-//    
-//    UIView *headerView = [[UIView alloc] init];
-//    [headerView addSubview:myLabel];
-//    
-//    return headerView;
-//}
-
 - (void)pushToFlightResults {
     FlightResultsViewController *vc = [[FlightResultsViewController alloc] init];
     vc.city = self.city;
@@ -223,66 +210,52 @@ NSInteger const kHeaderHeight = 150;
             self.blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
             self.blackView.alpha = 0;
             self.transitionView.clipsToBounds = YES;
+            self.transitionView.layer.cornerRadius = 3;
             self.originalFrame = self.transitionView.frame;
             toViewController.view.clipsToBounds = YES;
             CGFloat scale = 300 / self.transitionView.frame.size.width;
             toViewController.view.frame = CGRectMake(0, 0, 300, 550);
             toViewController.view.center = self.view.center;
             [containerView addSubview:self.blackView];
-            self.whiteView = [[UIView alloc] initWithFrame:CGRectMake(self.transitionView.frame.origin.x, self.transitionView.frame.origin.y+self.transitionView.frame.size.height, 300/scale, 0)];
+            self.whiteView = [[UIView alloc] initWithFrame:CGRectMake(self.transitionView.frame.origin.x, self.transitionView.frame.origin.y, self.transitionView.frame.size.width, self.transitionView.frame.size.height)];
             self.whiteView.backgroundColor = [UIColor whiteColor];
-            self.blueView = [[UIView alloc] initWithFrame:self.whiteView.frame];
+            self.blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 550/scale, self.whiteView.frame.size.width, 0)];
             self.blueView.backgroundColor = [[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0];
-            [containerView addSubview:self.transitionView];
+            self.whiteView.clipsToBounds = YES;
             [containerView addSubview:self.whiteView];
-            [containerView addSubview:self.blueView];
+            [self.whiteView addSubview:self.blueView];
+            [containerView addSubview:self.transitionView];
             [containerView addSubview:toViewController.view];
-            [UIView animateWithDuration:0.35 animations:^{
+            [UIView animateWithDuration:0.4 animations:^{
                 self.blackView.alpha = 1;
                 self.transitionView.transform = CGAffineTransformMakeScale(scale, scale);
                 self.transitionView.center = CGPointMake(self.view.center.x, self.view.center.y - 175);
                 self.transitionView.bounds = CGRectMake(0, 0, 300/scale, 200/scale);
-                self.whiteView.center = CGPointMake(self.view.center.x, self.view.center.y+100);
-                self.whiteView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y-75, 300, 350);
-                self.blueView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y + 225, 300, 50);
-                self.blueView.center = CGPointMake(self.view.center.x, self.view.center.y+250);
+                self.whiteView.center = CGPointMake(self.view.center.x, self.view.center.y);
+                self.whiteView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y-275, 300, 550);
+                self.blueView.frame = CGRectMake(0, 500, 300, 50);
+                self.whiteView.layer.cornerRadius = 5;
+                self.transitionView.layer.cornerRadius = 5 / scale;
             } completion:^(BOOL finished) {
-                [UIView animateWithDuration:0.05 animations:^{
+                [UIView animateWithDuration:0.1 animations:^{
                     toViewController.view.alpha = 1;
                     toViewController.view.layer.cornerRadius = 5;
                 } completion:^(BOOL finished) {
-                    [UIView animateWithDuration:0.1 animations:^{
-                        self.transitionView.alpha = 0;
-                        self.whiteView.alpha = 0;
-                        self.blueView.alpha = 0;
-                        self.transitionView.layer.cornerRadius = 3;
-                        self.whiteView.layer.cornerRadius = 3;
-                        self.blueView.layer.cornerRadius = 3;
-                    } completion:^(BOOL finished) {
-                        [transitionContext completeTransition:YES];
-                    }];
+                    [transitionContext completeTransition:YES];
                 }];
             }];
         }
     } else {
         if ([fromViewController isKindOfClass:[EventDetailViewController class]]) {
-            [UIView animateWithDuration:0.05 animations:^{
-                self.transitionView.alpha = 1;
-                self.whiteView.alpha = 1;
-                self.blueView.alpha = 1;
-            } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.1 animations:^{
                     fromViewController.view.alpha = 0;
-                    self.whiteView.layer.cornerRadius = 0;
-                    self.blueView.layer.cornerRadius = 0;
                 } completion:^(BOOL finished) {
-                    [UIView animateWithDuration:0.35 animations:^{
+                    [UIView animateWithDuration:0.4 animations:^{
                         self.blackView.alpha = 0;
                         self.transitionView.transform = CGAffineTransformIdentity;
                         self.transitionView.frame = self.originalFrame;
-                        self.transitionView.layer.cornerRadius = 3;
-                        self.blueView.frame = CGRectMake(self.originalFrame.origin.x, self.originalFrame.origin.y + self.originalFrame.size.height, self.originalFrame.size.width, 0);
-                        self.whiteView.frame = self.blueView.frame;
+                        self.blueView.frame = CGRectMake(0, 550/(300 / self.originalFrame.size.width), self.originalFrame.size.width, 0);
+                        self.whiteView.frame = self.transitionView.frame;
                     } completion:^(BOOL finished) {
                         [transitionContext completeTransition:YES];
                         [fromViewController.view removeFromSuperview];
@@ -294,7 +267,6 @@ NSInteger const kHeaderHeight = 150;
                         }
                     }];
                 }];
-            }];
         } else {
             [UIView animateWithDuration:0.5 animations:^{
                 fromViewController.view.alpha = 0;
