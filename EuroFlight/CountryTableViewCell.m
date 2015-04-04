@@ -26,6 +26,7 @@
 @property (nonatomic, strong) GPUImageLevelsFilter *levelsFilter;
 @property (nonatomic, strong) GPUImageBrightnessFilter *brightnessFilter;
 @property (nonatomic, strong) UIImageView *imgView;
+@property (nonatomic, assign) BOOL isAnimating;
 
 @end
 
@@ -163,8 +164,16 @@
 
 
 
-- (void)showCityViews:(BOOL)showViews {
+- (BOOL)showCityViews:(BOOL)showViews {
     // apply state with animation
+
+    // if the cell is already animating, ignore and return failure
+    if (self.isAnimating) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        return NO;
+    }
+
+    self.isAnimating = YES;
 
     if (showViews) {
         CGFloat constantChange = self.topOfCityLabelConstraint.constant - 10;
@@ -175,11 +184,13 @@
             for (CityCustomMiniView *cityView in self.customViews) {
                 [UIView transitionWithView:cityView duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                     cityView.hidden = !showViews;
-                } completion:nil];
+                } completion:^(BOOL finished) {
+                    self.isAnimating = NO;
+                    self.selectionStyle = UITableViewCellSelectionStyleDefault;
+                }];
             }
         }];
     } else {
-        
         for (CityCustomMiniView *cityView in self.customViews) {
             [UIView transitionWithView:cityView duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 cityView.hidden = !showViews;
@@ -187,10 +198,15 @@
                 [UIView animateWithDuration:0.4 animations:^{
                     self.topOfCityLabelConstraint.constant = 127;
                     [self.contentView layoutIfNeeded];
+                } completion:^(BOOL finished) {
+                    self.isAnimating = NO;
+                    self.selectionStyle = UITableViewCellSelectionStyleDefault;
                 }];
             }];
         }
     }
+
+    return YES;
 }
 
 

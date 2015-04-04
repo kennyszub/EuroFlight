@@ -112,11 +112,15 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     CountryTableViewCell *cell = (CountryTableViewCell *) [self.tableView cellForRowAtIndexPath:indexPath];
     if ([self.indexPathsOfSelectedCells containsObject:indexPath]) {
-        [self.indexPathsOfSelectedCells removeObject:indexPath];
-        [cell showCityViews:NO];
+        BOOL didAnimate = [cell showCityViews:NO];
+        if (didAnimate) {
+            [self.indexPathsOfSelectedCells removeObject:indexPath];
+        }
     } else {
-        [self.indexPathsOfSelectedCells addObject:indexPath];
-        [cell showCityViews:YES];
+        BOOL didAnimate = [cell showCityViews:YES];
+        if (didAnimate) {
+            [self.indexPathsOfSelectedCells addObject:indexPath];
+        }
     }
 }
 
