@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topOfCityLabelConstraint;
 @property (nonatomic, strong) GPUImageLevelsFilter *levelsFilter;
 @property (nonatomic, strong) GPUImageBrightnessFilter *brightnessFilter;
+@property (nonatomic, strong) UIImageView *imgView;
 
 @end
 
@@ -115,22 +116,20 @@
 }
 
 - (void)setCountryImage {
+    self.imgView = [[UIImageView alloc] init];
+    __weak CountryTableViewCell *weakSelf = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.country.countryPhotoURL]];
-    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
-    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        GPUImagePicture *imageSource = [[GPUImagePicture alloc] initWithImage:responseObject];
-        [self applyFilterToGPUImageView:imageSource];
-        
-        UIImage *filteredImage = [self.levelsFilter imageFromCurrentFramebuffer];
-        UIImage *brightImage = [self getBrightenedImage:filteredImage];
-        self.backgroundView = [[UIImageView alloc] initWithImage:filteredImage];
-        self.selectedBackgroundView = [[UIImageView alloc] initWithImage:brightImage];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    [self.imgView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        GPUImagePicture *imageSource = [[GPUImagePicture alloc] initWithImage:image];
+        [weakSelf applyFilterToGPUImageView:imageSource];
+
+        UIImage *filteredImage = [weakSelf.levelsFilter imageFromCurrentFramebuffer];
+        UIImage *brightImage = [weakSelf getBrightenedImage:filteredImage];
+        weakSelf.backgroundView = [[UIImageView alloc] initWithImage:filteredImage];
+        weakSelf.selectedBackgroundView = [[UIImageView alloc] initWithImage:brightImage];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         NSLog(@"Image error: %@", error);
     }];
-    [requestOperation start];
 }
 
 - (void)cityView:(CityCustomMiniView *)view didTapCityPrice:(City *)city {
