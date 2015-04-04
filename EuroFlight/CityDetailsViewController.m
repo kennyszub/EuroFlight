@@ -34,6 +34,8 @@ NSInteger const kHeaderHeight = 150;
 @property (nonatomic, strong) UIView *blackView;
 @property (nonatomic, strong) UIView *blueView;
 @property (nonatomic, assign) CGRect originalFrame;
+@property (nonatomic, assign) NSInteger eventWidth;
+@property (nonatomic, assign) NSInteger eventHeight;
 
 @end
 
@@ -213,13 +215,17 @@ NSInteger const kHeaderHeight = 150;
             self.transitionView.layer.cornerRadius = 3;
             self.originalFrame = self.transitionView.frame;
             toViewController.view.clipsToBounds = YES;
-            CGFloat scale = 300 / self.transitionView.frame.size.width;
-            toViewController.view.frame = CGRectMake(0, 0, 300, 550);
+            self.eventHeight = self.view.frame.size.height - 75;
+            if (self.eventHeight > 550) self.eventHeight = 550;
+            self.eventWidth = self.view.frame.size.width - 75;
+            if (self.eventWidth % 2 == 1) self.eventWidth++;
+            CGFloat scale = self.eventWidth / self.transitionView.frame.size.width;
+            toViewController.view.frame = CGRectMake(0, 0, self.eventWidth, self.eventHeight);
             toViewController.view.center = self.view.center;
             [containerView addSubview:self.blackView];
             self.whiteView = [[UIView alloc] initWithFrame:CGRectMake(self.transitionView.frame.origin.x, self.transitionView.frame.origin.y, self.transitionView.frame.size.width, self.transitionView.frame.size.height)];
             self.whiteView.backgroundColor = [UIColor whiteColor];
-            self.blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 550/scale, self.whiteView.frame.size.width, 0)];
+            self.blueView = [[UIView alloc] initWithFrame:CGRectMake(0, self.eventHeight/scale, self.whiteView.frame.size.width, 0)];
             self.blueView.backgroundColor = [[UIColor alloc] initWithRed:39/255.0 green:159/255.0 blue:190/255.0 alpha:1.0];
             self.whiteView.clipsToBounds = YES;
             [containerView addSubview:self.whiteView];
@@ -229,11 +235,11 @@ NSInteger const kHeaderHeight = 150;
             [UIView animateWithDuration:0.4 animations:^{
                 self.blackView.alpha = 1;
                 self.transitionView.transform = CGAffineTransformMakeScale(scale, scale);
-                self.transitionView.center = CGPointMake(self.view.center.x, self.view.center.y - 175);
-                self.transitionView.bounds = CGRectMake(0, 0, 300/scale, 200/scale);
+                self.transitionView.center = CGPointMake(self.view.center.x, self.view.center.y - (self.eventHeight / 2) + 100);
+                self.transitionView.bounds = CGRectMake(0, 0, self.eventWidth/scale, 200/scale);
                 self.whiteView.center = CGPointMake(self.view.center.x, self.view.center.y);
-                self.whiteView.frame = CGRectMake(self.view.center.x - 150, self.view.center.y-275, 300, 550);
-                self.blueView.frame = CGRectMake(0, 500, 300, 50);
+                self.whiteView.frame = CGRectMake(self.view.center.x - self.eventWidth / 2, self.view.center.y- self.eventHeight / 2, self.eventWidth, self.eventHeight);
+                self.blueView.frame = CGRectMake(0, self.eventHeight - 50, self.eventWidth, 50);
                 self.whiteView.layer.cornerRadius = 5;
                 self.transitionView.layer.cornerRadius = 5 / scale;
             } completion:^(BOOL finished) {
@@ -254,7 +260,7 @@ NSInteger const kHeaderHeight = 150;
                         self.blackView.alpha = 0;
                         self.transitionView.transform = CGAffineTransformIdentity;
                         self.transitionView.frame = self.originalFrame;
-                        self.blueView.frame = CGRectMake(0, 550/(300 / self.originalFrame.size.width), self.originalFrame.size.width, 0);
+                        self.blueView.frame = CGRectMake(0, self.eventHeight/(self.eventWidth / self.originalFrame.size.width), self.originalFrame.size.width, 0);
                         self.whiteView.frame = self.transitionView.frame;
                     } completion:^(BOOL finished) {
                         [transitionContext completeTransition:YES];
