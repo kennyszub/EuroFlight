@@ -64,7 +64,7 @@
             fromViewController.view.layer.transform = rotationTransform;
             toViewController.view.layer.transform = noTransform;
         } completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
+            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     } else { // must be dismissing
         [containerView addSubview:toViewController.view];
@@ -80,9 +80,11 @@
             toViewController.view.layer.transform = noTransform;
             
         } completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
+            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     }
 }
+
+
 
 @end

@@ -15,7 +15,18 @@
 #import "PushTiltTransition.h"
 #import "HomeViewController.h"
 
+@interface NavigationControllerDelegate ()
+
+@end
 @implementation NavigationControllerDelegate
+
+- (void)setNavController:(UINavigationController *)navController {
+    _navController = navController;
+    UIScreenEdgePanGestureRecognizer *screenPanRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(screenPan:)];
+    screenPanRecognizer.edges = UIRectEdgeLeft;
+    // adds the gesture recognizer to every navigation controller view
+    [navController.view addGestureRecognizer:screenPanRecognizer];
+}
 
 - (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                    animationControllerForOperation:(UINavigationControllerOperation)operation
@@ -66,6 +77,29 @@
     }
 
     return nil;
+}
+
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+    return self.interactiveTransition;
+}
+
+- (void)screenPan:(UIScreenEdgePanGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        self.interactiveTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
+
+        [self.navController popViewControllerAnimated:YES];
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        CGPoint translation = [recognizer translationInView:self.navController.view];
+        CGFloat percentTransitioned = (translation.x / CGRectGetWidth(self.navController.view.bounds));
+        [self.interactiveTransition updateInteractiveTransition:percentTransitioned];
+    } else if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if ([recognizer velocityInView:self.navController.view].x > 0) {
+            [self.interactiveTransition finishInteractiveTransition];
+        } else {
+            [self.interactiveTransition cancelInteractiveTransition];
+        }
+        self.interactiveTransition = nil;
+    }
 }
 
 @end

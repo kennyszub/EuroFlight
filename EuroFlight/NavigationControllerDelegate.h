@@ -10,5 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactiveTransition;
+@property (nonatomic, strong) UINavigationController *navController;
 
 @end
