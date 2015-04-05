@@ -35,6 +35,7 @@
     _place = place;
     self.nameLabel.text = self.place.name;
     self.placeView.image = nil;
+    self.placeView.backgroundColor = [UIColor lightGrayColor];
     [self.placeView setImageWithURL:[NSURL URLWithString:self.place.photoURL]];
 }
 
