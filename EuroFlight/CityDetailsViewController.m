@@ -53,7 +53,7 @@ NSInteger const kHeaderHeight = 150;
 
     NSNumberFormatter *formatter = [CurrencyFormatter formatterWithCurrencyCode:self.city.currencyType];
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.city.lowestCost]];
-    [self.ticketButton setTitle:[NSString stringWithFormat:@"Find tickets from %@", price] forState:UIControlStateNormal];
+    [self.ticketButton setTitle:[NSString stringWithFormat:@"Find flights from %@", price] forState:UIControlStateNormal];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
