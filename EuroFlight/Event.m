@@ -63,7 +63,9 @@ static NSDateFormatter *dateTimeParser;
             [dictionary setObject:images[key] forKey:@"photoURL"];
             [dictionary setObject:details[key][@"city"] forKey:@"city"];
             [dictionary setObject:details[key][@"date"] forKey:@"date"];
-            [dictionary setObject:([details[key][@"description"] isKindOfClass:[NSDictionary class]] ? details[key][@"description"][@"text"] : details[key][@"description"]) forKey:@"description"];
+            if (details[key][@"description"] != nil) {
+                [dictionary setObject:([details[key][@"description"] isKindOfClass:[NSDictionary class]] ? details[key][@"description"][@"text"] : details[key][@"description"]) forKey:@"description"];
+            }
             Event *event = [[Event alloc] initWithDictionary:dictionary];
             if (event.startDate != nil && event.endDate != nil) {
                 [array addObject:event];
