@@ -85,15 +85,13 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
 }
 
 - (void)makeFlightRequestWithAirportCode:(NSString *)airportCode {
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    // TODO finalize params (example)
-    Context *context = [Context currentContext];
-    params[kSourceAirportParamsKey] = context.originAirport;
-    params[kDestinationAirportParamsKey] = airportCode;
-
-    [[TripClient sharedInstance] tripsWithParams:params completion:^(NSArray *trips, NSError *error) {
-        [self.trips addObjectsFromArray:trips];
-    }];    
+    [[TripClient sharedInstance] tripsWithDestinationAirport:airportCode completion:^(NSArray *trips, NSError *error) {
+        if (error) {
+            NSLog(@"Error retrieving flights from Google: %@", error);
+        } else {
+            [self.trips addObjectsFromArray:trips];
+        }
+    }];
 }
 
 // dynamically compute the lowest cost across all trips available

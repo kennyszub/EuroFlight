@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 OkStupid. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "AFHTTPRequestOperationManager.h"
 
 extern NSString * const kSourceAirportParamsKey;
 extern NSString * const kDestinationAirportParamsKey;
 
-@interface TripClient : NSObject
+@interface TripClient : AFHTTPRequestOperationManager
 
 + (TripClient *)sharedInstance;
 
-- (void)tripsWithParams:(NSDictionary *)params completion:(void (^)(NSArray *trips, NSError *error))completion;
+- (void)tripsWithDestinationAirport:(NSString *)destination completion:(void (^)(NSArray *trips, NSError *error))completion;
 
 @end
