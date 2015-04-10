@@ -59,14 +59,14 @@
     
     NSDictionary *params = @{@"apikey" : @"UTXwecz7u66PZKgeLKG3KcFLTQJ2LtjU"};
     
-    return [self GET:@"https://www.kimonolabs.com/api/eetu0cjm" parameters:params success:success failure:failure];
+    return [self GET:@"https://www.kimonolabs.com/api/d737o8na" parameters:params success:success failure:failure];
 }
 
 - (AFHTTPRequestOperation *)fetchEventDetailsWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
     NSDictionary *params = @{@"apikey" : @"UTXwecz7u66PZKgeLKG3KcFLTQJ2LtjU"};
     
-    return [self GET:@"https://www.kimonolabs.com/api/7vyz5imi" parameters:params success:success failure:failure];
+    return [self GET:@"https://www.kimonolabs.com/api/avkbhb46" parameters:params success:success failure:failure];
 }
 
 - (AFHTTPRequestOperation *)getSummaries {
