@@ -169,8 +169,14 @@ enum Weeks {
             [self.view addSubview:hud];
             [hud show:YES];
 
-            self.rvc = [[ResultsViewController alloc] initWithResults];
-            [NSTimer scheduledTimerWithTimeInterval:LOADING_VIEW_DURATION target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
+//            self.rvc = [[ResultsViewController alloc] initWithResults];
+//            [NSTimer scheduledTimerWithTimeInterval:LOADING_VIEW_DURATION target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
+            [Country initFlightsWithCompletion:^{
+                [hud hide:YES];
+                self.rvc = [[ResultsViewController alloc] initWithResults];
+                [self.navigationController pushViewController:self.rvc animated:YES];
+            }];
+
             [self fadeOutTableView];
         } else {
             ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];

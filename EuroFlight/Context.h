@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const ContextChangedNotification;
+
 @interface Context : NSObject
 
 + (Context *)currentContext;

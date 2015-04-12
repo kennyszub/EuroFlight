@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSString *currencyType;
 
 + (NSArray *)initCountries;
++ (void)initFlightsWithCompletion:(void (^)())completion;
++ (void)setFlightDataDirty:(BOOL)dirty;
 
 - (NSArray *)favoritedCities;
 // returns either all cities or only favorited cities

@@ -7,6 +7,9 @@
 //
 
 #import "Context.h"
+#import "Country.h"
+
+NSString * const ContextChangedNotification = @"ContextChangedNotification";
 
 @implementation Context
 
@@ -34,6 +37,44 @@ static Context *_currentContext;
         _currentContext.timeZone = @"GMT";
     }
     return _currentContext;
+}
+
+- (void)postContextChangedNotification {
+    // HACK: instead of posting a notification, just change the state directly
+    // Yay!
+    [Country setFlightDataDirty:YES];
+    NSLog(@"setting flight data to dirty");
+//    [[NSNotificationCenter defaultCenter] postNotificationName:ContextChangedNotification object:nil];
+}
+
+- (void)setOriginAirport:(NSString *)originAirport {
+    _originAirport = originAirport;
+    [self postContextChangedNotification];
+}
+
+- (void)setDepartureDate:(NSDate *)departureDate {
+    _departureDate = departureDate;
+    [self postContextChangedNotification];
+}
+
+- (void)setReturnDate:(NSDate *)returnDate {
+    _returnDate = returnDate;
+    [self postContextChangedNotification];
+}
+
+- (void)setNumPassengers:(NSInteger)numPassengers {
+    _numPassengers = numPassengers;
+    [self postContextChangedNotification];
+}
+
+- (void)setIsRoundTrip:(BOOL)isRoundTrip {
+    _isRoundTrip = isRoundTrip;
+    [self postContextChangedNotification];
+}
+
+- (void)setTimeZone:(NSString *)timeZone {
+    _timeZone = timeZone;
+    [self postContextChangedNotification];
 }
 
 @end

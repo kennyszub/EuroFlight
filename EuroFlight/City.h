@@ -30,5 +30,6 @@ extern NSString * const FavoritedNotification;
 - (void)setFavoritedState:(BOOL)state;
 
 - (void)initSkyscannerTripsWithCompletion:(void (^)())completion;
+- (void)getGoogleFlightsWithCompletion:(void (^)())completion;
 
 @end

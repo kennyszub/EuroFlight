@@ -37,6 +37,24 @@ NSString * const FavoritedNotification = @"FavoritedNotification";
     }];
 }
 
+- (void)getGoogleFlightsWithCompletion:(void (^)())completion {
+    __block NSInteger completedAirports;
+    completedAirports = 0;
+    for (NSString *airportCode in self.airportCodes) {
+        [[TripClient sharedInstance] tripsWithDestinationAirport:airportCode completion:^(NSArray *trips, NSError *error) {
+            if (error) {
+                NSLog(@"Error retrieving flights from Google: %@", error);
+            } else {
+                [self.trips addObjectsFromArray:trips];
+            }
+
+            if (++completedAirports >= self.airportCodes.count) {
+                completion();
+            }
+        }];
+    }
+}
+
 NSString * const kPlaceDataPrefix = @"PlaceData";
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
@@ -45,10 +63,12 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
         self.name = dictionary[@"city"];
         self.trips = [[NSMutableArray alloc] init];
         self.airportCodes = dictionary[@"airportCodes"];
-        for (NSString *airportCode in self.airportCodes) {
-            [self makeFlightRequestWithAirportCode:airportCode];
-        }
-        
+
+        // don't ask for flights yet
+//        for (NSString *airportCode in self.airportCodes) {
+//            [self makeFlightRequestWithAirportCode:airportCode];
+//        }
+
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:[self userDefaultsKeyWithCity:self.name]];
         if (data != nil) {
             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];

@@ -85,6 +85,36 @@ static NSArray *_allCountries;
     return _allCountries;
 }
 
+static BOOL areFlightsUpToDate = NO;
+
++ (void)setFlightDataDirty:(BOOL)dirty {
+    areFlightsUpToDate = !dirty;
+}
+
++ (void)initFlightsWithCompletion:(void (^)())completion {
+    if (areFlightsUpToDate) {
+        completion();
+    } else {
+        NSInteger totalCities = 0;
+        for (Country *country in _allCountries) {
+            totalCities += country.cities.count;
+        }
+
+        __block NSInteger citiesCompleted;
+        citiesCompleted = 0;
+        for (Country *country in _allCountries) {
+            for (City *city in country.cities) {
+                [city getGoogleFlightsWithCompletion:^{
+                    if (++citiesCompleted >= totalCities) {
+                        areFlightsUpToDate = YES;
+                        completion();
+                    }
+                }];
+            }
+        }
+    }
+}
+
 + (NSArray *)getDestinations {
     NSArray *destinations =
     @[
