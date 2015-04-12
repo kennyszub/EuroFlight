@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 
-#import "FlightResultsViewController.h"
+#import "CityDetailsViewController.h"
 #import "Country.h"
+#import "City.h"
 
 @interface AppDelegate ()
 
@@ -32,6 +33,35 @@
     [self configureNavBar];
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if ([UIApplication sharedApplication].applicationState != UIApplicationStateActive) {
+        NSString *cityName = notification.userInfo[@"cityName"];
+        NSString *eventName = notification.userInfo[@"eventName"];
+
+        //    HomeViewController *hvc = [[HomeViewController alloc] init];
+        //    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:hvc];
+        // TODO this doesn't work if the user navigates to home view before backgrounding app
+        UINavigationController *nvc = (UINavigationController *)self.window.rootViewController;
+        CityDetailsViewController *cdvc = [[CityDetailsViewController alloc] init];
+
+        NSArray *countries = [Country initCountries];
+        for (Country *country in countries) {
+            for (City *city in country.cities) {
+                if ([city.name isEqualToString:cityName]) {
+                    cdvc.city = city;
+                    cdvc.eventName = eventName;
+                    NSLog(@"Pushing city details for %@", city.name);
+                    [nvc pushViewController:cdvc animated:YES];
+                    return;
+                }
+            }
+        }
+
+        NSLog(@"Couldn't find the proper city... pushing CityDetailsViewController anyway");
+        [nvc pushViewController:cdvc animated:YES];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

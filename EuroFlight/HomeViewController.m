@@ -97,6 +97,10 @@ enum Weeks {
     self.navigationDelegate = [[NavigationControllerDelegate alloc] init];
     self.navigationController.delegate = self.navigationDelegate; // this tells the navigation controller to check the navigationDelegate for custom transitions - returns nil otherwise which does a standard transition
     self.navigationDelegate.navController = self.navigationController;
+
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+    }
 }
 
 - (void)dealloc {
@@ -179,8 +183,10 @@ enum Weeks {
 
             [self fadeOutTableView];
         } else {
-            ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
-            [self.navigationController pushViewController:rvc animated:YES];
+            [Country initFlightsWithCompletion:^{
+                ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
+                [self.navigationController pushViewController:rvc animated:YES];
+            }];
         }
     }
 }

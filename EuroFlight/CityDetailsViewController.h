@@ -12,4 +12,6 @@
 @interface CityDetailsViewController : UIViewController
 
 @property (strong, nonatomic) City *city;
+@property (nonatomic, strong) NSString *eventName;
+
 @end

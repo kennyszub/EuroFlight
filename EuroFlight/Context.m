@@ -40,10 +40,8 @@ static Context *_currentContext;
 }
 
 - (void)postContextChangedNotification {
-    // HACK: instead of posting a notification, just change the state directly
-    // Yay!
+    // HACK: instead of posting a notification, just change the state directly. Yay!
     [Country setFlightDataDirty:YES];
-    NSLog(@"setting flight data to dirty");
 //    [[NSNotificationCenter defaultCenter] postNotificationName:ContextChangedNotification object:nil];
 }
 

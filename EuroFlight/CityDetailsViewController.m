@@ -89,6 +89,12 @@ NSInteger const kHeaderHeight = 150;
     self.tableView.contentOffset = CGPointMake(0, -kHeaderHeight);
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.eventName) {
+        [self presentEventWithName:self.eventName];
+    }
+}
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.button.frame = CGRectMake(self.headerView.frame.size.width - 42, 20, 22, 22);
@@ -333,13 +339,38 @@ NSInteger const kHeaderHeight = 150;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self presentEvent:[self.city.events objectAtIndex:indexPath.row] forIndexPath:indexPath];
+}
+
+- (void)presentEventWithName:(NSString *)eventName {
     EventDetailViewController *vc = [[EventDetailViewController alloc] init];
-    vc.event = [self.city.events objectAtIndex:indexPath.row];
+    NSIndexPath *indexPath;
+    for (int i = 0; i < self.city.events.count; i++) {
+        Event *event = self.city.events[i];
+        if ([event.name isEqualToString:eventName]) {
+            vc.event = event;
+            indexPath = [NSIndexPath indexPathForRow:i inSection:1];
+
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+            [self presentEvent:event forIndexPath:indexPath];
+            return;
+        }
+    }
+
+    if (!indexPath) {
+        NSLog(@"Event %@ wasn't found for some reason", eventName);
+        return;
+    }
+}
+
+- (void)presentEvent:(Event *)event forIndexPath:(NSIndexPath *)indexPath {
+    EventDetailViewController *vc = [[EventDetailViewController alloc] init];
+    vc.event = event;
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
-    UIImageView *eventView =((EventCell *)[tableView cellForRowAtIndexPath:indexPath]).eventView;
+    UIImageView *eventView =((EventCell *)[self.tableView cellForRowAtIndexPath:indexPath]).eventView;
     self.transitionView = [[UIImageView alloc] initWithImage:eventView.image];
-    self.transitionView.frame = [[tableView cellForRowAtIndexPath:indexPath] convertRect:eventView.frame toView:self.view];
+    self.transitionView.frame = [[self.tableView cellForRowAtIndexPath:indexPath] convertRect:eventView.frame toView:self.view];
     self.transitionView.contentMode = UIViewContentModeScaleAspectFill;
     [self presentViewController:vc animated:YES completion:nil];
 }

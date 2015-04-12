@@ -15,6 +15,7 @@
 #import "KimonoClient.h"
 #import "FavoritesManager.h"
 #import "SkyscannerClient.h"
+#import "Event.h"
 
 NSString * const FavoritedNotification = @"FavoritedNotification";
 
@@ -135,6 +136,24 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
 // TODO any way to make this a custom setter instead of an exposed method?
 - (void)setFavoritedState:(BOOL)state {
     [[FavoritesManager sharedInstance] setCity:self favorited:state];
+
+    // set up local notification for the first event in the city
+    if (state && self.events.count > 0) {
+        Event *event = [self.events firstObject];
+
+        NSDictionary *userInfo =
+        @{
+          @"cityName": self.name,
+          @"eventName" : event.name
+          };
+
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+        localNotification.alertBody = [NSString stringWithFormat:@"%@ is coming up in %@! Book your flight!", event.name, self.name];
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        localNotification.userInfo = userInfo;
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    }
 }
 
 @end
