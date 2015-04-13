@@ -216,9 +216,7 @@ static BOOL areFlightsUpToDate = NO;
       @{
           @"countryName" : @"Switzerland",
           @"cities" :
-              @[@{@"city" : @"Zurich",
-                  @"airportCodes" : @[@"ZRH"]},
-                @{@"city" : @"Geneva",
+              @[@{@"city" : @"Geneva",
                   @"airportCodes" : @[@"GVA"]}]
           },
       @{
