@@ -75,7 +75,24 @@
     }
 }
 
+- (void)sortCountriesList {
+    self.country.cities = [self.country.cities sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        float price1 = ((City *) obj1).lowestCost;
+        float price2 = ((City *) obj2).lowestCost;
+        return [CountryTableViewCell compareFloats:price1 secondFloat:price2];
+    }];
+}
 
+#pragma mark helper methods
++ (NSComparisonResult)compareFloats:(float)first secondFloat:(float)second {
+    if (first == second) {
+        return NSOrderedSame;
+    } else if (first > second) {
+        return NSOrderedDescending;
+    } else {
+        return NSOrderedAscending;
+    }
+}
 
 - (void)setCountry:(Country *)country {
     _country = country;
@@ -85,6 +102,7 @@
     self.lowestPriceLabel.text = [NSString stringWithFormat:@"from %@", price];
 
     [self setCountryImage];
+    [self sortCountriesList];
     
     self.eventIndex = -1;
     //NSLog(@"%@ %@", [Context currentContext].departureDate, [Context currentContext].returnDate);
