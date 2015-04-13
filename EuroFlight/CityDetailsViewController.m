@@ -92,6 +92,7 @@ NSInteger const kHeaderHeight = 150;
 - (void)viewDidAppear:(BOOL)animated {
     if (self.eventName) {
         [self presentEventWithName:self.eventName];
+        self.eventName = nil;
     }
 }
 
