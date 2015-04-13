@@ -24,8 +24,8 @@
 #import "PlaneLoadingView.h"
 #import "NavigationControllerDelegate.h"
 
-#define ENABLE_LOADING_VIEW 0
-#define LOADING_VIEW_DURATION 5
+#define ENABLE_LOADING_VIEW 1
+#define LOADING_VIEW_DURATION 3
 
 @interface HomeViewController () <THDatePickerDelegate, UITextFieldDelegate, AirportSearchResultsControllerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, OneWayRoundTripCellDelegate>
 @property (nonatomic, strong) THDatePickerViewController *outboundDatePicker;
@@ -167,26 +167,33 @@ enum Weeks {
     } else {
         self.dateErrorLabel.hidden = YES;
 
+        [Context currentContext].departureDate = self.outboundDate;
+        [Context currentContext].returnDate = self.returnDate;
+
         if (ENABLE_LOADING_VIEW) {
             // show the loading HUD
             PlaneLoadingView *hud = [[PlaneLoadingView alloc] init];
             [self.view addSubview:hud];
             [hud show:YES];
 
-//            self.rvc = [[ResultsViewController alloc] initWithResults];
-//            [NSTimer scheduledTimerWithTimeInterval:LOADING_VIEW_DURATION target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
             [Country initFlightsWithCompletion:^{
-                [hud hide:YES];
                 self.rvc = [[ResultsViewController alloc] initWithResults];
-                [self.navigationController pushViewController:self.rvc animated:YES];
             }];
+            [NSTimer scheduledTimerWithTimeInterval:LOADING_VIEW_DURATION target:self selector:@selector(hideHud:) userInfo:hud repeats:NO];
+//            [Country initFlightsWithCompletion:^{
+//                [hud hide:YES];
+//                self.rvc = [[ResultsViewController alloc] initWithResults];
+//                [self.navigationController pushViewController:self.rvc animated:YES];
+//            }];
 
             [self fadeOutTableView];
         } else {
-            [Country initFlightsWithCompletion:^{
-                ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
-                [self.navigationController pushViewController:rvc animated:YES];
-            }];
+//            [Country initFlightsWithCompletion:^{
+//                ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
+//                [self.navigationController pushViewController:rvc animated:YES];
+//            }];
+            ResultsViewController *rvc = [[ResultsViewController alloc] initWithResults];
+            [self.navigationController pushViewController:rvc animated:YES];
         }
     }
 }

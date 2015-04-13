@@ -17,6 +17,8 @@
 #import "SkyscannerClient.h"
 #import "Event.h"
 
+#define kPushNotificationDelay 7
+
 NSString * const FavoritedNotification = @"FavoritedNotification";
 
 @interface City ()
@@ -148,7 +150,7 @@ NSString * const kPlaceDataPrefix = @"PlaceData";
           };
 
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:kPushNotificationDelay];
         localNotification.alertBody = [NSString stringWithFormat:@"%@ is coming up in %@! Book your flight!", event.name, self.name];
         localNotification.soundName = UILocalNotificationDefaultSoundName;
         localNotification.userInfo = userInfo;

@@ -75,7 +75,7 @@
     }
 }
 
-- (void)sortCountriesList {
+- (void)sortCitiesList {
     self.country.cities = [self.country.cities sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         float price1 = ((City *) obj1).lowestCost;
         float price2 = ((City *) obj2).lowestCost;
@@ -101,8 +101,8 @@
     NSString *price = [formatter stringFromNumber:[NSNumber numberWithFloat:self.country.lowestCost]];
     self.lowestPriceLabel.text = [NSString stringWithFormat:@"from %@", price];
 
+    [self sortCitiesList];
     [self setCountryImage];
-    [self sortCountriesList];
     
     self.eventIndex = -1;
     //NSLog(@"%@ %@", [Context currentContext].departureDate, [Context currentContext].returnDate);
